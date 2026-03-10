@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useState } from 'react'
+import { LogoHorizontal } from './Logo'
 
 const navLinks = [
   { href: '/methodology', label: 'Methodology' },
@@ -21,11 +22,8 @@ export function Nav() {
     <header className="sticky top-0 z-50 bg-white border-b border-slate-200">
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex items-center justify-between h-16">
-          <Link
-            href="/"
-            className="text-brand-navy font-semibold text-sm leading-tight tracking-tight"
-          >
-            Rotation Analytics
+          <Link href="/" aria-label="Rotation Analytics home">
+            <LogoHorizontal />
           </Link>
 
           {/* Desktop nav */}

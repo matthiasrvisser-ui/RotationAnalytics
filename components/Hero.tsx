@@ -5,20 +5,58 @@ interface HeroProps {
   subheadline: string
   cta?: { label: string; href: string }
   secondaryCta?: { label: string; href: string }
+  /** Optional background image URL. When provided, a navy tint overlay is applied. */
+  backgroundImage?: string
 }
 
-export function Hero({ headline, subheadline, cta, secondaryCta }: HeroProps) {
+export function Hero({ headline, subheadline, cta, secondaryCta, backgroundImage }: HeroProps) {
+  const hasImage = Boolean(backgroundImage)
+
   return (
-    <section className="bg-brand-cream border-b border-slate-200 py-24 md:py-32">
-      <div className="max-w-6xl mx-auto px-6">
+    <section
+      className={`relative py-24 md:py-32 ${
+        hasImage ? 'overflow-hidden' : 'bg-brand-cream border-b border-slate-200'
+      }`}
+      style={
+        hasImage
+          ? {
+              backgroundImage: `url(${backgroundImage})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+            }
+          : undefined
+      }
+    >
+      {/* Navy tint overlay — only rendered when backgroundImage is provided */}
+      {hasImage && (
+        <div
+          className="absolute inset-0 bg-brand-navy"
+          style={{ opacity: 0.82 }}
+          aria-hidden="true"
+        />
+      )}
+
+      <div className="relative z-10 max-w-6xl mx-auto px-6">
         <div className="max-w-3xl">
-          <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-6">
+          <p
+            className={`text-xs font-semibold uppercase tracking-widest mb-6 ${
+              hasImage ? 'text-slate-300' : 'text-slate-400'
+            }`}
+          >
             Rotation Analytics
           </p>
-          <h1 className="text-4xl md:text-5xl font-bold text-brand-navy leading-tight tracking-tight mb-7">
+          <h1
+            className={`text-4xl md:text-5xl font-bold leading-tight tracking-tight mb-7 ${
+              hasImage ? 'text-white' : 'text-brand-navy'
+            }`}
+          >
             {headline}
           </h1>
-          <p className="text-lg text-slate-500 font-light leading-[1.8] mb-10 max-w-2xl">
+          <p
+            className={`text-lg font-light leading-[1.8] mb-10 max-w-2xl ${
+              hasImage ? 'text-slate-200' : 'text-slate-500'
+            }`}
+          >
             {subheadline}
           </p>
           {(cta || secondaryCta) && (
@@ -26,7 +64,11 @@ export function Hero({ headline, subheadline, cta, secondaryCta }: HeroProps) {
               {cta && (
                 <Link
                   href={cta.href}
-                  className="inline-block bg-brand-navy text-white px-7 py-3 rounded font-medium text-sm hover:bg-brand-navy-dark transition-colors"
+                  className={`inline-block px-7 py-3 rounded font-medium text-sm transition-colors ${
+                    hasImage
+                      ? 'bg-white text-brand-navy hover:bg-brand-cream'
+                      : 'bg-brand-navy text-white hover:bg-brand-navy-dark'
+                  }`}
                 >
                   {cta.label}
                 </Link>
@@ -34,7 +76,9 @@ export function Hero({ headline, subheadline, cta, secondaryCta }: HeroProps) {
               {secondaryCta && (
                 <Link
                   href={secondaryCta.href}
-                  className="inline-block text-brand-navy text-sm font-medium hover:underline underline-offset-4 transition-colors"
+                  className={`inline-block text-sm font-medium hover:underline underline-offset-4 transition-colors ${
+                    hasImage ? 'text-slate-200 hover:text-white' : 'text-brand-navy'
+                  }`}
                 >
                   {secondaryCta.label} →
                 </Link>

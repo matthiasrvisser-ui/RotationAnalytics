@@ -4,10 +4,10 @@
     x="16"
     y="22"
     font-family="system-ui, -apple-system, sans-serif"
-    font-size="14"
+    font-size="13"
     font-weight="700"
     fill="white"
     text-anchor="middle"
-    letter-spacing="-0.5"
-  >IR</text>
+    letter-spacing="0.5"
+  >RA</text>
 </svg>

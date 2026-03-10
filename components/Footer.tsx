@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { LogoHorizontal } from './Logo'
 
 export function Footer() {
   const currentYear = new Date().getFullYear()
@@ -8,7 +9,10 @@ export function Footer() {
       <div className="max-w-6xl mx-auto px-6 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
           <div>
-            <p className="font-semibold text-white mb-3 text-sm">
+            <div className="mb-4">
+              <LogoHorizontal color="#FFFFFF" />
+            </div>
+            <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-2">
               Independent Rotation Assurance™
             </p>
             <p className="text-sm text-slate-300 leading-relaxed">

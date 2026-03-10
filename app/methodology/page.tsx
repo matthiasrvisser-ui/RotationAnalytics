@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Hero } from '@/components/Hero'
 import { Section } from '@/components/Section'
+import { AnalysisFlow } from '@/components/AnalysisFlow'
 
 export const metadata: Metadata = {
   title: 'Methodology',
@@ -100,6 +101,17 @@ export default function Methodology() {
             </div>
           ))}
         </div>
+      </Section>
+
+      <Section divider>
+        <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-6">
+          Analysis Flow
+        </p>
+        <AnalysisFlow />
+        <p className="text-xs text-slate-400 mt-5 leading-relaxed max-w-2xl">
+          Each submitted rotation moves through a defined sequence. No stage involves employer contact.
+          Findings are delivered only to the commissioning union.
+        </p>
       </Section>
 
       <Section
