@@ -7,7 +7,7 @@ import { RiskCard } from '@/components/RiskCard'
 export const metadata: Metadata = {
   title: 'Sample Report',
   description:
-    'A representative Independent Rotation Assurance™ report showing the structure, depth, and format of findings delivered to unions.',
+    'A representative Independent Rotation Assurance™ report from Rotation Analytics, showing how fatigue risk, agreement interpretation exposure, and rotation design vulnerabilities are documented and classified for union review.',
 }
 
 const findings = [

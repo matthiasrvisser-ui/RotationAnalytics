@@ -8,7 +8,7 @@ import type { ShiftEntry } from '@/components/RotationTable'
 export const metadata: Metadata = {
   title: 'Example Rotation',
   description:
-    'A representative rotation analysis excerpt showing how scheduling findings are identified and documented.',
+    'A representative Independent Rotation Assurance™ analysis excerpt, showing how Rotation Analytics identifies structural fatigue risk, consecutive sequence violations, and collective agreement exposure in rotation schedule data.',
 }
 
 const rotationEntries: ShiftEntry[] = [

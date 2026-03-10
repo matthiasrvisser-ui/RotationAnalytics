@@ -6,7 +6,7 @@ import { Section } from '@/components/Section'
 export const metadata: Metadata = {
   title: 'About',
   description:
-    'About Independent Rotation Assurance™ — independent rotation schedule analysis produced exclusively for healthcare unions and worker representatives.',
+    'About Rotation Analytics — an independent analytical firm providing Independent Rotation Assurance™, a structured methodology for identifying fatigue risk, agreement interpretation exposure, and scheduling vulnerabilities across shift-based operations.',
 }
 
 const commitments = [
@@ -47,8 +47,8 @@ export default function About() {
   return (
     <>
       <Hero
-        headline="About Independent Rotation Assurance™"
-        subheadline="Independent, structured analysis of rotation schedules — produced for unions, not for management."
+        headline="About Rotation Analytics"
+        subheadline="An independent analytical firm providing Independent Rotation Assurance™ — structured rotation schedule analysis produced for unions, not for management."
       />
 
       <Section divider>
@@ -57,13 +57,18 @@ export default function About() {
             <h2 className="text-xl font-bold text-slate-900 mb-4 tracking-tight">What We Do</h2>
             <div className="space-y-4 text-sm text-slate-600 leading-relaxed">
               <p>
-                Independent Rotation Assurance™ provides third-party analysis of healthcare rotation schedules.
-                We examine shift records for rest period compliance, fatigue accumulation, consecutive shift patterns,
-                and collective agreement provisions — then produce structured reports for union review.
+                Rotation Analytics is an independent analytical firm. Its Independent Rotation Assurance™
+                methodology emerged from the analytical demands of highly constrained unionized scheduling
+                environments — settings defined by complex collective agreements, extended-hours rotations,
+                and documented fatigue exposure. That origin required a structured, repeatable approach to
+                identifying scheduling risk across full rotation cycles.
               </p>
               <p>
-                Our work is analytical. We do not negotiate, represent, or advise on strategy. We produce documented
-                findings that support the work of union committees, labour relations representatives, and Health &amp; Safety directors.
+                The firm provides third-party analysis of rotation schedules, examining shift records for
+                rest period compliance, fatigue accumulation, consecutive shift patterns, and collective
+                agreement provisions — then produces structured findings reports for union review.
+                The work is analytical and neutral. Rotation Analytics does not negotiate, represent, or
+                advise on strategy.
               </p>
             </div>
           </div>
@@ -101,6 +106,16 @@ export default function About() {
               <p className="text-sm text-slate-600 leading-relaxed">{c.body}</p>
             </div>
           ))}
+        </div>
+      </Section>
+
+      <Section divider>
+        <div className="max-w-3xl space-y-2 text-sm text-slate-500 leading-relaxed">
+          <p>
+            Rotation Analytics does not design schedules for employers.
+            Independent Rotation Assurance™ evaluates existing rotations independently to support
+            informed review and decision-making.
+          </p>
         </div>
       </Section>
 

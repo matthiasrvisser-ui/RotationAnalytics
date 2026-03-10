@@ -5,7 +5,7 @@ import { Section } from '@/components/Section'
 export const metadata: Metadata = {
   title: 'Request a Pilot Discussion',
   description:
-    'Request a pilot discussion with Independent Rotation Assurance™. Commission a rotation analysis for your union or health & safety committee.',
+    'Request a pilot discussion with Rotation Analytics. Commission an Independent Rotation Assurance™ engagement for your union or health &amp; safety committee — independent analysis of rotation schedules across shift-based operations.',
 }
 
 const primaryConcerns = [

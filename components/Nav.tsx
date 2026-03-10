@@ -25,8 +25,7 @@ export function Nav() {
             href="/"
             className="text-brand-navy font-semibold text-sm leading-tight tracking-tight"
           >
-            Independent Rotation<br />
-            Assurance™
+            Rotation Analytics
           </Link>
 
           {/* Desktop nav */}

@@ -12,24 +12,24 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: 'Independent Rotation Assurance™',
-    template: '%s | Independent Rotation Assurance™',
+    default: 'Rotation Analytics',
+    template: '%s | Rotation Analytics',
   },
   description:
-    'Third-party analysis of healthcare rotation schedules for unions and labour relations leadership. Independent validation of rest periods, fatigue exposure, and scheduling irregularities.',
+    'Rotation Analytics provides independent analysis of rotational work schedules through its Independent Rotation Assurance™ methodology, identifying structural fatigue risk, agreement interpretation exposure, and rotation design vulnerabilities across shift-based operations.',
   openGraph: {
     type: 'website',
-    siteName: 'Independent Rotation Assurance™',
-    title: 'Independent Rotation Assurance™',
+    siteName: 'Rotation Analytics',
+    title: 'Rotation Analytics — Independent Rotation Assurance™',
     description:
-      'Third-party rotation schedule analysis for healthcare unions. Independent validation of rest periods, fatigue exposure, and scheduling risk.',
+      'Rotation Analytics provides independent analysis of rotational work schedules through its Independent Rotation Assurance™ methodology — identifying fatigue risk, agreement exposure, and scheduling vulnerabilities for union review.',
     locale: 'en_CA',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Independent Rotation Assurance™',
+    title: 'Rotation Analytics — Independent Rotation Assurance™',
     description:
-      'Third-party rotation schedule analysis for healthcare unions. Independent validation of rest periods, fatigue exposure, and scheduling risk.',
+      'Rotation Analytics provides independent analysis of rotational work schedules through its Independent Rotation Assurance™ methodology — identifying fatigue risk, agreement exposure, and scheduling vulnerabilities for union review.',
   },
   metadataBase: new URL('https://rotation-analytics.vercel.app'),
 }

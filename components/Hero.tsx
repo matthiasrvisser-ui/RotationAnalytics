@@ -13,7 +13,7 @@ export function Hero({ headline, subheadline, cta, secondaryCta }: HeroProps) {
       <div className="max-w-6xl mx-auto px-6">
         <div className="max-w-3xl">
           <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-6">
-            Independent Rotation Assurance™
+            Rotation Analytics
           </p>
           <h1 className="text-4xl md:text-5xl font-bold text-brand-navy leading-tight tracking-tight mb-7">
             {headline}

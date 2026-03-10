@@ -5,7 +5,7 @@ import { Section } from '@/components/Section'
 export const metadata: Metadata = {
   title: 'Methodology',
   description:
-    'How Independent Rotation Assurance™ examines healthcare rotation schedules and classifies scheduling risk for union review.',
+    'How Rotation Analytics applies the Independent Rotation Assurance™ methodology — identifying structural fatigue risk, agreement interpretation exposure, and rotation design vulnerabilities across shift-based scheduling environments.',
 }
 
 const examineItems = [
@@ -134,6 +134,16 @@ export default function Methodology() {
           </p>
           <p className="text-base text-slate-600 leading-relaxed">
             This independence is not incidental — it is the structural basis of the assurance. A rotation analysis produced without a clear independence standard cannot reliably serve the interests of workers.
+          </p>
+        </div>
+      </Section>
+
+      <Section divider>
+        <div className="max-w-3xl space-y-2 text-sm text-slate-500 leading-relaxed">
+          <p>
+            Rotation Analytics does not design schedules for employers.
+            Independent Rotation Assurance™ evaluates existing rotations independently to support
+            informed review and decision-making.
           </p>
         </div>
       </Section>

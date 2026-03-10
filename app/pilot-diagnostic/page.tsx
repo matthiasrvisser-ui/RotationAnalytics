@@ -6,7 +6,7 @@ import { Section } from '@/components/Section'
 export const metadata: Metadata = {
   title: 'Pilot Diagnostic',
   description:
-    'The 5-Rotation Diagnostic Pilot — a structured, low-commitment entry point for unions evaluating independent rotation analysis.',
+    'The Rotation Analytics Pilot Diagnostic — a structured entry point for unions evaluating Independent Rotation Assurance™, covering fatigue risk, agreement exposure, and scheduling vulnerabilities across a defined rotation period.',
 }
 
 const pilotScope = [

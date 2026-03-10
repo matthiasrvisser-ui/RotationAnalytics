@@ -27,8 +27,8 @@ export default function Home() {
   return (
     <>
       <Hero
-        headline="Independent Rotation Assurance for Healthcare Workers"
-        subheadline="A structured, third-party review of rotation schedules — conducted on behalf of unions and worker representatives, and delivered as documented findings for union use."
+        headline="Independent Rotation Analysis for Complex Shift Operations"
+        subheadline="Independent Rotation Assurance™ applies structured analytical methodology to rotation schedules across shift-based operations — examining rest intervals, consecutive sequences, and collective agreement obligations to produce documented findings for union review."
         cta={{ label: 'View Sample Report', href: '/sample-report' }}
         secondaryCta={{ label: 'Our Methodology', href: '/methodology' }}
       />
@@ -76,10 +76,11 @@ export default function Home() {
             What is Independent Rotation Assurance™?
           </h2>
           <p className="text-base text-slate-600 leading-relaxed mb-6">
-            Independent Rotation Assurance™ is a structured, third-party review of healthcare rotation
-            schedules, conducted on behalf of unions and worker representatives. It examines rotation
-            records against rest period standards, collective agreement provisions, and established
-            fatigue science — and produces a written findings report classified by risk level.
+            Rotation Analytics provides Independent Rotation Assurance™ — a structured, third-party
+            review of rotation schedules conducted on behalf of unions and worker representatives.
+            The methodology examines rotation records against rest period standards, collective
+            agreement provisions, and established fatigue science, and produces a written findings
+            report classified by risk level.
           </p>
           <p className="text-base text-slate-600 leading-relaxed mb-6">
             It is not a consulting service and does not advise on bargaining positions or strategy.
@@ -108,6 +109,90 @@ export default function Home() {
         divider
       >
         <ProcessOverview />
+      </Section>
+
+      {/* Methodology origin */}
+      <Section title="Where the Methodology Comes From" divider>
+        <div className="max-w-3xl">
+          <p className="text-base text-slate-600 leading-relaxed mb-5">
+            Independent Rotation Assurance™ was developed within the scheduling conditions present in
+            unionized healthcare — environments characterised by collective agreements of significant
+            interpretive complexity, multi-week extended-hours rotations, and documented fatigue
+            sensitivity arising from clinical shift demands.
+          </p>
+          <p className="text-base text-slate-600 leading-relaxed mb-8">
+            Those conditions produce a concentration of scheduling risk factors: narrow rest period
+            tolerances, accumulated consecutive sequences, provisions that interact across rotation
+            cycles, and shift patterns where non-compliance may not be apparent without structured
+            analytical review.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+            {[
+              {
+                label: 'Complex collective agreements',
+                detail: 'Multi-provision scheduling obligations with interpretive interdependencies.',
+              },
+              {
+                label: 'Extended-hours rotations',
+                detail: '12-hour shift environments with compressed rest tolerances and accumulation risk.',
+              },
+              {
+                label: 'Fatigue-sensitive environments',
+                detail: 'Settings where occupational fatigue carries documented operational and safety consequences.',
+              },
+              {
+                label: 'Interpretive scheduling risk',
+                detail: 'Provisions that create compliance exposure only when examined across full rotation cycles.',
+              },
+            ].map((item) => (
+              <div key={item.label} className="border-l-2 border-slate-200 pl-5">
+                <p className="text-sm font-semibold text-slate-800 mb-1">{item.label}</p>
+                <p className="text-sm text-slate-500 leading-relaxed">{item.detail}</p>
+              </div>
+            ))}
+          </div>
+          <p className="text-sm text-slate-500 leading-relaxed italic border-l-2 border-brand-navy pl-5">
+            Methods developed for the most complex scheduling environments translate naturally to
+            other shift-based operations.
+          </p>
+        </div>
+      </Section>
+
+      {/* Sectors */}
+      <Section title="Where Rotation Assurance Applies" className="bg-brand-cream" divider>
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-px bg-slate-200 border border-slate-200 rounded-lg overflow-hidden">
+          {[
+            {
+              label: 'Healthcare',
+              detail: 'The originating environment — complex shift agreements and fatigue-sensitive operations.',
+            },
+            {
+              label: 'Energy & Industrial Operations',
+              detail: 'Extended rotations and continuous operations with documented rest requirements.',
+            },
+            {
+              label: 'Emergency Services',
+              detail: 'Shift scheduling subject to collective agreement provisions and fatigue protocols.',
+            },
+            {
+              label: 'Transportation',
+              detail: 'Regulated rest period obligations across rotating multi-week schedules.',
+            },
+            {
+              label: 'Manufacturing',
+              detail: 'Continuous production environments with multi-week rotation structures.',
+            },
+            {
+              label: '24/7 Operations',
+              detail: 'Any shift-based environment with consecutive sequence risk and collective agreement exposure.',
+            },
+          ].map((sector) => (
+            <div key={sector.label} className="bg-white p-6">
+              <p className="text-sm font-semibold text-slate-900 mb-2">{sector.label}</p>
+              <p className="text-xs text-slate-500 leading-relaxed">{sector.detail}</p>
+            </div>
+          ))}
+        </div>
       </Section>
 
       {/* Independence & Confidentiality */}
@@ -241,7 +326,7 @@ export default function Home() {
               href="/about"
               className="inline-block border border-slate-300 text-slate-700 px-7 py-3 rounded font-medium text-sm hover:border-slate-400 transition-colors"
             >
-              About IRA
+              About Us
             </Link>
           </div>
         </div>
