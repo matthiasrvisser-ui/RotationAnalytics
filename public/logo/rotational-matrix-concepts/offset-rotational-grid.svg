@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Offset Rotational Grid — logo mark concept">
+  <title>Rotation Analytics — Offset Rotational Grid concept</title>
+
+  <!--
+    Concept 2: Offset Rotational Grid
+    Grid A: 5×5 outlined squares (cell 16×16, pitch 22) — the schedule framework.
+    Grid B: 4×4 filled squares (cell 16×16, pitch 22) — analytical findings,
+    offset by half pitch (11,11) to interleave with Grid A's interstices.
+    Phase offset between grids conveys examination across rotation cycles.
+    Monochrome navy #1B2D4F. No gradients, no arrows.
+  -->
+
+  <!-- Grid A: 5×5 outlined squares, start x=48, y=48, pitch=22 -->
+  <!-- Row 0 -->
+  <rect x="48"  y="48"  width="16" height="16" fill="none" stroke="#1B2D4F" stroke-width="1.5"/>
+  <rect x="70"  y="48"  width="16" height="16" fill="none" stroke="#1B2D4F" stroke-width="1.5"/>
+  <rect x="92"  y="48"  width="16" height="16" fill="none" stroke="#1B2D4F" stroke-width="1.5"/>
+  <rect x="114" y="48"  width="16" height="16" fill="none" stroke="#1B2D4F" stroke-width="1.5"/>
+  <rect x="136" y="48"  width="16" height="16" fill="none" stroke="#1B2D4F" stroke-width="1.5"/>
+  <!-- Row 1 -->
+  <rect x="48"  y="70"  width="16" height="16" fill="none" stroke="#1B2D4F" stroke-width="1.5"/>
+  <rect x="70"  y="70"  width="16" height="16" fill="none" stroke="#1B2D4F" stroke-width="1.5"/>
+  <rect x="92"  y="70"  width="16" height="16" fill="none" stroke="#1B2D4F" stroke-width="1.5"/>
+  <rect x="114" y="70"  width="16" height="16" fill="none" stroke="#1B2D4F" stroke-width="1.5"/>
+  <rect x="136" y="70"  width="16" height="16" fill="none" stroke="#1B2D4F" stroke-width="1.5"/>
+  <!-- Row 2 -->
+  <rect x="48"  y="92"  width="16" height="16" fill="none" stroke="#1B2D4F" stroke-width="1.5"/>
+  <rect x="70"  y="92"  width="16" height="16" fill="none" stroke="#1B2D4F" stroke-width="1.5"/>
+  <rect x="92"  y="92"  width="16" height="16" fill="none" stroke="#1B2D4F" stroke-width="1.5"/>
+  <rect x="114" y="92"  width="16" height="16" fill="none" stroke="#1B2D4F" stroke-width="1.5"/>
+  <rect x="136" y="92"  width="16" height="16" fill="none" stroke="#1B2D4F" stroke-width="1.5"/>
+  <!-- Row 3 -->
+  <rect x="48"  y="114" width="16" height="16" fill="none" stroke="#1B2D4F" stroke-width="1.5"/>
+  <rect x="70"  y="114" width="16" height="16" fill="none" stroke="#1B2D4F" stroke-width="1.5"/>
+  <rect x="92"  y="114" width="16" height="16" fill="none" stroke="#1B2D4F" stroke-width="1.5"/>
+  <rect x="114" y="114" width="16" height="16" fill="none" stroke="#1B2D4F" stroke-width="1.5"/>
+  <rect x="136" y="114" width="16" height="16" fill="none" stroke="#1B2D4F" stroke-width="1.5"/>
+  <!-- Row 4 -->
+  <rect x="48"  y="136" width="16" height="16" fill="none" stroke="#1B2D4F" stroke-width="1.5"/>
+  <rect x="70"  y="136" width="16" height="16" fill="none" stroke="#1B2D4F" stroke-width="1.5"/>
+  <rect x="92"  y="136" width="16" height="16" fill="none" stroke="#1B2D4F" stroke-width="1.5"/>
+  <rect x="114" y="136" width="16" height="16" fill="none" stroke="#1B2D4F" stroke-width="1.5"/>
+  <rect x="136" y="136" width="16" height="16" fill="none" stroke="#1B2D4F" stroke-width="1.5"/>
+
+  <!-- Grid B: 4×4 filled squares, start x=59, y=59 (offset +11,+11), pitch=22 -->
+  <!-- Row 0 -->
+  <rect x="59"  y="59"  width="16" height="16" fill="#1B2D4F"/>
+  <rect x="81"  y="59"  width="16" height="16" fill="#1B2D4F"/>
+  <rect x="103" y="59"  width="16" height="16" fill="#1B2D4F"/>
+  <rect x="125" y="59"  width="16" height="16" fill="#1B2D4F"/>
+  <!-- Row 1 -->
+  <rect x="59"  y="81"  width="16" height="16" fill="#1B2D4F"/>
+  <rect x="81"  y="81"  width="16" height="16" fill="#1B2D4F"/>
+  <rect x="103" y="81"  width="16" height="16" fill="#1B2D4F"/>
+  <rect x="125" y="81"  width="16" height="16" fill="#1B2D4F"/>
+  <!-- Row 2 -->
+  <rect x="59"  y="103" width="16" height="16" fill="#1B2D4F"/>
+  <rect x="81"  y="103" width="16" height="16" fill="#1B2D4F"/>
+  <rect x="103" y="103" width="16" height="16" fill="#1B2D4F"/>
+  <rect x="125" y="103" width="16" height="16" fill="#1B2D4F"/>
+  <!-- Row 3 -->
+  <rect x="59"  y="125" width="16" height="16" fill="#1B2D4F"/>
+  <rect x="81"  y="125" width="16" height="16" fill="#1B2D4F"/>
+  <rect x="103" y="125" width="16" height="16" fill="#1B2D4F"/>
+  <rect x="125" y="125" width="16" height="16" fill="#1B2D4F"/>
+</svg>

@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Segmented Matrix Ring — logo mark concept">
+  <title>Rotation Analytics — Segmented Matrix Ring concept</title>
+
+  <!--
+    Concept 1: Segmented Matrix Ring
+    Geometric blocks arranged at 45° intervals around an implied centre.
+    Two concentric rings (outer r=52, inner r=26) interleaved at 22.5° offset
+    suggest layered rotational analysis. A centre square anchors the mark.
+    Monochrome navy #1B2D4F. No gradients, no arrows.
+  -->
+
+  <!-- Outer ring: 8 blocks at 45° intervals, 30×7 each -->
+  <rect x="-15" y="-3.5" width="30" height="7" fill="#1B2D4F"
+    transform="translate(100,100) rotate(0) translate(52,0)"/>
+  <rect x="-15" y="-3.5" width="30" height="7" fill="#1B2D4F"
+    transform="translate(100,100) rotate(45) translate(52,0)"/>
+  <rect x="-15" y="-3.5" width="30" height="7" fill="#1B2D4F"
+    transform="translate(100,100) rotate(90) translate(52,0)"/>
+  <rect x="-15" y="-3.5" width="30" height="7" fill="#1B2D4F"
+    transform="translate(100,100) rotate(135) translate(52,0)"/>
+  <rect x="-15" y="-3.5" width="30" height="7" fill="#1B2D4F"
+    transform="translate(100,100) rotate(180) translate(52,0)"/>
+  <rect x="-15" y="-3.5" width="30" height="7" fill="#1B2D4F"
+    transform="translate(100,100) rotate(225) translate(52,0)"/>
+  <rect x="-15" y="-3.5" width="30" height="7" fill="#1B2D4F"
+    transform="translate(100,100) rotate(270) translate(52,0)"/>
+  <rect x="-15" y="-3.5" width="30" height="7" fill="#1B2D4F"
+    transform="translate(100,100) rotate(315) translate(52,0)"/>
+
+  <!-- Inner ring: 8 blocks at 22.5° offset from outer, 14×4 each, r=26 -->
+  <rect x="-7" y="-2" width="14" height="4" fill="#1B2D4F"
+    transform="translate(100,100) rotate(22.5) translate(26,0)"/>
+  <rect x="-7" y="-2" width="14" height="4" fill="#1B2D4F"
+    transform="translate(100,100) rotate(67.5) translate(26,0)"/>
+  <rect x="-7" y="-2" width="14" height="4" fill="#1B2D4F"
+    transform="translate(100,100) rotate(112.5) translate(26,0)"/>
+  <rect x="-7" y="-2" width="14" height="4" fill="#1B2D4F"
+    transform="translate(100,100) rotate(157.5) translate(26,0)"/>
+  <rect x="-7" y="-2" width="14" height="4" fill="#1B2D4F"
+    transform="translate(100,100) rotate(202.5) translate(26,0)"/>
+  <rect x="-7" y="-2" width="14" height="4" fill="#1B2D4F"
+    transform="translate(100,100) rotate(247.5) translate(26,0)"/>
+  <rect x="-7" y="-2" width="14" height="4" fill="#1B2D4F"
+    transform="translate(100,100) rotate(292.5) translate(26,0)"/>
+  <rect x="-7" y="-2" width="14" height="4" fill="#1B2D4F"
+    transform="translate(100,100) rotate(337.5) translate(26,0)"/>
+
+  <!-- Centre anchor square -->
+  <rect x="94" y="94" width="12" height="12" fill="#1B2D4F"/>
+</svg>

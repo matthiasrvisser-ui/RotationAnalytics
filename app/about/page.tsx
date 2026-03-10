@@ -109,11 +109,14 @@ export default function About() {
       </Section>
 
       <Section divider>
-        <div className="max-w-3xl space-y-2 text-sm text-slate-500 leading-relaxed">
+        <div className="max-w-3xl space-y-3 text-sm text-slate-500 leading-relaxed">
           <p>
             Rotation Analytics does not design schedules for employers.
             Independent Rotation Assurance™ evaluates existing rotations independently to support
             informed review and decision-making.
+          </p>
+          <p className="text-xs text-slate-400">
+            Independent Rotation Assurance™ methodology established in 2025.
           </p>
         </div>
       </Section>
