@@ -65,11 +65,11 @@ export function Footer() {
 
         <div className="border-t border-slate-700 pt-6 space-y-3">
           <p className="text-xs text-slate-400 leading-relaxed max-w-2xl">
-            Independent Rotation Assurance™ is an independent analytical service. We provide analytical support to unions and worker representatives.
+            Independent Rotation Assurance™ is an independent analytical service provided by Rotation Analytics. We provide analytical support to unions and worker representatives.
             We do not accept engagements from employers or management. Our findings are produced for union use only and released exclusively to the commissioning party.
           </p>
           <p className="text-xs text-slate-500">
-            © {currentYear} Independent Rotation Assurance™. All rights reserved.
+            © {currentYear} Rotation Analytics. All rights reserved.
           </p>
         </div>
       </div>

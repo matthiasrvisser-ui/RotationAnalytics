@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     description:
       'Third-party rotation schedule analysis for healthcare unions. Independent validation of rest periods, fatigue exposure, and scheduling risk.',
   },
-  metadataBase: new URL('https://independent-rotation-assurance.vercel.app'),
+  metadataBase: new URL('https://rotation-analytics.vercel.app'),
 }
 
 export default function RootLayout({
