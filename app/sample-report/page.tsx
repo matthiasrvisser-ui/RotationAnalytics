@@ -17,14 +17,14 @@ const findings = [
     description:
       'Four instances identified over the 4-week rotation where the interval between consecutive shifts falls below the 11-hour minimum established in the collective agreement and provincial labour standards.',
     finding:
-      'Mar 7 (8h), Mar 16 (8h), Mar 23 (9h), Mar 29 (8.5h). The pattern is recurring and structurally consistent across the rotation, indicating a scheduling design issue rather than an isolated occurrence.',
+      'Mar 7 (8h), Mar 16 (8h), Mar 23 (9h), Mar 29 (8.5h). The pattern is recurring and consistent across the rotation. This indicates a scheduling design issue rather than an isolated occurrence.',
     reference: 'Art. 14.03 — Rest Between Shifts | Labour Standards Act s.36',
   },
   {
     level: 'high' as const,
     title: 'Consecutive Night Shifts — Exceeds Established Occupational Health Guideline',
     description:
-      'A sequence of six consecutive night shifts was identified in Week 3. Established occupational health guidelines (NIOSH, 2020) indicate that sequences exceeding four consecutive nights are associated with significantly elevated cumulative fatigue and error risk.',
+      'A sequence of six consecutive night shifts was identified in Week 3. NIOSH occupational health guidelines (2020) indicate that sequences exceeding four consecutive nights carry significantly elevated cumulative fatigue and error risk.',
     finding:
       'Sequence runs Mar 11–16. Estimated cumulative fatigue score of 62 points over this stretch, based on the Fatigue Risk Management framework applied in this analysis. Exceeds the moderate-risk threshold of 45.',
     reference: 'NIOSH Night Shift Guidelines | CBA Art. 12.07',
@@ -108,13 +108,13 @@ export default function SampleReport() {
         <div className="max-w-3xl mb-10">
           <h3 className="text-lg font-bold text-slate-900 mb-4">Executive Summary</h3>
           <p className="text-sm text-slate-600 leading-relaxed mb-4">
-            This report presents findings from an independent analysis of the rotation schedule for the above-referenced worker over a 4-week period in March 2025. The analysis examined rest periods, shift sequencing, fatigue accumulation, weekend distribution, and applicable collective agreement provisions.
+            This report covers an independent analysis of the rotation schedule for the above-referenced worker over a 4-week period in March 2025. Rest periods, shift sequencing, fatigue accumulation, weekend distribution, and applicable collective agreement provisions were all examined.
           </p>
           <p className="text-sm text-slate-600 leading-relaxed mb-4">
-            Two high-risk findings were identified: a recurring quick-return pattern (rest periods below the 11-hour minimum on four occasions) and an extended consecutive night shift sequence exceeding established occupational health guidelines. One moderate-risk finding relates to inequitable weekend distribution. One low-risk item is documented for ongoing tracking.
+            Two high-risk findings were identified: a recurring quick-return pattern with rest periods below the 11-hour minimum on four occasions, and a consecutive night shift sequence exceeding established occupational health guidelines. One moderate-risk finding relates to inequitable weekend distribution. One low-risk item is documented for ongoing tracking.
           </p>
           <p className="text-sm text-slate-600 leading-relaxed">
-            Recommended actions are noted for each finding. The union committee should review these findings in the context of the applicable collective agreement and determine appropriate next steps.
+            Recommended actions are noted for each finding. The union committee should review these findings against the applicable collective agreement and determine appropriate next steps.
           </p>
         </div>
 

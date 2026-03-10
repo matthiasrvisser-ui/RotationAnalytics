@@ -28,7 +28,7 @@ export default function Home() {
     <>
       <Hero
         headline="Independent Rotation Analysis for Complex Shift Operations"
-        subheadline="Independent Rotation Assurance™ applies structured analytical methodology to rotation schedules across shift-based operations — examining rest intervals, consecutive sequences, and collective agreement obligations to produce documented findings for union review."
+        subheadline="Independent Rotation Assurance™ applies structured analytical methodology to rotation schedules across shift-based operations, examining rest intervals, consecutive sequences, and collective agreement obligations to produce documented findings for union review."
         cta={{ label: 'View Sample Report', href: '/sample-report' }}
         secondaryCta={{ label: 'Our Methodology', href: '/methodology' }}
       />
@@ -51,7 +51,7 @@ export default function Home() {
             </p>
             <p className="text-base text-slate-500 leading-relaxed">
               The result is that rest period violations, problematic shift sequences, and collective
-              agreement non-compliance may go undocumented — until a worker files a grievance or a
+              agreement non-compliance may go undocumented until a worker files a grievance or a
               health event occurs.
             </p>
           </div>
@@ -79,13 +79,13 @@ export default function Home() {
             Rotation Analytics provides Independent Rotation Assurance™ — a structured, third-party
             review of rotation schedules conducted on behalf of unions and worker representatives.
             The methodology examines rotation records against rest period standards, collective
-            agreement provisions, and established fatigue science, and produces a written findings
-            report classified by risk level.
+            agreement provisions, and established fatigue science. The output is a written findings
+            report, classified by risk level.
           </p>
           <p className="text-base text-slate-600 leading-relaxed mb-6">
-            It is not a consulting service and does not advise on bargaining positions or strategy.
-            It does not represent workers or determine grievance outcomes. It produces documented
-            findings that union representatives can use in their own review processes.
+            It is not a consulting service. It does not advise on bargaining positions or strategy,
+            represent workers, or determine grievance outcomes. It produces documented findings that
+            union representatives can use in their own review processes.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-10 pt-8 border-t border-slate-200">
             {[
@@ -116,15 +116,14 @@ export default function Home() {
         <div className="max-w-3xl">
           <p className="text-base text-slate-600 leading-relaxed mb-5">
             Independent Rotation Assurance™ was developed within the scheduling conditions present in
-            unionized healthcare — environments characterised by collective agreements of significant
-            interpretive complexity, multi-week extended-hours rotations, and documented fatigue
-            sensitivity arising from clinical shift demands.
+            unionized healthcare. Those environments are characterised by collective agreements of
+            significant interpretive complexity, multi-week extended-hours rotations, and documented
+            fatigue sensitivity from clinical shift demands.
           </p>
           <p className="text-base text-slate-600 leading-relaxed mb-8">
             Those conditions produce a concentration of scheduling risk factors: narrow rest period
-            tolerances, accumulated consecutive sequences, provisions that interact across rotation
-            cycles, and shift patterns where non-compliance may not be apparent without structured
-            analytical review.
+            tolerances, accumulated consecutive sequences, and provisions that interact across
+            rotation cycles in ways that are not apparent without structured review.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
             {[
@@ -164,7 +163,7 @@ export default function Home() {
           {[
             {
               label: 'Healthcare',
-              detail: 'The originating environment — complex shift agreements and fatigue-sensitive operations.',
+              detail: 'The originating environment: complex shift agreements and fatigue-sensitive operations.',
             },
             {
               label: 'Energy & Industrial Operations',
@@ -215,8 +214,8 @@ export default function Home() {
               a documented baseline.
             </p>
             <p className="text-base text-slate-500 leading-relaxed mb-8">
-              It is designed to give union leadership a concrete understanding of what rotation
-              analysis reveals — before committing to a broader analytical engagement.
+              It gives union leadership a concrete understanding of what rotation analysis reveals,
+              without the commitment of a broader engagement.
             </p>
             <Link
               href="/pilot-diagnostic"
@@ -260,7 +259,7 @@ export default function Home() {
             Example Rotation Analysis
           </h2>
           <p className="text-base text-slate-500 leading-relaxed mb-8">
-            A worked example — using anonymized schedule data — showing how findings are identified,
+            A worked example using anonymized schedule data, showing how findings are identified,
             classified, and documented. Illustrates the structure and depth of a full rotation findings report.
           </p>
 
@@ -287,7 +286,7 @@ export default function Home() {
             </div>
             <p className="text-xs text-slate-400 leading-relaxed">
               When published, this section will include a full shift table, fatigue accumulation map,
-              and a complete findings summary — illustrating exactly what a rotation analysis produces.
+              and a complete findings summary showing exactly what a rotation analysis produces.
             </p>
           </div>
 

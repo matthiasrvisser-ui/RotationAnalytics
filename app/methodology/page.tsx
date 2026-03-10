@@ -48,7 +48,7 @@ const riskLevels = [
     bg: 'bg-red-50',
     badge: 'bg-red-100 text-red-700',
     description:
-      'The scheduling pattern represents an immediate potential for grievance proceedings, regulatory non-compliance, or documented occupational health risk. The finding warrants prompt attention by the union committee.',
+      'The scheduling pattern presents an immediate basis for grievance proceedings, regulatory non-compliance, or documented occupational health risk. Prompt review by the union committee is warranted.',
   },
   {
     level: 'Moderate',
@@ -56,7 +56,7 @@ const riskLevels = [
     bg: 'bg-amber-50',
     badge: 'bg-amber-100 text-amber-700',
     description:
-      'The pattern warrants union attention and monitoring. It may not yet constitute a grievable violation but represents elevated exposure that should be tracked and formally documented.',
+      'The pattern warrants union attention and monitoring. It may not yet constitute a grievable violation, but it represents elevated exposure. Tracking and formal documentation are appropriate.',
   },
   {
     level: 'Low',
@@ -133,7 +133,7 @@ export default function Methodology() {
             Findings are produced for and released only to the commissioning party. Our analysis is never shared with the employer without the explicit direction of the commissioning union.
           </p>
           <p className="text-base text-slate-600 leading-relaxed">
-            This independence is not incidental — it is the structural basis of the assurance. A rotation analysis produced without a clear independence standard cannot reliably serve the interests of workers.
+            This independence is not incidental. It is the structural basis of the assurance. A rotation analysis produced without a clear independence standard cannot serve the interests of workers reliably.
           </p>
         </div>
       </Section>

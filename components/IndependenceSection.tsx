@@ -22,7 +22,7 @@ const principles = [
   {
     number: '05',
     title: 'Expertise Applied Independently',
-    body: 'Analytical frameworks are applied without instruction from the employer and without reference to management scheduling rationale. The analysis reflects the rotation record as submitted — not the employer\'s characterisation of it.',
+    body: 'Analytical frameworks are applied without instruction from the employer and without reference to management scheduling rationale. The analysis reflects the rotation record as submitted, not the employer\'s characterisation of it.',
   },
 ]
 
@@ -53,7 +53,7 @@ export function IndependenceSection() {
           {/* Sixth cell — closing statement */}
           <div className="bg-brand-navy-light/20 p-6 md:p-8 flex items-end">
             <p className="text-sm text-slate-400 leading-relaxed italic">
-              These principles are not policy statements — they are structural features of how
+              These principles are not policy statements. They are structural features of how
               Independent Rotation Assurance™ operates and accepts engagements.
             </p>
           </div>

@@ -31,12 +31,12 @@ const deliverables = [
   {
     number: '03',
     title: 'Risk Classification Summary',
-    body: 'A consolidated index of findings — high, moderate, and low — with the specific scheduling pattern, applicable reference, and recommended action noted for each.',
+    body: 'A consolidated index of all findings by risk level, with the specific scheduling pattern, applicable reference, and recommended action noted for each.',
   },
   {
     number: '04',
     title: 'Union Decision Support Brief',
-    body: 'A plain-language summary of the most significant findings, written for use by the union committee in determining appropriate next steps. Not strategic advice — a factual summary for internal use.',
+    body: 'A plain-language summary of the most significant findings, written for use by the union committee in determining appropriate next steps. Not strategic advice. A factual summary for internal use.',
   },
 ]
 
@@ -73,7 +73,7 @@ const timelineSteps = [
   {
     step: 'Step 3',
     title: 'Report Delivery',
-    body: 'The complete findings package — structured report, fatigue overview, risk summary, and decision support brief — is delivered confidentially to the commissioning union.',
+    body: 'The complete findings package is delivered confidentially to the commissioning union: structured report, fatigue overview, risk summary, and decision support brief.',
   },
 ]
 
@@ -98,8 +98,8 @@ export default function PilotDiagnostic() {
             </h2>
             <p className="text-base text-slate-500 leading-relaxed mb-5">
               Independent rotation analysis is a new form of engagement for most union committees.
-              The 5-Rotation Diagnostic Pilot exists to give union leadership a concrete, documented
-              experience of what rotation analysis produces — without requiring a full-scale or
+              The 5-Rotation Diagnostic Pilot gives union leadership a concrete, documented
+              experience of what the analysis produces, without the commitment of a full-scale or
               ongoing engagement.
             </p>
             <p className="text-base text-slate-500 leading-relaxed mb-5">
@@ -108,7 +108,7 @@ export default function PilotDiagnostic() {
               by the commissioning party.
             </p>
             <p className="text-base text-slate-500 leading-relaxed">
-              A pilot also produces a documented record in its own right — useful for Health &amp;
+              A pilot also produces a documented record in its own right, useful for Health &amp;
               Safety reporting, internal union files, and collective bargaining preparation,
               regardless of what the findings show.
             </p>
@@ -164,7 +164,7 @@ export default function PilotDiagnostic() {
               <div>
                 <p className="text-sm font-semibold text-slate-900 mb-2">Context notes</p>
                 <p className="text-sm text-slate-500 leading-relaxed">
-                  Background the union wishes to provide — active scheduling concerns, specific
+                  Background the union wishes to provide: active scheduling concerns, specific
                   provisions of interest, or ongoing grievance context. Not required, but may
                   focus the analysis on areas of union priority.
                 </p>
@@ -268,9 +268,9 @@ export default function PilotDiagnostic() {
               no financial exposure from the engagement.
             </p>
             <p>
-              In practice, a clean pilot result is itself a documented finding — one that can
-              inform collective bargaining, Health &amp; Safety reporting, and internal union records
-              in the same way that an adverse finding would.
+              In practice, a clean pilot result is itself a documented finding. It can inform
+              collective bargaining, Health &amp; Safety reporting, and internal union records in
+              the same way that an adverse finding would.
             </p>
           </div>
 
@@ -293,7 +293,7 @@ export default function PilotDiagnostic() {
             </ul>
             <p className="text-xs text-slate-400 mt-5 pt-4 border-t border-slate-100 leading-relaxed">
               Full waiver terms are set out in the engagement agreement. Low-risk findings do not
-              trigger the waiver — a low-risk finding is a documented record, not a null result.
+              trigger the waiver. A low-risk finding is a documented record, not a null result.
             </p>
           </div>
 

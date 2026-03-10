@@ -12,7 +12,7 @@ const steps = [
   {
     step: 'Step 3',
     title: 'Findings Returned to Union',
-    body: 'A structured findings report, with all identified items classified by risk level and referenced against applicable provisions, is delivered confidentially to the commissioning union for their review and use.',
+    body: 'A structured findings report is delivered confidentially to the commissioning union. All identified items are classified by risk level and referenced against applicable provisions.',
   },
 ]
 

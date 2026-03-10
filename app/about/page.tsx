@@ -24,7 +24,7 @@ const commitments = [
   },
   {
     title: 'Clarity',
-    body: 'Reports are written to be useful to union committees — not to demonstrate analytical sophistication. Plain language is used throughout.',
+    body: 'Reports are written to be useful to union committees, not to demonstrate analytical sophistication. Plain language is used throughout.',
   },
   {
     title: 'Scope Integrity',
@@ -48,7 +48,7 @@ export default function About() {
     <>
       <Hero
         headline="About Rotation Analytics"
-        subheadline="An independent analytical firm providing Independent Rotation Assurance™ — structured rotation schedule analysis produced for unions, not for management."
+        subheadline="An independent analytical firm providing Independent Rotation Assurance™. Rotation schedule analysis produced for unions, not for management."
       />
 
       <Section divider>
@@ -57,16 +57,15 @@ export default function About() {
             <h2 className="text-xl font-bold text-slate-900 mb-4 tracking-tight">What We Do</h2>
             <div className="space-y-4 text-sm text-slate-600 leading-relaxed">
               <p>
-                Rotation Analytics is an independent analytical firm. Its Independent Rotation Assurance™
-                methodology emerged from the analytical demands of highly constrained unionized scheduling
-                environments — settings defined by complex collective agreements, extended-hours rotations,
-                and documented fatigue exposure. That origin required a structured, repeatable approach to
-                identifying scheduling risk across full rotation cycles.
+                Rotation Analytics is an independent analytical firm. The Independent Rotation Assurance™
+                methodology was built within constrained unionized scheduling environments: complex
+                collective agreements, extended-hours rotations, and documented fatigue exposure. Those
+                conditions required a structured, repeatable approach to identifying scheduling risk.
               </p>
               <p>
                 The firm provides third-party analysis of rotation schedules, examining shift records for
                 rest period compliance, fatigue accumulation, consecutive shift patterns, and collective
-                agreement provisions — then produces structured findings reports for union review.
+                agreement provisions, then produces structured findings reports for union review.
                 The work is analytical and neutral. Rotation Analytics does not negotiate, represent, or
                 advise on strategy.
               </p>
