@@ -7,7 +7,7 @@ import { RiskCard } from '@/components/RiskCard'
 export const metadata: Metadata = {
   title: 'Sample Report',
   description:
-    'A representative Independent Rotation Assurance™ report from Rotation Analytics, showing how fatigue risk, agreement interpretation exposure, and rotation design vulnerabilities are documented and classified for union review.',
+    'A representative Independent Rotation Assurance™ report from Rotation Analytics, showing how fatigue risk, agreement interpretation exposure, and rotation design vulnerabilities are documented and classified for review by the commissioning party.',
 }
 
 const findings = [
@@ -26,7 +26,7 @@ const findings = [
     description:
       'A sequence of six consecutive night shifts was identified in Week 3. NIOSH occupational health guidelines (2020) indicate that sequences exceeding four consecutive nights carry significantly elevated cumulative fatigue and error risk.',
     finding:
-      'Sequence runs Mar 11–16. Estimated cumulative fatigue score of 62 points over this stretch, based on the Fatigue Risk Management framework applied in this analysis. Exceeds the moderate-risk threshold of 45.',
+      'Sequence runs Mar 11–16. Six consecutive nights. NIOSH occupational health guidelines identify sequences exceeding four consecutive nights as carrying elevated risk for circadian disruption and impaired recovery. Recommend review against collective agreement provisions governing consecutive shift limits.',
     reference: 'NIOSH Night Shift Guidelines | CBA Art. 12.07',
   },
   {
@@ -52,10 +52,10 @@ const findings = [
 const reportSections = [
   'Executive Summary',
   'Rotation Record — Full 4-Week Schedule',
-  'Fatigue Accumulation Map',
+  'Fatigue Risk Observations',
   'Findings — Classified by Risk Level',
   'Regulatory and Collective Agreement References',
-  'Recommended Actions for Union Review',
+  'Recommended Actions for Commissioning Party Review',
   'Methodology Notes',
 ]
 
@@ -75,7 +75,7 @@ export default function SampleReport() {
     <>
       <Hero
         headline="Sample Report"
-        subheadline="A representative Independent Rotation Assurance™ report, showing the structure, depth, and format of findings delivered to unions."
+        subheadline="A representative Independent Rotation Assurance™ report, showing the structure, depth, and format of findings delivered to the commissioning party."
       />
 
       <Section divider>
@@ -88,7 +88,7 @@ export default function SampleReport() {
         <div className="border border-slate-200 rounded-lg overflow-hidden mb-12">
           <div className="bg-brand-navy px-6 py-5">
             <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-1">
-              Confidential — For Union Use Only
+              Confidential — For Commissioning Party Use
             </p>
             <h2 className="text-xl font-bold text-white">Rotation Assurance Report</h2>
           </div>
@@ -108,13 +108,13 @@ export default function SampleReport() {
         <div className="max-w-3xl mb-10">
           <h3 className="text-lg font-bold text-slate-900 mb-4">Executive Summary</h3>
           <p className="text-sm text-slate-600 leading-relaxed mb-4">
-            This report covers an independent analysis of the rotation schedule for the above-referenced worker over a 4-week period in March 2025. Rest periods, shift sequencing, fatigue accumulation, weekend distribution, and applicable collective agreement provisions were all examined.
+            This report covers an independent analysis of the rotation schedule for the above-referenced worker over a 4-week period in March 2025. Rest periods, shift sequencing, fatigue risk patterns, weekend distribution, and applicable collective agreement provisions were all examined.
           </p>
           <p className="text-sm text-slate-600 leading-relaxed mb-4">
             Two high-risk findings were identified: a recurring quick-return pattern with rest periods below the 11-hour minimum on four occasions, and a consecutive night shift sequence exceeding established occupational health guidelines. One moderate-risk finding relates to inequitable weekend distribution. One low-risk item is documented for ongoing tracking.
           </p>
           <p className="text-sm text-slate-600 leading-relaxed">
-            Recommended actions are noted for each finding. The union committee should review these findings against the applicable collective agreement and determine appropriate next steps.
+            Recommended actions are noted for each finding. The commissioning party should review these findings against the applicable collective agreement and determine appropriate next steps.
           </p>
         </div>
 

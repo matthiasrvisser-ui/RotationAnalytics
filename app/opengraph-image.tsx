@@ -1,7 +1,7 @@
 import { ImageResponse } from 'next/og'
 
 export const runtime = 'edge'
-export const alt = 'Independent Rotation Assurance™ — Third-party rotation schedule analysis for healthcare unions'
+export const alt = 'Independent Rotation Assurance™ — Third-party rotation schedule analysis for healthcare and shift-based operations'
 export const size = { width: 1200, height: 630 }
 export const contentType = 'image/png'
 
@@ -67,7 +67,7 @@ export default function OGImage() {
               letterSpacing: '-1px',
             }}
           >
-            Third-party rotation schedule analysis for healthcare unions.
+            Independent rotation schedule analysis for healthcare and shift-based operations.
           </div>
           <div
             style={{
@@ -103,7 +103,7 @@ export default function OGImage() {
               letterSpacing: '0.04em',
             }}
           >
-            Commissioned by unions. Released to unions only.
+            Analytically independent. Released to the commissioning party only.
           </div>
         </div>
       </div>

@@ -12,11 +12,11 @@ export const metadata: Metadata = {
 const commitments = [
   {
     title: 'Independence',
-    body: 'No employer relationships. No management-side engagements. All analysis is produced exclusively for union use.',
+    body: 'Analysis is conducted without structural alignment to any party to the scheduling arrangement. No ownership, financial, or contractual relationship exists with any employer, employer association, or management body.',
   },
   {
     title: 'Confidentiality',
-    body: 'Findings are released only to the commissioning party. Reports are never shared with the employer without explicit union direction.',
+    body: 'Findings are released only to the commissioning party as defined in the engagement agreement. Disclosure to any other party requires explicit written direction in that agreement.',
   },
   {
     title: 'Accuracy',
@@ -24,7 +24,7 @@ const commitments = [
   },
   {
     title: 'Clarity',
-    body: 'Reports are written to be useful to union committees, not to demonstrate analytical sophistication. Plain language is used throughout.',
+    body: 'Reports are written to be useful to the commissioning party, not to demonstrate analytical sophistication. Plain language is used throughout.',
   },
   {
     title: 'Scope Integrity',
@@ -32,7 +32,7 @@ const commitments = [
   },
   {
     title: 'Support — Not Replacement',
-    body: 'Independent Rotation Assurance™ supports union decision-making. It does not replace union expertise, judgement, or authority.',
+    body: 'Independent Rotation Assurance™ supports the commissioning party\'s review process. It does not substitute for the party\'s own expertise, judgement, or authority.',
   },
 ]
 
@@ -48,7 +48,7 @@ export default function About() {
     <>
       <Hero
         headline="About Rotation Analytics"
-        subheadline="An independent analytical firm providing Independent Rotation Assurance™. Rotation schedule analysis produced for unions, not for management."
+        subheadline="An independent analytical firm providing Independent Rotation Assurance™. Rotation schedule analysis conducted without structural alignment to any party to the scheduling arrangement."
       />
 
       <Section divider>
@@ -65,7 +65,7 @@ export default function About() {
               <p>
                 The firm provides third-party analysis of rotation schedules, examining shift records for
                 rest period compliance, fatigue risk patterns, consecutive shift sequences, and collective
-                agreement provisions, then produces structured findings reports for union review.
+                agreement provisions, then produces structured findings reports for review by the commissioning party.
                 The work is analytical and neutral. Rotation Analytics does not negotiate, represent, or
                 advise on strategy.
               </p>
@@ -84,8 +84,7 @@ export default function About() {
             </ul>
             <div className="bg-slate-50 border border-slate-200 rounded-lg p-4">
               <p className="text-sm text-slate-700">
-                <strong className="text-slate-900 font-semibold">We do not accept engagements from employers.</strong>{' '}
-                Our independence from management is the foundation of the assurance we provide.
+                Analytical independence from all parties to the scheduling arrangement is documented in each engagement agreement.
               </p>
             </div>
           </div>

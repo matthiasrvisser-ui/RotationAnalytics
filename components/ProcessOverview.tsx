@@ -2,7 +2,7 @@ const steps = [
   {
     step: 'Step 1',
     title: 'Rotation Received',
-    body: 'The rotation schedule, as produced by the employer, is provided to Independent Rotation Assurance™ by the commissioning union. The schedule is treated as confidential from the point of receipt.',
+    body: 'The rotation schedule, as produced by the employer, is provided to Independent Rotation Assurance™ by the commissioning party. The schedule is treated as confidential from the point of receipt.',
   },
   {
     step: 'Step 2',
@@ -11,8 +11,8 @@ const steps = [
   },
   {
     step: 'Step 3',
-    title: 'Findings Returned to Union',
-    body: 'A structured findings report is delivered confidentially to the commissioning union. All identified items are classified by risk level and referenced against applicable provisions.',
+    title: 'Findings Delivered to Commissioning Party',
+    body: 'A structured findings report is delivered confidentially to the commissioning party. All identified items are classified by risk level and referenced against applicable provisions.',
   },
 ]
 
@@ -72,7 +72,7 @@ export function ProcessOverview({ showTitle = false }: ProcessOverviewProps) {
       <div className="mt-6 pt-6 border-t border-slate-100">
         <p className="text-xs text-slate-400 leading-relaxed">
           The employer is not a party to the engagement and does not receive notice of the analysis.
-          All communication is between Independent Rotation Assurance™ and the commissioning union.
+          All communication is between Independent Rotation Assurance™ and the commissioning party.
         </p>
       </div>
     </div>

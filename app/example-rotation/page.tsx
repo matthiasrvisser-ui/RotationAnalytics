@@ -32,7 +32,7 @@ export default function ExampleRotation() {
     <>
       <Hero
         headline="Example Rotation Analysis"
-        subheadline="A representative excerpt from a rotation analysis, illustrating how findings are identified and documented for union review."
+        subheadline="A representative excerpt from a rotation analysis, illustrating how findings are identified and documented for review by the commissioning party."
       />
 
       <Section divider>

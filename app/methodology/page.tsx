@@ -49,7 +49,7 @@ const riskLevels = [
     bg: 'bg-red-50',
     badge: 'bg-red-100 text-red-700',
     description:
-      'The scheduling pattern presents an immediate basis for grievance proceedings, regulatory non-compliance, or documented occupational health risk. Prompt review by the union committee is warranted.',
+      'The scheduling pattern presents an immediate basis for grievance proceedings, regulatory non-compliance, or documented occupational health risk. Prompt review by the commissioning party is warranted.',
   },
   {
     level: 'Moderate',
@@ -57,7 +57,7 @@ const riskLevels = [
     bg: 'bg-amber-50',
     badge: 'bg-amber-100 text-amber-700',
     description:
-      'The pattern warrants union attention and monitoring. It may not yet constitute a grievable violation, but it represents elevated exposure. Tracking and formal documentation are appropriate.',
+      'The pattern warrants attention and monitoring. It may not yet constitute a grievable violation, but it represents elevated exposure. Tracking and formal documentation are appropriate.',
   },
   {
     level: 'Low',
@@ -82,7 +82,7 @@ export default function Methodology() {
     <>
       <Hero
         headline="Our Methodology"
-        subheadline="How we examine rotation schedules and identify scheduling risk for union review."
+        subheadline="How we examine rotation schedules and identify scheduling risk for review by the commissioning party."
       />
 
       <Section
@@ -110,13 +110,13 @@ export default function Methodology() {
         <AnalysisFlow />
         <p className="text-xs text-slate-400 mt-5 leading-relaxed max-w-2xl">
           Each submitted rotation moves through a defined sequence. No stage involves employer contact.
-          Findings are delivered only to the commissioning union.
+          Findings are delivered only to the commissioning party.
         </p>
       </Section>
 
       <Section
         title="Risk Classification"
-        subtitle="Identified findings are classified into three levels to guide union prioritisation."
+        subtitle="Identified findings are classified into three levels to guide commissioning party prioritisation."
         className="bg-brand-cream"
         divider
       >
@@ -139,13 +139,13 @@ export default function Methodology() {
       >
         <div className="max-w-3xl space-y-5">
           <p className="text-base text-slate-600 leading-relaxed">
-            Independent Rotation Assurance™ operates exclusively on behalf of unions and worker representatives. We do not accept engagements from employers, management, or facility administration.
+            Independent Rotation Assurance™ operates as an independent analytical body. It holds no ownership, financial, or contractual relationship with any employer, employer association, or management body, and accepts no instruction from any such party.
           </p>
           <p className="text-base text-slate-600 leading-relaxed">
-            Findings are produced for and released only to the commissioning party. Our analysis is never shared with the employer without the explicit direction of the commissioning union.
+            Findings reflect the rotation record as submitted and are assessed against established occupational health standards, regulatory requirements, and applicable collective agreement provisions. They are analytical interpretations — not advocacy positions and not representative of the interests of any party.
           </p>
           <p className="text-base text-slate-600 leading-relaxed">
-            This independence is not incidental. It is the structural basis of the assurance. A rotation analysis produced without a clear independence standard cannot serve the interests of workers reliably.
+            All materials received and findings produced within an engagement are treated as strictly confidential. The scope of each engagement, and the parties to whom findings are released, are defined in the engagement agreement prior to commencement.
           </p>
         </div>
       </Section>

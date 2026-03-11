@@ -5,7 +5,7 @@ import { Section } from '@/components/Section'
 export const metadata: Metadata = {
   title: 'Request a Pilot Discussion',
   description:
-    'Request a pilot discussion with Rotation Analytics. Commission an Independent Rotation Assurance™ engagement for your union or health &amp; safety committee — independent analysis of rotation schedules across shift-based operations.',
+    'Request a pilot discussion with Rotation Analytics. Commission an Independent Rotation Assurance™ engagement for your organisation or health &amp; safety committee — independent analysis of rotation schedules across shift-based operations.',
 }
 
 const primaryConcerns = [
@@ -43,7 +43,7 @@ const nextSteps = [
     number: '03',
     title: 'Engagement Agreement',
     description:
-      'A brief engagement letter is issued to the union confirming confidentiality, deliverables, and timeline before work begins.',
+      'A brief engagement letter is issued to the commissioning party confirming confidentiality, deliverables, and timeline before work begins.',
   },
 ]
 
@@ -58,7 +58,7 @@ export default function Contact() {
     <>
       <Hero
         headline="Request a Pilot Discussion"
-        subheadline="Complete the form below to begin a pilot engagement. We will confirm scope, timeline, and engagement terms directly with your union before any work commences."
+        subheadline="Complete the form below to begin a pilot engagement. We will confirm scope, timeline, and engagement terms directly with the commissioning party before any work commences."
       />
 
       <Section divider>
@@ -71,7 +71,7 @@ export default function Contact() {
               </p>
               <p className="text-sm text-slate-700 leading-relaxed">
                 We accept engagements commissioned by healthcare unions, worker representatives, and
-                Health &amp; Safety committees. We do not accept engagements from employers or management.
+                Health &amp; Safety committees.
               </p>
             </div>
 
@@ -143,7 +143,7 @@ export default function Contact() {
                 required
                 aria-required="true"
                 className={inputClass}
-                placeholder="your@union.org"
+                placeholder="your@email.com"
               />
             </div>
 

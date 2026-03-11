@@ -6,7 +6,7 @@ import { Section } from '@/components/Section'
 export const metadata: Metadata = {
   title: 'Pilot Diagnostic',
   description:
-    'The Rotation Analytics Pilot Diagnostic — a structured entry point for unions evaluating Independent Rotation Assurance™, covering fatigue risk, agreement exposure, and scheduling vulnerabilities across a defined rotation period.',
+    'The Rotation Analytics Pilot Diagnostic — a structured entry point for evaluating Independent Rotation Assurance™, covering fatigue risk, agreement exposure, and scheduling vulnerabilities across a defined rotation period.',
 }
 
 const pilotScope = [
@@ -14,7 +14,7 @@ const pilotScope = [
   { label: 'Rotation period', value: 'One defined cycle (typically 4 weeks)' },
   { label: 'Deliverables', value: '4 structured documents' },
   { label: 'Employer involvement', value: 'None' },
-  { label: 'Findings ownership', value: 'Commissioning union only' },
+  { label: 'Findings ownership', value: 'Commissioning party only' },
 ]
 
 const deliverables = [
@@ -35,8 +35,8 @@ const deliverables = [
   },
   {
     number: '04',
-    title: 'Union Decision Support Brief',
-    body: 'A plain-language summary of the most significant findings, written for use by the union committee in determining appropriate next steps. Not strategic advice. A factual summary for internal use.',
+    title: 'Decision Support Brief',
+    body: 'A plain-language summary of the most significant findings, written for use by the commissioning party in determining appropriate next steps. Not strategic advice. A factual summary for internal use.',
   },
 ]
 
@@ -63,7 +63,7 @@ const timelineSteps = [
   {
     step: 'Step 1',
     title: 'Submission',
-    body: 'The commissioning union provides rotation files in Excel format for up to five workers across a defined rotation period. Optional context notes may be included. No employer contact is required.',
+    body: 'The commissioning party provides rotation files in Excel format for up to five workers across a defined rotation period. Optional context notes may be included. No employer contact is required.',
   },
   {
     step: 'Step 2',
@@ -82,7 +82,7 @@ export default function PilotDiagnostic() {
     <>
       <Hero
         headline="5-Rotation Diagnostic Pilot"
-        subheadline="A structured, defined-scope engagement for unions evaluating independent rotation analysis. Fixed deliverables, no operational interference, and a documented fee waiver condition."
+        subheadline="A structured, defined-scope engagement for parties evaluating independent rotation analysis. Fixed deliverables, no operational interference, and a documented fee waiver condition."
         cta={{ label: 'Discuss an Engagement', href: '/contact' }}
       />
 
@@ -97,19 +97,19 @@ export default function PilotDiagnostic() {
               Evaluate the value of rotation analysis before any broader commitment.
             </h2>
             <p className="text-base text-slate-500 leading-relaxed mb-5">
-              Independent rotation analysis is a new form of engagement for most union committees.
-              The 5-Rotation Diagnostic Pilot gives union leadership a concrete, documented
+              Independent rotation analysis is a new form of engagement for most commissioning parties.
+              The 5-Rotation Diagnostic Pilot provides a concrete, documented
               experience of what the analysis produces, without the commitment of a full-scale or
               ongoing engagement.
             </p>
             <p className="text-base text-slate-500 leading-relaxed mb-5">
               The pilot covers a defined set of workers and a defined rotation period. Scope does
-              not expand without explicit direction from the union. All findings are owned entirely
+              not expand without explicit direction from the commissioning party. All findings are owned entirely
               by the commissioning party.
             </p>
             <p className="text-base text-slate-500 leading-relaxed">
               A pilot also produces a documented record in its own right, useful for Health &amp;
-              Safety reporting, internal union files, and collective bargaining preparation,
+              Safety reporting, internal files, and collective bargaining preparation,
               regardless of what the findings show.
             </p>
           </div>
@@ -133,8 +133,8 @@ export default function PilotDiagnostic() {
 
       {/* What the Union Provides */}
       <Section
-        title="What the Union Provides"
-        subtitle="The pilot requires minimal input from the commissioning union."
+        title="What the Commissioning Party Provides"
+        subtitle="The pilot requires minimal input from the commissioning party."
         className="bg-brand-cream"
         divider
       >
@@ -164,9 +164,9 @@ export default function PilotDiagnostic() {
               <div>
                 <p className="text-sm font-semibold text-slate-900 mb-2">Context notes</p>
                 <p className="text-sm text-slate-500 leading-relaxed">
-                  Background the union wishes to provide: active scheduling concerns, specific
-                  provisions of interest, or ongoing grievance context. Not required, but may
-                  focus the analysis on areas of union priority.
+                  Background the commissioning party wishes to provide: active scheduling concerns,
+                  specific provisions of interest, or ongoing grievance context. Not required, but
+                  may focus the analysis on areas of priority.
                 </p>
               </div>
             </div>
@@ -176,7 +176,7 @@ export default function PilotDiagnostic() {
         <p className="text-xs text-slate-400 mt-6 max-w-2xl leading-relaxed">
           No access to employer systems is required. No direct communication with the facility,
           employer, or scheduling staff is involved at any stage. All materials are submitted
-          directly to IRA by the commissioning union.
+          directly to IRA by the commissioning party.
         </p>
       </Section>
 
@@ -264,12 +264,12 @@ export default function PilotDiagnostic() {
             <p>
               This condition is documented in the engagement agreement prior to commencement. It is
               not a promotional offer. It reflects the analytical basis on which this service
-              operates: if the schedules are compliant and the rotations are sound, the union carries
-              no financial exposure from the engagement.
+              operates: if the schedules are compliant and the rotations are sound, the commissioning
+              party carries no financial exposure from the engagement.
             </p>
             <p>
               In practice, a clean pilot result is itself a documented finding. It can inform
-              collective bargaining, Health &amp; Safety reporting, and internal union records in
+              collective bargaining, Health &amp; Safety reporting, and internal records in
               the same way that an adverse finding would.
             </p>
           </div>

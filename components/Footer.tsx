@@ -16,7 +16,7 @@ export function Footer() {
               Independent Rotation Assurance™
             </p>
             <p className="text-sm text-slate-300 leading-relaxed">
-              Third-party rotation schedule analysis for healthcare unions and labour relations leadership.
+              Independent rotation schedule analysis for healthcare and shift-based operations.
             </p>
           </div>
 

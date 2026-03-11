@@ -22,14 +22,14 @@ export const metadata: Metadata = {
     siteName: 'Rotation Analytics',
     title: 'Rotation Analytics — Independent Rotation Assurance™',
     description:
-      'Rotation Analytics provides independent analysis of rotational work schedules through its Independent Rotation Assurance™ methodology — identifying fatigue risk, agreement exposure, and scheduling vulnerabilities for union review.',
+      'Rotation Analytics provides independent analysis of rotational work schedules through its Independent Rotation Assurance™ methodology — identifying fatigue risk, agreement exposure, and scheduling vulnerabilities for review by the commissioning party.',
     locale: 'en_CA',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Rotation Analytics — Independent Rotation Assurance™',
     description:
-      'Rotation Analytics provides independent analysis of rotational work schedules through its Independent Rotation Assurance™ methodology — identifying fatigue risk, agreement exposure, and scheduling vulnerabilities for union review.',
+      'Rotation Analytics provides independent analysis of rotational work schedules through its Independent Rotation Assurance™ methodology — identifying fatigue risk, agreement exposure, and scheduling vulnerabilities for review by the commissioning party.',
   },
   metadataBase: new URL('https://rotation-analytics.vercel.app'),
 }
