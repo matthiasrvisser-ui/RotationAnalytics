@@ -1,28 +1,28 @@
 const principles = [
   {
     number: '01',
-    title: 'Independent Incorporated Entity',
-    body: 'Independent Rotation Assurance™ is incorporated without any ownership, financial, or contractual relationship with any healthcare employer, employer association, or management body.',
+    title: 'Analytical Independence',
+    body: 'Independent Rotation Assurance™ operates as an independent analytical body. It holds no ownership, financial, or contractual relationship with any employer, employer association, or management body, and accepts no instruction from any such party.',
   },
   {
     number: '02',
-    title: 'No Employer Engagements',
-    body: 'Analysis is undertaken exclusively at the direction of a union, worker representative body, or Health & Safety committee. Employers cannot commission analysis, and no employer-side engagement is accepted under any circumstance.',
+    title: 'Neutrality of Findings',
+    body: 'Findings are based on the rotation record as submitted and assessed against established occupational health standards, regulatory requirements, and applicable collective agreement provisions. They are analytical interpretations of the data — not advocacy positions and not representative of the interests of any party.',
   },
   {
     number: '03',
-    title: 'Strict Confidentiality of Findings',
-    body: 'Reports are delivered exclusively to the commissioning party. Findings are not disclosed to the employer, facility administration, or any third party without explicit written direction from the commissioning union.',
+    title: 'Confidentiality Obligations',
+    body: 'All materials received and findings produced within an engagement are treated as strictly confidential. Disclosure is governed by the terms of the engagement agreement. Findings are not shared with any party not identified in that agreement.',
   },
   {
     number: '04',
-    title: 'Support for Union Review Processes',
-    body: 'Independent Rotation Assurance™ produces analytical findings to inform the union\'s own review. It does not determine grievance outcomes, advise on strategy, represent workers, or substitute for union judgement or authority.',
+    title: 'Engagement-Defined Scope',
+    body: 'The scope of each engagement is defined in the engagement agreement prior to commencement. Analysis is conducted within that defined scope only. Independent Rotation Assurance™ does not design schedules, make operational recommendations, or advise on scheduling decisions.',
   },
   {
     number: '05',
-    title: 'Expertise Applied Independently',
-    body: 'Analytical frameworks are applied without instruction from the employer and without reference to management scheduling rationale. The analysis reflects the rotation record as submitted, not the employer\'s characterisation of it.',
+    title: 'No Operational Role',
+    body: 'Independent Rotation Assurance™ does not interact with facility scheduling staff, management, or employer-side parties at any stage of an engagement. All materials are received from, and all findings delivered to, the party or parties identified in the engagement agreement.',
   },
 ]
 
@@ -35,7 +35,7 @@ export function IndependenceSection() {
             Independence &amp; Confidentiality
           </p>
           <h2 className="text-2xl md:text-3xl font-bold text-white tracking-tight max-w-2xl">
-            Structured to serve the union — structurally prevented from serving the employer.
+            Analysis conducted independently, without structural alignment to any party to the scheduling arrangement.
           </h2>
         </div>
 
@@ -53,8 +53,9 @@ export function IndependenceSection() {
           {/* Sixth cell — closing statement */}
           <div className="bg-brand-navy-light/20 p-6 md:p-8 flex items-end">
             <p className="text-sm text-slate-400 leading-relaxed italic">
-              These principles are not policy statements. They are structural features of how
-              Independent Rotation Assurance™ operates and accepts engagements.
+              These are structural and operational features of how Independent Rotation Assurance™
+              accepts and conducts engagements. They are not policy declarations. Each is documented
+              in the applicable engagement agreement.
             </p>
           </div>
         </div>

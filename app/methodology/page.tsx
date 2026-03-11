@@ -26,9 +26,9 @@ const examineItems = [
       'Night shift strings, extended stretches of consecutive working days, and rapid shift type rotations (day to night, evening to day, night to day).',
   },
   {
-    label: 'Fatigue accumulation',
+    label: 'Fatigue risk patterns',
     detail:
-      'Estimated cumulative fatigue exposure based on shift type, sequence, and rest intervals, referenced against NIOSH and peer-reviewed occupational health standards.',
+      'Shift sequences and rest intervals assessed against established occupational health guidelines to identify scheduling patterns associated with fatigue risk. Observations reference NIOSH guidance and peer-reviewed standards; they are not quantified fatigue scores.',
   },
   {
     label: 'Weekend and statutory holiday distribution',

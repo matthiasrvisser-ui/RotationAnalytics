@@ -25,8 +25,8 @@ const deliverables = [
   },
   {
     number: '02',
-    title: 'Fatigue Exposure Overview',
-    body: 'An estimated fatigue accumulation map across the submitted rotation periods, identifying sequences of elevated cumulative exposure relative to established occupational health guidelines.',
+    title: 'Fatigue Risk Observations',
+    body: 'A review of shift sequences and rest intervals against established occupational health guidelines, identifying scheduling patterns associated with fatigue risk. Observations reference industry best practices and are not quantified fatigue scores.',
   },
   {
     number: '03',
@@ -43,19 +43,19 @@ const deliverables = [
 const principles = [
   {
     title: 'Independent',
-    body: 'No employer relationship. Analysis is conducted without reference to management scheduling rationale, employer instruction, or facility context provided by management.',
+    body: 'Independent Rotation Assurance™ holds no ownership, financial, or contractual relationship with any employer, employer association, or management body. Analysis is conducted without reference to management scheduling rationale or employer instruction.',
   },
   {
     title: 'Confidential',
-    body: 'All materials received and findings produced are treated as strictly confidential. No disclosure to the employer, facility administration, or any third party.',
+    body: 'All materials received and findings produced are treated as strictly confidential and governed by the engagement agreement. No disclosure is made to any party not identified in that agreement.',
   },
   {
-    title: 'Supports Union Review',
-    body: 'The pilot produces analytical findings for the union to use in its own review process. It does not determine outcomes, advise on grievance strategy, or represent workers.',
+    title: 'Analytical Findings',
+    body: 'The pilot produces analytical findings for the commissioning party to use in its own review process. Findings are interpretations of the rotation record against established standards — not advocacy positions and not strategic advice.',
   },
   {
-    title: 'No Operational Interference',
-    body: 'Analysis is conducted entirely from submitted records. No contact is made with the facility, scheduling staff, management, or any employer-side party at any stage.',
+    title: 'No Operational Role',
+    body: 'Analysis is conducted entirely from submitted records. No contact is made with the facility, scheduling staff, management, or any employer-side party at any stage of the engagement.',
   },
 ]
 
@@ -73,7 +73,7 @@ const timelineSteps = [
   {
     step: 'Step 3',
     title: 'Report Delivery',
-    body: 'The complete findings package is delivered confidentially to the commissioning union: structured report, fatigue overview, risk summary, and decision support brief.',
+    body: 'The complete findings package is delivered confidentially to the commissioning party: structured report, fatigue risk observations, risk summary, and decision support brief.',
   },
 ]
 

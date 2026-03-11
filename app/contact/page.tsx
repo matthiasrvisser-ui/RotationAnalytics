@@ -13,7 +13,7 @@ const primaryConcerns = [
   'Consecutive shift sequencing (night shifts, extended stretches)',
   'Weekend and statutory holiday distribution',
   'Collective agreement provision review',
-  'Fatigue accumulation and exposure',
+  'Fatigue risk patterns and shift sequencing',
   'General rotation assessment',
   'Other',
 ]

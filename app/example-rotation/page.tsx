@@ -2,7 +2,6 @@ import type { Metadata } from 'next'
 import { Hero } from '@/components/Hero'
 import { Section } from '@/components/Section'
 import { RotationTable } from '@/components/RotationTable'
-import { HeatmapPlaceholder } from '@/components/HeatmapPlaceholder'
 import type { ShiftEntry } from '@/components/RotationTable'
 
 export const metadata: Metadata = {
@@ -66,14 +65,46 @@ export default function ExampleRotation() {
       </Section>
 
       <Section
-        title="Fatigue Accumulation Map"
-        subtitle="Estimated fatigue exposure plotted across the full 4-week rotation period."
+        title="Fatigue Risk Observations"
+        subtitle="Scheduling patterns assessed against established occupational health guidelines."
         className="bg-brand-cream"
         divider
       >
-        <HeatmapPlaceholder
-          description="Illustrative heatmap. Full analysis maps fatigue exposure across the complete rotation. Week 3 shows critical concentration aligned with the consecutive night shift sequence identified above."
-        />
+        <div className="space-y-4 max-w-3xl">
+          <div className="bg-white border border-slate-200 rounded-lg p-5">
+            <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-3">Pattern Identified</p>
+            <h4 className="text-sm font-semibold text-slate-900 mb-2">Extended Consecutive Night Shift Sequence</h4>
+            <p className="text-sm text-slate-600 leading-relaxed mb-3">
+              Five consecutive night shifts (Sun Mar 9 – Thu Mar 13). NIOSH guidance and published occupational
+              health literature identify extended consecutive night shift strings as a recognised risk factor for
+              circadian disruption and impaired recovery. Industry practice commonly references a threshold of
+              three to four consecutive nights.
+            </p>
+            <p className="text-xs text-slate-400 leading-relaxed">
+              Reference: NIOSH Work Schedule Design guidelines; peer-reviewed literature on shift work and fatigue risk.
+            </p>
+          </div>
+
+          <div className="bg-white border border-slate-200 rounded-lg p-5">
+            <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-3">Pattern Identified</p>
+            <h4 className="text-sm font-semibold text-slate-900 mb-2">Quick Return — Short Rest Interval</h4>
+            <p className="text-sm text-slate-600 leading-relaxed mb-3">
+              Two instances where the interval between consecutive shifts falls below 11 hours (Mar 7: 8 hours;
+              Mar 16: 8 hours). Short rest intervals are consistently identified in occupational health research
+              as a primary scheduling risk factor. Provincial health sector labour standards and most collective
+              agreements set a minimum rest period of 11 hours between consecutive shifts.
+            </p>
+            <p className="text-xs text-slate-400 leading-relaxed">
+              Reference: Provincial health sector labour standards; applicable collective agreement provisions;
+              NIOSH rest period guidance.
+            </p>
+          </div>
+
+          <p className="text-xs text-slate-400 leading-relaxed pt-2">
+            Observations identify scheduling patterns associated with fatigue risk based on industry guidelines.
+            They are not quantified fatigue scores. Findings are for review by the commissioning party.
+          </p>
+        </div>
       </Section>
 
       {/* Findings summary */}

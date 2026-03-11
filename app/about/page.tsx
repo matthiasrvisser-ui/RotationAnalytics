@@ -64,7 +64,7 @@ export default function About() {
               </p>
               <p>
                 The firm provides third-party analysis of rotation schedules, examining shift records for
-                rest period compliance, fatigue accumulation, consecutive shift patterns, and collective
+                rest period compliance, fatigue risk patterns, consecutive shift sequences, and collective
                 agreement provisions, then produces structured findings reports for union review.
                 The work is analytical and neutral. Rotation Analytics does not negotiate, represent, or
                 advise on strategy.

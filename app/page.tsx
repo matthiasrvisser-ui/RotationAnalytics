@@ -285,7 +285,7 @@ export default function Home() {
               ))}
             </div>
             <p className="text-xs text-slate-400 leading-relaxed">
-              When published, this section will include a full shift table, fatigue accumulation map,
+              When published, this section will include a full shift table, fatigue risk observations,
               and a complete findings summary showing exactly what a rotation analysis produces.
             </p>
           </div>
