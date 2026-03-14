@@ -1,11 +1,10 @@
-const FONT = "Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif"
+﻿const FONT = "Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif"
 
 const steps = [
   ['Rotation', 'Submitted'],
-  ['Independent', 'Analysis'],
+  ['Methodologic', 'Analysis'],
   ['Risk', 'Classification'],
-  ['Findings', 'Report'],
-  ['Review', 'Support'],
+  ['Executive', 'Summary'],
 ]
 
 const NODE_W = 118
@@ -13,7 +12,7 @@ const NODE_H = 44
 const GAP = 48
 const NODE_Y = 8
 const SVG_H = 60
-const TOTAL_W = steps.length * NODE_W + (steps.length - 1) * GAP // 590 + 192 = 782
+const TOTAL_W = 616 // 4 nodes * 118 + 3 gaps * 48
 
 export function AnalysisFlow() {
   return (
@@ -21,11 +20,11 @@ export function AnalysisFlow() {
       <svg
         width={TOTAL_W}
         height={SVG_H}
-        viewBox={`0 0 ${TOTAL_W} ${SVG_H}`}
+        viewBox="0 0 616 60"
         xmlns="http://www.w3.org/2000/svg"
         role="img"
-        aria-label="Analysis flow: Rotation Submitted, Independent Analysis, Risk Classification, Findings Report, Review Support"
-        className="min-w-[600px]"
+        aria-label="Analysis flow: Rotation Submitted, Methodologic Analysis, Risk Classification, Executive Summary"
+        className="min-w-[400px]"
       >
         <defs>
           <marker
@@ -47,7 +46,6 @@ export function AnalysisFlow() {
 
           return (
             <g key={i}>
-              {/* Connector line to next node */}
               {i < steps.length - 1 && (
                 <line
                   x1={x + NODE_W}
@@ -60,7 +58,6 @@ export function AnalysisFlow() {
                 />
               )}
 
-              {/* Node rectangle */}
               <rect
                 x={x}
                 y={NODE_Y}
@@ -72,7 +69,6 @@ export function AnalysisFlow() {
                 strokeWidth="1.5"
               />
 
-              {/* Step number */}
               <text
                 x={x + 9}
                 y={NODE_Y + 11}
@@ -85,7 +81,6 @@ export function AnalysisFlow() {
                 {String(i + 1).padStart(2, '0')}
               </text>
 
-              {/* Label lines */}
               {lines.map((line, li) => (
                 <text
                   key={li}

@@ -6,7 +6,7 @@ import { AnalysisFlow } from '@/components/AnalysisFlow'
 export const metadata: Metadata = {
   title: 'Methodology',
   description:
-    'How Rotation Analytics applies the Independent Rotation Assurance™ methodology — identifying structural fatigue risk, agreement interpretation exposure, and rotation design vulnerabilities across shift-based scheduling environments.',
+    'How Rotation Analytics Inc applies structured analytical methodology — identifying fatigue risk, agreement interpretation exposure, and rotation design vulnerabilities across shift-based scheduling environments.',
 }
 
 const examineItems = [
@@ -18,22 +18,22 @@ const examineItems = [
   {
     label: 'Rest intervals',
     detail:
-      'The elapsed time between the end of one shift and the start of the next. The established minimum under most provincial health sector collective agreements and labour standards is 11 hours.',
+      'The elapsed time between the end of one shift and the start of the next based agreement provisions.',
   },
   {
-    label: 'Consecutive shift sequences',
+    label: 'Shift Type Changes',
     detail:
-      'Night shift strings, extended stretches of consecutive working days, and rapid shift type rotations (day to night, evening to day, night to day).',
+      'Rapid shift type changes, specifically Night Shift to Day Shift changes are identified.',
   },
   {
     label: 'Fatigue risk patterns',
     detail:
-      'Shift sequences and rest intervals assessed against established occupational health guidelines to identify scheduling patterns associated with fatigue risk. Observations reference NIOSH guidance and peer-reviewed standards; they are not quantified fatigue scores.',
+      'Shift sequences and rest intervals assessed against established occupational health guidelines to identify scheduling patterns associated with fatigue risk. These are occupational best practices from peer-reviewed standards; they are not quantified fatigue scores.',
   },
   {
     label: 'Weekend and statutory holiday distribution',
     detail:
-      'Pattern of weekend and statutory holiday assignments across the full rotation, compared to the rotation group where data is available.',
+      'Weekends off patterns, and statutory holiday assignments across the full rotation, compared to the rotation group where data is available.',
   },
   {
     label: 'Collective agreement provisions',
@@ -65,7 +65,7 @@ const riskLevels = [
     bg: 'bg-green-50',
     badge: 'bg-green-100 text-green-700',
     description:
-      'Documented for completeness. The item is not immediately concerning but is captured in the report record. It may escalate under a continued or repeated pattern.',
+      'Parameters have been met. Documented for completeness. The item is not immediately concerning, and this is captured in the report record.',
   },
 ]
 
@@ -73,7 +73,6 @@ const referencePoints = [
   'Provincial Labour Standards legislation',
   'Applicable collective agreement scheduling provisions',
   'Occupational Health & Safety Act requirements',
-  'NIOSH shiftwork and fatigue guidelines',
   'Peer-reviewed fatigue science (cited on applicable findings)',
 ]
 
@@ -109,8 +108,7 @@ export default function Methodology() {
         </p>
         <AnalysisFlow />
         <p className="text-xs text-slate-400 mt-5 leading-relaxed max-w-2xl">
-          Each submitted rotation moves through a defined sequence. No stage involves employer contact.
-          Findings are delivered only to the commissioning party.
+          Your rotation is confidential and all findings are delivered only to the commissioning party.
         </p>
       </Section>
 
@@ -139,10 +137,10 @@ export default function Methodology() {
       >
         <div className="max-w-3xl space-y-5">
           <p className="text-base text-slate-600 leading-relaxed">
-            Independent Rotation Assurance™ operates as an independent analytical body. It holds no ownership, financial, or contractual relationship with any employer, employer association, or management body, and accepts no instruction from any such party.
+            Rotation Analytics Inc operates as an independent entity. It holds no ownership, financial, or contractual relationship with any employer, employer association, or management body, and accepts no instruction from any external party.
           </p>
           <p className="text-base text-slate-600 leading-relaxed">
-            Findings reflect the rotation record as submitted and are assessed against established occupational health standards, regulatory requirements, and applicable collective agreement provisions. They are analytical interpretations — not advocacy positions and not representative of the interests of any party.
+            Findings reflect the rotation record as submitted and are assessed against established occupational health standards, regulatory requirements, and applicable collective agreement provisions. They are analytical interpretations, not advocacy positions and not representative of the interests of any party.
           </p>
           <p className="text-base text-slate-600 leading-relaxed">
             All materials received and findings produced within an engagement are treated as strictly confidential. The scope of each engagement, and the parties to whom findings are released, are defined in the engagement agreement prior to commencement.
@@ -153,9 +151,7 @@ export default function Methodology() {
       <Section divider>
         <div className="max-w-3xl space-y-2 text-sm text-slate-500 leading-relaxed">
           <p>
-            Rotation Analytics does not design schedules for employers.
-            Independent Rotation Assurance™ evaluates existing rotations independently to support
-            informed review and decision-making.
+            Rotation Analytics Inc currently does not design rotation schedules; we expertly evaluate existing rotations to provide informed review and decision-making for our clients.
           </p>
         </div>
       </Section>
