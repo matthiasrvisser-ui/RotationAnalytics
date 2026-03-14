@@ -12,9 +12,6 @@ export function Footer() {
             <div className="mb-4">
               <LogoHorizontal color="#FFFFFF" />
             </div>
-            <p className="text-[11px] font-medium text-slate-400 uppercase tracking-widest mb-2">
-              Independent Rotation Assurance™
-            </p>
             <p className="text-sm text-slate-300 leading-relaxed">
               Independent rotation schedule analysis for healthcare and shift-based operations.
             </p>
@@ -69,10 +66,10 @@ export function Footer() {
 
         <div className="border-t border-slate-700 pt-6 space-y-3">
           <p className="text-xs text-slate-400 leading-relaxed max-w-2xl">
-            Independent Rotation Assurance™ is an independent analytical service provided by Rotation Analytics. Analysis is conducted without structural alignment to any party to the scheduling arrangement. Findings are analytical interpretations of the rotation record and are released exclusively to the commissioning party as defined in the engagement agreement.
+            Rotation Analytics Inc conducts our methodology without structural alignment to any party to the scheduling arrangement. Findings are a systematic evaluation of the rotation record and are released exclusively to the commissioning party as defined in the engagement agreement.
           </p>
           <p className="text-xs text-slate-500">
-            © {currentYear} Rotation Analytics. All rights reserved.
+            &copy; {currentYear} Rotation Analytics Inc. All rights reserved.
           </p>
         </div>
       </div>

@@ -1,4 +1,4 @@
-interface LogoProps {
+﻿interface LogoProps {
   color?: string
   className?: string
 }
@@ -8,8 +8,12 @@ const FONT = "Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, s
 function MarkSVGWhite() {
   return (
     <svg width="24" height="24" viewBox="0 0 48 48" fill="none" aria-hidden="true">
-      <path fill="white" opacity="0.55" d="M2.9 25.8A21 21 0 0 1 22.2 3.1L23 12A12 12 0 0 0 12.1 25Z"/>
-      <path fill="white" d="M27.6 3.3A21 21 0 1 1 3.7 29.4L12.4 27.1A12 12 0 1 0 26.1 12.2Z"/>
+      <g fill="white">
+        <path d="M24 6A18 18 0 0 1 41.7 27.1L29.4 26.5A6 6 0 0 0 25.6 18.2Z"/>
+        <path d="M39.6 33A18 18 0 0 1 12.4 37.8L19.1 27.4A6 6 0 0 0 28.2 28.2Z"/>
+        <path d="M8.4 33A18 18 0 0 1 17.8 7.1L23.5 18A6 6 0 0 0 18.2 25.6Z"/>
+        <circle cx="24" cy="24" r="2.5"/>
+      </g>
     </svg>
   )
 }
@@ -18,8 +22,12 @@ export function LogoMark({ color = '#1B2D4F', size = 32, className = '' }: LogoP
   if (color === '#FFFFFF') {
     return (
       <svg width={size} height={size} viewBox="0 0 48 48" fill="none" className={className} role="img" aria-label="Rotation Analytics">
-        <path fill="white" opacity="0.55" d="M2.9 25.8A21 21 0 0 1 22.2 3.1L23 12A12 12 0 0 0 12.1 25Z"/>
-        <path fill="white" d="M27.6 3.3A21 21 0 1 1 3.7 29.4L12.4 27.1A12 12 0 1 0 26.1 12.2Z"/>
+        <g fill="white">
+          <path d="M24 6A18 18 0 0 1 41.7 27.1L29.4 26.5A6 6 0 0 0 25.6 18.2Z"/>
+          <path d="M39.6 33A18 18 0 0 1 12.4 37.8L19.1 27.4A6 6 0 0 0 28.2 28.2Z"/>
+          <path d="M8.4 33A18 18 0 0 1 17.8 7.1L23.5 18A6 6 0 0 0 18.2 25.6Z"/>
+          <circle cx="24" cy="24" r="2.5"/>
+        </g>
       </svg>
     )
   }

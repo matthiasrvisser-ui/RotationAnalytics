@@ -1,4 +1,4 @@
-import Link from 'next/link'
+﻿import Link from 'next/link'
 import { Hero } from '@/components/Hero'
 import { Section } from '@/components/Section'
 import { IndependenceSection } from '@/components/IndependenceSection'
@@ -305,7 +305,7 @@ export default function Home() {
             </p>
             <Link
               href="/contact"
-              className="inline-block border border-slate-300 text-slate-700 px-6 py-2.5 rounded font-medium text-sm hover:border-slate-400 transition-colors"
+              className="inline-block bg-brand-navy text-white px-6 py-2.5 rounded font-medium text-sm hover:bg-brand-navy-dark transition-colors"
             >
               Discuss an Engagement &rarr;
             </Link>
