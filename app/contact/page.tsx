@@ -1,11 +1,12 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import { Hero } from '@/components/Hero'
 import { Section } from '@/components/Section'
 
 export const metadata: Metadata = {
-  title: 'Request a Pilot Discussion',
+  title: 'Contact',
   description:
-    'Request a pilot discussion with Rotation Analytics. Commission an Independent Rotation Assurance™ engagement for your organisation or health &amp; safety committee — independent analysis of rotation schedules across shift-based operations.',
+    'Contact Rotation Analytics Inc to request a pilot engagement discussion. We accept engagements commissioned by healthcare unions, worker representatives, and Health & Safety committees.',
 }
 
 const primaryConcerns = [
@@ -57,13 +58,22 @@ export default function Contact() {
   return (
     <>
       <Hero
-        headline="Request a Pilot Discussion"
-        subheadline="Complete the form below to begin a pilot engagement. We will confirm scope, timeline, and engagement terms directly with the commissioning party before any work commences."
+        headline="Contact"
+        subheadline="Request a pilot engagement discussion. We accept engagements commissioned by healthcare unions, worker representatives, and Health &amp; Safety committees."
       />
 
       <Section divider>
+        <div className="mb-8">
+          <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-2">
+            New Engagement
+          </p>
+          <h2 className="text-xl font-bold text-slate-900 tracking-tight">
+            Request a Pilot Discussion
+          </h2>
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-14">
-          {/* Left column — What Happens Next */}
+          {/* Left — What Happens Next */}
           <div>
             <div className="bg-slate-50 border border-slate-200 rounded-lg p-5 mb-8">
               <p className="text-xs font-semibold text-slate-500 uppercase tracking-widest mb-1">
@@ -98,10 +108,16 @@ export default function Contact() {
                 All communications are treated as confidential. Enquiries are not shared with employers
                 or third parties.
               </p>
+              <p className="text-xs text-slate-400 leading-relaxed mt-3">
+                Already commissioned?{' '}
+                <Link href="/submit" className="text-brand-navy hover:underline font-medium">
+                  Submit your rotation files here.
+                </Link>
+              </p>
             </div>
           </div>
 
-          {/* Right column — Form */}
+          {/* Right — Pilot Request Form */}
           <form className="space-y-5" aria-label="Pilot discussion request form">
             <div>
               <label htmlFor="org" className={labelClass}>
@@ -195,7 +211,7 @@ export default function Contact() {
               </label>
               <textarea
                 id="message"
-                rows={5}
+                rows={4}
                 className={`${inputClass} resize-none`}
                 placeholder="Describe the scheduling concern, applicable collective agreement provisions, or any other context that would help us assess scope."
               />

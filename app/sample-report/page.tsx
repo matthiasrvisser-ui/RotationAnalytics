@@ -7,7 +7,7 @@ import { RiskCard } from '@/components/RiskCard'
 export const metadata: Metadata = {
   title: 'Sample Report',
   description:
-    'A representative Independent Rotation Assurance™ report from Rotation Analytics, showing how fatigue risk, agreement interpretation exposure, and rotation design vulnerabilities are documented and classified for review by the commissioning party.',
+    'A representative Rotation Analytics Inc findings report, showing how fatigue risk, agreement interpretation exposure, and rotation design vulnerabilities are documented and classified for review by the commissioning party.',
 }
 
 const findings = [
@@ -24,10 +24,10 @@ const findings = [
     level: 'high' as const,
     title: 'Consecutive Night Shifts — Exceeds Established Occupational Health Guideline',
     description:
-      'A sequence of six consecutive night shifts was identified in Week 3. NIOSH occupational health guidelines (2020) indicate that sequences exceeding four consecutive nights carry significantly elevated cumulative fatigue and error risk.',
+      'A sequence of six consecutive night shifts was identified in Week 3. Peer-reviewed occupational health standards indicate that sequences exceeding four consecutive nights carry significantly elevated cumulative fatigue and error risk.',
     finding:
-      'Sequence runs Mar 11–16. Six consecutive nights. NIOSH occupational health guidelines identify sequences exceeding four consecutive nights as carrying elevated risk for circadian disruption and impaired recovery. Recommend review against collective agreement provisions governing consecutive shift limits.',
-    reference: 'NIOSH Night Shift Guidelines | CBA Art. 12.07',
+      'Sequence runs Mar 11–16. Six consecutive nights. Occupational health guidelines identify sequences exceeding four consecutive nights as carrying elevated risk for circadian disruption and impaired recovery. Recommend review against collective agreement provisions governing consecutive shift limits.',
+    reference: 'Occupational Health Best Practices | CBA Art. 12.07',
   },
   {
     level: 'moderate' as const,
@@ -55,7 +55,7 @@ const reportSections = [
   'Fatigue Risk Observations',
   'Findings — Classified by Risk Level',
   'Regulatory and Collective Agreement References',
-  'Recommended Actions for Commissioning Party Review',
+  'Improvement Guidance for Commissioning Party Review',
   'Methodology Notes',
 ]
 
@@ -65,7 +65,7 @@ const reportMeta = [
   { label: 'Facility', value: '[Anonymized]' },
   { label: 'Period', value: 'March 2025' },
   { label: 'Commissioned By', value: '[Union Local]' },
-  { label: 'Analyst', value: 'IRA — File #2025-0047' },
+  { label: 'Analyst', value: 'Rotation Analytics Inc — File #2025-0047' },
   { label: 'Date Issued', value: 'March 31, 2025' },
   { label: 'Status', value: 'Final' },
 ]
@@ -75,7 +75,7 @@ export default function SampleReport() {
     <>
       <Hero
         headline="Sample Report"
-        subheadline="A representative Independent Rotation Assurance™ report, showing the structure, depth, and format of findings delivered to the commissioning party."
+        subheadline="A representative Rotation Analytics Inc findings report, showing the structure, depth, and format of findings delivered to the commissioning party."
       />
 
       <Section divider>
@@ -90,7 +90,7 @@ export default function SampleReport() {
             <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-1">
               Confidential — For Commissioning Party Use
             </p>
-            <h2 className="text-xl font-bold text-white">Rotation Assurance Report</h2>
+            <h2 className="text-xl font-bold text-white">Rotation Analysis Report</h2>
           </div>
           <div className="bg-white px-6 py-5 grid grid-cols-2 md:grid-cols-4 gap-y-4 gap-x-6 border-b border-slate-100">
             {reportMeta.map((item) => (
@@ -149,7 +149,7 @@ export default function SampleReport() {
       {/* What's included */}
       <Section
         title="What a Full Report Includes"
-        subtitle="Every Independent Rotation Assurance™ report is delivered with the following sections."
+        subtitle="Every Rotation Analytics Inc report is delivered with the following sections."
         divider
       >
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-2xl">
@@ -169,7 +169,7 @@ export default function SampleReport() {
         <div className="text-center py-4">
           <h2 className="text-2xl font-bold text-white mb-4 tracking-tight">Commission an Analysis</h2>
           <p className="text-slate-300 mb-8 max-w-xl mx-auto text-sm leading-relaxed">
-            Independent Rotation Assurance™ accepts engagements from unions and worker representatives. Contact us to discuss a rotation analysis for your members.
+            Rotation Analytics Inc accepts engagements from unions and worker representatives. Contact us to discuss a rotation analysis for your members.
           </p>
           <Link
             href="/contact"

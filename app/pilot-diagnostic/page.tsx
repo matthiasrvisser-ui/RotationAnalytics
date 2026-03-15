@@ -6,13 +6,13 @@ import { Section } from '@/components/Section'
 export const metadata: Metadata = {
   title: 'Pilot Diagnostic',
   description:
-    'The Rotation Analytics Pilot Diagnostic — a structured entry point for evaluating Independent Rotation Assurance™, covering fatigue risk, agreement exposure, and scheduling vulnerabilities across a defined rotation period.',
+    'The Rotation Analytics Inc Pilot Diagnostic — a structured entry point for evaluating independent rotation analysis, covering fatigue risk, agreement exposure, and scheduling vulnerabilities across a defined rotation period.',
 }
 
 const pilotScope = [
   { label: 'Workers covered', value: 'Up to 5 workers per pilot' },
-  { label: 'Rotation period', value: 'One defined cycle (typically 4 weeks)' },
-  { label: 'Deliverables', value: '4 structured documents' },
+  { label: 'Rotation period', value: 'Two defined cycles (typically 4 weeks each)' },
+  { label: 'Deliverables', value: '2 structured documents' },
   { label: 'Employer involvement', value: 'None' },
   { label: 'Findings ownership', value: 'Commissioning party only' },
 ]
@@ -20,30 +20,20 @@ const pilotScope = [
 const deliverables = [
   {
     number: '01',
-    title: 'Structured Findings Report',
-    body: 'All identified scheduling irregularities documented by worker and rotation period, classified by risk level, and referenced against applicable collective agreement provisions and regulatory standards.',
+    title: 'Marked Rotation Schedule (Excel)',
+    body: 'Your submitted rotation returned with all identified non-conformances clearly flagged directly within the schedule. Lines are flagged and issues are annotated where they occur in the rotation, allowing reviewers to see exactly where scheduling provisions, fatigue considerations, or regulatory requirements may not have been met.',
   },
   {
     number: '02',
-    title: 'Fatigue Risk Observations',
-    body: 'A review of shift sequences and rest intervals against established occupational health guidelines, identifying scheduling patterns associated with fatigue risk. Observations reference industry best practices and are not quantified fatigue scores.',
-  },
-  {
-    number: '03',
-    title: 'Risk Classification Summary',
-    body: 'A consolidated index of all findings by risk level, with the specific scheduling pattern, applicable reference, and recommended action noted for each.',
-  },
-  {
-    number: '04',
-    title: 'Decision Support Brief',
-    body: 'A plain-language summary of the most significant findings, written for use by the commissioning party in determining appropriate next steps. Not strategic advice. A factual summary for internal use.',
+    title: 'Executive Summary Report',
+    body: 'A structured findings report explaining each discrepancy identified in the schedule compared to applicable parameters, with the basis for each observation documented. Includes risk-classified findings, direct citation of applicable collective agreement provisions and employment standards, and improvement guidance for the commissioning party\'s internal use.',
   },
 ]
 
 const principles = [
   {
     title: 'Independent',
-    body: 'Independent Rotation Assurance™ holds no ownership, financial, or contractual relationship with any employer, employer association, or management body. Analysis is conducted without reference to management scheduling rationale or employer instruction.',
+    body: 'Rotation Analytics Inc holds no ownership, financial, or contractual relationship with any employer, employer association, or management body. Analysis is conducted without reference to management scheduling rationale or employer instruction.',
   },
   {
     title: 'Confidential',
@@ -68,12 +58,12 @@ const timelineSteps = [
   {
     step: 'Step 2',
     title: 'Independent Analysis',
-    body: 'IRA conducts review against rest period standards, collective agreement provisions, and established fatigue science. No employer communication takes place during this phase.',
+    body: 'Rotation Analytics Inc conducts review against rest period standards, collective agreement provisions, and established fatigue science. No employer communication takes place during this phase.',
   },
   {
     step: 'Step 3',
     title: 'Report Delivery',
-    body: 'The complete findings package is delivered confidentially to the commissioning party: structured report, fatigue risk observations, risk summary, and decision support brief.',
+    body: 'The complete findings package is delivered confidentially to the commissioning party: the marked rotation schedule and executive summary report.',
   },
 ]
 
@@ -81,7 +71,7 @@ export default function PilotDiagnostic() {
   return (
     <>
       <Hero
-        headline="5-Rotation Diagnostic Pilot"
+        headline="2-Rotation Diagnostic Pilot"
         subheadline="A structured, defined-scope engagement for parties evaluating independent rotation analysis. Fixed deliverables, no operational interference, and a documented fee waiver condition."
         cta={{ label: 'Discuss an Engagement', href: '/contact' }}
       />
@@ -98,19 +88,18 @@ export default function PilotDiagnostic() {
             </h2>
             <p className="text-base text-slate-500 leading-relaxed mb-5">
               Independent rotation analysis is a new form of engagement for most commissioning parties.
-              The 5-Rotation Diagnostic Pilot provides a concrete, documented
-              experience of what the analysis produces, without the commitment of a full-scale or
-              ongoing engagement.
+              The 2-Rotation Diagnostic Pilot provides a concrete, documented experience of what the
+              analysis produces, without the commitment of a full-scale or ongoing engagement.
             </p>
             <p className="text-base text-slate-500 leading-relaxed mb-5">
-              The pilot covers a defined set of workers and a defined rotation period. Scope does
-              not expand without explicit direction from the commissioning party. All findings are owned entirely
-              by the commissioning party.
+              The pilot covers two rotation cycles of the commissioning party&apos;s choosing over a
+              defined period. Scope is fixed at the outset and does not expand without explicit direction
+              from the commissioning party. All findings are owned entirely by the commissioning party.
             </p>
             <p className="text-base text-slate-500 leading-relaxed">
-              A pilot also produces a documented record in its own right, useful for Health &amp;
-              Safety reporting, internal files, and collective bargaining preparation,
-              regardless of what the findings show.
+              A pilot produces a documented record in its own right, useful for Health &amp; Safety
+              reporting, internal files, and collective bargaining preparation, regardless of what
+              the findings show.
             </p>
           </div>
 
@@ -131,7 +120,7 @@ export default function PilotDiagnostic() {
         </div>
       </Section>
 
-      {/* What the Union Provides */}
+      {/* What the Commissioning Party Provides */}
       <Section
         title="What the Commissioning Party Provides"
         subtitle="The pilot requires minimal input from the commissioning party."
@@ -148,7 +137,7 @@ export default function PilotDiagnostic() {
               <div>
                 <p className="text-sm font-semibold text-slate-900 mb-2">Rotation files (Excel)</p>
                 <p className="text-sm text-slate-500 leading-relaxed">
-                  Shift schedule data for up to five workers provided in Excel format. Standard
+                  Shift schedule data for two separate rotations provided in Excel format. Standard
                   rotation export files are accepted without modification or reformatting.
                 </p>
               </div>
@@ -174,16 +163,16 @@ export default function PilotDiagnostic() {
         </div>
 
         <p className="text-xs text-slate-400 mt-6 max-w-2xl leading-relaxed">
-          No access to employer systems is required. No direct communication with the facility,
+          No access to employer systems is required. No outside communication with the facility,
           employer, or scheduling staff is involved at any stage. All materials are submitted
-          directly to IRA by the commissioning party.
+          directly to Rotation Analytics Inc by the commissioning party.
         </p>
       </Section>
 
       {/* What We Deliver */}
       <Section
         title="What We Deliver"
-        subtitle="Every pilot engagement produces four structured documents, delivered as a complete package."
+        subtitle="Every pilot engagement produces two structured documents, delivered as a complete package."
         divider
       >
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
@@ -240,12 +229,12 @@ export default function PilotDiagnostic() {
           ))}
         </div>
         <p className="text-xs text-slate-400 mt-5 leading-relaxed">
-          Target delivery window: 10–15 business days from receipt of a complete submission.
+          Target delivery window: 2 business days from receipt of a complete submission.
           Timeline is confirmed at the outset of the engagement.
         </p>
       </Section>
 
-      {/* Risk Reduction Statement */}
+      {/* Fee Waiver */}
       <Section className="bg-slate-50">
         <div className="max-w-3xl">
           <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-5">
@@ -274,7 +263,6 @@ export default function PilotDiagnostic() {
             </p>
           </div>
 
-          {/* Waiver condition box */}
           <div className="border border-slate-200 rounded-lg p-6 mb-10 bg-white">
             <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-4">
               Waiver Applies When

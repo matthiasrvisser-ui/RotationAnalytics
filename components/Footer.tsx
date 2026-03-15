@@ -13,7 +13,7 @@ export function Footer() {
               <LogoHorizontal color="#FFFFFF" />
             </div>
             <p className="text-sm text-slate-300 leading-relaxed">
-              Independent rotation schedule analysis for healthcare and shift-based operations.
+              Structured independent analysis of rotation schedules, delivered exclusively to the commissioning party.
             </p>
           </div>
 
@@ -58,6 +58,11 @@ export function Footer() {
               <li>
                 <Link href="/contact" className="text-sm text-slate-300 hover:text-white transition-colors">
                   Contact
+                </Link>
+              </li>
+              <li>
+                <Link href="/submit" className="text-sm text-slate-300 hover:text-white transition-colors">
+                  Submit Work
                 </Link>
               </li>
             </ul>

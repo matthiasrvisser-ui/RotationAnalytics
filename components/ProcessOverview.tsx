@@ -7,7 +7,7 @@
   {
     step: 'Step 2',
     title: 'Independent Analysis Performed',
-    body: 'The schedule is examined by our expert using our tools against collective agreement provisions, extended work agreements, applicable employment standards, and established fatigue science principles.',
+    body: 'The schedule is examined by our expert using our propietary tools against collective agreement provisions, extended work agreements, applicable employment standards, and established fatigue science principles.',
   },
   {
     step: 'Step 3',
