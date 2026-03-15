@@ -1,13 +1,13 @@
-﻿const principles = [
+const principles = [
   {
     number: '01',
     title: 'Analytical Independence',
-    body: 'Rotation Analytics Inc operates as an independent analytical body. It holds no ownership, financial, or contractual relationship with any employer, employer association, or management body, and accepts no instruction from any such party.',
+    body: 'Rotation Analytics Inc operates as an independent analytical body. It holds no ownership, financial, or contractual relationship with any employer, employer association, or management body, and accepts no instruction from any party other than the commissioning client.',
   },
   {
     number: '02',
     title: 'Neutrality of Findings',
-    body: 'Findings are based on the rotation record as submitted and assessed against established occupational health standards, regulatory requirements, and applicable collective agreement provisions. They are analytical interpretations of the data, not advocacy positions and not representative of the interests of any party.',
+    body: 'Findings are based on the rotation record as submitted and assessed against established occupational health standards, regulatory requirements, and applicable collective agreement provisions. They are impartial analytical interpretations of the data.',
   },
   {
     number: '03',
@@ -17,12 +17,7 @@
   {
     number: '04',
     title: 'Engagement-Defined Scope',
-    body: 'The scope of each engagement is defined in the engagement agreement prior to commencement. Analysis is conducted within that defined scope only. We do not design schedules, make operational recommendations, or advise on scheduling decisions.',
-  },
-  {
-    number: '05',
-    title: 'No Operational Role',
-    body: 'Rotation Analytics Inc does not interact with facility scheduling staff, management, or employer-side parties at any stage of an engagement. All materials are received from, and all findings delivered to, the party or parties identified in the engagement agreement.',
+    body: 'The scope of each engagement is defined in the engagement agreement prior to commencement. Analysis is conducted within that defined scope only.',
   },
 ]
 
@@ -39,22 +34,22 @@ export function IndependenceSection() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-white/10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-white/10 mb-px">
           {principles.map((p) => (
             <div key={p.number} className="bg-brand-navy p-6 md:p-8">
-              <p className="text-xs font-bold text-brand-navy-light tracking-widest mb-3 text-slate-400">
+              <p className="text-xs font-bold tracking-widest mb-3 text-slate-400">
                 {p.number}
               </p>
               <h3 className="text-sm font-semibold text-white mb-3 leading-snug">{p.title}</h3>
               <p className="text-sm text-slate-300 leading-relaxed">{p.body}</p>
             </div>
           ))}
+        </div>
 
-          <div className="bg-brand-navy-light/20 p-6 md:p-8 flex items-end">
-            <p className="text-sm text-slate-400 leading-relaxed italic">
-              These are structural and operational features of how Rotation Analytics Inc accepts and conducts engagements. They are not policy declarations. Each is documented in the applicable engagement agreement.
-            </p>
-          </div>
+        <div className="bg-brand-navy pt-6 mt-px border-t border-white/10">
+          <p className="text-sm text-slate-400 leading-relaxed italic max-w-3xl">
+            These are structural and operational features of how Rotation Analytics Inc accepts and conducts engagements. They are not policy declarations. Each is documented in the applicable engagement agreement.
+          </p>
         </div>
       </div>
     </section>

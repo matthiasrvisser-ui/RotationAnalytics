@@ -1,10 +1,10 @@
-﻿import Link from 'next/link'
+import Link from 'next/link'
 import { Hero } from '@/components/Hero'
 import { Section } from '@/components/Section'
 import { IndependenceSection } from '@/components/IndependenceSection'
 import { ProcessOverview } from '@/components/ProcessOverview'
 
-const problemAreas = [
+const primaryProblems = [
   {
     heading: 'Collective Agreement Compliance',
     body: 'Scheduling provisions within collective agreements create documented operational obligations. Without structured review, non-compliance may persist across rotation schedules without being clearly identified.',
@@ -13,6 +13,9 @@ const problemAreas = [
     heading: 'Lack of Documented Analysis',
     body: 'Grievance preparation is strengthened when concerns are supported by structured, independently produced analysis. Informal or ad hoc review does not carry the same evidentiary weight. Rotation Analytics Inc. provides a documented analysis package that clients may use at their discretion.',
   },
+]
+
+const exampleProblems = [
   {
     heading: 'Inadequate Rest Periods',
     body: 'Shift sequences that provide insufficient recovery time between duties are a recognized contributor to occupational fatigue and a frequent basis for grievance proceedings. Rotation analysis identifies rest period exposures across the full schedule cycle.',
@@ -28,7 +31,7 @@ export default function Home() {
     <>
       <Hero
         headline="Independent Rotation Analysis for Complex Shift Operations"
-        subheadline="Rotation Analytics Inc applies structured analytical methodology to rotation schedules across shift-based operations, examining rest intervals, consecutive sequences, and collective agreement obligations to produce documented findings for union review."
+        subheadline="Rotation Analytics Inc applies structured analytical methodology to rotation schedules across shift-based operations, examining rest intervals, consecutive sequences, and collective agreement obligations to produce documented findings for clients utilization."
         cta={{ label: 'View Sample Report', href: '/sample-report' }}
         secondaryCta={{ label: 'Our Methodology', href: '/methodology' }}
       />
@@ -44,13 +47,22 @@ export default function Home() {
               Rotation schedules carry documented risk that is rarely examined independently.
             </h2>
             <p className="text-base text-slate-500 leading-relaxed">
-              Healthcare rotations can look compliant on paper while quietly creating fatigue, worker dissatisfaction, and collective agreement violations. Most of these problems only surface after a grievance is filed, because schedules are rarely subjected to structured, independent analysis before implementation.
+              Unionized rotations can appear acceptable during cursory review while quietly creating fatigue, worker dissatisfaction, and failing to meet collective agreement obligations. Most of these problems only surface after a grievance is filed, because schedules are rarely subjected to structured, independent analysis before implementation.
             </p>
           </div>
           <div className="grid grid-cols-1 gap-4">
-            {problemAreas.map((item) => (
+            {primaryProblems.map((item) => (
               <div key={item.heading} className="border-l-2 border-slate-200 pl-5">
                 <p className="text-sm font-semibold text-slate-800 mb-1">{item.heading}</p>
+                <p className="text-sm text-slate-500 leading-relaxed">{item.body}</p>
+              </div>
+            ))}
+            <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest pt-2">
+              Some examples include
+            </p>
+            {exampleProblems.map((item) => (
+              <div key={item.heading} className="border-l-2 border-slate-100 pl-5">
+                <p className="text-sm font-semibold text-slate-700 mb-1">{item.heading}</p>
                 <p className="text-sm text-slate-500 leading-relaxed">{item.body}</p>
               </div>
             ))}
@@ -68,19 +80,19 @@ export default function Home() {
             Independent Rotation Analysis
           </h2>
           <p className="text-base text-slate-600 leading-relaxed mb-6">
-            Rotation Analytics Inc. provides Independent Rotation Analysis, a structured third-party review of rotation schedules conducted on behalf of unions and worker representatives.
+            Rotation Analytics Inc. provides comprehensive, independent, third-party review of rotation schedules conducted on behalf of the commissioning party.
           </p>
           <p className="text-base text-slate-600 leading-relaxed mb-6">
-            The methodology evaluates rotation schedules against collective agreement provisions, extended work agreements, applicable employment standards, and established fatigue science principles. The result is a written findings report identifying schedule elements that fall outside these parameters, classified by risk level.
+            The methodology evaluates rotation schedules against collective agreement provisions, extended work agreements, applicable employment standards, and established fatigue management principles. The result is an executive summary identifying schedule elements that fall outside of these parameters, classified by risk level.
           </p>
           <p className="text-base text-slate-600 leading-relaxed mb-10">
-            Rotation Analytics does not provide consulting or labour relations strategy. We do not advise on bargaining positions, represent individual workers, or determine grievance outcomes. Our role is limited to producing documented analytical findings that union representatives may use within their own review and decision-making processes.
+            Rotation Analytics Inc. offers clients impartial shift analysis and a documented analytical report for use as they see fit in their own internal reviews, decision-making, and processes.
           </p>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-8 border-t border-slate-200">
             {[
-              { label: 'Independent', detail: 'No employment or advisory relationship with the employer.' },
-              { label: 'Documented', detail: 'Structured written findings supported by analytical review.' },
-              { label: 'Risk-Classified', detail: 'Observations organized by severity to support internal assessment.' },
+              { label: 'Independent', detail: 'No conflicting employment or advisory relationship.' },
+              { label: 'Documented', detail: 'Executive report summary and recommendations.' },
+              { label: 'Risk-Classified', detail: 'Observations classified by severity to support internal assessment.' },
               { label: 'Confidential', detail: 'Reports are released solely to the commissioning client.' },
             ].map((item) => (
               <div key={item.label} className="text-center py-4">
@@ -101,48 +113,11 @@ export default function Home() {
         <ProcessOverview />
       </Section>
 
-      {/* Methodological Foundation */}
-      <Section title="Methodological Foundation" divider>
-        <div className="max-w-3xl">
-          <p className="text-base text-slate-600 leading-relaxed mb-5">
-            Our methodology was developed within the scheduling environments of unionized healthcare systems. These environments are characterised by collective agreements of significant interpretive complexity, large shift groups, multi-week extended-hours rotations, shift-type transitions, and documented fatigue sensitivity.
-          </p>
-          <p className="text-base text-slate-600 leading-relaxed mb-8">
-            These conditions concentrate several scheduling risk factors: narrow rest period tolerances, accumulated consecutive work sequences, and provisions that interact across rotation cycles in ways that are not apparent without structured analysis.
-          </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
-            {[
-              {
-                label: 'Complex Collective Agreements',
-                detail: 'Multi-provision scheduling obligations with interpretive interdependencies.',
-              },
-              {
-                label: 'Extended-Hours Rotations',
-                detail: '12-hour shift environments with compressed rest tolerances and fatigue accumulation risk.',
-              },
-              {
-                label: 'Fatigue-Sensitive Environments',
-                detail: 'Operational settings where occupational fatigue carries documented safety and performance consequences.',
-              },
-              {
-                label: 'Interpretive Scheduling Risk',
-                detail: 'Agreement provisions that create compliance exposure only when examined across full rotation cycles.',
-              },
-            ].map((item) => (
-              <div key={item.label} className="border-l-2 border-slate-200 pl-5">
-                <p className="text-sm font-semibold text-slate-800 mb-1">{item.label}</p>
-                <p className="text-sm text-slate-500 leading-relaxed">{item.detail}</p>
-              </div>
-            ))}
-          </div>
-          <p className="text-sm text-slate-500 leading-relaxed italic border-l-2 border-brand-navy pl-5">
-            Analytical methods developed for the most complex scheduling environments translate directly to other shift-based operations.
-          </p>
-        </div>
-      </Section>
-
-      {/* Sectors */}
-      <Section title="Where Rotation Assurance Applies" className="bg-brand-cream" divider>
+      {/* Where Rotation Analysis Applies */}
+      <Section title="Where Rotation Analysis Applies" className="bg-brand-cream" divider>
+        <p className="text-base text-slate-600 leading-relaxed mb-8 max-w-3xl">
+          A rotation, or master schedule, is a cyclical work plan where a pre-determined pattern of shifts — including on duty times, off duty days, and shift types — automatically repeats over a set period, usually spanning weeks or months.
+        </p>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-px bg-slate-200 border border-slate-200 rounded-lg overflow-hidden">
           {[
             {
@@ -192,16 +167,16 @@ export default function Home() {
               Pilot Diagnostic Engagement
             </h2>
             <p className="text-base text-slate-500 leading-relaxed mb-5">
-              For organizations interested in utilizing independent rotation analysis, Rotation Analytics Inc. offers a structured introductory engagement known as the Pilot Diagnostic.
+              Organizations interested in independent rotation analysis may begin with our Pilot Diagnostic.
             </p>
             <p className="text-base text-slate-500 leading-relaxed mb-5">
-              The pilot establishes a documented analytical baseline through a limited-scope review of selected rotation schedules. It allows commissioning parties to see what structured rotation analysis identifies before considering broader engagement.
+              This limited engagement provides a documented analysis of two rotation schedules, allowing you to see exactly what structured rotation analysis reveals before considering broader work.
             </p>
             <p className="text-base text-slate-500 leading-relaxed mb-8">
-              The engagement is intentionally limited in scope and designed to demonstrate what independent analysis reveals within a defined sample. All findings remain fully owned by the commissioning party and may be used internally at their discretion.
+              The pilot is intentionally small in scope and designed to demonstrate our methodology within a defined sample. All findings remain the property of the commissioning organization and may be used internally at their discretion.
             </p>
             <Link
-              href="/contact"
+              href="/pilot-diagnostic"
               className="text-sm font-medium text-brand-navy hover:underline"
             >
               Learn more about the Pilot Diagnostic &rarr;
@@ -301,7 +276,7 @@ export default function Home() {
           <div className="border border-slate-200 rounded-lg p-8">
             <h3 className="text-base font-bold text-slate-900 mb-3">Commission a Full Analysis</h3>
             <p className="text-sm text-slate-500 leading-relaxed mb-6">
-              For unions ready to proceed, rotation analysis can be commissioned immediately for defined schedules or worker groups.
+              For organizations ready to proceed, rotation analysis can be commissioned immediately for defined schedules or worker groups.
             </p>
             <Link
               href="/contact"
