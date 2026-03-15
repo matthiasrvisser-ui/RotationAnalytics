@@ -12,7 +12,10 @@ export function Footer() {
             <div className="mb-4">
               <LogoHorizontal color="#FFFFFF" />
             </div>
-            <p className="text-sm text-slate-300 leading-relaxed">
+            <p className="text-sm font-light text-white italic tracking-wide mb-3">
+              Clarity from Complexity.
+            </p>
+            <p className="text-xs text-slate-400 leading-relaxed">
               Structured independent analysis of rotation schedules, delivered exclusively to the commissioning party.
             </p>
           </div>
