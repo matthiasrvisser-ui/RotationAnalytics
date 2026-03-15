@@ -6,41 +6,34 @@ import { Section } from '@/components/Section'
 export const metadata: Metadata = {
   title: 'About',
   description:
-    'About Rotation Analytics Inc — an independent analytical firm providing structured third-party review of rotation schedules for unions, labour relations leadership, and Health & Safety committees.',
+    'About Rotation Analytics Inc — an independent analytical firm providing structured third-party review of rotation schedules for any organization requiring expert, non-affiliated rotation analysis.',
 }
 
 const commitments = [
   {
     title: 'Independence',
-    body: 'Analysis is conducted without structural alignment to any party to the scheduling arrangement. No ownership, financial, or contractual relationship exists with any employer, employer association, or management body.',
+    body: 'No ownership, financial, or contractual relationship exists with any employer, employer association, or management body. Analysis is conducted without structural alignment to any party to the scheduling arrangement.',
   },
   {
     title: 'Confidentiality',
-    body: 'Findings are released only to the commissioning party as defined in the engagement agreement. Disclosure to any other party requires explicit written direction in that agreement.',
+    body: 'Findings are released only to the commissioning party as defined in the engagement agreement. Disclosure to any other party requires explicit written direction.',
   },
   {
     title: 'Accuracy',
     body: 'All findings are documented with references to the specific scheduling data, applicable provisions, and the methodological basis for each classification.',
   },
   {
-    title: 'Clarity',
-    body: 'Reports are written to be useful to the commissioning party, not to demonstrate analytical sophistication. Plain language is used throughout.',
-  },
-  {
     title: 'Scope Integrity',
-    body: 'We produce what is commissioned. We do not add recommendations outside the agreed analytical scope or advise on bargaining strategy.',
-  },
-  {
-    title: 'Support — Not Replacement',
-    body: "Rotation Analytics Inc supports the commissioning party's review process. It does not substitute for the party's own expertise, judgement, or authority.",
+    body: 'We produce what is commissioned. We do not add recommendations outside the agreed scope, advise on bargaining strategy, or substitute for the client\'s own expertise and authority.',
   },
 ]
 
 const clientTypes = [
-  'Healthcare union locals',
-  'Labour relations leadership',
+  'Unions and worker representatives',
+  'Employers and management',
+  'Labour relations professionals',
   'Health & Safety committees',
-  'Worker and union representatives',
+  'Scheduling and workforce deployment platforms',
   'Any organization requiring independent rotation evaluation',
 ]
 
@@ -48,12 +41,12 @@ const deliverables = [
   {
     number: '01',
     title: 'Marked Rotation Schedule (Excel)',
-    body: 'Your submitted rotation returned with all identified non-conformances clearly flagged directly within the schedule. Lines are flagged and issues are annotated where they occur in the rotation, allowing reviewers to see exactly where scheduling provisions, fatigue considerations, or regulatory requirements may not have been met.',
+    body: 'The submitted rotation returned with all identified non-conformances flagged directly within the schedule. Issues are annotated where they occur, allowing reviewers to see exactly where provisions, fatigue considerations, or regulatory requirements may not have been met.',
   },
   {
     number: '02',
     title: 'Executive Summary Report',
-    body: "A structured findings report explaining each discrepancy identified in the schedule compared to applicable parameters, with the basis for each observation documented. Includes risk-classified findings, direct citation of applicable collective agreement provisions and employment standards, and improvement guidance for the commissioning party's internal use.",
+    body: 'A structured findings report documenting each discrepancy against applicable parameters. Includes risk-classified findings, citation of collective agreement provisions and employment standards, and supporting explanation for internal review.',
   },
 ]
 
@@ -71,13 +64,10 @@ export default function About() {
             <h2 className="text-xl font-bold text-slate-900 mb-4 tracking-tight">What We Do</h2>
             <div className="space-y-4 text-sm text-slate-600 leading-relaxed">
               <p>
-                Rotation Analytics Inc is an independent analytical firm specializing in the review of complex rotational staffing schedules.
+                Rotation Analytics Inc is an independent analytical firm specializing in the review of complex rotational staffing schedules. Our expertise is built on decades of real-world experience in healthcare union shift environments, combined with proprietary analytical tools designed to evaluate rotation schedules at a level not achievable through routine review.
               </p>
               <p>
-                Our work is built on decades of real-world experience in healthcare union shift environments, where collective agreements, fatigue risk, and operational demands intersect. We combine that practical expertise with proprietary analytical tools designed specifically to evaluate rotation schedules at a level not achievable through routine review.
-              </p>
-              <p>
-                We conduct structured, third-party analysis of rotation schedules, identifying collective agreement non-compliance, fatigue risk exposure, and structural scheduling issues across full rotation cycles. The result is a documented findings report delivered to the commissioning organization for its own review and decision-making.
+                We conduct structured, third-party analysis identifying collective agreement non-compliance, fatigue risk exposure, and structural scheduling issues across full rotation cycles. The result is a documented findings report delivered to the commissioning organization for its own review and decision-making.
               </p>
               <p>
                 We do not negotiate, represent parties, or advise on labour strategy. Our role is analytical, neutral, and evidence-focused.
@@ -97,7 +87,7 @@ export default function About() {
             </ul>
             <div className="bg-slate-50 border border-slate-200 rounded-lg p-4">
               <p className="text-sm text-slate-700">
-                While our expertise is healthcare, the methodology applies to any fatigue-sensitive, shift-based operation.
+                Our expertise originates in healthcare, but the methodology applies to any fatigue-sensitive, shift-based operation.
               </p>
             </div>
           </div>
@@ -106,7 +96,7 @@ export default function About() {
 
       <Section
         title="What a Full Report Includes"
-        subtitle="Every engagement produces two core deliverables supported by structured analytical findings."
+        subtitle="Every engagement produces two core deliverables."
         className="bg-brand-cream"
         divider
       >
@@ -128,7 +118,7 @@ export default function About() {
         subtitle="The principles that govern how we work."
         divider
       >
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 max-w-4xl">
           {commitments.map((c) => (
             <div key={c.title} className="bg-white border border-slate-200 rounded-lg p-5">
               <h3 className="text-sm font-semibold text-brand-navy mb-2">{c.title}</h3>
@@ -138,18 +128,10 @@ export default function About() {
         </div>
       </Section>
 
-      <Section divider>
-        <div className="max-w-3xl space-y-2 text-sm text-slate-500 leading-relaxed">
-          <p>
-            Rotation Analytics Inc does not design rotation schedules. We evaluate existing rotations independently to support informed review and decision-making by the commissioning party.
-          </p>
-        </div>
-      </Section>
-
       <Section title="Enquiries">
         <div className="max-w-xl">
           <p className="text-base text-slate-600 leading-relaxed mb-6">
-            If you represent a union, Health &amp; Safety committee, or labour relations body and want to understand how rotation analysis might support your work, we are available to discuss. Commissioned clients may submit rotation files directly.
+            If your organization requires independent rotation analysis, we are available to discuss scope and engagement terms. Commissioned clients may submit rotation files directly.
           </p>
           <div className="flex flex-wrap gap-4">
             <Link

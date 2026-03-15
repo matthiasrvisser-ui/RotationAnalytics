@@ -6,7 +6,7 @@ import { Section } from '@/components/Section'
 export const metadata: Metadata = {
   title: 'Pilot Diagnostic',
   description:
-    'The Rotation Analytics Inc Pilot Diagnostic — a structured entry point for evaluating independent rotation analysis, covering fatigue risk, agreement exposure, and scheduling vulnerabilities across a defined rotation period.',
+    'The Rotation Analytics Inc Pilot Diagnostic — a structured entry point for evaluating independent rotation analysis across a defined rotation period.',
 }
 
 const pilotScope = [
@@ -21,31 +21,27 @@ const deliverables = [
   {
     number: '01',
     title: 'Marked Rotation Schedule (Excel)',
-    body: 'Your submitted rotation returned with all identified non-conformances clearly flagged directly within the schedule. Lines are flagged and issues are annotated where they occur in the rotation, allowing reviewers to see exactly where scheduling provisions, fatigue considerations, or regulatory requirements may not have been met.',
+    body: 'The submitted rotation returned with all identified non-conformances flagged and annotated directly within the schedule.',
   },
   {
     number: '02',
     title: 'Executive Summary Report',
-    body: 'A structured findings report explaining each discrepancy identified in the schedule compared to applicable parameters, with the basis for each observation documented. Includes risk-classified findings, direct citation of applicable collective agreement provisions and employment standards, and improvement guidance for the commissioning party\'s internal use.',
+    body: 'Risk-classified findings with citation of applicable collective agreement provisions, employment standards, and supporting explanation.',
   },
 ]
 
 const principles = [
   {
     title: 'Independent',
-    body: 'Rotation Analytics Inc holds no ownership, financial, or contractual relationship with any employer, employer association, or management body. Analysis is conducted without reference to management scheduling rationale or employer instruction.',
+    body: 'No ownership, financial, or contractual relationship with any employer or management body. No contact with facility or scheduling staff at any stage.',
   },
   {
     title: 'Confidential',
-    body: 'All materials received and findings produced are treated as strictly confidential and governed by the engagement agreement. No disclosure is made to any party not identified in that agreement.',
+    body: 'All materials and findings governed by the engagement agreement. No disclosure to any party not identified in that agreement.',
   },
   {
-    title: 'Analytical Findings',
-    body: 'The pilot produces analytical findings for the commissioning party to use in its own review process. Findings are interpretations of the rotation record against established standards — not advocacy positions and not strategic advice.',
-  },
-  {
-    title: 'No Operational Role',
-    body: 'Analysis is conducted entirely from submitted records. No contact is made with the facility, scheduling staff, management, or any employer-side party at any stage of the engagement.',
+    title: 'Analytical',
+    body: 'Findings are interpretations of the rotation record against established standards — not advocacy positions and not strategic advice.',
   },
 ]
 
@@ -53,17 +49,17 @@ const timelineSteps = [
   {
     step: 'Step 1',
     title: 'Submission',
-    body: 'The commissioning party provides rotation files in Excel format for up to five workers across a defined rotation period. Optional context notes may be included. No employer contact is required.',
+    body: 'Rotation files provided in Excel format for up to five workers. Optional context notes may be included. No employer contact required.',
   },
   {
     step: 'Step 2',
     title: 'Independent Analysis',
-    body: 'Rotation Analytics Inc conducts review against rest period standards, collective agreement provisions, and established fatigue science. No employer communication takes place during this phase.',
+    body: 'Rotation Analytics Inc conducts review against rest period standards, collective agreement provisions, and established fatigue science.',
   },
   {
     step: 'Step 3',
     title: 'Report Delivery',
-    body: 'The complete findings package is delivered confidentially to the commissioning party: the marked rotation schedule and executive summary report.',
+    body: 'The marked rotation schedule and executive summary report are delivered confidentially to the commissioning party.',
   },
 ]
 
@@ -72,7 +68,7 @@ export default function PilotDiagnostic() {
     <>
       <Hero
         headline="2-Rotation Diagnostic Pilot"
-        subheadline="A structured, defined-scope engagement for parties evaluating independent rotation analysis. Fixed deliverables, no operational interference, and a documented fee waiver condition."
+        subheadline="A structured, defined-scope engagement with fixed deliverables, no operational interference, and a documented fee waiver condition."
         cta={{ label: 'Discuss an Engagement', href: '/contact' }}
       />
 
@@ -87,19 +83,10 @@ export default function PilotDiagnostic() {
               Evaluate the value of rotation analysis before any broader commitment.
             </h2>
             <p className="text-base text-slate-500 leading-relaxed mb-5">
-              Independent rotation analysis is a new form of engagement for most commissioning parties.
-              The 2-Rotation Diagnostic Pilot provides a concrete, documented experience of what the
-              analysis produces, without the commitment of a full-scale or ongoing engagement.
-            </p>
-            <p className="text-base text-slate-500 leading-relaxed mb-5">
-              The pilot covers two rotation cycles of the commissioning party&apos;s choosing over a
-              defined period. Scope is fixed at the outset and does not expand without explicit direction
-              from the commissioning party. All findings are owned entirely by the commissioning party.
+              The 2-Rotation Diagnostic Pilot provides a concrete, documented experience of what independent rotation analysis produces — without the commitment of a full-scale engagement.
             </p>
             <p className="text-base text-slate-500 leading-relaxed">
-              A pilot produces a documented record in its own right, useful for Health &amp; Safety
-              reporting, internal files, and collective bargaining preparation, regardless of what
-              the findings show.
+              Scope is fixed at the outset and does not expand without explicit client direction. All findings are owned entirely by the commissioning party and produce a documented record useful for internal files, Health &amp; Safety reporting, and collective bargaining preparation.
             </p>
           </div>
 
@@ -120,59 +107,33 @@ export default function PilotDiagnostic() {
         </div>
       </Section>
 
-      {/* What the Commissioning Party Provides */}
+      {/* What the Client Provides */}
       <Section
-        title="What the Commissioning Party Provides"
-        subtitle="The pilot requires minimal input from the commissioning party."
+        title="What the Client Provides"
         className="bg-brand-cream"
         divider
       >
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 max-w-3xl">
-          <div className="bg-white border border-slate-200 rounded-lg p-6">
-            <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-5">
-              Required
-            </p>
-            <div className="flex items-start gap-4">
-              <div className="w-1.5 h-1.5 rounded-full bg-brand-navy mt-2 flex-shrink-0" />
-              <div>
-                <p className="text-sm font-semibold text-slate-900 mb-2">Rotation files (Excel)</p>
-                <p className="text-sm text-slate-500 leading-relaxed">
-                  Shift schedule data for two separate rotations provided in Excel format. Standard
-                  rotation export files are accepted without modification or reformatting.
-                </p>
-              </div>
+        <div className="max-w-3xl">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+            <div className="flex items-start gap-3 text-sm text-slate-600">
+              <div className="w-1.5 h-1.5 rounded-full bg-brand-navy mt-1.5 flex-shrink-0" />
+              <span><strong>Required:</strong> Rotation files in Excel format covering the agreed period</span>
+            </div>
+            <div className="flex items-start gap-3 text-sm text-slate-600">
+              <div className="w-1.5 h-1.5 rounded-full bg-slate-300 mt-1.5 flex-shrink-0" />
+              <span><strong>Optional:</strong> Context notes on active concerns or provisions of interest</span>
             </div>
           </div>
-
-          <div className="bg-white border border-slate-200 rounded-lg p-6">
-            <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-5">
-              Optional
-            </p>
-            <div className="flex items-start gap-4">
-              <div className="w-1.5 h-1.5 rounded-full bg-slate-300 mt-2 flex-shrink-0" />
-              <div>
-                <p className="text-sm font-semibold text-slate-900 mb-2">Context notes</p>
-                <p className="text-sm text-slate-500 leading-relaxed">
-                  Background the commissioning party wishes to provide: active scheduling concerns,
-                  specific provisions of interest, or ongoing grievance context. Not required, but
-                  may focus the analysis on areas of priority.
-                </p>
-              </div>
-            </div>
-          </div>
+          <p className="text-xs text-slate-400 leading-relaxed">
+            No employer system access required. No outside communication with the facility or scheduling staff at any stage.
+          </p>
         </div>
-
-        <p className="text-xs text-slate-400 mt-6 max-w-2xl leading-relaxed">
-          No access to employer systems is required. No outside communication with the facility,
-          employer, or scheduling staff is involved at any stage. All materials are submitted
-          directly to Rotation Analytics Inc by the commissioning party.
-        </p>
       </Section>
 
       {/* What We Deliver */}
       <Section
         title="What We Deliver"
-        subtitle="Every pilot engagement produces two structured documents, delivered as a complete package."
+        subtitle="Every pilot produces two structured documents."
         divider
       >
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
@@ -191,11 +152,11 @@ export default function PilotDiagnostic() {
       {/* Engagement Principles */}
       <Section
         title="Engagement Principles"
-        subtitle="The terms under which every pilot is conducted, documented in the engagement agreement."
+        subtitle="Documented in the engagement agreement."
         className="bg-brand-cream"
         divider
       >
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
           {principles.map((p) => (
             <div
               key={p.title}
@@ -211,7 +172,6 @@ export default function PilotDiagnostic() {
       {/* Timeline */}
       <Section
         title="Engagement Timeline"
-        subtitle="The pilot follows a structured three-phase sequence from submission to delivery."
         divider
       >
         <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-slate-200 rounded-lg overflow-hidden">
@@ -229,8 +189,7 @@ export default function PilotDiagnostic() {
           ))}
         </div>
         <p className="text-xs text-slate-400 mt-5 leading-relaxed">
-          Target delivery window: 2 business days from receipt of a complete submission.
-          Timeline is confirmed at the outset of the engagement.
+          Target delivery: 2 business days from receipt of complete submission.
         </p>
       </Section>
 
@@ -246,20 +205,10 @@ export default function PilotDiagnostic() {
 
           <div className="space-y-5 text-base text-slate-500 leading-relaxed mb-10">
             <p>
-              Where independent analysis of the submitted rotation files does not identify findings
-              classified as high or moderate risk under the standard classification framework, the
-              pilot engagement fee is waived in full.
+              Where independent analysis does not identify findings classified as high or moderate risk, the pilot fee is waived in full. This condition is documented in the engagement agreement prior to commencement.
             </p>
             <p>
-              This condition is documented in the engagement agreement prior to commencement. It is
-              not a promotional offer. It reflects the analytical basis on which this service
-              operates: if the schedules are compliant and the rotations are sound, the commissioning
-              party carries no financial exposure from the engagement.
-            </p>
-            <p>
-              In practice, a clean pilot result is itself a documented finding. It can inform
-              collective bargaining, Health &amp; Safety reporting, and internal records in
-              the same way that an adverse finding would.
+              A clean result is itself a documented finding — useful for internal records, Health &amp; Safety reporting, and collective bargaining preparation in the same way an adverse finding would be.
             </p>
           </div>
 
@@ -269,9 +218,9 @@ export default function PilotDiagnostic() {
             </p>
             <ul className="space-y-3">
               {[
-                'No findings are classified as High Risk',
-                'No findings are classified as Moderate Risk',
-                'The submitted rotation files are complete and cover the agreed period',
+                'No findings classified as High Risk',
+                'No findings classified as Moderate Risk',
+                'Submitted rotation files are complete and cover the agreed period',
               ].map((item, i) => (
                 <li key={i} className="flex items-start gap-3 text-sm text-slate-600">
                   <div className="w-1.5 h-1.5 rounded-full bg-slate-300 mt-2 flex-shrink-0" />
@@ -280,8 +229,7 @@ export default function PilotDiagnostic() {
               ))}
             </ul>
             <p className="text-xs text-slate-400 mt-5 pt-4 border-t border-slate-100 leading-relaxed">
-              Full waiver terms are set out in the engagement agreement. Low-risk findings do not
-              trigger the waiver. A low-risk finding is a documented record, not a null result.
+              Full terms in the engagement agreement. Low-risk findings do not trigger the waiver.
             </p>
           </div>
 

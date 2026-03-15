@@ -7,22 +7,22 @@ import { ProcessOverview } from '@/components/ProcessOverview'
 const primaryProblems = [
   {
     heading: 'Collective Agreement Compliance',
-    body: 'Scheduling provisions within collective agreements create documented operational obligations. Without structured review, non-compliance may persist across rotation schedules without being clearly identified.',
+    body: 'Scheduling provisions within collective agreements create documented operational obligations. Without structured review, non-compliance may persist across rotation cycles without being identified.',
   },
   {
     heading: 'Lack of Documented Analysis',
-    body: 'Grievance preparation is strengthened when concerns are supported by structured, independently produced analysis. Informal or ad hoc review does not carry the same evidentiary weight. Rotation Analytics Inc. provides a documented analysis package that clients may use at their discretion.',
+    body: 'Grievance preparation is strengthened when supported by structured, independently produced analysis. Informal review does not carry the same evidentiary weight. Rotation Analytics Inc provides a documented analysis package for client use at their discretion.',
   },
 ]
 
 const exampleProblems = [
   {
     heading: 'Inadequate Rest Periods',
-    body: 'Shift sequences that provide insufficient recovery time between duties are a recognized contributor to occupational fatigue and a frequent basis for grievance proceedings. Rotation analysis identifies rest period exposures across the full schedule cycle.',
+    body: 'Shift sequences providing insufficient recovery time between duties are a recognized contributor to occupational fatigue and a frequent basis for grievance proceedings.',
   },
   {
     heading: 'Shift Type Transitions',
-    body: 'Transitions between night and day shifts are a common source of fatigue risk. Many agreements contain specific provisions governing shift change direction, recovery time, or transition structure. These issues often go unnoticed during routine schedule review but can create clear compliance exposure within the rotation schedule.',
+    body: 'Night-to-day shift transitions are a common source of fatigue risk. Many agreements contain specific provisions governing transition structure and recovery time that go unnoticed during routine schedule review.',
   },
 ]
 
@@ -31,7 +31,7 @@ export default function Home() {
     <>
       <Hero
         headline="Independent Rotation Analysis for Complex Shift Operations"
-        subheadline="Rotation Analytics Inc applies structured analytical methodology to rotation schedules across shift-based operations, examining rest intervals, consecutive sequences, and collective agreement obligations to produce documented findings for clients utilization."
+        subheadline="Rotation Analytics Inc applies structured analytical methodology to rotation schedules across shift-based operations, examining rest intervals, consecutive sequences, and collective agreement obligations to produce documented findings for client utilization."
         cta={{ label: 'View Sample Report', href: '/sample-report' }}
         secondaryCta={{ label: 'Our Methodology', href: '/methodology' }}
       />
@@ -80,13 +80,13 @@ export default function Home() {
             Independent Rotation Analysis
           </h2>
           <p className="text-base text-slate-600 leading-relaxed mb-6">
-            Rotation Analytics Inc. provides comprehensive, independent, third-party review of rotation schedules conducted on behalf of the commissioning party.
+            Rotation Analytics Inc provides comprehensive, independent, third-party review of rotation schedules conducted on behalf of the commissioning party.
           </p>
           <p className="text-base text-slate-600 leading-relaxed mb-6">
             The methodology evaluates rotation schedules against collective agreement provisions, extended work agreements, applicable employment standards, and established fatigue management principles. The result is an executive summary identifying schedule elements that fall outside of these parameters, classified by risk level.
           </p>
           <p className="text-base text-slate-600 leading-relaxed mb-10">
-            Rotation Analytics Inc. offers clients impartial shift analysis and a documented analytical report for use as they see fit in their own internal reviews, decision-making, and processes.
+            Rotation Analytics Inc offers clients impartial shift analysis and a documented analytical report for use in their own internal reviews, decision-making, and processes.
           </p>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-8 border-t border-slate-200">
             {[
@@ -122,27 +122,27 @@ export default function Home() {
           {[
             {
               label: 'Healthcare',
-              detail: 'The originating environment: complex shift agreements and fatigue-sensitive operations.',
+              detail: 'Complex shift agreements and fatigue-sensitive operations.',
             },
             {
-              label: 'Energy & Industrial Operations',
-              detail: 'Extended rotations and continuous operations with documented rest requirements.',
+              label: 'Energy & Industrial',
+              detail: 'Extended rotations with documented rest requirements.',
             },
             {
               label: 'Emergency Services',
-              detail: 'Shift scheduling subject to collective agreement provisions and fatigue protocols.',
+              detail: 'Collective agreement provisions and fatigue protocols.',
             },
             {
               label: 'Transportation',
-              detail: 'Regulated rest period obligations across rotating multi-week schedules.',
+              detail: 'Regulated rest obligations across multi-week schedules.',
             },
             {
               label: 'Manufacturing',
-              detail: 'Continuous production environments with multi-week rotation structures.',
+              detail: 'Continuous production with multi-week rotation structures.',
             },
             {
               label: '24/7 Operations',
-              detail: 'Any shift-based environment with consecutive sequence risk and collective agreement exposure.',
+              detail: 'Consecutive sequence risk and agreement exposure.',
             },
           ].map((sector) => (
             <div key={sector.label} className="bg-white p-6">
@@ -167,13 +167,10 @@ export default function Home() {
               Pilot Diagnostic Engagement
             </h2>
             <p className="text-base text-slate-500 leading-relaxed mb-5">
-              Organizations interested in independent rotation analysis may begin with our Pilot Diagnostic.
-            </p>
-            <p className="text-base text-slate-500 leading-relaxed mb-5">
-              This limited engagement provides a documented analysis of two rotation schedules, allowing you to see exactly what structured rotation analysis reveals before considering broader work.
+              Organizations interested in independent rotation analysis may begin with our Pilot Diagnostic — a limited engagement covering two rotation schedules, designed to demonstrate what structured analysis reveals before committing to broader work.
             </p>
             <p className="text-base text-slate-500 leading-relaxed mb-8">
-              The pilot is intentionally small in scope and designed to demonstrate our methodology within a defined sample. All findings remain the property of the commissioning organization and may be used internally at their discretion.
+              The pilot is intentionally small in scope. All findings remain the property of the commissioning organization and may be used internally at their discretion.
             </p>
             <Link
               href="/pilot-diagnostic"
@@ -206,45 +203,6 @@ export default function Home() {
             <p className="text-xs text-slate-400 mt-6 pt-5 border-t border-slate-200">
               All findings are delivered confidentially to the commissioning party.
             </p>
-          </div>
-        </div>
-      </Section>
-
-      {/* Example Rotation placeholder */}
-      <Section className="bg-slate-50" divider>
-        <div className="max-w-2xl mx-auto text-center">
-          <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-5">
-            Demonstration
-          </p>
-          <h2 className="text-2xl font-bold text-slate-900 tracking-tight mb-4">
-            Example Rotation Analysis
-          </h2>
-          <p className="text-base text-slate-500 leading-relaxed mb-8">
-            A worked example using anonymized schedule data showing how findings are identified, classified, and documented. This demonstration illustrates the structure and depth of a completed rotation findings report.
-          </p>
-
-          <div className="bg-white border border-slate-200 rounded-lg p-8 text-left">
-            <div className="flex items-center justify-between mb-5">
-              <p className="text-xs font-semibold text-slate-500 uppercase tracking-wide">
-                Example Rotation
-              </p>
-              <span className="inline-block text-xs font-semibold text-slate-400 border border-slate-200 bg-slate-50 px-3 py-1 rounded-full">
-                Demonstration coming soon.
-              </span>
-            </div>
-            <p className="text-xs text-slate-400 leading-relaxed">
-              When published, this section will include a full shift table, fatigue risk observations,
-              and a complete findings summary showing exactly what a rotation analysis produces.
-            </p>
-          </div>
-
-          <div className="mt-6">
-            <Link
-              href="/methodology"
-              className="text-sm text-brand-navy font-medium hover:underline"
-            >
-              Review our methodology in the meantime &rarr;
-            </Link>
           </div>
         </div>
       </Section>

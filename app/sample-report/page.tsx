@@ -7,7 +7,7 @@ import { RiskCard } from '@/components/RiskCard'
 export const metadata: Metadata = {
   title: 'Sample Report',
   description:
-    'A representative Rotation Analytics Inc findings report, showing how fatigue risk, agreement interpretation exposure, and rotation design vulnerabilities are documented and classified for review by the commissioning party.',
+    'A representative Rotation Analytics Inc findings report showing how fatigue risk, agreement compliance exposure, and rotation design vulnerabilities are documented and classified.',
 }
 
 const findings = [
@@ -17,34 +17,34 @@ const findings = [
     description:
       'Four instances identified over the 4-week rotation where the interval between consecutive shifts falls below the 11-hour minimum established in the collective agreement and provincial labour standards.',
     finding:
-      'Mar 7 (8h), Mar 16 (8h), Mar 23 (9h), Mar 29 (8.5h). The pattern is recurring and consistent across the rotation. This indicates a scheduling design issue rather than an isolated occurrence.',
+      'Mar 7 (8h), Mar 16 (8h), Mar 23 (9h), Mar 29 (8.5h). The pattern is recurring and consistent across the rotation, indicating a scheduling design issue rather than an isolated occurrence.',
     reference: 'Art. 14.03 — Rest Between Shifts | Labour Standards Act s.36',
   },
   {
     level: 'high' as const,
     title: 'Consecutive Night Shifts — Exceeds Established Occupational Health Guideline',
     description:
-      'A sequence of six consecutive night shifts was identified in Week 3. Peer-reviewed occupational health standards indicate that sequences exceeding four consecutive nights carry significantly elevated cumulative fatigue and error risk.',
+      'A sequence of six consecutive night shifts identified in Week 3. Peer-reviewed standards indicate sequences exceeding four consecutive nights carry significantly elevated cumulative fatigue risk.',
     finding:
-      'Sequence runs Mar 11–16. Six consecutive nights. Occupational health guidelines identify sequences exceeding four consecutive nights as carrying elevated risk for circadian disruption and impaired recovery. Recommend review against collective agreement provisions governing consecutive shift limits.',
+      'Sequence runs Mar 11–16. Six consecutive nights. Guidelines identify sequences exceeding four consecutive nights as carrying elevated risk for circadian disruption and impaired recovery.',
     reference: 'Occupational Health Best Practices | CBA Art. 12.07',
   },
   {
     level: 'moderate' as const,
     title: 'Weekend Distribution — Inequitable Assignment Pattern',
     description:
-      'Analysis of the 4-week rotation reveals this worker is scheduled for 5 of 8 weekend days (62.5%). The collective agreement provides for equitable distribution of weekend work within the rotation group.',
+      'This worker is scheduled for 5 of 8 weekend days (62.5%). The collective agreement provides for equitable distribution of weekend work within the rotation group.',
     finding:
-      'Weekend distribution for this worker: 62.5%. Rotation group average: 48.3%. The differential of 14.2 percentage points warrants review under the applicable equitable distribution provision.',
+      'Weekend distribution: 62.5%. Rotation group average: 48.3%. Differential of 14.2 percentage points warrants review under the applicable equitable distribution provision.',
     reference: 'CBA Art. 15.01 — Weekend Scheduling',
   },
   {
     level: 'low' as const,
     title: 'Annual Overtime Accumulation — Within Expected Range',
     description:
-      'Overtime hours to date are within expected ranges and no collective agreement threshold has been approached. Documented for completeness and ongoing period tracking.',
+      'Overtime hours are within expected ranges and no collective agreement threshold has been approached. Documented for completeness.',
     finding:
-      'YTD overtime as of end of rotation period: 14.5 hours. No threshold triggers apply. No action required at this time.',
+      'YTD overtime as of end of rotation period: 14.5 hours. No threshold triggers apply. No action required.',
     reference: 'CBA Art. 18.01 — Overtime Provisions',
   },
 ]
@@ -55,7 +55,7 @@ const reportSections = [
   'Fatigue Risk Observations',
   'Findings — Classified by Risk Level',
   'Regulatory and Collective Agreement References',
-  'Improvement Guidance for Commissioning Party Review',
+  'Improvement Guidance',
   'Methodology Notes',
 ]
 
@@ -64,7 +64,7 @@ const reportMeta = [
   { label: 'Classification', value: 'Registered Nurse' },
   { label: 'Facility', value: '[Anonymized]' },
   { label: 'Period', value: 'March 2025' },
-  { label: 'Commissioned By', value: '[Union Local]' },
+  { label: 'Commissioned By', value: '[Client]' },
   { label: 'Analyst', value: 'Rotation Analytics Inc — File #2025-0047' },
   { label: 'Date Issued', value: 'March 31, 2025' },
   { label: 'Status', value: 'Final' },
@@ -75,13 +75,12 @@ export default function SampleReport() {
     <>
       <Hero
         headline="Sample Report"
-        subheadline="A representative Rotation Analytics Inc findings report, showing the structure, depth, and format of findings delivered to the commissioning party."
+        subheadline="A representative findings report showing the structure, depth, and format of findings delivered to the commissioning party."
       />
 
       <Section divider>
         <div className="bg-amber-50 border border-amber-200 rounded-lg p-4 mb-10 text-sm text-amber-800">
           <strong>Representative example.</strong> Names, facility identifiers, collective agreement references, and dates are illustrative.
-          Findings are drawn from common scheduling patterns for demonstration purposes only.
         </div>
 
         {/* Report header block */}
@@ -108,13 +107,13 @@ export default function SampleReport() {
         <div className="max-w-3xl mb-10">
           <h3 className="text-lg font-bold text-slate-900 mb-4">Executive Summary</h3>
           <p className="text-sm text-slate-600 leading-relaxed mb-4">
-            This report covers an independent analysis of the rotation schedule for the above-referenced worker over a 4-week period in March 2025. Rest periods, shift sequencing, fatigue risk patterns, weekend distribution, and applicable collective agreement provisions were all examined.
+            Independent analysis of the rotation schedule for the above-referenced worker over a 4-week period. Rest periods, shift sequencing, fatigue risk patterns, weekend distribution, and applicable collective agreement provisions were examined.
           </p>
           <p className="text-sm text-slate-600 leading-relaxed mb-4">
-            Two high-risk findings were identified: a recurring quick-return pattern with rest periods below the 11-hour minimum on four occasions, and a consecutive night shift sequence exceeding established occupational health guidelines. One moderate-risk finding relates to inequitable weekend distribution. One low-risk item is documented for ongoing tracking.
+            Two high-risk findings identified: a recurring quick-return pattern with rest periods below the 11-hour minimum on four occasions, and a consecutive night shift sequence exceeding established occupational health guidelines. One moderate-risk finding relates to inequitable weekend distribution. One low-risk item documented for ongoing tracking.
           </p>
           <p className="text-sm text-slate-600 leading-relaxed">
-            Recommended actions are noted for each finding. The commissioning party should review these findings against the applicable collective agreement and determine appropriate next steps.
+            Recommended actions noted for each finding. The commissioning party should review these against the applicable collective agreement and determine next steps.
           </p>
         </div>
 
@@ -149,7 +148,7 @@ export default function SampleReport() {
       {/* What's included */}
       <Section
         title="What a Full Report Includes"
-        subtitle="Every Rotation Analytics Inc report is delivered with the following sections."
+        subtitle="Every report is delivered with the following sections."
         divider
       >
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-2xl">
@@ -169,7 +168,7 @@ export default function SampleReport() {
         <div className="text-center py-4">
           <h2 className="text-2xl font-bold text-white mb-4 tracking-tight">Commission an Analysis</h2>
           <p className="text-slate-300 mb-8 max-w-xl mx-auto text-sm leading-relaxed">
-            Rotation Analytics Inc accepts engagements from unions and worker representatives. Contact us to discuss a rotation analysis for your members.
+            Rotation Analytics Inc accepts engagements from any organization requiring independent rotation analysis.
           </p>
           <Link
             href="/contact"

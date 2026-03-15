@@ -6,7 +6,7 @@ import { AnalysisFlow } from '@/components/AnalysisFlow'
 export const metadata: Metadata = {
   title: 'Methodology',
   description:
-    'How Rotation Analytics Inc applies structured analytical methodology — identifying fatigue risk, agreement interpretation exposure, and rotation design vulnerabilities across shift-based scheduling environments.',
+    'How Rotation Analytics Inc applies structured analytical methodology to identify fatigue risk, agreement compliance exposure, and rotation design vulnerabilities across shift-based scheduling environments.',
 }
 
 const examineItems = [
@@ -18,27 +18,27 @@ const examineItems = [
   {
     label: 'Rest intervals',
     detail:
-      'The elapsed time between the end of one shift and the start of the next based agreement provisions.',
+      'Elapsed time between the end of one shift and the start of the next, assessed against applicable agreement provisions.',
   },
   {
-    label: 'Shift Type Changes',
+    label: 'Shift type changes',
     detail:
-      'Rapid shift type changes, specifically Night Shift to Day Shift changes are identified.',
+      'Rapid shift type transitions, specifically night-to-day shift changes, identified and flagged.',
   },
   {
     label: 'Fatigue risk patterns',
     detail:
-      'Shift sequences and rest intervals assessed against established occupational health guidelines to identify scheduling patterns associated with fatigue risk. These are occupational best practices from peer-reviewed standards; they are not quantified fatigue scores.',
+      'Shift sequences and rest intervals assessed against established occupational health guidelines. These are peer-reviewed best practices, not quantified fatigue scores.',
   },
   {
     label: 'Weekend and statutory holiday distribution',
     detail:
-      'Weekends off patterns, and statutory holiday assignments across the full rotation, compared to the rotation group where data is available.',
+      'Weekends off patterns and statutory holiday assignments across the full rotation, compared to the rotation group where data is available.',
   },
   {
     label: 'Collective agreement provisions',
     detail:
-      'Scheduling provisions stipulated in the applicable collective agreement are cross-referenced against the actual rotation record.',
+      'Scheduling provisions in the applicable collective agreement cross-referenced against the actual rotation record.',
   },
 ]
 
@@ -49,7 +49,7 @@ const riskLevels = [
     bg: 'bg-red-50',
     badge: 'bg-red-100 text-red-700',
     description:
-      'The scheduling pattern presents an immediate basis for grievance proceedings, regulatory non-compliance, or documented occupational health risk. Prompt review by the commissioning party is warranted.',
+      'Immediate basis for grievance proceedings, regulatory non-compliance, or documented occupational health risk. Prompt review warranted.',
   },
   {
     level: 'Moderate',
@@ -57,7 +57,7 @@ const riskLevels = [
     bg: 'bg-amber-50',
     badge: 'bg-amber-100 text-amber-700',
     description:
-      'The pattern warrants attention and monitoring. It may not yet constitute a grievable violation, but it represents elevated exposure. Tracking and formal documentation are appropriate.',
+      'Elevated exposure warranting attention and monitoring. May not yet constitute a grievable violation, but formal documentation is appropriate.',
   },
   {
     level: 'Low',
@@ -65,7 +65,7 @@ const riskLevels = [
     bg: 'bg-green-50',
     badge: 'bg-green-100 text-green-700',
     description:
-      'Parameters have been met. Documented for completeness. The item is not immediately concerning, and this is captured in the report record.',
+      'Parameters met. Documented for completeness and ongoing record.',
   },
 ]
 
@@ -81,7 +81,7 @@ export default function Methodology() {
     <>
       <Hero
         headline="Our Methodology"
-        subheadline="How we examine rotation schedules and identify scheduling risk for review by the commissioning party."
+        subheadline="How we examine rotation schedules and classify scheduling risk for client review."
       />
 
       <Section
@@ -108,13 +108,13 @@ export default function Methodology() {
         </p>
         <AnalysisFlow />
         <p className="text-xs text-slate-400 mt-5 leading-relaxed max-w-2xl">
-          Your rotation is confidential and all findings are delivered only to the commissioning party.
+          Your rotation is confidential. All findings are delivered only to the commissioning party.
         </p>
       </Section>
 
       <Section
         title="Risk Classification"
-        subtitle="Identified findings are classified into three levels to guide commissioning party prioritisation."
+        subtitle="Findings are classified into three levels to guide client prioritisation."
         className="bg-brand-cream"
         divider
       >
@@ -127,32 +127,6 @@ export default function Methodology() {
               <p className="text-sm text-slate-700 leading-relaxed">{r.description}</p>
             </div>
           ))}
-        </div>
-      </Section>
-
-      <Section
-        title="Our Independence"
-        subtitle="The structural foundation of the assurance we provide."
-        divider
-      >
-        <div className="max-w-3xl space-y-5">
-          <p className="text-base text-slate-600 leading-relaxed">
-            Rotation Analytics Inc operates as an independent entity. It holds no ownership, financial, or contractual relationship with any employer, employer association, or management body, and accepts no instruction from any external party.
-          </p>
-          <p className="text-base text-slate-600 leading-relaxed">
-            Findings reflect the rotation record as submitted and are assessed against established occupational health standards, regulatory requirements, and applicable collective agreement provisions. They are analytical interpretations, not advocacy positions and not representative of the interests of any party.
-          </p>
-          <p className="text-base text-slate-600 leading-relaxed">
-            All materials received and findings produced within an engagement are treated as strictly confidential. The scope of each engagement, and the parties to whom findings are released, are defined in the engagement agreement prior to commencement.
-          </p>
-        </div>
-      </Section>
-
-      <Section divider>
-        <div className="max-w-3xl space-y-2 text-sm text-slate-500 leading-relaxed">
-          <p>
-            Rotation Analytics Inc currently does not design rotation schedules; we expertly evaluate existing rotations to provide informed review and decision-making for our clients.
-          </p>
         </div>
       </Section>
 

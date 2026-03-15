@@ -1,18 +1,18 @@
-﻿const steps = [
+const steps = [
   {
     step: 'Step 1',
     title: 'Rotation Received',
-    body: 'The rotation schedule is provided to Rotation Analytics Inc by the commissioning party. The schedule is treated as confidential from the point of receipt.',
+    body: 'The rotation schedule is provided to Rotation Analytics Inc by the commissioning party. Confidential from point of receipt.',
   },
   {
     step: 'Step 2',
     title: 'Independent Analysis Performed',
-    body: 'The schedule is examined by our expert using our propietary tools against collective agreement provisions, extended work agreements, applicable employment standards, and established fatigue science principles.',
+    body: 'The schedule is examined using proprietary tools against collective agreement provisions, employment standards, and established fatigue science principles.',
   },
   {
     step: 'Step 3',
-    title: 'Findings Delivered to Commissioning Party',
-    body: 'A structured findings report is delivered confidentially to the commissioning party. All identified items are classified by risk level and referenced against applicable agreement provision, and occupational standards.',
+    title: 'Findings Delivered',
+    body: 'A structured findings report is delivered confidentially. All items are classified by risk level and referenced against applicable provisions and occupational standards.',
   },
 ]
 
@@ -67,7 +67,7 @@ export function ProcessOverview({ showTitle = false }: ProcessOverviewProps) {
 
       <div className="mt-6 pt-6 border-t border-slate-100">
         <p className="text-xs text-slate-400 leading-relaxed">
-          Confidentiality is critical to our business, all data and communication remains between Rotation Analytics Inc and the commissioning party.
+          All data and communication remains between Rotation Analytics Inc and the commissioning party.
         </p>
       </div>
     </div>

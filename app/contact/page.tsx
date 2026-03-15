@@ -6,7 +6,7 @@ import { Section } from '@/components/Section'
 export const metadata: Metadata = {
   title: 'Contact',
   description:
-    'Contact Rotation Analytics Inc to request a pilot engagement discussion. We accept engagements commissioned by healthcare unions, worker representatives, and Health & Safety committees.',
+    'Contact Rotation Analytics Inc to request a pilot engagement discussion or commission a rotation analysis.',
 }
 
 const primaryConcerns = [
@@ -20,9 +20,9 @@ const primaryConcerns = [
 ]
 
 const rotationVolumes = [
-  '1–5 workers',
-  '6–20 workers',
-  '21–50 workers',
+  '1\u20135 workers',
+  '6\u201320 workers',
+  '21\u201350 workers',
   '51 or more workers',
   'Unknown at this time',
 ]
@@ -32,19 +32,19 @@ const nextSteps = [
     number: '01',
     title: 'Initial Response',
     description:
-      'We will review your enquiry and respond within 2 business days to confirm that your situation falls within our scope.',
+      'We review your enquiry and respond within 2 business days to confirm scope eligibility.',
   },
   {
     number: '02',
     title: 'Scope Confirmation',
     description:
-      'We will confirm the rotation period, worker count, and collective agreement provisions relevant to the analysis.',
+      'Rotation period, worker count, and applicable collective agreement provisions are confirmed.',
   },
   {
     number: '03',
     title: 'Engagement Agreement',
     description:
-      'A brief engagement letter is issued to the commissioning party confirming confidentiality, deliverables, and timeline before work begins.',
+      'A brief engagement letter confirming confidentiality, deliverables, and timeline is issued before work begins.',
   },
 ]
 
@@ -59,7 +59,7 @@ export default function Contact() {
     <>
       <Hero
         headline="Contact"
-        subheadline="Request a pilot engagement discussion. We accept engagements commissioned by healthcare unions, worker representatives, and Health &amp; Safety committees."
+        subheadline="Request a pilot engagement discussion or commission a rotation analysis. We accept engagements from any organization requiring independent rotation evaluation."
       />
 
       <Section divider>
@@ -75,16 +75,6 @@ export default function Contact() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-14">
           {/* Left — What Happens Next */}
           <div>
-            <div className="bg-slate-50 border border-slate-200 rounded-lg p-5 mb-8">
-              <p className="text-xs font-semibold text-slate-500 uppercase tracking-widest mb-1">
-                Eligibility
-              </p>
-              <p className="text-sm text-slate-700 leading-relaxed">
-                We accept engagements commissioned by healthcare unions, worker representatives, and
-                Health &amp; Safety committees.
-              </p>
-            </div>
-
             <h3 className="text-sm font-semibold text-slate-900 mb-6 uppercase tracking-wide">
               What Happens Next
             </h3>
@@ -105,8 +95,7 @@ export default function Contact() {
 
             <div className="mt-10 pt-6 border-t border-slate-100">
               <p className="text-xs text-slate-400 leading-relaxed">
-                All communications are treated as confidential. Enquiries are not shared with employers
-                or third parties.
+                All communications are treated as confidential.
               </p>
               <p className="text-xs text-slate-400 leading-relaxed mt-3">
                 Already commissioned?{' '}
@@ -130,7 +119,7 @@ export default function Contact() {
                 required
                 aria-required="true"
                 className={inputClass}
-                placeholder="Union local or organisation name"
+                placeholder="Organisation name"
               />
             </div>
 
@@ -213,7 +202,7 @@ export default function Contact() {
                 id="message"
                 rows={4}
                 className={`${inputClass} resize-none`}
-                placeholder="Describe the scheduling concern, applicable collective agreement provisions, or any other context that would help us assess scope."
+                placeholder="Scheduling concern, applicable provisions, or other context."
               />
             </div>
 
@@ -225,8 +214,7 @@ export default function Contact() {
             </button>
 
             <p className="text-xs text-slate-400 text-center">
-              We typically respond within 2 business days. No commitment is made until an engagement
-              letter is issued and accepted.
+              We typically respond within 2 business days. No commitment until an engagement letter is issued and accepted.
             </p>
           </form>
         </div>
