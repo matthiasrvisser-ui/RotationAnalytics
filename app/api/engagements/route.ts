@@ -65,11 +65,28 @@ export async function POST(req: NextRequest) {
       }
     }
 
-    // Update with file path and advance status
+    // Generate unique random work order number (4 digits, expanding to 5 when exhausted)
+    let workOrderNumber = ''
+    let digits = 4
+    for (let attempt = 0; attempt < 20; attempt++) {
+      const max = Math.pow(10, digits)
+      const min = Math.pow(10, digits - 1)
+      const candidate = String(Math.floor(Math.random() * (max - min)) + min)
+      const { data: existing } = await supabaseAdmin
+        .from('engagements')
+        .select('id')
+        .eq('work_order_number', candidate)
+        .single()
+      if (!existing) { workOrderNumber = candidate; break }
+      if (attempt === 18) digits = 5 // expand to 5 digits after exhausting 4-digit space
+    }
+
+    // Update with file path, work order, and advance status
     await supabaseAdmin
       .from('engagements')
       .update({
         rotation_file_path: filePath,
+        work_order_number: workOrderNumber,
         status: 'submission_complete',
       })
       .eq('id', engagement.id)

@@ -3,7 +3,7 @@
 import { useEffect, useState, useCallback } from 'react'
 import { useRouter, useParams } from 'next/navigation'
 import Link from 'next/link'
-import { STATUS_LABELS, STATUS_ORDER, type EngagementStatus, type Engagement, type AuditEntry } from '@/lib/types'
+import { STATUS_LABELS, STATUS_ORDER, type EngagementStatus, type Engagement, type AuditEntry, type Message } from '@/lib/types'
 
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL ?? 'https://rotationanalytics.ca'
 
@@ -26,7 +26,10 @@ export default function EngagementDetail() {
   const { id } = useParams<{ id: string }>()
   const [engagement, setEngagement] = useState<Engagement | null>(null)
   const [audit, setAudit] = useState<AuditEntry[]>([])
+  const [messages, setMessages] = useState<Message[]>([])
   const [loading, setLoading] = useState(true)
+  const [msgBody, setMsgBody] = useState('')
+  const [sendingMsg, setSendingMsg] = useState(false)
 
   // Invoice form state
   const [invoiceNumber, setInvoiceNumber] = useState('')
@@ -52,6 +55,11 @@ export default function EngagementDetail() {
     setEngagement(json.engagement)
     setAudit(json.audit ?? [])
     setAdminNotes(json.engagement?.admin_notes ?? '')
+
+    // Load messages
+    const msgRes = await fetch(`/api/admin/engagements/${id}/messages`, { headers })
+    if (msgRes.ok) setMessages(await msgRes.json())
+
     setLoading(false)
   }, [id, router])
 
@@ -98,6 +106,23 @@ export default function EngagementDetail() {
     })
   }
 
+  async function sendMessage() {
+    if (!msgBody.trim()) return
+    setSendingMsg(true)
+    const headers = await authHeaders()
+    const res = await fetch(`/api/admin/engagements/${id}/messages`, {
+      method: 'POST',
+      headers: { ...headers, 'Content-Type': 'application/json' },
+      body: JSON.stringify({ body: msgBody }),
+    })
+    if (res.ok) {
+      const { message } = await res.json()
+      setMessages(prev => [...prev, message])
+      setMsgBody('')
+    }
+    setSendingMsg(false)
+  }
+
   async function uploadDeliverable() {
     if (!deliverableFile) return
     setUploading(true)
@@ -135,7 +160,10 @@ export default function EngagementDetail() {
             <Link href="/admin" className="text-slate-400 hover:text-slate-600 text-sm">← Dashboard</Link>
             <div>
               <h1 className="text-lg font-bold text-slate-900">{engagement.org_name}</h1>
-              <p className="text-xs text-slate-400">{engagement.id}</p>
+              <p className="text-xs text-slate-400">
+                {engagement.work_order_number && <span className="font-mono mr-2">{engagement.work_order_number}</span>}
+                {engagement.id}
+              </p>
             </div>
           </div>
           <div className="flex items-center gap-3">
@@ -279,6 +307,42 @@ export default function EngagementDetail() {
                   className="bg-brand-navy text-white px-5 py-2.5 rounded text-sm font-medium hover:bg-brand-navy-dark transition-colors disabled:opacity-50"
                 >
                   {uploading ? 'Uploading…' : 'Upload Deliverable'}
+                </button>
+              </div>
+            </div>
+
+            {/* Messages */}
+            <div className="bg-white border border-slate-200 rounded-lg p-6">
+              <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-4">Client Messages</p>
+              <div className="space-y-3 mb-4 max-h-64 overflow-y-auto">
+                {messages.length === 0 && <p className="text-xs text-slate-400">No messages yet.</p>}
+                {messages.map(m => (
+                  <div key={m.id} className={`flex ${m.sender === 'admin' ? 'justify-end' : 'justify-start'}`}>
+                    <div className={`max-w-xs px-3 py-2 rounded-lg text-sm ${m.sender === 'admin' ? 'bg-brand-navy text-white' : 'bg-slate-100 text-slate-700'}`}>
+                      <p>{m.body}</p>
+                      <p className={`text-xs mt-1 ${m.sender === 'admin' ? 'text-white/60' : 'text-slate-400'}`}>
+                        {new Date(m.created_at).toLocaleDateString('en-CA', { month: 'short', day: 'numeric' })}
+                        {' · '}{m.sender === 'admin' ? 'You' : 'Client'}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div className="flex gap-2">
+                <input
+                  type="text"
+                  value={msgBody}
+                  onChange={e => setMsgBody(e.target.value)}
+                  onKeyDown={e => e.key === 'Enter' && sendMessage()}
+                  placeholder="Reply to client…"
+                  className="flex-1 border border-slate-300 rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-navy/20"
+                />
+                <button
+                  onClick={sendMessage}
+                  disabled={sendingMsg || !msgBody.trim()}
+                  className="bg-brand-navy text-white px-4 py-2 rounded text-sm font-medium hover:bg-brand-navy-dark disabled:opacity-50 transition-colors"
+                >
+                  {sendingMsg ? '…' : 'Send'}
                 </button>
               </div>
             </div>

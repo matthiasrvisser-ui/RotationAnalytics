@@ -1,7 +1,8 @@
 import { notFound } from 'next/navigation'
 import { supabaseAdmin } from '@/lib/supabase'
 import { Section } from '@/components/Section'
-import { STATUS_LABELS, STATUS_ORDER, type EngagementStatus } from '@/lib/types'
+import { MessageThread } from '@/components/MessageThread'
+import { STATUS_LABELS, STATUS_ORDER, type EngagementStatus, type Message } from '@/lib/types'
 
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL ?? 'https://rotationanalytics.ca'
 
@@ -26,11 +27,17 @@ function StatusBadge({ status }: { status: EngagementStatus }) {
 export default async function StatusPage({ params }: { params: { token: string } }) {
   const { data: engagement, error } = await supabaseAdmin
     .from('engagements')
-    .select('id, status, org_name, contact_name, email, created_at, agreement_signed_at, invoice_number, invoice_amount, invoice_issued_at, payment_confirmed_at, deliverable_token, deliverable_expires_at')
+    .select('id, status, org_name, contact_name, email, created_at, agreement_signed_at, invoice_number, invoice_amount, invoice_issued_at, payment_confirmed_at, deliverable_token, deliverable_expires_at, work_order_number')
     .eq('status_token', params.token)
     .single()
 
   if (error || !engagement) notFound()
+
+  const { data: messages } = await supabaseAdmin
+    .from('messages')
+    .select('*')
+    .eq('engagement_id', engagement.id)
+    .order('created_at', { ascending: true })
 
   const currentIndex = STATUS_ORDER.indexOf(engagement.status as EngagementStatus)
   const hasDeliverable = engagement.status === 'delivered' && engagement.deliverable_token
@@ -47,6 +54,9 @@ export default async function StatusPage({ params }: { params: { token: string }
             <span className="text-white/50 text-sm">
               Submitted {new Date(engagement.created_at).toLocaleDateString('en-CA', { year: 'numeric', month: 'long', day: 'numeric' })}
             </span>
+            {engagement.work_order_number && (
+              <span className="text-white/40 text-sm font-mono">{engagement.work_order_number}</span>
+            )}
           </div>
         </div>
       </div>
@@ -118,6 +128,11 @@ export default async function StatusPage({ params }: { params: { token: string }
                 )
               })}
             </div>
+
+            <div className="mt-10 border-t border-slate-100 pt-8">
+              <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-4">Messages</p>
+              <MessageThread messages={(messages ?? []) as Message[]} token={params.token} />
+            </div>
           </div>
 
           {/* Sidebar */}
@@ -125,6 +140,12 @@ export default async function StatusPage({ params }: { params: { token: string }
             <div className="bg-brand-cream border border-slate-200 rounded-lg p-5">
               <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-3">Engagement Details</p>
               <dl className="space-y-2 text-sm">
+                {engagement.work_order_number && (
+                  <div>
+                    <dt className="text-slate-500 text-xs">Work Order</dt>
+                    <dd className="text-slate-800 font-mono font-medium">{engagement.work_order_number}</dd>
+                  </div>
+                )}
                 <div>
                   <dt className="text-slate-500 text-xs">Organization</dt>
                   <dd className="text-slate-800 font-medium">{engagement.org_name}</dd>

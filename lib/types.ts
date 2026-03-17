@@ -36,10 +36,20 @@ export interface Engagement {
   invoice_amount: number | null
   invoice_issued_at: string | null
   payment_confirmed_at: string | null
+  // Work order
+  work_order_number: string | null
   // Admin
   admin_notes: string | null
   // Status token (for client status page)
   status_token: string
+}
+
+export interface Message {
+  id: string
+  engagement_id: string
+  sender: 'admin' | 'client'
+  body: string
+  created_at: string
 }
 
 export interface AuditEntry {
