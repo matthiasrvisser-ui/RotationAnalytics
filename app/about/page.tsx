@@ -16,7 +16,7 @@ const commitments = [
   },
   {
     title: 'Confidentiality',
-    body: 'Findings are released only to the commissioning party as defined in the engagement agreement. Disclosure to any other party requires explicit written direction.',
+    body: 'Findings are released only to the commissioning party as defined in the service agreement. Disclosure to any other party requires explicit written direction.',
   },
   {
     title: 'Accuracy',
@@ -94,10 +94,51 @@ export default function About() {
         </div>
       </Section>
 
+      {/* What Sets Us Apart */}
+      <Section className="bg-brand-cream" divider>
+        <div className="max-w-4xl">
+          <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-5">
+            What Sets Us Apart
+          </p>
+          <h2 className="text-2xl md:text-3xl font-bold text-slate-900 tracking-tight mb-6">
+            Expert knowledge. Purpose-built tools. Focused analysis.
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="space-y-4 text-sm text-slate-600 leading-relaxed">
+              <p>
+                Analyzing rotation schedules for compliance against collective bargaining agreements is extraordinarily complex. Hundreds of provisions. Weeks of shift data. Thousands of individual checkpoints. A human expert can work through a basic rotation in about an hour — but complex schedules take significantly longer, and as complexity increases, violations are inevitably missed.
+              </p>
+              <p>
+                Rotation Analytics combines decades of domain expertise with a proprietary analysis engine built from the ground up for this specific problem. Not a subscription-based platform. Not adapted from general scheduling software. A focused, independent analytical service that delivers documented findings for your review.
+              </p>
+            </div>
+            <div className="space-y-4">
+              <div className="bg-white border border-slate-200 rounded-lg p-5">
+                <h3 className="text-sm font-semibold text-brand-navy mb-2">Proprietary Analysis Engine</h3>
+                <p className="text-sm text-slate-500 leading-relaxed">
+                  Purpose-built to evaluate rotation schedules against collective agreement provisions, employment standards, and fatigue management principles — systematically and completely.
+                </p>
+              </div>
+              <div className="bg-white border border-slate-200 rounded-lg p-5">
+                <h3 className="text-sm font-semibold text-brand-navy mb-2">Flexible Engagement</h3>
+                <p className="text-sm text-slate-500 leading-relaxed">
+                  Commission analysis when you need it. No platform subscriptions, no long-term contracts. Focused, per-rotation analytical service with documented deliverables.
+                </p>
+              </div>
+              <div className="bg-white border border-slate-200 rounded-lg p-5">
+                <h3 className="text-sm font-semibold text-brand-navy mb-2">Documented Deliverables</h3>
+                <p className="text-sm text-slate-500 leading-relaxed">
+                  Every analysis produces a marked rotation schedule and a risk-classified executive report — structured for internal review, grievance preparation, or decision-making.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </Section>
+
       <Section
         title="What a Full Report Includes"
         subtitle="Every engagement produces two core deliverables."
-        className="bg-brand-cream"
         divider
       >
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5 max-w-4xl">
@@ -128,23 +169,27 @@ export default function About() {
         </div>
       </Section>
 
-      <Section title="Enquiries">
-        <div className="max-w-xl">
-          <p className="text-base text-slate-600 leading-relaxed mb-6">
-            If your organization requires independent rotation analysis, we are available to discuss scope and engagement terms. Commissioned clients may submit rotation files directly.
+      {/* CTA */}
+      <Section className="bg-brand-navy">
+        <div className="text-center py-4">
+          <h2 className="text-2xl font-bold text-white mb-4 tracking-tight">
+            Ready to discuss an engagement?
+          </h2>
+          <p className="text-slate-300 mb-8 max-w-xl mx-auto text-sm leading-relaxed">
+            Whether you have a specific rotation in mind or want to understand what structured analysis would reveal, we are available to discuss your requirements.
           </p>
-          <div className="flex flex-wrap gap-4">
+          <div className="flex flex-wrap justify-center gap-5 items-center">
             <Link
               href="/contact"
-              className="inline-block bg-brand-navy text-white px-7 py-3 rounded font-medium text-sm hover:bg-brand-navy-dark transition-colors"
+              className="bg-white text-brand-navy px-7 py-3 rounded font-medium text-sm hover:bg-brand-cream transition-colors"
             >
-              Request a Pilot Discussion
+              Get in Touch
             </Link>
             <Link
               href="/submit"
-              className="inline-block border border-slate-300 text-slate-700 px-7 py-3 rounded font-medium text-sm hover:border-slate-400 transition-colors"
+              className="text-sm font-medium text-slate-200 hover:text-white hover:underline underline-offset-4 transition-colors"
             >
-              Submit Work
+              Already commissioned? Submit Work &rarr;
             </Link>
           </div>
         </div>

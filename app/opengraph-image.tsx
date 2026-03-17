@@ -1,7 +1,7 @@
 import { ImageResponse } from 'next/og'
 
 export const runtime = 'edge'
-export const alt = 'Independent Rotation Assurance™ — Third-party rotation schedule analysis for healthcare and shift-based operations'
+export const alt = 'Rotation Analytics — Independent Rotation Analysis for Complex Shift Operations'
 export const size = { width: 1200, height: 630 }
 export const contentType = 'image/png'
 
@@ -42,7 +42,7 @@ export default function OGImage() {
               letterSpacing: '-0.5px',
             }}
           >
-            IR
+            RA
           </div>
           <span
             style={{
@@ -52,7 +52,7 @@ export default function OGImage() {
               textTransform: 'uppercase',
             }}
           >
-            Independent Rotation Assurance™
+            Rotation Analytics
           </span>
         </div>
 
@@ -67,7 +67,7 @@ export default function OGImage() {
               letterSpacing: '-1px',
             }}
           >
-            Independent rotation schedule analysis for healthcare and shift-based operations.
+            Independent Rotation Analysis for Complex Shift Operations
           </div>
           <div
             style={{
@@ -75,9 +75,10 @@ export default function OGImage() {
               color: 'rgba(255,255,255,0.65)',
               fontWeight: '300',
               lineHeight: 1.5,
+              fontStyle: 'italic',
             }}
           >
-            Independent validation of rest periods, fatigue exposure, and scheduling risk.
+            Clarity from Complexity.
           </div>
         </div>
 
@@ -103,7 +104,7 @@ export default function OGImage() {
               letterSpacing: '0.04em',
             }}
           >
-            Analytically independent. Released to the commissioning party only.
+            Structured independent analysis. Released to the commissioning party only.
           </div>
         </div>
       </div>

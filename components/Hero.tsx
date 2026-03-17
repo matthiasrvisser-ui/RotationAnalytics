@@ -39,11 +39,18 @@ export function Hero({ headline, subheadline, cta, secondaryCta, backgroundImage
       <div className="relative z-10 max-w-6xl mx-auto px-6">
         <div className="max-w-3xl">
           <p
-            className={`text-xs font-semibold uppercase tracking-widest mb-6 ${
+            className={`text-xs font-semibold uppercase tracking-widest mb-1.5 ${
               hasImage ? 'text-slate-300' : 'text-slate-400'
             }`}
           >
             Rotation Analytics
+          </p>
+          <p
+            className={`text-sm font-light italic tracking-wide mb-7 ${
+              hasImage ? 'text-slate-400' : 'text-slate-400'
+            }`}
+          >
+            Clarity from Complexity.
           </p>
           <h1
             className={`text-4xl md:text-5xl font-bold leading-tight tracking-tight mb-7 ${

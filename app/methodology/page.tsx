@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import { Hero } from '@/components/Hero'
 import { Section } from '@/components/Section'
 import { AnalysisFlow } from '@/components/AnalysisFlow'
@@ -103,8 +104,11 @@ export default function Methodology() {
       </Section>
 
       <Section divider>
-        <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-6">
+        <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-3">
           Analysis Flow
+        </p>
+        <p className="text-base text-slate-600 leading-relaxed mb-8 max-w-3xl">
+          Our methodology is powered by a proprietary analysis engine built specifically for rotation compliance. Unlike manual review — which scales linearly with rotation complexity and inevitably misses more as schedules grow longer — our tools systematically evaluate every shift against every applicable provision across the full rotation cycle.
         </p>
         <AnalysisFlow />
         <p className="text-xs text-slate-400 mt-5 leading-relaxed max-w-2xl">
@@ -133,7 +137,7 @@ export default function Methodology() {
       <Section
         title="Regulatory Reference Points"
         subtitle="Analyses reference applicable frameworks in context of the specific jurisdiction and collective agreement."
-        className="bg-brand-cream"
+        divider
       >
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-3xl">
           {referencePoints.map((item, i) => (
@@ -142,6 +146,69 @@ export default function Methodology() {
               <p className="text-sm text-slate-700">{item}</p>
             </div>
           ))}
+        </div>
+      </Section>
+
+      {/* See the Methodology Applied */}
+      <Section className="bg-brand-cream" divider>
+        <div className="mb-8">
+          <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-5">
+            See the Methodology Applied
+          </p>
+          <h2 className="text-2xl md:text-3xl font-bold text-slate-900 tracking-tight mb-3">
+            From rotation to documented findings.
+          </h2>
+          <p className="text-base text-slate-500 leading-relaxed max-w-2xl">
+            Walk through a real analysis — from a rotation that passed manual review to the structured report that revealed what was missed.
+          </p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl">
+          <Link href="/example-rotation" className="group border border-slate-200 bg-white rounded-lg p-8 hover:border-brand-navy/30 transition-colors">
+            <p className="text-2xl font-bold text-slate-200 mb-4">01</p>
+            <h3 className="text-base font-bold text-slate-900 mb-3 group-hover:text-brand-navy transition-colors">
+              Example Rotation
+            </h3>
+            <p className="text-sm text-slate-500 leading-relaxed mb-4">
+              See how a rotation can appear compliant at first glance while containing hidden rest period violations, weekend non-compliance, and on-call scheduling issues.
+            </p>
+            <span className="text-sm font-medium text-brand-navy">View the rotation &rarr;</span>
+          </Link>
+          <Link href="/sample-report" className="group border border-slate-200 bg-white rounded-lg p-8 hover:border-brand-navy/30 transition-colors">
+            <p className="text-2xl font-bold text-slate-200 mb-4">02</p>
+            <h3 className="text-base font-bold text-slate-900 mb-3 group-hover:text-brand-navy transition-colors">
+              Sample Report
+            </h3>
+            <p className="text-sm text-slate-500 leading-relaxed mb-4">
+              Review the executive report that analysis produced — 15 parameters evaluated, 5 findings documented with risk classifications and agreement references.
+            </p>
+            <span className="text-sm font-medium text-brand-navy">View the report &rarr;</span>
+          </Link>
+        </div>
+      </Section>
+
+      {/* Final CTA */}
+      <Section className="bg-brand-navy">
+        <div className="text-center py-4">
+          <h2 className="text-2xl font-bold text-white mb-4 tracking-tight">
+            Ready to discuss an engagement?
+          </h2>
+          <p className="text-slate-300 mb-8 max-w-xl mx-auto text-sm leading-relaxed">
+            Whether you have a specific rotation in mind or want to understand what structured analysis would reveal, we are available to discuss your requirements.
+          </p>
+          <div className="flex flex-wrap justify-center gap-5 items-center">
+            <Link
+              href="/contact"
+              className="bg-white text-brand-navy px-7 py-3 rounded font-medium text-sm hover:bg-brand-cream transition-colors"
+            >
+              Get in Touch
+            </Link>
+            <Link
+              href="/submit"
+              className="text-sm font-medium text-slate-200 hover:text-white hover:underline underline-offset-4 transition-colors"
+            >
+              Already commissioned? Submit Work &rarr;
+            </Link>
+          </div>
         </div>
       </Section>
     </>

@@ -12,12 +12,12 @@ const principles = [
   {
     number: '03',
     title: 'Confidentiality Obligations',
-    body: 'All materials received and findings produced within an engagement are treated as strictly confidential. Disclosure is governed by the terms of the engagement agreement. Findings are not shared with any party not identified in that agreement.',
+    body: 'All materials received and findings produced within an engagement are treated as strictly confidential. Disclosure is governed by the terms of the service agreement. Findings are not shared with any party not identified in that agreement.',
   },
   {
     number: '04',
     title: 'Engagement-Defined Scope',
-    body: 'The scope of each engagement is defined in the engagement agreement prior to commencement. Analysis is conducted within that defined scope only.',
+    body: 'The scope of each engagement is defined in the service agreement prior to commencement. Analysis is conducted within that defined scope only.',
   },
 ]
 
@@ -48,7 +48,7 @@ export function IndependenceSection() {
 
         <div className="bg-brand-navy pt-6 mt-px border-t border-white/10">
           <p className="text-sm text-slate-400 leading-relaxed italic max-w-3xl">
-            These are structural and operational features of how Rotation Analytics Inc accepts and conducts engagements. They are not policy declarations. Each is documented in the applicable engagement agreement.
+            These are structural and operational features of how Rotation Analytics Inc accepts and conducts engagements. They are not policy declarations. Each is documented in the applicable service agreement.
           </p>
         </div>
       </div>

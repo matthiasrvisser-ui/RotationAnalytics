@@ -45,14 +45,9 @@ export function Footer() {
 
           <div>
             <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-4">
-              Organisation
+              Company
             </p>
             <ul className="space-y-2.5">
-              <li>
-                <Link href="/pilot-diagnostic" className="text-sm text-slate-300 hover:text-white transition-colors">
-                  Pilot Diagnostic
-                </Link>
-              </li>
               <li>
                 <Link href="/about" className="text-sm text-slate-300 hover:text-white transition-colors">
                   About
@@ -74,7 +69,7 @@ export function Footer() {
 
         <div className="border-t border-slate-700 pt-6 space-y-3">
           <p className="text-xs text-slate-400 leading-relaxed max-w-2xl">
-            Rotation Analytics Inc conducts our methodology without structural alignment to any party to the scheduling arrangement. Findings are a systematic evaluation of the rotation record and are released exclusively to the commissioning party as defined in the engagement agreement.
+            Rotation Analytics Inc conducts its methodology without structural alignment to any party to the scheduling arrangement. Findings are a systematic evaluation of the rotation record and are released exclusively to the commissioning party as defined in the service agreement.
           </p>
           <p className="text-xs text-slate-500">
             &copy; {currentYear} Rotation Analytics Inc. All rights reserved.

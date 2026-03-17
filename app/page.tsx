@@ -30,10 +30,10 @@ export default function Home() {
   return (
     <>
       <Hero
-        headline="Independent Rotation Analysis for Complex Shift Operations"
-        subheadline="Rotation Analytics Inc applies structured analytical methodology to rotation schedules across shift-based operations, examining rest intervals, consecutive sequences, and collective agreement obligations to produce documented findings for client utilization."
-        cta={{ label: 'View Sample Report', href: '/sample-report' }}
-        secondaryCta={{ label: 'Our Methodology', href: '/methodology' }}
+        headline="Hidden Risks Live Inside Complex Rotation Schedules"
+        subheadline="We reveal them before they become costly problems. Independent, expert-led analysis of unionized shift rotations — powered by purpose-built compliance tools."
+        cta={{ label: 'View Example Rotation', href: '/example-rotation' }}
+        secondaryCta={{ label: 'View Sample Report', href: '/sample-report' }}
       />
 
       {/* Problem framing */}
@@ -47,7 +47,7 @@ export default function Home() {
               Rotation schedules carry documented risk that is rarely examined independently.
             </h2>
             <p className="text-base text-slate-500 leading-relaxed">
-              Unionized rotations can appear acceptable during cursory review while quietly creating fatigue, worker dissatisfaction, and failing to meet collective agreement obligations. Most of these problems only surface after a grievance is filed, because schedules are rarely subjected to structured, independent analysis before implementation.
+              Unionized rotations can appear acceptable during cursory review while quietly creating fatigue, worker dissatisfaction, and failing to meet collective agreement obligations. Most of these problems only emerge after a grievance is filed, because schedules are rarely subjected to structured, independent analysis before implementation.
             </p>
           </div>
           <div className="grid grid-cols-1 gap-4">
@@ -70,36 +70,55 @@ export default function Home() {
         </div>
       </Section>
 
-      {/* What We Provide */}
+      {/* Why Rotation Analytics */}
       <Section className="bg-brand-cream" divider>
-        <div className="max-w-3xl">
+        <div className="max-w-4xl">
           <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-5">
-            What We Provide
+            Why Rotation Analytics
           </p>
           <h2 className="text-2xl md:text-3xl font-bold text-slate-900 tracking-tight mb-6">
-            Independent Rotation Analysis
+            Manual review doesn&rsquo;t scale. Purpose-built analysis does.
           </h2>
-          <p className="text-base text-slate-600 leading-relaxed mb-6">
-            Rotation Analytics Inc provides comprehensive, independent, third-party review of rotation schedules conducted on behalf of the commissioning party.
-          </p>
-          <p className="text-base text-slate-600 leading-relaxed mb-6">
-            The methodology evaluates rotation schedules against collective agreement provisions, extended work agreements, applicable employment standards, and established fatigue management principles. The result is an executive summary identifying schedule elements that fall outside of these parameters, classified by risk level.
+          <p className="text-base text-slate-600 leading-relaxed mb-4">
+            You know the reality: collective agreements contain hundreds of scheduling provisions. Rotations span weeks. A single schedule can generate thousands of individual compliance checkpoints. Manual review — no matter how experienced the reviewer — misses more as complexity increases.
           </p>
           <p className="text-base text-slate-600 leading-relaxed mb-10">
-            Rotation Analytics Inc offers clients impartial shift analysis and a documented analytical report for use in their own internal reviews, decision-making, and processes.
+            Rotation Analytics was built for exactly this problem.
           </p>
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-8 border-t border-slate-200">
-            {[
-              { label: 'Independent', detail: 'No conflicting employment or advisory relationship.' },
-              { label: 'Documented', detail: 'Executive report summary and recommendations.' },
-              { label: 'Risk-Classified', detail: 'Observations classified by severity to support internal assessment.' },
-              { label: 'Confidential', detail: 'Reports are released solely to the commissioning client.' },
-            ].map((item) => (
-              <div key={item.label} className="text-center py-4">
-                <p className="text-sm font-bold text-brand-navy mb-1">{item.label}</p>
-                <p className="text-xs text-slate-500">{item.detail}</p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="bg-white border border-slate-200 rounded-lg p-6">
+              <div className="w-10 h-10 rounded-lg bg-brand-navy/10 flex items-center justify-center mb-4">
+                <svg className="w-5 h-5 text-brand-navy" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085" />
+                </svg>
               </div>
-            ))}
+              <h3 className="text-sm font-semibold text-slate-900 mb-2">Purpose-Built Compliance Tools</h3>
+              <p className="text-sm text-slate-500 leading-relaxed">
+                Our proprietary analysis engine was engineered specifically for rotation compliance — evaluating every shift against every applicable provision across the full rotation cycle.
+              </p>
+            </div>
+            <div className="bg-white border border-slate-200 rounded-lg p-6">
+              <div className="w-10 h-10 rounded-lg bg-brand-navy/10 flex items-center justify-center mb-4">
+                <svg className="w-5 h-5 text-brand-navy" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M4.26 10.147a60.438 60.438 0 00-.491 6.347A48.62 48.62 0 0112 20.904a48.62 48.62 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.636 50.636 0 00-2.658-.813A59.906 59.906 0 0112 3.493a59.903 59.903 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0112 13.489a50.702 50.702 0 017.74-3.342" />
+                </svg>
+              </div>
+              <h3 className="text-sm font-semibold text-slate-900 mb-2">Domain Expertise</h3>
+              <p className="text-sm text-slate-500 leading-relaxed">
+                Decades of real-world experience in unionized shift environments inform every parameter we evaluate. The tool is powerful because the expertise behind it knows what to look for.
+              </p>
+            </div>
+            <div className="bg-white border border-slate-200 rounded-lg p-6">
+              <div className="w-10 h-10 rounded-lg bg-brand-navy/10 flex items-center justify-center mb-4">
+                <svg className="w-5 h-5 text-brand-navy" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+                </svg>
+              </div>
+              <h3 className="text-sm font-semibold text-slate-900 mb-2">Pre-Grievance Identification</h3>
+              <p className="text-sm text-slate-500 leading-relaxed">
+                Issues identified before implementation cost a fraction of what they cost after a grievance is filed. Structured analysis turns potential disputes into documented, addressable findings.
+              </p>
+            </div>
           </div>
         </div>
       </Section>
@@ -156,91 +175,64 @@ export default function Home() {
       {/* Independence & Confidentiality */}
       <IndependenceSection />
 
-      {/* Pilot diagnostic */}
+      {/* See It In Action */}
       <Section divider>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
-          <div>
-            <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-5">
-              Entry Point
+        <div className="mb-8">
+          <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-5">
+            See It In Action
+          </p>
+          <h2 className="text-2xl md:text-3xl font-bold text-slate-900 tracking-tight mb-3">
+            From rotation to documented findings.
+          </h2>
+          <p className="text-base text-slate-500 leading-relaxed max-w-2xl">
+            Walk through a real analysis — from a rotation that passed manual review to the structured report that revealed what was missed.
+          </p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl">
+          <Link href="/example-rotation" className="group border border-slate-200 rounded-lg p-8 hover:border-brand-navy/30 transition-colors">
+            <p className="text-2xl font-bold text-slate-200 mb-4">01</p>
+            <h3 className="text-base font-bold text-slate-900 mb-3 group-hover:text-brand-navy transition-colors">Example Rotation</h3>
+            <p className="text-sm text-slate-500 leading-relaxed mb-4">
+              See how a rotation can appear compliant at first glance while containing hidden rest period violations, weekend non-compliance, and on-call scheduling issues.
             </p>
-            <h2 className="text-2xl md:text-3xl font-bold text-slate-900 tracking-tight mb-6">
-              Pilot Diagnostic Engagement
-            </h2>
-            <p className="text-base text-slate-500 leading-relaxed mb-5">
-              Organizations interested in independent rotation analysis may begin with our Pilot Diagnostic — a limited engagement covering two rotation schedules, designed to demonstrate what structured analysis reveals before committing to broader work.
+            <span className="text-sm font-medium text-brand-navy">
+              View the rotation &rarr;
+            </span>
+          </Link>
+          <Link href="/sample-report" className="group border border-slate-200 rounded-lg p-8 hover:border-brand-navy/30 transition-colors">
+            <p className="text-2xl font-bold text-slate-200 mb-4">02</p>
+            <h3 className="text-base font-bold text-slate-900 mb-3 group-hover:text-brand-navy transition-colors">Sample Report</h3>
+            <p className="text-sm text-slate-500 leading-relaxed mb-4">
+              Review the executive report that analysis produced — 15 parameters evaluated, 5 findings documented with risk classifications and agreement references.
             </p>
-            <p className="text-base text-slate-500 leading-relaxed mb-8">
-              The pilot is intentionally small in scope. All findings remain the property of the commissioning organization and may be used internally at their discretion.
-            </p>
-            <Link
-              href="/pilot-diagnostic"
-              className="text-sm font-medium text-brand-navy hover:underline"
-            >
-              Learn more about the Pilot Diagnostic &rarr;
-            </Link>
-          </div>
-
-          <div className="bg-brand-cream border border-slate-200 rounded-lg p-8">
-            <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-6">
-              Pilot Diagnostic Scope
-            </p>
-            <p className="text-sm text-slate-500 mb-5">A Pilot Diagnostic engagement typically includes:</p>
-            <ul className="space-y-4">
-              {[
-                'Evaluation of two defined rotation cycles (commonly four-week rotations)',
-                'Full rest interval analysis across the rotation cycle',
-                'Consecutive shift sequence review',
-                'Assessment of shift-type transitions where applicable',
-                'Cross-reference against collective agreement scheduling provisions',
-                'A date and time stamped executive summary report with risk classifications',
-              ].map((item, i) => (
-                <li key={i} className="flex items-start gap-3 text-sm text-slate-600">
-                  <div className="w-1.5 h-1.5 rounded-full bg-brand-navy mt-2 flex-shrink-0" />
-                  {item}
-                </li>
-              ))}
-            </ul>
-            <p className="text-xs text-slate-400 mt-6 pt-5 border-t border-slate-200">
-              All findings are delivered confidentially to the commissioning party.
-            </p>
-          </div>
+            <span className="text-sm font-medium text-brand-navy">
+              View the report &rarr;
+            </span>
+          </Link>
         </div>
       </Section>
 
       {/* Final CTA */}
-      <Section>
-        <div className="mb-8">
-          <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-5">
-            Next Steps
-          </p>
-          <h2 className="text-2xl md:text-3xl font-bold text-slate-900 tracking-tight">
-            Choose how you want to begin.
+      <Section className="bg-brand-navy">
+        <div className="text-center py-4">
+          <h2 className="text-2xl font-bold text-white mb-4 tracking-tight">
+            Ready to discuss an engagement?
           </h2>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl">
-          <div className="border border-slate-200 rounded-lg p-8">
-            <h3 className="text-base font-bold text-slate-900 mb-3">Start with a Pilot Diagnostic</h3>
-            <p className="text-sm text-slate-500 leading-relaxed mb-6">
-              Evaluate the analysis with a defined-scope pilot engagement.
-              If the pilot produces no findings, there is no cost.
-            </p>
+          <p className="text-slate-300 mb-8 max-w-xl mx-auto text-sm leading-relaxed">
+            Whether you have a specific rotation in mind or want to understand what structured analysis would reveal, we are available to discuss your requirements.
+          </p>
+          <div className="flex flex-wrap justify-center gap-5 items-center">
             <Link
               href="/contact"
-              className="inline-block bg-brand-navy text-white px-6 py-2.5 rounded font-medium text-sm hover:bg-brand-navy-dark transition-colors"
+              className="bg-white text-brand-navy px-7 py-3 rounded font-medium text-sm hover:bg-brand-cream transition-colors"
             >
-              Learn About the Pilot &rarr;
+              Get in Touch
             </Link>
-          </div>
-          <div className="border border-slate-200 rounded-lg p-8">
-            <h3 className="text-base font-bold text-slate-900 mb-3">Commission a Full Analysis</h3>
-            <p className="text-sm text-slate-500 leading-relaxed mb-6">
-              For organizations ready to proceed, rotation analysis can be commissioned immediately for defined schedules or worker groups.
-            </p>
             <Link
-              href="/contact"
-              className="inline-block bg-brand-navy text-white px-6 py-2.5 rounded font-medium text-sm hover:bg-brand-navy-dark transition-colors"
+              href="/about"
+              className="text-sm font-medium text-slate-200 hover:text-white hover:underline underline-offset-4 transition-colors"
             >
-              Discuss an Engagement &rarr;
+              Learn more about us &rarr;
             </Link>
           </div>
         </div>

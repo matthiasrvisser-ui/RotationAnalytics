@@ -9,7 +9,6 @@ const navLinks = [
   { href: '/methodology', label: 'Methodology' },
   { href: '/example-rotation', label: 'Example Rotation' },
   { href: '/sample-report', label: 'Sample Report' },
-  { href: '/pilot-diagnostic', label: 'Pilot Diagnostic' },
   { href: '/about', label: 'About' },
   { href: '/contact', label: 'Contact' },
 ]
@@ -41,6 +40,16 @@ export function Nav() {
                 {link.label}
               </Link>
             ))}
+            <Link
+              href="/engage"
+              className={`text-sm px-4 py-1.5 rounded transition-colors ${
+                pathname === '/engage'
+                  ? 'bg-brand-navy text-white'
+                  : 'bg-brand-navy text-white hover:bg-brand-navy-dark'
+              }`}
+            >
+              Begin Engagement
+            </Link>
           </nav>
 
           {/* Mobile menu button */}
@@ -79,6 +88,13 @@ export function Nav() {
                 {link.label}
               </Link>
             ))}
+            <Link
+              href="/engage"
+              className="text-sm py-2 px-4 mt-2 rounded bg-brand-navy text-white text-center"
+              onClick={() => setMobileOpen(false)}
+            >
+              Begin Engagement
+            </Link>
           </nav>
         )}
       </div>

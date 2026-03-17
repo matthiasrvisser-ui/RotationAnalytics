@@ -17,16 +17,16 @@ export function LogoMark({ color = '#1B2D4F', size = 32, className = '' }: LogoP
 export function LogoHorizontal({ color = '#1B2D4F', className = '' }: LogoProps) {
   const isWhite = color === '#FFFFFF'
   return (
-    <div className={`flex items-center gap-[10px] ${className}`} style={{ lineHeight: 1 }}>
+    <div className={`flex items-center gap-3 ${className}`} style={{ lineHeight: 1 }}>
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         src={isWhite ? '/logo/footer-mark.PNG' : '/logo/rotation-mark.png'}
         alt=""
-        width={24}
-        height={24}
+        width={28}
+        height={28}
         className="object-contain"
       />
-      <span style={{ fontFamily: FONT, fontSize: '15px', fontWeight: '600', color: color, letterSpacing: '-0.2px' }}>
+      <span style={{ fontFamily: FONT, fontSize: '17px', fontWeight: '600', color: color, letterSpacing: '-0.3px' }}>
         Rotation Analytics
       </span>
     </div>
