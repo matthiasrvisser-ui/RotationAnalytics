@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { Nav } from '@/components/Nav'
 import { Footer } from '@/components/Footer'
+import { OrganizationSchema, WebSiteSchema, ServiceSchema } from '@/components/StructuredData'
 import './globals.css'
 
 const inter = Inter({
@@ -31,7 +32,7 @@ export const metadata: Metadata = {
     description:
       'Structured, independent analysis of rotation schedules — identifying collective agreement non-compliance, fatigue risk, and scheduling vulnerabilities. Findings delivered exclusively to the commissioning party.',
   },
-  metadataBase: new URL('https://rotation-analytics.vercel.app'),
+  metadataBase: new URL('https://www.rotationanalytics.ca'),
 }
 
 export default function RootLayout({
@@ -41,6 +42,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={inter.variable}>
+      <head>
+        <OrganizationSchema />
+        <WebSiteSchema />
+        <ServiceSchema />
+      </head>
       <body className="bg-white text-slate-900 flex flex-col min-h-screen font-sans">
         <a
           href="#main-content"

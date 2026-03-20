@@ -59,9 +59,14 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/submit" className="text-sm text-slate-300 hover:text-white transition-colors">
-                  Submit Work
+                <Link href="/engage" className="text-sm text-slate-300 hover:text-white transition-colors">
+                  Begin Engagement
                 </Link>
+              </li>
+              <li>
+                <a href="mailto:hello@rotationanalytics.ca" className="text-sm text-slate-300 hover:text-white transition-colors">
+                  hello@rotationanalytics.ca
+                </a>
               </li>
             </ul>
           </div>
@@ -71,9 +76,17 @@ export function Footer() {
           <p className="text-xs text-slate-400 leading-relaxed max-w-2xl">
             Rotation Analytics Inc conducts its methodology without structural alignment to any party to the scheduling arrangement. Findings are a systematic evaluation of the rotation record and are released exclusively to the commissioning party as defined in the service agreement.
           </p>
-          <p className="text-xs text-slate-500">
-            &copy; {currentYear} Rotation Analytics Inc. All rights reserved.
-          </p>
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-1">
+            <p className="text-xs text-slate-500">
+              &copy; {currentYear} Rotation Analytics Inc. All rights reserved.
+            </p>
+            <Link href="/privacy-policy" className="text-xs text-slate-500 hover:text-slate-300 transition-colors">
+              Privacy Policy
+            </Link>
+            <Link href="/terms-of-service" className="text-xs text-slate-500 hover:text-slate-300 transition-colors">
+              Terms of Service
+            </Link>
+          </div>
         </div>
       </div>
     </footer>
