@@ -58,9 +58,11 @@ Rotation Analytics and the Client are each referred to as a "Party" and collecti
 
 **2.3** Findings constitute analytical observations only and are not determinations of compliance, safety, legality, or obligation.
 
-**2.4** Additional Engagements may be commissioned without executing a new agreement if confirmed in writing.
+**2.4 Data Completeness.** Rotation Analytics will review submitted materials for completeness and may request clarification or additional information before proceeding. An invoice will not be issued, and analysis will not commence, until Rotation Analytics has confirmed that all applicable data has been received. Completeness of submission is determined solely by Rotation Analytics.
 
-**2.5 Non-Reliance.** The Client acknowledges Rotation Analytics does not provide legal, engineering, safety certification, regulatory, medical, or professional advisory services and agrees not to rely on Analytical Services as a substitute for independent professional advice.
+**2.5** Additional Engagements may be commissioned without executing a new agreement if confirmed in writing.
+
+**2.6 Non-Reliance.** The Client acknowledges Rotation Analytics does not provide legal, engineering, safety certification, regulatory, medical, or professional advisory services and agrees not to rely on Analytical Services as a substitute for independent professional advice.
 
 ---
 
@@ -77,6 +79,12 @@ Rotation Analytics and the Client are each referred to as a "Party" and collecti
 **3.3** Deliverables are for internal decision-making only unless written consent is provided.
 
 **3.4 Acceptance of Deliverables.** Deliverables shall be deemed accepted unless the Client provides written notice of a material deficiency within ten (10) business days of delivery.
+
+**3.5 Turnaround.** Rotation Analytics targets delivery within forty-eight (48) hours of confirmed payment, with a maximum delivery window of seventy-two (72) hours (three business days).
+
+**3.6 Late Delivery Adjustment.** If Deliverables are not provided within seventy-two (72) hours of confirmed payment, a fee reduction of ten percent (10%) shall be applied for each additional twenty-four (24) hour period of delay, up to a maximum reduction of thirty percent (30%). The applicable reduction shall be refunded to the Client. The turnaround period commences only upon confirmed payment of the issued invoice.
+
+**3.7 Turnaround Exclusions.** The turnaround period is tolled during: (a) any period in which Rotation Analytics is awaiting additional information or clarification from the Client; and (b) force majeure events beyond the reasonable control of Rotation Analytics, including but not limited to natural disasters, acts of government, internet or infrastructure failures, and pandemics.
 
 ---
 
@@ -112,7 +120,7 @@ Rotation Analytics and the Client are each referred to as a "Party" and collecti
 
 A minimum engagement fee of **$225.00 (CAD)** applies to all Engagements regardless of volume.
 
-**5.2** Fees are calculated automatically based on the published rate schedule at the time of submission and the data contained in the submitted rotation. By accepting this Agreement and submitting rotation data, the Client authorizes Rotation Analytics to calculate Fees accordingly and issue an invoice upon receipt. Analysis commences immediately upon submission.
+**5.2** Fees are calculated automatically based on the published rate schedule at the time of submission and the confirmed rotation data. By accepting this Agreement and submitting rotation data, the Client authorizes Rotation Analytics to verify completeness, calculate Fees accordingly, and issue an invoice upon confirmation of data completeness. Analysis commences upon confirmed payment.
 
 **5.3** Invoices are payable within thirty (30) days of the date of invoice.
 
