@@ -22,11 +22,11 @@ export function LogoHorizontal({ color = '#1B2D4F', className = '' }: LogoProps)
       <img
         src={isWhite ? '/logo/footer-mark.PNG' : '/logo/rotation-mark.png'}
         alt=""
-        width={28}
-        height={28}
+        width={34}
+        height={34}
         className="object-contain"
       />
-      <span style={{ fontFamily: FONT, fontSize: '17px', fontWeight: '600', color: color, letterSpacing: '-0.3px' }}>
+      <span style={{ fontFamily: FONT, fontSize: '20px', fontWeight: '600', color: color, letterSpacing: '-0.4px' }}>
         Rotation Analytics
       </span>
     </div>

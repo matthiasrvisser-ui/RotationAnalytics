@@ -7,6 +7,7 @@ import { LogoHorizontal } from './Logo'
 
 const navLinks = [
   { href: '/methodology', label: 'Methodology' },
+  { href: '/fatigue-analysis', label: 'Fatigue Analysis' },
   { href: '/example-rotation', label: 'Example Rotation' },
   { href: '/sample-report', label: 'Sample Report' },
   { href: '/about', label: 'About' },
