@@ -83,7 +83,7 @@ export default function EngagePage() {
             </div>
 
             <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-4">
-              Service Agreement — Version 2025-v1
+              Service Agreement — Version 2025-v2
             </p>
 
             {/* Agreement text */}
@@ -107,7 +107,7 @@ export default function EngagePage() {
                 <p>Rotation Analytics will use commercially reasonable efforts to deliver within 24 hours of Engagement commencement. Delivery within any specific timeframe is not guaranteed.</p>
 
                 <p className="font-semibold">5. Fees and Payment</p>
-                <p>Analytical Services are billed at <strong>$200.00 CAD base rate per rotation analysis</strong>, with fees confirmed in writing prior to commencement. The maximum fee per individual rotation analysis engagement shall not exceed <strong>$600.00 CAD</strong>. Fees are quoted in Canadian dollars and exclude applicable taxes. Invoices are payable within thirty (30) days. Work may begin prior to payment. <strong>Deliverables will not be released until payment is confirmed.</strong> Overdue amounts bear interest at 1.5% per month. Rotation Analytics may suspend services upon written notice if payment is overdue.</p>
+                <p>Analytical Services are billed on a <strong>per-shift basis</strong>. Compliance Analysis is billed at <strong>$0.35 CAD per shift analyzed</strong>. Fatigue Risk Analysis, when elected, is billed at an additional <strong>$0.15 CAD per shift analyzed</strong> ($0.50 CAD per shift combined). A <strong>minimum engagement fee of $225.00 CAD</strong> applies to all engagements. Fees for each Engagement will be confirmed in writing prior to commencement. Fees are quoted in Canadian dollars and exclude applicable taxes. Invoices are payable within thirty (30) days. Work may begin prior to payment. <strong>Deliverables will not be released until payment is confirmed.</strong> Overdue amounts bear interest at 1.5% per month. Rotation Analytics may suspend services upon written notice if payment is overdue.</p>
 
                 <p className="font-semibold">6. Intellectual Property</p>
                 <p>All methodologies, tools, templates, and analytical frameworks remain the exclusive property of Visser Ventures Corp. Prior to payment, the Client holds no licence or usage rights in the Deliverables. Upon payment in full, the Client receives a non-exclusive, non-transferable licence for internal use only. The Client shall not attempt to derive, replicate, reverse engineer, or recreate the Methodology from Deliverables.</p>
@@ -127,7 +127,7 @@ export default function EngagePage() {
                 <p className="font-semibold">11. Electronic Acceptance</p>
                 <p>Electronic acceptance is valid under the <em>Electronic Transactions Act</em> (Alberta). Electronic acceptance has the same legal effect as a handwritten signature. The timestamp and version of this Agreement are recorded upon acceptance.</p>
 
-                <p className="text-xs text-slate-400 pt-4 border-t border-slate-100">Agreement version: 2025-v1 | Rotation Analytics — a division of Visser Ventures Corp., Alberta, Canada | Independent analytical services only.</p>
+                <p className="text-xs text-slate-400 pt-4 border-t border-slate-100">Agreement version: 2025-v2 | Rotation Analytics — a division of Visser Ventures Corp., Alberta, Canada | Independent analytical services only.</p>
               </div>
             </div>
 
@@ -144,7 +144,7 @@ export default function EngagePage() {
                   }}
                 />
                 <span className="text-sm text-slate-700 leading-relaxed">
-                  I have read and accept the Service Agreement (Version 2025-v1) on behalf of my organization. I understand that engagement begins only after agreement acceptance and receipt of complete submission, that deliverables are withheld until payment is confirmed, and that no usage rights are granted prior to payment.
+                  I have read and accept the Service Agreement (Version 2025-v2) on behalf of my organization. I understand that engagement begins only after agreement acceptance and receipt of complete submission, that deliverables are withheld until payment is confirmed, and that no usage rights are granted prior to payment.
                 </span>
               </label>
               {agreeError && (
@@ -335,8 +335,22 @@ export default function EngagePage() {
             </div>
 
             <div className="bg-white border border-slate-200 rounded-lg p-5">
-              <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-2">Pricing</p>
-              <p className="text-sm text-slate-700 leading-relaxed">$200 CAD base rate per rotation. Maximum $600 CAD per engagement. Fees confirmed in writing before work commences. Taxes additional.</p>
+              <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-3">Pricing</p>
+              <div className="space-y-2">
+                <div className="flex justify-between items-baseline">
+                  <span className="text-sm text-slate-600">Compliance Analysis</span>
+                  <span className="text-sm font-semibold text-slate-800">$0.35 / shift</span>
+                </div>
+                <div className="flex justify-between items-baseline">
+                  <span className="text-sm text-slate-600">+ Fatigue Risk Analysis</span>
+                  <span className="text-sm font-semibold text-slate-800">$0.15 / shift</span>
+                </div>
+                <div className="border-t border-slate-100 pt-2 flex justify-between items-baseline">
+                  <span className="text-sm text-slate-600">Combined</span>
+                  <span className="text-sm font-semibold text-brand-navy">$0.50 / shift</span>
+                </div>
+                <p className="text-xs text-slate-400 pt-1">Minimum engagement: $225 CAD. Fees confirmed in writing before work commences. Taxes additional.</p>
+              </div>
             </div>
 
             <div className="bg-white border border-slate-200 rounded-lg p-5">

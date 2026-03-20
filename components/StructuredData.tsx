@@ -109,10 +109,12 @@ export function ServiceSchema() {
     description:
       'Independent review of complex rotational staffing schedules against collective agreements, employment standards, and fatigue science principles.',
     offers: {
-      '@type': 'Offer',
-      price: '200',
+      '@type': 'AggregateOffer',
+      lowPrice: '0.35',
+      highPrice: '0.50',
       priceCurrency: 'CAD',
-      description: 'Base rate per rotation analysis. Maximum $600 CAD per engagement.',
+      description:
+        'Per-shift pricing: $0.35 CAD/shift for Compliance Analysis, $0.50 CAD/shift combined with Fatigue Risk Analysis. $225 CAD minimum engagement.',
     },
     hasOfferCatalog: {
       '@type': 'OfferCatalog',

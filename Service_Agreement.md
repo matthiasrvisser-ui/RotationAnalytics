@@ -102,7 +102,13 @@ Rotation Analytics and the Client are each referred to as a "Party" and collecti
 
 ## 5. FEES AND PAYMENT
 
-**5.1 Standard Rates.** Unless otherwise agreed in writing, Analytical Services are billed at a rate of $250.00 (CAD) per hour, with a minimum of one (1) hour per rotation analysed. The maximum Fee per individual rotation analysis shall not exceed $750.00 (CAD). Fees for each Engagement will be confirmed in writing prior to commencement of work.
+**5.1 Standard Rates.** Unless otherwise agreed in writing, Analytical Services are billed on a per-shift basis as follows:
+
+(a) **Compliance Analysis**: $0.35 (CAD) per shift analyzed;
+
+(b) **Fatigue Risk Analysis** (optional add-on): $0.15 (CAD) per shift analyzed, in addition to the Compliance Analysis rate ($0.50 CAD per shift combined).
+
+A minimum engagement fee of **$225.00 (CAD)** applies to all Engagements regardless of volume. Fees for each Engagement will be confirmed in writing prior to commencement of work.
 
 **5.2** Work will not commence until scope and Fees are confirmed.
 
