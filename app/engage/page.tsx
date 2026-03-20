@@ -107,7 +107,7 @@ export default function EngagePage() {
                 <p>Rotation Analytics will use commercially reasonable efforts to deliver within 24 hours of Engagement commencement. Delivery within any specific timeframe is not guaranteed.</p>
 
                 <p className="font-semibold">5. Fees and Payment</p>
-                <p>Analytical Services are billed on a <strong>per-shift basis</strong>. Compliance Analysis is billed at <strong>$0.35 CAD per shift analyzed</strong>. Fatigue Risk Analysis, when elected, is billed at an additional <strong>$0.15 CAD per shift analyzed</strong> ($0.50 CAD per shift combined). A <strong>minimum engagement fee of $225.00 CAD</strong> applies to all engagements. Fees for each Engagement will be confirmed in writing prior to commencement. Fees are quoted in Canadian dollars and exclude applicable taxes. Invoices are payable within thirty (30) days. Work may begin prior to payment. <strong>Deliverables will not be released until payment is confirmed.</strong> Overdue amounts bear interest at 1.5% per month. Rotation Analytics may suspend services upon written notice if payment is overdue.</p>
+                <p>Analytical Services are billed on a <strong>per-shift basis</strong>. Compliance Analysis is billed at <strong>$0.35 CAD per shift analyzed</strong>, including regular and on-call shifts. Fatigue Risk Analysis, when elected, is billed at an additional <strong>$0.15 CAD per shift analyzed</strong> ($0.50 CAD per shift combined). A <strong>Designated Day Off (DDO) surcharge of $0.15 CAD per DDO shift</strong> applies where rotation schedules include designated days off requiring additional analytical review. A <strong>minimum engagement fee of $225.00 CAD</strong> applies to all engagements. Fees for each Engagement will be confirmed in writing prior to commencement. Fees are quoted in Canadian dollars and exclude applicable taxes. Invoices are payable within thirty (30) days. Work may begin prior to payment. <strong>Deliverables will not be released until payment is confirmed.</strong> Overdue amounts bear interest at 1.5% per month. Rotation Analytics may suspend services upon written notice if payment is overdue.</p>
 
                 <p className="font-semibold">6. Intellectual Property</p>
                 <p>All methodologies, tools, templates, and analytical frameworks remain the exclusive property of Visser Ventures Corp. Prior to payment, the Client holds no licence or usage rights in the Deliverables. Upon payment in full, the Client receives a non-exclusive, non-transferable licence for internal use only. The Client shall not attempt to derive, replicate, reverse engineer, or recreate the Methodology from Deliverables.</p>
@@ -349,7 +349,11 @@ export default function EngagePage() {
                   <span className="text-sm text-slate-600">Combined</span>
                   <span className="text-sm font-semibold text-brand-navy">$0.50 / shift</span>
                 </div>
-                <p className="text-xs text-slate-400 pt-1">Minimum engagement: $225 CAD. Fees confirmed in writing before work commences. Taxes additional.</p>
+                <div className="border-t border-slate-100 pt-2 flex justify-between items-baseline">
+                  <span className="text-sm text-slate-600">DDO Surcharge</span>
+                  <span className="text-sm font-semibold text-slate-800">+$0.15 / shift</span>
+                </div>
+                <p className="text-xs text-slate-400 pt-1">On-call shifts priced as regular shifts. DDO surcharge applies where applicable. Minimum engagement: $225 CAD. Taxes additional.</p>
               </div>
             </div>
 

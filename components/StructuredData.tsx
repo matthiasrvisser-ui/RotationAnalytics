@@ -114,7 +114,7 @@ export function ServiceSchema() {
       highPrice: '0.50',
       priceCurrency: 'CAD',
       description:
-        'Per-shift pricing: $0.35 CAD/shift for Compliance Analysis, $0.50 CAD/shift combined with Fatigue Risk Analysis. $225 CAD minimum engagement.',
+        'Per-shift pricing: $0.35 CAD/shift for Compliance Analysis, $0.50 CAD/shift combined with Fatigue Risk Analysis. DDO surcharge +$0.15/shift where applicable. $225 CAD minimum engagement.',
     },
     hasOfferCatalog: {
       '@type': 'OfferCatalog',

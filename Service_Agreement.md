@@ -104,9 +104,11 @@ Rotation Analytics and the Client are each referred to as a "Party" and collecti
 
 **5.1 Standard Rates.** Unless otherwise agreed in writing, Analytical Services are billed on a per-shift basis as follows:
 
-(a) **Compliance Analysis**: $0.35 (CAD) per shift analyzed;
+(a) **Compliance Analysis**: $0.35 (CAD) per shift analyzed, including regular and on-call shifts;
 
-(b) **Fatigue Risk Analysis** (optional add-on): $0.15 (CAD) per shift analyzed, in addition to the Compliance Analysis rate ($0.50 CAD per shift combined).
+(b) **Fatigue Risk Analysis** (optional add-on): $0.15 (CAD) per shift analyzed, in addition to the Compliance Analysis rate ($0.50 CAD per shift combined);
+
+(c) **Designated Day Off (DDO) Surcharge**: $0.15 (CAD) per DDO shift, where rotation schedules include designated days off requiring additional analytical review.
 
 A minimum engagement fee of **$225.00 (CAD)** applies to all Engagements regardless of volume. Fees for each Engagement will be confirmed in writing prior to commencement of work.
 
