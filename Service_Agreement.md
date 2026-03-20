@@ -32,7 +32,7 @@ Rotation Analytics and the Client are each referred to as a "Party" and collecti
 
 **1.6** "Engagement" means a discrete project commissioned under this Agreement.
 
-**1.7** "Fees" means amounts payable for Analytical Services as confirmed in writing.
+**1.7** "Fees" means amounts payable for Analytical Services, calculated in accordance with the published rate schedule.
 
 **1.8** "Governing Documents" means collective agreements, extended work agreements, legislation, regulations, and standards identified by the Client.
 
@@ -42,7 +42,7 @@ Rotation Analytics and the Client are each referred to as a "Party" and collecti
 
 ## 2. SERVICES
 
-**2.1** Rotation Analytics will perform independent analytical review of workforce rotation schedules provided by the Client. Scope shall be confirmed in writing prior to commencement.
+**2.1** Rotation Analytics will perform independent analytical review of workforce rotation schedules provided by the Client. Scope is determined by the submitted rotation data and elected services.
 
 **2.2** Analytical Services may include review against:
 
@@ -110,9 +110,9 @@ Rotation Analytics and the Client are each referred to as a "Party" and collecti
 
 (c) **Designated Day Off (DDO) Surcharge**: $0.15 (CAD) per DDO shift, where rotation schedules include designated days off requiring additional analytical review.
 
-A minimum engagement fee of **$225.00 (CAD)** applies to all Engagements regardless of volume. Fees for each Engagement will be confirmed in writing prior to commencement of work.
+A minimum engagement fee of **$225.00 (CAD)** applies to all Engagements regardless of volume.
 
-**5.2** Work will not commence until scope and Fees are confirmed.
+**5.2** Fees are calculated automatically based on the published rate schedule at the time of submission and the data contained in the submitted rotation. By accepting this Agreement and submitting rotation data, the Client authorizes Rotation Analytics to calculate Fees accordingly and issue an invoice upon receipt. Analysis commences immediately upon submission.
 
 **5.3** Invoices are payable within thirty (30) days of the date of invoice.
 
