@@ -258,15 +258,20 @@ export default function FatigueAnalysisPage() {
             </p>
             <p className="text-sm text-slate-600 leading-relaxed mb-3">
               A comprehensive white paper detailing the complete mathematical methodology,
-              model parameters, and validation references is available upon request.
-              Every deliverable includes a methodology explanation section.
+              model parameters, validation references, and risk classification thresholds
+              is available for download. Every deliverable also includes a methodology
+              explanation section.
             </p>
-            <Link
-              href="/contact"
-              className="text-sm font-medium text-brand-navy hover:text-brand-navy-dark transition-colors"
+            <a
+              href="/rotations/fatigue-methodology-white-paper.pdf"
+              download
+              className="inline-flex items-center gap-2 text-sm font-medium text-brand-navy hover:text-brand-navy-dark transition-colors"
             >
-              Request the full methodology white paper &rarr;
-            </Link>
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+              </svg>
+              Download Methodology White Paper (PDF) &rarr;
+            </a>
           </div>
         </div>
       </Section>
