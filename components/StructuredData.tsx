@@ -109,12 +109,10 @@ export function ServiceSchema() {
     description:
       'Independent rotational risk analysis of complex staffing schedules against collective agreements, occupational health and safety standards, and fatigue science principles including biomathematical modelling.',
     offers: {
-      '@type': 'AggregateOffer',
-      lowPrice: '0.35',
-      highPrice: '0.50',
+      '@type': 'Offer',
       priceCurrency: 'CAD',
       description:
-        'Per-shift pricing: $0.35 CAD/shift for Compliance Analysis, $0.50 CAD/shift combined with Fatigue Risk Analysis. DDO surcharge +$0.15/shift where applicable. $225 CAD minimum engagement.',
+        'Fees are outlined in the Service Agreement upon engagement. Contact Rotation Analytics for details.',
     },
     hasOfferCatalog: {
       '@type': 'OfferCatalog',

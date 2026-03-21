@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     'See how a rotation schedule can appear compliant at first glance while containing hidden issues that only structured analysis reveals.',
 }
 
-const SITE = 'https://rotation-analytics.vercel.app'
+const SITE = 'https://www.rotationanalytics.ca'
 
 const issuesIdentified = [
   {

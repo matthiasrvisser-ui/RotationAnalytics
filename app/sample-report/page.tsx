@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     'A sample executive report demonstrating how Rotation Analytics documents rotation findings with risk classifications, agreement references, and structured analysis.',
 }
 
-const SITE = 'https://rotation-analytics.vercel.app'
+const SITE = 'https://www.rotationanalytics.ca'
 
 const reportFindings = [
   {

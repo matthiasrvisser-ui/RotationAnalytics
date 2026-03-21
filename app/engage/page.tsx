@@ -435,29 +435,6 @@ export default function EngagePage() {
             </div>
 
             <div className="bg-white border border-slate-200 rounded-lg p-5">
-              <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-3">Pricing</p>
-              <div className="space-y-2">
-                <div className="flex justify-between items-baseline">
-                  <span className="text-sm text-slate-600">Compliance Analysis</span>
-                  <span className="text-sm font-semibold text-slate-800">$0.35 / shift</span>
-                </div>
-                <div className="flex justify-between items-baseline">
-                  <span className="text-sm text-slate-600">+ Fatigue Risk Analysis</span>
-                  <span className="text-sm font-semibold text-slate-800">$0.15 / shift</span>
-                </div>
-                <div className="border-t border-slate-100 pt-2 flex justify-between items-baseline">
-                  <span className="text-sm text-slate-600">Combined</span>
-                  <span className="text-sm font-semibold text-brand-navy">$0.50 / shift</span>
-                </div>
-                <div className="border-t border-slate-100 pt-2 flex justify-between items-baseline">
-                  <span className="text-sm text-slate-600">DDO Surcharge</span>
-                  <span className="text-sm font-semibold text-slate-800">+$0.15 / shift</span>
-                </div>
-                <p className="text-xs text-slate-400 pt-1">On-call shifts priced as regular shifts. DDO surcharge applies where applicable. Minimum engagement: $225 CAD. Taxes additional.</p>
-              </div>
-            </div>
-
-            <div className="bg-white border border-slate-200 rounded-lg p-5">
               <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-2">Release of Deliverables</p>
               <p className="text-sm text-slate-600 leading-relaxed">Deliverables are held until payment is confirmed. No licence or usage rights are granted prior to payment.</p>
             </div>

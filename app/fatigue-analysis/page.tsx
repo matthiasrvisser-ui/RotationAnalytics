@@ -2,7 +2,9 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { Hero } from '@/components/Hero'
 import { Section } from '@/components/Section'
-import { RiskClassification, SampleReportTable, HowItWorks, WhyItMatters } from './components'
+import { RiskClassification, HowItWorks, WhyItMatters } from './components'
+
+const SITE = 'https://www.rotationanalytics.ca'
 
 export const metadata: Metadata = {
   title: 'Fatigue Risk Analysis',
@@ -130,12 +132,45 @@ export default function FatigueAnalysisPage() {
             Sample Fatigue Report
           </h2>
           <p className="text-slate-700 leading-relaxed mb-6">
-            The table below is representative of an actual Fatigue Risk Analysis deliverable.
+            The report below is representative of an actual Fatigue Risk Analysis deliverable.
             Each row represents a rotation line. The trend column traces the fatigue score across
             every day of the rotation — both worked days and days off — showing the full recovery
             and fatigue cycle.
           </p>
-          <SampleReportTable />
+
+          <div className="border border-slate-200 rounded-lg overflow-hidden bg-white mb-4">
+            <div className="bg-slate-50 border-b border-slate-200 px-5 py-3 flex items-center justify-between flex-wrap gap-3">
+              <div className="flex items-center gap-3">
+                <div className="w-8 h-8 rounded bg-brand-navy/10 flex items-center justify-center">
+                  <svg className="w-4 h-4 text-brand-navy" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                  </svg>
+                </div>
+                <div>
+                  <p className="text-sm font-semibold text-slate-800">Sample Fatigue Risk Analysis Report</p>
+                  <p className="text-xs text-slate-400">Excel Spreadsheet — Biomathematical Analysis</p>
+                </div>
+              </div>
+              <a
+                href="/rotations/sample-fatigue-report.xlsx"
+                download
+                className="inline-flex items-center gap-2 text-xs font-medium text-brand-navy hover:underline"
+              >
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                </svg>
+                Download .xlsx
+              </a>
+            </div>
+            <div className="relative w-full" style={{ height: '500px' }}>
+              <iframe
+                src={`https://view.officeapps.live.com/op/embed.aspx?src=${encodeURIComponent(`${SITE}/rotations/sample-fatigue-report.xlsx`)}`}
+                className="absolute inset-0 w-full h-full border-0"
+                title="Sample Fatigue Risk Analysis Report"
+              />
+            </div>
+          </div>
+
           <p className="text-sm text-slate-500 mt-4 leading-relaxed">
             All sparklines use the same 0–100 vertical scale and are directly comparable across
             rows. Lines with visibly higher peaks carry more fatigue risk, even if both are
@@ -239,8 +274,7 @@ export default function FatigueAnalysisPage() {
             Add Fatigue Analysis to Your Engagement
           </h2>
           <p className="text-slate-700 leading-relaxed mb-8">
-            Fatigue risk analysis is available alongside any compliance engagement at $0.15 per
-            shift analyzed. Combined with compliance analysis, the total is $0.50 per shift —
+            Fatigue risk analysis is available as an add-on to any compliance engagement —
             providing the most complete rotation risk assessment available.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
