@@ -19,6 +19,9 @@ export default function EngagePage() {
   const [agreed, setAgreed] = useState(false)
   const [agreeError, setAgreeError] = useState(false)
   const [submitError, setSubmitError] = useState<string | null>(null)
+  const [showReturningModal, setShowReturningModal] = useState(false)
+  const [returningAgreed, setReturningAgreed] = useState(false)
+  const [returningError, setReturningError] = useState(false)
   const formRef = useRef<HTMLFormElement>(null)
 
   function handleAgreementContinue() {
@@ -27,6 +30,17 @@ export default function EngagePage() {
       return
     }
     setAgreeError(false)
+    setStep('submission')
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
+  function handleReturningContinue() {
+    if (!returningAgreed) {
+      setReturningError(true)
+      return
+    }
+    setReturningError(false)
+    setShowReturningModal(false)
     setStep('submission')
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
@@ -62,14 +76,14 @@ export default function EngagePage() {
       <>
         <Hero
           headline="Begin Your Engagement"
-          subheadline="Review and accept the service agreement, then submit your rotation files. Engagement begins upon receipt of signed agreement and complete submission."
+          subheadline="Review and accept the service agreement to begin. Once accepted, submit your rotation data — Rotation Analytics will verify completeness, issue an invoice, and deliver your analysis upon confirmed payment."
         />
 
         <Section divider>
           <div className="max-w-3xl">
             {/* Process steps */}
             <div className="flex items-center gap-3 mb-10">
-              {['Sign Agreement', 'Submit Files', 'Engagement Active'].map((label, i) => (
+              {['Accept Agreement', 'Submit Rotation', 'Invoice & Payment', 'Deliverables'].map((label, i) => (
                 <div key={i} className="flex items-center gap-3">
                   <div className="flex items-center gap-2">
                     <div className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold ${i === 0 ? 'bg-brand-navy text-white' : 'bg-slate-200 text-slate-500'}`}>
@@ -77,7 +91,7 @@ export default function EngagePage() {
                     </div>
                     <span className={`text-sm ${i === 0 ? 'text-slate-800 font-medium' : 'text-slate-400'}`}>{label}</span>
                   </div>
-                  {i < 2 && <div className="w-8 h-px bg-slate-300" />}
+                  {i < 3 && <div className="w-8 h-px bg-slate-300" />}
                 </div>
               ))}
             </div>
@@ -95,10 +109,12 @@ export default function EngagePage() {
                 <p><strong>This Service Agreement</strong> is entered into as of the date of electronic acceptance between <strong>Visser Ventures Corp.</strong>, a corporation incorporated under the laws of the Province of Alberta, operating under the trade name <strong>Rotation Analytics</strong> ("Rotation Analytics" or the "Provider"), and the Client identified below.</p>
 
                 <p className="font-semibold">1. Services</p>
-                <p>Rotation Analytics will perform independent analytical review of workforce rotation schedules provided by the Client. Analytical Services may include review against collective agreement provisions, extended work agreements, employment standards legislation, occupational health and safety considerations, and fatigue science principles. Findings constitute analytical observations only and are not determinations of compliance, safety, legality, or obligation. Rotation Analytics does not provide legal, engineering, safety certification, regulatory, medical, or professional advisory services.</p>
+                <p>Rotation Analytics performs independent rotational risk analysis of workforce rotation schedules provided by the Client. Analytical Services include risk analysis against collective agreement provisions, extended work agreements, employment standards legislation, occupational health and safety standards, and fatigue science principles including biomathematical modelling. Findings constitute independent risk analysis and identify and classify rotational risk. Findings are not determinations of compliance, safety, legality, or obligation. Rotation Analytics does not provide legal, engineering, safety certification, regulatory, medical, or professional advisory services.</p>
 
-                <p className="font-semibold">2. Engagement Commencement</p>
+                <p className="font-semibold">2. Engagement Commencement &amp; Models</p>
                 <p>An Engagement begins only upon: (a) execution of this Agreement by electronic acceptance; (b) receipt of complete submission materials; and (c) receipt of payment. Rotation Analytics will review submitted materials for completeness and may request clarification or additional information before proceeding. An invoice will not be issued until Rotation Analytics has confirmed that all applicable data has been received. Completeness of submission is determined solely by Rotation Analytics. Fees are calculated automatically based on the published rate schedule and the submitted rotation data.</p>
+                <p>Rotation Analytics offers both <strong>ad hoc</strong> and <strong>integrated</strong> engagement models. Ad hoc engagements provide single-rotation analysis on an as-needed basis. Integrated engagements provide recurring analytical support across rotation cycles, enabling trend identification, comparative risk assessment, and ongoing rotational risk monitoring. Rotation Analytics recommends integrated engagement for organizations seeking sustained oversight of rotational risk.</p>
+                <p>This Agreement remains in effect for a twelve (12) month term and automatically renews unless terminated in accordance with its terms. <strong>Once executed, the Client may submit additional rotations for analysis under this Agreement without re-execution.</strong> A copy of the executed Agreement will be provided to both Parties upon acceptance.</p>
 
                 <p className="font-semibold">3. Deliverables</p>
                 <p>Deliverables include an Annotated Rotation Schedule and an Executive Findings Report. Deliverables rely solely on information supplied by the Client. Rotation Analytics does not verify the accuracy or completeness of Client-provided materials. Deliverables are for internal decision-making only unless written consent is provided. Deliverables shall be deemed accepted unless the Client provides written notice of a material deficiency within ten (10) business days of delivery.</p>
@@ -144,7 +160,7 @@ export default function EngagePage() {
                   }}
                 />
                 <span className="text-sm text-slate-700 leading-relaxed">
-                  I have read and accept the Service Agreement (Version 2025-v2) on behalf of my organization. I understand that engagement begins only after agreement acceptance and receipt of complete submission, that deliverables are withheld until payment is confirmed, and that no usage rights are granted prior to payment.
+                  I have read and accept the Service Agreement (Version 2025-v2) on behalf of my organization. I understand that this Agreement governs all current and future engagements, that analysis commences only upon confirmed payment, that deliverables are withheld until payment is confirmed, and that no usage rights are granted prior to payment. A copy of this executed Agreement will be provided to both parties.
                 </span>
               </label>
               {agreeError && (
@@ -161,8 +177,92 @@ export default function EngagePage() {
             >
               Accept Agreement &amp; Continue to Submission
             </button>
+
+            <div className="mt-6 pt-6 border-t border-slate-200">
+              <button
+                type="button"
+                onClick={() => setShowReturningModal(true)}
+                className="text-sm font-medium text-brand-navy hover:text-brand-navy-dark transition-colors"
+              >
+                Returning client? Submit under your existing agreement &rarr;
+              </button>
+            </div>
           </div>
         </Section>
+
+        {/* Returning Client Modal */}
+        {showReturningModal && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+            <div
+              className="absolute inset-0 bg-black/50"
+              onClick={() => { setShowReturningModal(false); setReturningError(false); setReturningAgreed(false) }}
+            />
+            <div className="relative bg-white rounded-lg shadow-xl max-w-lg w-full p-6">
+              <button
+                onClick={() => { setShowReturningModal(false); setReturningError(false); setReturningAgreed(false) }}
+                className="absolute top-4 right-4 text-slate-400 hover:text-slate-600 transition-colors"
+                aria-label="Close"
+              >
+                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+
+              <p className="text-xs font-semibold text-brand-navy uppercase tracking-widest mb-3">
+                Returning Client
+              </p>
+              <h3 className="text-lg font-semibold text-brand-navy mb-3">
+                Submit Under Existing Agreement
+              </h3>
+              <p className="text-sm text-slate-600 leading-relaxed mb-5">
+                If your organization has a signed Service Agreement (Version 2025-v2) currently
+                in effect with Rotation Analytics, you may submit additional rotations for analysis
+                without re-executing the agreement.
+              </p>
+
+              <div className={`rounded-lg border p-4 mb-5 ${returningError ? 'border-red-300 bg-red-50' : 'border-slate-200 bg-slate-50'}`}>
+                <label className="flex items-start gap-3 cursor-pointer">
+                  <input
+                    type="checkbox"
+                    className="mt-0.5 w-4 h-4 rounded border-slate-400 accent-brand-navy cursor-pointer"
+                    checked={returningAgreed}
+                    onChange={e => {
+                      setReturningAgreed(e.target.checked)
+                      if (e.target.checked) setReturningError(false)
+                    }}
+                  />
+                  <span className="text-sm text-slate-700 leading-relaxed">
+                    I confirm that my organization has a signed Service Agreement currently in effect
+                    with Rotation Analytics, and I acknowledge that this submission is governed by
+                    the terms, conditions, and pricing of that agreement.
+                  </span>
+                </label>
+                {returningError && (
+                  <p className="mt-2 text-xs text-red-600 font-medium">
+                    You must confirm your existing agreement to continue.
+                  </p>
+                )}
+              </div>
+
+              <div className="flex items-center gap-3">
+                <button
+                  type="button"
+                  onClick={handleReturningContinue}
+                  className="bg-brand-navy text-white px-6 py-2.5 rounded font-medium text-sm hover:bg-brand-navy-dark transition-colors"
+                >
+                  Continue to Submission
+                </button>
+                <button
+                  type="button"
+                  onClick={() => { setShowReturningModal(false); setReturningError(false); setReturningAgreed(false) }}
+                  className="text-sm text-slate-500 hover:text-slate-700 transition-colors"
+                >
+                  Cancel
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
       </>
     )
   }
@@ -171,13 +271,13 @@ export default function EngagePage() {
     <>
       <Hero
         headline="Submit Your Rotation"
-        subheadline="Agreement accepted. Provide your rotation files and supporting details to begin analysis."
+        subheadline="Agreement accepted — a copy has been provided to both parties. Submit your rotation data and supporting details. Rotation Analytics will verify completeness and issue an invoice. Returning clients may submit additional rotations under their existing agreement."
       />
 
       <Section divider>
         {/* Step indicator */}
         <div className="flex items-center gap-3 mb-10 max-w-3xl">
-          {['Sign Agreement', 'Submit Files', 'Engagement Active'].map((label, i) => (
+          {['Accept Agreement', 'Submit Rotation', 'Invoice & Payment', 'Deliverables'].map((label, i) => (
             <div key={i} className="flex items-center gap-3">
               <div className="flex items-center gap-2">
                 <div className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold ${i === 0 ? 'bg-green-500 text-white' : i === 1 ? 'bg-brand-navy text-white' : 'bg-slate-200 text-slate-500'}`}>
@@ -185,7 +285,7 @@ export default function EngagePage() {
                 </div>
                 <span className={`text-sm ${i <= 1 ? 'text-slate-800 font-medium' : 'text-slate-400'}`}>{label}</span>
               </div>
-              {i < 2 && <div className="w-8 h-px bg-slate-300" />}
+              {i < 3 && <div className="w-8 h-px bg-slate-300" />}
             </div>
           ))}
         </div>
@@ -305,7 +405,7 @@ export default function EngagePage() {
               </button>
 
               <p className="text-xs text-slate-400 text-center">
-                By submitting you confirm your agreement acceptance. Rotation Analytics will verify completeness and issue an invoice.
+                Rotation Analytics will verify data completeness, which may require further clarification, and issue an invoice upon confirmation. Analysis commences upon confirmed payment.
                 Target turnaround: 48 hours from confirmed payment. Maximum: 72 hours.
               </p>
             </form>
@@ -360,6 +460,13 @@ export default function EngagePage() {
             <div className="bg-white border border-slate-200 rounded-lg p-5">
               <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-2">Release of Deliverables</p>
               <p className="text-sm text-slate-600 leading-relaxed">Deliverables are held until payment is confirmed. No licence or usage rights are granted prior to payment.</p>
+            </div>
+
+            <div className="bg-brand-navy/5 border border-brand-navy/15 rounded-lg p-5">
+              <p className="text-xs font-semibold text-brand-navy uppercase tracking-widest mb-2">Integrated Support</p>
+              <p className="text-sm text-slate-600 leading-relaxed">
+                While ad hoc analysis is available, Rotation Analytics recommends integrated engagement for ongoing rotational risk monitoring across rotation cycles. Contact us to discuss recurring analytical support.
+              </p>
             </div>
           </div>
         </div>

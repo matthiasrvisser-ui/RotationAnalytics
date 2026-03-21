@@ -8,7 +8,7 @@ export function OrganizationSchema() {
     logo: 'https://www.rotationanalytics.ca/logo/rotation-analytics-logo.svg',
     image: 'https://www.rotationanalytics.ca/logo/rotation-analytics-logo.svg',
     description:
-      'Independent analytical firm providing structured third-party review of rotation schedules — identifying collective agreement non-compliance, fatigue risk exposure, and scheduling vulnerabilities.',
+      'Independent rotational risk analysis firm providing structured third-party review of rotation schedules — identifying collective agreement non-compliance, fatigue risk exposure, and scheduling vulnerabilities through biomathematical modelling and OHS standards.',
     email: 'hello@rotationanalytics.ca',
     foundingDate: '2024',
     areaServed: {
@@ -107,7 +107,7 @@ export function ServiceSchema() {
       name: 'Canada',
     },
     description:
-      'Independent review of complex rotational staffing schedules against collective agreements, employment standards, and fatigue science principles.',
+      'Independent rotational risk analysis of complex staffing schedules against collective agreements, occupational health and safety standards, and fatigue science principles including biomathematical modelling.',
     offers: {
       '@type': 'AggregateOffer',
       lowPrice: '0.35',
@@ -133,9 +133,9 @@ export function ServiceSchema() {
           '@type': 'Offer',
           itemOffered: {
             '@type': 'Service',
-            name: 'Fatigue Risk Assessment',
+            name: 'Fatigue Risk Analysis',
             description:
-              'Analysis of rest intervals, shift transitions, and scheduling patterns against occupational health guidelines.',
+              'Biomathematical fatigue modelling applied across the full rotation cycle, assessing sleep opportunity, circadian disruption, and cumulative fatigue exposure.',
           },
         },
         {

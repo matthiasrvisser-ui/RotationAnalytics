@@ -20,7 +20,7 @@ Rotation Analytics and the Client are each referred to as a "Party" and collecti
 
 ## 1. DEFINITIONS
 
-**1.1** "Analytical Services" means the independent analytical review of workforce rotation schedules performed by Rotation Analytics.
+**1.1** "Analytical Services" means the independent rotational risk analysis of workforce rotation schedules performed by Rotation Analytics, including review against applicable collective agreements, occupational health and safety standards, and fatigue science principles.
 
 **1.2** "Applicable Law" means the laws of the Province of Alberta and the federal laws of Canada applicable therein.
 
@@ -42,9 +42,9 @@ Rotation Analytics and the Client are each referred to as a "Party" and collecti
 
 ## 2. SERVICES
 
-**2.1** Rotation Analytics will perform independent analytical review of workforce rotation schedules provided by the Client. Scope is determined by the submitted rotation data and elected services.
+**2.1** Rotation Analytics will perform independent rotational risk analysis of workforce rotation schedules provided by the Client. Scope is determined by the submitted rotation data and elected services.
 
-**2.2** Analytical Services may include review against:
+**2.2** Analytical Services include risk analysis against:
 
 (a) collective agreement provisions;
 
@@ -52,17 +52,27 @@ Rotation Analytics and the Client are each referred to as a "Party" and collecti
 
 (c) employment standards legislation;
 
-(d) occupational health and safety considerations; and
+(d) occupational health and safety standards; and
 
-(e) fatigue science principles.
+(e) fatigue science principles and biomathematical modelling.
 
-**2.3** Findings constitute analytical observations only and are not determinations of compliance, safety, legality, or obligation.
+**2.3** Findings constitute independent risk analysis and identify and classify rotational risk. Findings are not determinations of compliance, safety, legality, or obligation.
 
 **2.4 Data Completeness.** Rotation Analytics will review submitted materials for completeness and may request clarification or additional information before proceeding. An invoice will not be issued, and analysis will not commence, until Rotation Analytics has confirmed that all applicable data has been received. Completeness of submission is determined solely by Rotation Analytics.
 
-**2.5** Additional Engagements may be commissioned without executing a new agreement if confirmed in writing.
+**2.5 Engagement Models.** Rotation Analytics offers both ad hoc and integrated engagement models:
 
-**2.6 Non-Reliance.** The Client acknowledges Rotation Analytics does not provide legal, engineering, safety certification, regulatory, medical, or professional advisory services and agrees not to rely on Analytical Services as a substitute for independent professional advice.
+(a) **Ad Hoc Engagement**: single-rotation analysis commissioned on an as-needed basis;
+
+(b) **Integrated Engagement**: recurring analytical support across rotation cycles, enabling trend identification, comparative risk assessment, and ongoing rotational risk monitoring.
+
+Rotation Analytics recommends integrated engagement for organizations seeking sustained oversight of rotational risk. Ad hoc engagements may be converted to integrated engagements at any time upon written request.
+
+**2.6 Returning Clients.** This Agreement remains in effect for the Term specified in Section 11 and governs all Engagements during that period. Once executed, the Client may submit additional rotations for analysis under this Agreement without re-execution. Each submission initiates a new Engagement subject to the data completeness verification and invoicing process described in Section 2.4 and Section 5.
+
+**2.7 Agreement Copies.** Upon execution, a copy of the executed Agreement shall be provided to both Parties. The executed copy shall include the version number, timestamp of acceptance, and identity of the accepting party.
+
+**2.8 Non-Reliance.** The Client acknowledges Rotation Analytics does not provide legal, engineering, safety certification, regulatory, medical, or professional advisory services and agrees not to rely on Analytical Services as a substitute for independent professional advice.
 
 ---
 
