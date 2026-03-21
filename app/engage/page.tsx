@@ -271,7 +271,7 @@ export default function EngagePage() {
     <>
       <Hero
         headline="Submit Your Rotation"
-        subheadline="Agreement accepted — a copy has been provided to both parties. Submit your rotation data and supporting details. Rotation Analytics will verify completeness and issue an invoice. Returning clients may submit additional rotations under their existing agreement."
+        subheadline="Agreement accepted — a copy has been provided to both parties. Submit your rotation data below. Rotation Analytics will verify completeness and issue an invoice."
       />
 
       <Section divider>
@@ -363,7 +363,7 @@ export default function EngagePage() {
                     <div>
                       <p className="text-sm font-semibold text-brand-navy mb-1">Add Fatigue Risk Analysis</p>
                       <p className="text-xs text-slate-600 leading-relaxed">
-                        Elect biomathematical fatigue modelling as an add-on to your compliance analysis. Your deliverables will additionally include a Fatigue Risk Analysis Report with per-line fatigue scores, risk classifications, and trend visualisations across the full rotation cycle.
+                        Add biomathematical fatigue modelling to your compliance analysis. Your deliverables will include a Fatigue Risk Analysis Report with per-line fatigue scores, risk classifications, and trend visualisations across the full rotation cycle.
                       </p>
                       <a href="/fatigue-analysis" target="_blank" rel="noopener noreferrer" className="text-xs font-medium text-brand-navy hover:underline mt-1 inline-block">
                         Learn more about Fatigue Risk Analysis &rarr;
@@ -430,8 +430,8 @@ export default function EngagePage() {
               </button>
 
               <p className="text-xs text-slate-400 text-center">
-                Rotation Analytics will verify data completeness, which may require further clarification, and issue an invoice upon confirmation. Analysis commences upon confirmed payment.
-                Target turnaround: 48 hours from confirmed payment. Maximum: 72 hours.
+                Rotation Analytics will verify data completeness and issue an invoice upon confirmation. Analysis commences upon confirmed payment.
+                Target turnaround: 48 hours. Maximum: 72 hours.
               </p>
             </form>
           </div>

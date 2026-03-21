@@ -6,11 +6,11 @@ import { Section } from '@/components/Section'
 export const metadata: Metadata = {
   title: 'Getting Started',
   description:
-    'How to engage Rotation Analytics for independent rotation compliance and fatigue risk analysis. From initial conversation through delivery — a clear, structured process.',
+    'How to engage Rotation Analytics for independent rotation compliance and fatigue risk analysis. From initial conversation through delivery — a clear process.',
   openGraph: {
     title: 'Getting Started | Rotation Analytics',
     description:
-      'A structured engagement pathway for unions, employers, and labour relations professionals seeking independent rotation analysis.',
+      'An engagement pathway for unions, employers, and labour relations professionals seeking independent rotation analysis.',
   },
 }
 
@@ -33,7 +33,7 @@ const timelineSteps = [
     title: 'Service Agreement',
     duration: 'Electronic acceptance',
     description:
-      'A straightforward service agreement governs all engagements. It covers scope, confidentiality, independence, deliverables, and fees. The agreement is reviewed and accepted electronically — no procurement cycles or lengthy negotiations required.',
+      'A straightforward service agreement governs all engagements. It covers scope, confidentiality, independence, deliverables, and fees. You review and accept it electronically — no procurement cycles or lengthy negotiations.',
     details: [
       'Per-rotation pricing — no subscriptions or platform fees',
       'Confidentiality obligations documented in writing',
@@ -59,7 +59,7 @@ const timelineSteps = [
     title: 'Analysis and Delivery',
     duration: '48–72 hours from confirmed payment',
     description:
-      'The rotation is evaluated against every applicable provision in the collective agreement. If fatigue analysis is elected, the biomathematical model runs concurrently. Deliverables are released confidentially to the submitting client.',
+      'Rotation Analytics evaluates the rotation against every applicable provision in the collective agreement. If fatigue analysis is elected, the biomathematical model runs concurrently. Deliverables are released confidentially to the submitting client.',
     details: [
       'Annotated rotation schedule with flagged non-conformances',
       'Executive findings report with risk classifications and citations',
@@ -71,9 +71,9 @@ const timelineSteps = [
 
 const pilotBenefits = [
   {
-    title: 'Low Commitment',
+    title: 'One Rotation, One Fee',
     description:
-      'Submit a single rotation under a standard service agreement. No minimum volume, no multi-year contract, no platform subscription.',
+      'One fee, one rotation, one deliverable set. No minimum volume, no multi-year contract, no platform subscription.',
   },
   {
     title: 'Full Methodology',
@@ -88,7 +88,7 @@ const pilotBenefits = [
   {
     title: 'No Pressure to Continue',
     description:
-      'If the pilot engagement does not demonstrate clear value, there is no obligation to continue. The service agreement allows submissions at your discretion with no volume commitments.',
+      'A pilot engagement is a single analysis starting at $225 CAD. You receive the same deliverables as every other engagement — nothing is simplified. If the pilot demonstrates value, your service agreement remains active for 12 months and you can continue submitting rotations on an ad hoc basis at any time. Organizations that require ongoing analytical support can contact us to discuss an integrated service agreement tailored to their volume and scheduling environment.',
   },
 ]
 
@@ -111,7 +111,7 @@ const faqs = [
   {
     question: 'What collective agreements do you support?',
     answer:
-      'The analysis engine is configured for the specific collective agreement identified at submission. We have deep experience with healthcare collective agreements in Alberta and are equipped to support agreements from any Canadian jurisdiction and sector.',
+      'The analysis engine is configured for the specific collective agreement identified at submission. We have deep experience with healthcare collective agreements in Alberta and can support agreements from any Canadian jurisdiction and sector.',
   },
   {
     question: 'Is there a minimum engagement size?',
@@ -130,7 +130,7 @@ export default function GettingStartedPage() {
     <>
       <Hero
         headline="Getting Started"
-        subheadline="A clear, structured process from initial conversation to delivered findings. No platform onboarding, no procurement complexity — just the analysis your rotation requires."
+        subheadline="A clear process from initial conversation to delivered findings. No platform onboarding, no procurement hurdles — just the analysis your rotation requires."
       />
 
       {/* ── ENGAGEMENT PATHWAY ── */}
@@ -143,9 +143,9 @@ export default function GettingStartedPage() {
             Four steps from conversation to findings.
           </h2>
           <p className="text-base text-slate-500 leading-relaxed mb-12 max-w-3xl">
-            Every engagement follows the same structured process. Whether this is
+            Every engagement follows the same process. Whether this is
             your first analysis or your twentieth, the pathway is consistent,
-            predictable, and designed to minimise your time investment.
+            predictable, and designed to be fast.
           </p>
 
           <div className="space-y-0">
@@ -266,7 +266,7 @@ export default function GettingStartedPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" />
                 </svg>
               </div>
-              <h3 className="text-sm font-semibold text-slate-900 mb-2">Cycle-Over-Cycle Tracking</h3>
+              <h3 className="text-sm font-semibold text-slate-900 mb-2">Rotation-Over-Rotation Comparison</h3>
               <p className="text-sm text-slate-500 leading-relaxed">
                 When the same rotation is analysed across successive cycles, changes in
                 compliance posture and fatigue risk become visible over time —

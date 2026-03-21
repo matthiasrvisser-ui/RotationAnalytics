@@ -6,7 +6,7 @@ import { Section } from '@/components/Section'
 export const metadata: Metadata = {
   title: 'Example Rotation',
   description:
-    'See how a rotation schedule can appear compliant at first glance while containing hidden issues that only structured analysis reveals.',
+    'See how a rotation schedule can appear compliant at first glance while containing hidden issues that only independent analysis reveals.',
 }
 
 const SITE = 'https://www.rotationanalytics.ca'
@@ -66,7 +66,7 @@ export default function ExampleRotation() {
     <>
       <Hero
         headline="Example Rotation Analysis"
-        subheadline="A sample rotation schedule that passed manual review — and the hidden issues that structured analysis revealed."
+        subheadline="A sample rotation schedule that passed manual review — and the hidden issues that independent analysis revealed."
         cta={{ label: 'View Sample Report', href: '/sample-report' }}
         secondaryCta={{ label: 'Our Methodology', href: '/methodology' }}
       />
@@ -78,13 +78,13 @@ export default function ExampleRotation() {
             Context
           </p>
           <h2 className="text-2xl md:text-3xl font-bold text-slate-900 tracking-tight mb-6">
-            Rotations are routinely reviewed and accepted without structured analysis.
+            Rotations are routinely reviewed and accepted without independent analysis.
           </h2>
           <p className="text-base text-slate-600 leading-relaxed mb-5">
             Unionized rotation schedules are typically reviewed manually by schedulers and labour relations staff. At first glance, most rotations appear to meet staffing requirements and basic rest provisions. Subtle issues, however, can persist across rotation cycles without detection.
           </p>
           <p className="text-base text-slate-600 leading-relaxed">
-            These hidden problems include insufficient rest periods between shifts, weekends off that do not meet collective agreement thresholds, non-compliant consecutive shift sequences, on-call violations, and days off configurations that fail minimum requirements. High-impact violations carry documented fatigue risk and create grounds for grievance proceedings.
+            These hidden problems include insufficient rest periods between shifts, weekends off that do not meet collective agreement thresholds, non-compliant consecutive shift sequences, on-call violations, and days off configurations that fail minimum requirements. High-impact violations carry real fatigue risk and create grounds for grievance proceedings.
           </p>
         </div>
       </Section>
@@ -195,7 +195,7 @@ export default function ExampleRotation() {
           The Same Rotation — With Issues Highlighted
         </h2>
         <p className="text-base text-slate-500 leading-relaxed mb-8 max-w-3xl">
-          Structured analysis applied 15 parameters drawn from the applicable collective agreement and employment standards. Cells highlighted in orange indicate insufficient hours between shifts. Cells in pink or purple indicate on-call scheduling violations.
+          The analysis engine applied 15 parameters drawn from the applicable collective agreement and employment standards. Cells highlighted in orange indicate insufficient hours between shifts. Cells in pink or purple indicate on-call scheduling violations.
         </p>
 
         <div className="border border-slate-200 rounded-lg overflow-hidden bg-white mb-4">
@@ -232,14 +232,14 @@ export default function ExampleRotation() {
         </div>
 
         <p className="text-xs text-slate-400 leading-relaxed mt-4 max-w-3xl">
-          Following structured analysis, a number of non-conformances present themselves across this rotation — highlighted directly within the schedule for review. The full findings are documented in the executive report.
+          Analysis revealed a number of non-conformances across this rotation — highlighted directly within the schedule for review. The full findings are documented in the executive report.
         </p>
       </Section>
 
       {/* 5. Key Issues Identified */}
       <Section
         title="Key Issues Identified"
-        subtitle="Structured analysis of 15 parameters revealed 5 areas that did not meet requirements."
+        subtitle="The analysis engine applied 15 parameters and revealed 5 areas that did not meet requirements."
         divider
       >
         <div className="grid grid-cols-3 sm:grid-cols-5 gap-3 mb-10">
@@ -295,10 +295,10 @@ export default function ExampleRotation() {
               Why This Happens in Real Organizations
             </h2>
             <p className="text-base text-slate-500 leading-relaxed mb-5">
-              Rotation planning is an extremely complex exercise. A 10-week rotation with 11 lines contains over 700 individual shift assignments, each governed by intersecting rules from collective agreements, employment standards, and operational requirements.
+              Rotation planning is a complex exercise. A 10-week rotation with 11 lines contains over 700 individual shift assignments, each governed by intersecting rules from collective agreements, employment standards, and operational requirements.
             </p>
             <p className="text-base text-slate-500 leading-relaxed">
-              Collective agreements contain nuanced provisions — weekend off requirements averaged across multi-week periods, consecutive shift limits counted across week boundaries, minimum rest hours measured to the half-hour. Manual reviews are time-consuming and structurally unable to trace all intersecting parameters simultaneously.
+              Collective agreements contain nuanced provisions — weekend off requirements averaged across multi-week periods, consecutive shift limits counted across week boundaries, minimum rest hours measured to the half-hour. A manual reviewer cannot trace all intersecting parameters simultaneously across a full rotation cycle.
             </p>
           </div>
 
@@ -325,10 +325,10 @@ export default function ExampleRotation() {
             The Solution
           </p>
           <h2 className="text-2xl md:text-3xl font-bold text-slate-900 tracking-tight mb-6">
-            Structured, Independent Rotation Analysis
+            Independent Rotation Analysis
           </h2>
           <p className="text-base text-slate-600 leading-relaxed mb-8">
-            Rotation Analytics Inc conducts structured evaluation of rotation schedules, applying documented parameters against the full rotation cycle to identify issues that manual review cannot reliably detect.
+            Rotation Analytics applies documented parameters against the full rotation cycle to identify issues that manual review cannot reliably detect.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {[
@@ -353,7 +353,7 @@ export default function ExampleRotation() {
             See the Full Executive Report
           </h2>
           <p className="text-slate-300 mb-8 max-w-xl mx-auto text-sm leading-relaxed">
-            This rotation generated a structured executive report documenting all 15 parameters evaluated, with risk classifications and applicable agreement references.
+            This rotation generated an executive report documenting all 15 parameters evaluated, with risk classifications and applicable agreement references.
           </p>
           <div className="flex flex-wrap justify-center gap-5 items-center">
             <Link

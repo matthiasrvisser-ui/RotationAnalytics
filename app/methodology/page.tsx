@@ -29,7 +29,7 @@ const examineItems = [
   {
     label: 'Fatigue risk patterns',
     detail:
-      'Shift sequences and rest intervals assessed against established occupational health guidelines. These are peer-reviewed best practices, not quantified fatigue scores.',
+      'Shift sequences and rest intervals assessed against established occupational health guidelines. Quantified fatigue scoring is available separately through the Fatigue Risk Analysis add-on.',
   },
   {
     label: 'Weekend and statutory holiday distribution',
@@ -82,7 +82,7 @@ export default function Methodology() {
     <>
       <Hero
         headline="Our Methodology"
-        subheadline="How we examine rotation schedules and classify scheduling risk for client review."
+        subheadline="How Rotation Analytics examines rotation schedules and classifies scheduling risk for client review."
       />
 
       <Section
@@ -108,7 +108,7 @@ export default function Methodology() {
           Analysis Flow
         </p>
         <p className="text-base text-slate-600 leading-relaxed mb-8 max-w-3xl">
-          Our methodology is powered by a proprietary analysis engine built specifically for rotation compliance. Unlike manual review — which scales linearly with rotation complexity and inevitably misses more as schedules grow longer — our tools systematically evaluate every shift against every applicable provision across the full rotation cycle.
+          Our methodology is powered by a proprietary analysis engine built specifically for rotation compliance. Manual review scales linearly with rotation complexity and inevitably misses more as schedules grow longer. Our engine evaluates every shift against every applicable provision across the full rotation cycle.
         </p>
         <AnalysisFlow />
         <p className="text-xs text-slate-400 mt-5 leading-relaxed max-w-2xl">
@@ -118,7 +118,7 @@ export default function Methodology() {
 
       <Section
         title="Risk Classification"
-        subtitle="Findings are classified into three levels to guide client prioritisation."
+        subtitle="Compliance findings are classified into three levels to guide client prioritisation."
         className="bg-brand-cream"
         divider
       >
@@ -132,11 +132,14 @@ export default function Methodology() {
             </div>
           ))}
         </div>
+        <p className="text-xs text-slate-500 leading-relaxed mt-6 max-w-3xl">
+          Compliance risk uses three classification levels (High, Moderate, Low) based on collective agreement obligations and regulatory requirements. Fatigue risk uses four levels (Low, Moderate, High, Critical) based on biomathematical fatigue modelling. When both analyses are elected, findings from each appear in their respective reports and combine to form the complete rotation risk profile.
+        </p>
       </Section>
 
       <Section
         title="Regulatory Reference Points"
-        subtitle="Analyses reference applicable frameworks in context of the specific jurisdiction and collective agreement."
+        subtitle="Each analysis references the applicable frameworks for its jurisdiction and collective agreement."
         divider
       >
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-3xl">
@@ -159,7 +162,7 @@ export default function Methodology() {
             From rotation to documented findings.
           </h2>
           <p className="text-base text-slate-500 leading-relaxed max-w-2xl">
-            Walk through a real analysis — from a rotation that passed manual review to the structured report that revealed what was missed.
+            Walk through a real analysis — from a rotation that passed manual review to the findings report that revealed what was missed.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl">
@@ -193,7 +196,7 @@ export default function Methodology() {
             Ready to discuss an engagement?
           </h2>
           <p className="text-slate-300 mb-8 max-w-xl mx-auto text-sm leading-relaxed">
-            Whether you have a specific rotation in mind or want to understand what structured analysis would reveal, we are available to discuss your requirements.
+            Whether you have a specific rotation in mind or want to understand what independent analysis would reveal, we are available to discuss your requirements.
           </p>
           <div className="flex flex-wrap justify-center gap-5 items-center">
             <Link

@@ -7,11 +7,11 @@ import { ProcessOverview } from '@/components/ProcessOverview'
 const primaryProblems = [
   {
     heading: 'Collective Agreement Compliance',
-    body: 'Scheduling provisions within collective agreements create documented operational obligations. Without structured review, non-compliance may persist across rotation cycles without being identified.',
+    body: 'Scheduling provisions within collective agreements create specific scheduling obligations. Without independent review, non-compliance may persist across rotation cycles without being identified.',
   },
   {
     heading: 'Lack of Documented Analysis',
-    body: 'Grievance preparation is strengthened when supported by structured, independently produced analysis. Informal review does not carry the same evidentiary weight. Rotation Analytics Inc provides a documented analysis package for client use at their discretion.',
+    body: 'Grievance preparation is strengthened when supported by independently produced analysis. Informal review does not carry the same evidentiary weight. Rotation Analytics Inc provides a documented analysis package for client use.',
   },
 ]
 
@@ -40,7 +40,7 @@ export default function Home() {
       <div className="border-t border-slate-200">
         <div className="max-w-6xl mx-auto px-6 py-10 text-center">
           <p className="text-sm text-slate-500 leading-relaxed max-w-2xl mx-auto">
-            Led by a former frontline registered nurse and unionized healthcare worker with over a decade of rotation consulting experience. We have lived the schedules we now analyze &mdash; and we bring that firsthand understanding to every engagement.
+            Led by a former frontline registered nurse with over a decade of rotation consulting experience. We have lived the schedules we now analyze &mdash; and we bring that firsthand understanding to every engagement.
           </p>
         </div>
       </div>
@@ -89,7 +89,7 @@ export default function Home() {
             Manual review doesn&rsquo;t scale. Purpose-built analysis does.
           </h2>
           <p className="text-base text-slate-600 leading-relaxed mb-4">
-            You know the reality: collective agreements contain hundreds of scheduling provisions. Rotations span weeks. A single schedule can generate thousands of individual compliance checkpoints. Manual review — no matter how experienced the reviewer — misses more as complexity increases.
+            You know the reality: collective agreements contain hundreds of scheduling provisions. Rotations span weeks. Manual review — no matter how experienced the reviewer — misses more as complexity increases.
           </p>
           <p className="text-base text-slate-600 leading-relaxed mb-10">
             Rotation Analytics was built for exactly this problem.
@@ -114,7 +114,7 @@ export default function Home() {
               </div>
               <h3 className="text-sm font-semibold text-slate-900 mb-2">Domain Expertise</h3>
               <p className="text-sm text-slate-500 leading-relaxed">
-                Decades of real-world experience in unionized shift environments inform every parameter we evaluate. The tool is powerful because the expertise behind it knows what to look for.
+                The engine finds what it's built to find because the people behind it have lived these schedules. Decades of real-world experience in unionized shift environments inform every parameter we evaluate.
               </p>
             </div>
             <div className="bg-white border border-slate-200 rounded-lg p-6">
@@ -125,7 +125,7 @@ export default function Home() {
               </div>
               <h3 className="text-sm font-semibold text-slate-900 mb-2">Pre-Grievance Identification</h3>
               <p className="text-sm text-slate-500 leading-relaxed">
-                Issues identified before implementation cost a fraction of what they cost after a grievance is filed. Structured analysis turns potential disputes into documented, addressable findings.
+                Issues identified before implementation cost a fraction of what they cost after a grievance is filed. Independent analysis turns potential disputes into documented, addressable findings.
               </p>
             </div>
           </div>
@@ -190,7 +190,7 @@ export default function Home() {
       {/* Where Rotation Analysis Applies */}
       <Section title="Where Rotation Analysis Applies" divider>
         <p className="text-base text-slate-600 leading-relaxed mb-8 max-w-3xl">
-          A rotation, or master schedule, is a cyclical work plan where a pre-determined pattern of shifts — including on duty times, off duty days, and shift types — automatically repeats over a set period, usually spanning weeks or months.
+          A rotation is a cyclical work plan where a pattern of shifts — on duty times, off duty days, and shift types — repeats over a set period, usually spanning weeks or months.
         </p>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-px bg-slate-200 border border-slate-200 rounded-lg overflow-hidden">
           {[
@@ -240,7 +240,7 @@ export default function Home() {
             From rotation to documented findings.
           </h2>
           <p className="text-base text-slate-500 leading-relaxed max-w-2xl">
-            Walk through a real analysis — from a rotation that passed manual review to the structured report that revealed what was missed.
+            Walk through a real analysis — from a rotation that passed manual review to the report that revealed what was missed.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl">
@@ -274,7 +274,7 @@ export default function Home() {
             Ready to discuss an engagement?
           </h2>
           <p className="text-slate-300 mb-8 max-w-xl mx-auto text-sm leading-relaxed">
-            Whether you have a specific rotation in mind or want to understand what structured analysis would reveal, we are available to discuss your requirements. Start with a single rotation — no ongoing commitment required.
+            Whether you have a specific rotation in mind or want to understand what independent analysis would reveal, we are available to discuss your requirements. Start with a single rotation — no ongoing commitment required.
           </p>
           <div className="flex flex-wrap justify-center gap-5 items-center">
             <Link

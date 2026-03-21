@@ -37,7 +37,7 @@ export default function FatigueAnalysisPage() {
           </p>
           <p className="text-slate-700 leading-relaxed mb-6">
             This is a science-based fatigue risk assessment for every rotation line in the schedule.
-            It runs continuously across the entire rotation — including days off — to track each
+            The model runs continuously across the entire rotation — including days off — to track each
             worker&rsquo;s physiological state without interruption. The result is a fatigue score
             for every day of the rotation, risk classification for every line, and a clear picture
             of where the schedule creates risk that manual review cannot detect.
@@ -54,7 +54,7 @@ export default function FatigueAnalysisPage() {
             How the Fatigue Score Is Calculated
           </h2>
           <p className="text-slate-700 leading-relaxed mb-8">
-            The fatigue score is calculated using a biomathematical model that simulates three
+            The fatigue score is produced by a biomathematical model that simulates three
             physiological processes operating inside the human body. The model runs a 15-minute
             step simulation continuously across every day in the rotation to track the worker&rsquo;s
             physiological state.
@@ -78,7 +78,7 @@ export default function FatigueAnalysisPage() {
           <p className="text-slate-700 leading-relaxed mb-4">
             Night shift workers are predicted to sleep during the day because their sleep pressure
             is high after the night shift. During multi-day breaks, the model recognises the
-            worker&rsquo;s natural daily sleep-wake cycle. No fixed sleep window is assumed —
+            worker&rsquo;s natural sleep-wake cycle. No fixed sleep window is assumed —
             sleep timing adapts to the schedule.
           </p>
 
@@ -89,11 +89,11 @@ export default function FatigueAnalysisPage() {
               </p>
               <p className="text-sm text-slate-600 leading-relaxed">
                 When predicted sleep falls below 6 hours and the gap between shifts is short
-                (under 16 hours), the shortfall accumulates as sleep debt. Each hour of debt
-                adds 2 points to the fatigue score. Sleep debt resets when the worker achieves
-                a full sleep period of 7 hours or more &mdash; capturing the compounding effect
-                of consecutive short-rest shifts without penalising well-rested workers during
-                long recovery periods.
+                (under 16 hours), the shortfall accumulates. Each hour adds 2 points to the
+                fatigue score. The debt resets when the worker achieves a full sleep period
+                of 7 hours or more &mdash; capturing the compounding effect of consecutive
+                short-rest shifts without penalising well-rested workers during long recovery
+                periods.
               </p>
             </div>
             <div className="bg-white border border-slate-200 rounded-lg p-5">
@@ -190,7 +190,7 @@ export default function FatigueAnalysisPage() {
           <p className="text-slate-700 leading-relaxed mb-4">
             Fatigue analysis is available as an add-on to any compliance engagement. A single
             rotation submission flows through both the compliance engine and the fatigue model,
-            producing a combined deliverable that covers both dimensions of scheduling risk.
+            covering both dimensions of scheduling risk.
           </p>
 
           <div className="bg-white border border-slate-200 rounded-lg overflow-hidden my-6">
@@ -228,8 +228,7 @@ export default function FatigueAnalysisPage() {
 
           <p className="text-slate-700 leading-relaxed mb-4">
             Compliance analysis identifies what the schedule violates. Fatigue analysis identifies
-            what the schedule does to the worker. Together, they provide the complete risk profile
-            that informed decision-making requires.
+            what the schedule does to the worker. Together, they form the complete rotation risk profile.
           </p>
         </div>
       </Section>
@@ -242,7 +241,7 @@ export default function FatigueAnalysisPage() {
           </h2>
           <p className="text-slate-700 leading-relaxed mb-4">
             The fatigue model is built on the Three-Process Model published by Åkerstedt and
-            Folkard (1987, revised through 2008), the most widely validated biomathematical model
+            Folkard (1987, revised through 2008) &mdash; the most widely validated biomathematical model
             for shift work fatigue in the occupational health literature. Its parameters have been
             validated against real worker performance data including healthcare and industrial settings.
           </p>

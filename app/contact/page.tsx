@@ -5,21 +5,6 @@ import { useState } from 'react'
 import { Hero } from '@/components/Hero'
 import { Section } from '@/components/Section'
 
-const timelineSteps = [
-  {
-    title: 'Enquiry & Scope Confirmation',
-    description: 'We review your enquiry and confirm rotation period, worker count, and applicable collective agreement provisions.',
-  },
-  {
-    title: 'Service Agreement',
-    description: 'A brief service agreement confirming confidentiality, deliverables, and timeline is issued before work begins.',
-  },
-  {
-    title: 'Analysis & Report Delivery',
-    description: 'Rotation files are submitted, analysis is conducted, and the marked schedule and executive report are delivered confidentially.',
-  },
-]
-
 const inputClass =
   'w-full border border-slate-300 rounded px-4 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-brand-navy/20 focus:border-brand-navy transition-colors'
 
@@ -57,30 +42,9 @@ export default function Contact() {
     <>
       <Hero
         headline="Get in Touch"
-        subheadline="Discuss an engagement for independent rotation analysis — from a single rotation review to a full schedule evaluation."
+        subheadline="Reach out to discuss independent rotation analysis — whether it's a single rotation or a full schedule evaluation."
         secondaryCta={{ label: 'Already commissioned? Begin Engagement', href: '/engage' }}
       />
-
-      {/* How It Works */}
-      <Section className="bg-brand-cream" divider>
-        <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-8">
-          How It Works
-        </p>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-slate-200 rounded-lg overflow-hidden">
-          {timelineSteps.map((s, i) => (
-            <div key={i} className="bg-white p-8">
-              <div className="w-8 h-8 rounded-full bg-brand-navy text-white text-xs font-bold flex items-center justify-center mb-5">
-                {i + 1}
-              </div>
-              <h3 className="text-sm font-semibold text-slate-900 mb-2">{s.title}</h3>
-              <p className="text-sm text-slate-500 leading-relaxed">{s.description}</p>
-            </div>
-          ))}
-        </div>
-        <p className="text-xs text-slate-400 mt-5 leading-relaxed">
-          All communications and materials are treated as confidential from first contact.
-        </p>
-      </Section>
 
       {/* What to Expect + Form */}
       <Section>
@@ -104,7 +68,7 @@ export default function Contact() {
                 <div>
                   <p className="text-sm font-semibold text-slate-900 mb-1">Purpose-Built Analysis</p>
                   <p className="text-sm text-slate-500 leading-relaxed">
-                    Every shift evaluated against every applicable provision across the full rotation cycle — powered by proprietary compliance tools.
+                    Every shift evaluated against every applicable provision across the full rotation cycle — powered by a proprietary analysis engine.
                   </p>
                 </div>
               </div>
@@ -136,7 +100,7 @@ export default function Contact() {
               </div>
             </div>
 
-            <div className="bg-slate-50 border border-slate-200 rounded-lg p-4">
+            <div className="bg-slate-50 border border-slate-200 rounded-lg p-4 mb-6">
               <p className="text-xs text-slate-500 leading-relaxed">
                 Not sure what to expect?{' '}
                 <Link href="/example-rotation" className="text-brand-navy font-medium hover:underline">See an example rotation</Link>
@@ -146,7 +110,7 @@ export default function Contact() {
               </p>
             </div>
 
-            <div className="mt-6 border border-slate-200 rounded-lg p-5 space-y-3">
+            <div className="border border-slate-200 rounded-lg p-5 space-y-3">
               <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest">
                 Direct Contact
               </p>
@@ -269,7 +233,7 @@ export default function Contact() {
                     value={form.message}
                     onChange={e => set('message', e.target.value)}
                     className={`${inputClass} resize-none`}
-                    placeholder="Brief description of your rotation environment, scheduling concerns, or any questions."
+                    placeholder="Your rotation environment, any scheduling concerns, or questions you have."
                   />
                 </div>
 
@@ -284,11 +248,11 @@ export default function Contact() {
                   disabled={status === 'submitting'}
                   className="w-full bg-brand-navy text-white px-6 py-3 rounded font-medium text-sm hover:bg-brand-navy-dark transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  {status === 'submitting' ? 'Sending…' : 'Submit Enquiry'}
+                  {status === 'submitting' ? 'Sending\u2026' : 'Submit Enquiry'}
                 </button>
 
                 <p className="text-xs text-slate-400 text-center">
-                  We respond within 2 business days. No commitment until a service agreement is issued and accepted.
+                  We respond within 2 business days. All communications are confidential from first contact.
                 </p>
               </form>
             )}

@@ -6,7 +6,7 @@ import { Section } from '@/components/Section'
 export const metadata: Metadata = {
   title: 'Sample Report',
   description:
-    'A sample executive report demonstrating how Rotation Analytics documents rotation findings with risk classifications, agreement references, and structured analysis.',
+    'A sample executive report demonstrating how Rotation Analytics documents rotation findings with risk classifications, agreement references, and independent analysis.',
 }
 
 const SITE = 'https://www.rotationanalytics.ca'
@@ -94,10 +94,10 @@ export default function SampleReport() {
             Introduction
           </p>
           <h2 className="text-2xl md:text-3xl font-bold text-slate-900 tracking-tight mb-6">
-            Structured findings from an independent rotation analysis.
+            Findings from an independent rotation analysis.
           </h2>
           <p className="text-base text-slate-600 leading-relaxed mb-5">
-            The report below was generated from the sample rotation available on the <Link href="/example-rotation" className="text-brand-navy font-medium hover:underline">Example Rotation</Link> page. That rotation appeared compliant during manual review. Structured analysis revealed five areas where the schedule did not meet documented requirements — including insufficient rest periods, weekend off violations, and on-call scheduling concerns.
+            The report below was generated from the sample rotation available on the <Link href="/example-rotation" className="text-brand-navy font-medium hover:underline">Example Rotation</Link> page. That rotation appeared compliant during manual review. The analysis engine identified five areas where the schedule did not meet documented requirements — including insufficient rest periods, weekend off violations, and on-call scheduling concerns.
           </p>
           <p className="text-base text-slate-600 leading-relaxed">
             This sample demonstrates the format, depth, and classification structure that every Rotation Analytics executive report follows.
@@ -110,7 +110,7 @@ export default function SampleReport() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-slate-200 rounded-lg overflow-hidden">
           {[
             { step: '01', title: 'Rotation Received', body: 'A 10-week rotation with 11 shift lines covering day, evening, night, and on-call assignments was submitted for analysis.' },
-            { step: '02', title: 'Structured Analysis Applied', body: '15 parameters were evaluated against the applicable collective agreement and employment standards across all lines and the full rotation cycle.' },
+            { step: '02', title: 'Analysis Applied', body: '15 parameters were evaluated against the applicable collective agreement and employment standards across all lines and the full rotation cycle.' },
             { step: '03', title: 'Executive Report Produced', body: 'Findings documented with risk classifications, specific line references, affected periods, and applicable agreement citations.' },
           ].map((s) => (
             <div key={s.step} className="bg-white p-8">
@@ -137,19 +137,19 @@ export default function SampleReport() {
             Most scheduling issues are discovered after the fact — and the cost is significant.
           </h2>
           <p className="text-base text-slate-600 leading-relaxed mb-5">
-            You already know this: subtle scheduling issues — rest periods that fall hours short, weekends that miss thresholds by a single occurrence, on-call placements that violate nuanced provisions — routinely escape manual review. These issues typically emerge only after a grievance is filed, by which point the scheduling arrangement has already created exposure for all parties.
+            Subtle scheduling issues — rest periods that fall hours short, weekends that miss thresholds by a single occurrence, on-call placements that violate nuanced provisions — routinely escape manual review. These issues typically emerge only after a grievance is filed, by which point the scheduling arrangement has already created exposure for all parties.
           </p>
           <p className="text-base text-slate-600 leading-relaxed mb-5">
-            Each undetected non-conformance represents potential grievance exposure. Arbitration is costly and time-consuming. Worker frustration compounds. And the longer a non-compliant rotation runs, the deeper the exposure becomes.
+            Each undetected non-conformance represents potential grievance exposure. Arbitration is costly and time-consuming. The longer a non-compliant rotation runs, the deeper the exposure becomes.
           </p>
           <p className="text-base text-slate-600 leading-relaxed mb-8">
-            Structured rotation analysis identifies these issues while they can still be addressed — before they escalate into formal disputes.
+            Independent analysis identifies these issues while they can still be addressed — before they escalate into formal disputes.
           </p>
           <div className="space-y-3">
             {[
               'Identify collective agreement non-compliance before it results in grievances',
               'Document findings with risk classifications for internal review and decision-making',
-              'Reduce grievance exposure through preventative, structured evaluation',
+              'Reduce grievance exposure through preventative, independent evaluation',
               'Support confident scheduling decisions with independent analysis',
             ].map((point, i) => (
               <div key={i} className="flex items-start gap-3 bg-slate-50 border border-slate-200 rounded-lg p-4">
@@ -170,7 +170,7 @@ export default function SampleReport() {
           Executive Report
         </h2>
         <p className="text-base text-slate-500 leading-relaxed mb-8 max-w-3xl">
-          The executive report is one of two deliverables provided. It documents all parameters evaluated, whether each was met, the impact classification, and specific details for any findings.
+          The executive report is one of two core deliverables. It documents all parameters evaluated, whether each was met, the impact classification, and specific details for any findings.
         </p>
 
         <div className="bg-amber-50 border border-amber-200 rounded-lg p-4 mb-6 text-sm text-amber-800">
@@ -288,7 +288,7 @@ export default function SampleReport() {
             Ready to discuss an engagement?
           </h2>
           <p className="text-slate-300 mb-8 max-w-xl mx-auto text-sm leading-relaxed">
-            Whether you have a specific rotation in mind or want to understand what structured analysis would reveal, we are available to discuss your requirements.
+            Whether you have a specific rotation in mind or want to understand what this analysis would reveal for your schedule, we are available to discuss your requirements.
           </p>
           <div className="flex flex-wrap justify-center gap-5 items-center">
             <Link
