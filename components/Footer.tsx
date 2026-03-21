@@ -7,7 +7,7 @@ export function Footer() {
   return (
     <footer className="bg-brand-navy text-white">
       <div className="max-w-6xl mx-auto px-6 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-10">
           <div>
             <div className="mb-4">
               <LogoHorizontal color="#FFFFFF" />
@@ -40,6 +40,11 @@ export function Footer() {
                   Sample Report
                 </Link>
               </li>
+              <li>
+                <Link href="/fatigue-analysis" className="text-sm text-slate-300 hover:text-white transition-colors">
+                  Fatigue Analysis
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -64,9 +69,32 @@ export function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/status" className="text-sm text-slate-300 hover:text-white transition-colors">
+                  Client Portal
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-4">
+              Contact
+            </p>
+            <ul className="space-y-2.5">
+              <li>
+                <a href="tel:+14035063636" className="text-sm text-slate-300 hover:text-white transition-colors">
+                  (403) 506-3636
+                </a>
+              </li>
+              <li>
                 <a href="mailto:hello@rotationanalytics.ca" className="text-sm text-slate-300 hover:text-white transition-colors">
                   hello@rotationanalytics.ca
                 </a>
+              </li>
+              <li className="text-sm text-slate-400 leading-relaxed pt-1">
+                PO Box 2234<br />
+                Crossfield, Alberta<br />
+                Canada
               </li>
             </ul>
           </div>

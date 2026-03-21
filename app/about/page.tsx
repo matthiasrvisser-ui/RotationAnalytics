@@ -99,8 +99,53 @@ export default function About() {
         </div>
       </Section>
 
-      {/* What Sets Us Apart */}
+      {/* Leadership */}
       <Section className="bg-brand-cream" divider>
+        <div className="max-w-4xl">
+          <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-5">
+            Leadership
+          </p>
+          <h2 className="text-2xl md:text-3xl font-bold text-slate-900 tracking-tight mb-8">
+            Built by people who have lived the schedules.
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="bg-white border border-slate-200 rounded-lg p-6">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="w-12 h-12 rounded-full bg-brand-navy flex items-center justify-center text-white text-sm font-bold">
+                  KV
+                </div>
+                <div>
+                  <p className="text-sm font-semibold text-slate-900">Kristy Visser</p>
+                  <p className="text-xs text-slate-500">Principal Analyst</p>
+                </div>
+              </div>
+              <p className="text-sm text-slate-600 leading-relaxed">
+                Former frontline registered nurse and unionized healthcare worker who transitioned into rotation consulting over a decade ago. Kristy has spent the last 10 years building, advising on, and training organizations in rotation schedule design across complex unionized healthcare environments. Her firsthand experience as both a shift worker and a rotation specialist is the foundation of every parameter Rotation Analytics evaluates.
+              </p>
+            </div>
+            <div className="bg-white border border-slate-200 rounded-lg p-6">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="w-12 h-12 rounded-full bg-brand-navy flex items-center justify-center text-white text-sm font-bold">
+                  MV
+                </div>
+                <div>
+                  <p className="text-sm font-semibold text-slate-900">Matthias Visser</p>
+                  <p className="text-xs text-slate-500">Founder &amp; CEO</p>
+                </div>
+              </div>
+              <p className="text-sm text-slate-600 leading-relaxed">
+                Entrepreneur and business operator responsible for the technology, analytical infrastructure, and commercial operations behind Rotation Analytics. Matthias designed and built the proprietary analysis engine that powers every engagement &mdash; translating decades of domain expertise into systematic, repeatable analytical capability.
+              </p>
+            </div>
+          </div>
+          <p className="text-xs text-slate-400 mt-6 leading-relaxed">
+            Rotation Analytics is a division of Visser Ventures Corp., incorporated under the laws of the Province of Alberta, Canada.
+          </p>
+        </div>
+      </Section>
+
+      {/* What Sets Us Apart */}
+      <Section divider>
         <div className="max-w-4xl">
           <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-5">
             What Sets Us Apart

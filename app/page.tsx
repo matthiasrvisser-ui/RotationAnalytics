@@ -40,7 +40,7 @@ export default function Home() {
       <div className="border-t border-slate-200">
         <div className="max-w-6xl mx-auto px-6 py-10 text-center">
           <p className="text-sm text-slate-500 leading-relaxed max-w-2xl mx-auto">
-            Built by former unionized healthcare workers with over a decade of frontline rotation experience. We have lived the schedules we now analyze &mdash; and we bring that firsthand understanding to every engagement.
+            Led by a former frontline registered nurse and unionized healthcare worker with over a decade of rotation consulting experience. We have lived the schedules we now analyze &mdash; and we bring that firsthand understanding to every engagement.
           </p>
         </div>
       </div>
