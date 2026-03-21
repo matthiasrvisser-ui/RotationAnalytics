@@ -38,7 +38,7 @@ export function HowItWorks() {
       id: 'S',
       name: 'Sleep Pressure',
       description:
-        'The longer a person is awake, the more their body builds pressure to sleep. This is a real neurochemical process — adenosine accumulates in the brain during wakefulness and clears during sleep. Sleep pressure builds gradually during every hour awake and dissipates during sleep, clearing roughly four times faster than it builds. A worker who gets shortened sleep carries a residual load into their next shift.',
+        'The longer a person is awake, the more their body builds pressure to sleep. This is a real neurochemical process \u2014 adenosine accumulates in the brain during wakefulness and clears during sleep. Sleep pressure builds gradually during every hour awake and dissipates during sleep, clearing roughly four times faster than it builds. A worker who gets shortened sleep carries a residual load into their next shift.',
       color: 'border-blue-400 bg-blue-50',
       accent: 'text-blue-700',
       impact: 'Contributes the largest component of the fatigue score.',
@@ -47,16 +47,16 @@ export function HowItWorks() {
       id: 'C',
       name: 'Circadian Rhythm',
       description:
-        'The human body runs on an internal 24-hour clock that governs alertness independently of how much sleep a person has had. Even a fully rested worker experiences reduced alertness in the early morning hours (approximately 03:00–05:00). Alertness peaks in the mid-to-late afternoon (around 16:00). This cycle runs continuously regardless of sleep history.',
+        'The human body runs on an internal 24-hour clock that governs alertness independently of how much sleep a person has had. Even a fully rested worker experiences reduced alertness in the early morning hours (approximately 03:00\u201305:00). Alertness peaks in the mid-to-late afternoon (around 16:00). This cycle runs continuously regardless of sleep history.',
       color: 'border-amber-400 bg-amber-50',
       accent: 'text-amber-700',
-      impact: 'Night shifts receive a circadian penalty of up to +16 points. Day and evening shifts receive a benefit of up to −9 points.',
+      impact: 'Night shifts receive a circadian penalty of up to +16 points. Day and evening shifts receive a benefit of up to \u22129 points.',
     },
     {
       id: 'D',
       name: 'Sleep Debt',
       description:
-        'When predicted sleep falls below 6 hours and the gap between shifts is short, the shortfall accumulates as sleep debt. Sleep debt captures the compounding effect of consecutive short-rest shifts. It resets to zero when the worker achieves a full sleep period of 7 hours or more.',
+        'When predicted sleep falls below 6 hours and the gap between shifts is short (under 16 hours), the shortfall accumulates as sleep debt. Sleep debt captures the compounding effect of consecutive short-rest shifts. It resets to zero when the worker achieves a full sleep period of 7 hours or more.',
       color: 'border-purple-400 bg-purple-50',
       accent: 'text-purple-700',
       impact: 'Adds 2 points per hour of accumulated debt.',
@@ -82,17 +82,17 @@ export function HowItWorks() {
           The Fatigue Score
         </p>
         <p className="text-sm text-slate-700 leading-relaxed mb-3">
-          The three components combine into a single score on a 0–100 scale:
+          The three components combine into a single score on a 0&ndash;100 scale:
         </p>
         <div className="bg-white border border-slate-200 rounded px-4 py-3 mb-3">
           <p className="text-sm font-mono text-brand-navy text-center">
-            Fatigue Score = (Sleep Pressure × 100) + (Circadian Modifier) + (Sleep Debt × 2)
+            Fatigue Score = (Sleep Pressure &times; 100) + (Circadian Modifier) + (Sleep Debt &times; 2)
           </p>
         </div>
         <p className="text-xs text-slate-500 leading-relaxed">
-          Sleep Pressure is converted from a 0–1 value to a 0–100 base score.
-          The Circadian Modifier ranges from approximately −9 (afternoon) to +16 (early morning).
-          Sleep Debt adds 2 points per hour of accumulated shortfall. The score is clamped to 0–100.
+          Sleep Pressure is converted from a 0&ndash;1 value to a 0&ndash;100 base score.
+          The Circadian Modifier ranges from approximately &minus;9 (afternoon) to +16 (early morning).
+          Sleep Debt adds 2 points per hour of accumulated shortfall. The score is clamped to 0&ndash;100.
         </p>
       </div>
     </>
@@ -117,7 +117,7 @@ export function RiskClassification() {
       color: 'bg-amber-50 border-amber-400 text-amber-800',
       dot: 'bg-amber-400',
       description:
-        'Elevated fatigue. Typical of evening shifts and consecutive day shifts with mildly shortened sleep. Performance may be subtly degraded. This is the expected baseline result for shift workers.',
+        'Elevated fatigue. Typical of evening shifts and consecutive day shifts with mildly shortened sleep. Performance may be subtly degraded.',
     },
     {
       range: '60 – 74',

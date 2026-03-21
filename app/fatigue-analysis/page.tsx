@@ -88,11 +88,12 @@ export default function FatigueAnalysisPage() {
                 Sleep Debt
               </p>
               <p className="text-sm text-slate-600 leading-relaxed">
-                When predicted sleep falls below 6 hours and the gap between shifts is short,
-                the shortfall accumulates as sleep debt. Each hour of debt adds to the fatigue
-                score. Sleep debt resets when the worker achieves a full sleep period — capturing
-                the compounding effect of consecutive short-rest shifts without penalising
-                well-rested workers during long recovery periods.
+                When predicted sleep falls below 6 hours and the gap between shifts is short
+                (under 16 hours), the shortfall accumulates as sleep debt. Each hour of debt
+                adds 2 points to the fatigue score. Sleep debt resets when the worker achieves
+                a full sleep period of 7 hours or more &mdash; capturing the compounding effect
+                of consecutive short-rest shifts without penalising well-rested workers during
+                long recovery periods.
               </p>
             </div>
             <div className="bg-white border border-slate-200 rounded-lg p-5">
@@ -263,7 +264,7 @@ export default function FatigueAnalysisPage() {
               explanation section.
             </p>
             <a
-              href="/rotations/fatigue-methodology-white-paper.pdf"
+              href="/rotations/RA-Fatigue-Engine-White-Paper.pdf"
               download
               className="inline-flex items-center gap-2 text-sm font-medium text-brand-navy hover:text-brand-navy-dark transition-colors"
             >
