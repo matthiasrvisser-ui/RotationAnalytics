@@ -16,7 +16,7 @@ const commitments = [
   },
   {
     title: 'Confidentiality',
-    body: 'Findings are released only to the commissioning party as defined in the service agreement. Disclosure to any other party requires explicit written direction.',
+    body: 'Findings are released only to the Client as defined in the service agreement. Disclosure to any other party requires explicit written direction.',
   },
   {
     title: 'Accuracy',
@@ -40,13 +40,18 @@ const clientTypes = [
 const deliverables = [
   {
     number: '01',
-    title: 'Marked Rotation Schedule (Excel)',
+    title: 'Annotated Rotation Schedule (Excel)',
     body: 'The submitted rotation returned with all identified non-conformances flagged directly within the schedule. Issues are annotated where they occur, allowing reviewers to see exactly where provisions, fatigue considerations, or regulatory requirements may not have been met.',
   },
   {
     number: '02',
-    title: 'Executive Summary Report',
+    title: 'Executive Findings Report',
     body: 'A structured findings report documenting each discrepancy against applicable parameters. Includes risk-classified findings, citation of collective agreement provisions and employment standards, and supporting explanation for internal review.',
+  },
+  {
+    number: '03',
+    title: 'Fatigue Risk Analysis Report (Add-On)',
+    body: 'Available when fatigue analysis is elected at submission. Per-line fatigue scores, risk classifications, and trend visualisations showing the complete fatigue and recovery cycle across the full rotation. Based on a biomathematical model validated in occupational health research.',
   },
 ]
 
@@ -138,7 +143,7 @@ export default function About() {
 
       <Section
         title="What a Full Report Includes"
-        subtitle="Every engagement produces two core deliverables."
+        subtitle="Every engagement produces two core deliverables, with an optional third when fatigue analysis is elected."
         divider
       >
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5 max-w-4xl">
@@ -180,16 +185,16 @@ export default function About() {
           </p>
           <div className="flex flex-wrap justify-center gap-5 items-center">
             <Link
-              href="/contact"
+              href="/engage"
               className="bg-white text-brand-navy px-7 py-3 rounded font-medium text-sm hover:bg-brand-cream transition-colors"
             >
-              Get in Touch
+              Begin an Engagement
             </Link>
             <Link
-              href="/submit"
+              href="/contact"
               className="text-sm font-medium text-slate-200 hover:text-white hover:underline underline-offset-4 transition-colors"
             >
-              Already commissioned? Submit Work &rarr;
+              Get in Touch &rarr;
             </Link>
           </div>
         </div>

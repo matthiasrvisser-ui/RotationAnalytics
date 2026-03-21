@@ -118,7 +118,7 @@ export default function FatigueAnalysisPage() {
           </h2>
           <p className="text-slate-700 leading-relaxed mb-6">
             Fatigue scores are classified into four risk levels. These classifications appear in
-            the deliverable alongside compliance findings, giving the commissioning party a
+            the deliverable alongside compliance findings, giving the Client a
             complete picture of scheduling risk.
           </p>
           <RiskClassification />
@@ -197,6 +197,7 @@ export default function FatigueAnalysisPage() {
               <p className="text-white text-sm font-semibold">What You Receive</p>
             </div>
             <div className="p-5 space-y-4">
+              <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest">Included in Every Engagement</p>
               <div className="flex items-start gap-3">
                 <span className="flex-shrink-0 w-8 h-8 rounded-full bg-brand-navy/10 flex items-center justify-center text-sm font-semibold text-brand-navy">1</span>
                 <div>
@@ -211,10 +212,13 @@ export default function FatigueAnalysisPage() {
                   <p className="text-sm text-slate-600">Risk-classified compliance findings with collective agreement citations and supporting explanation.</p>
                 </div>
               </div>
+              <div className="border-t border-slate-200 pt-4">
+                <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-4">When Fatigue Analysis Is Elected</p>
+              </div>
               <div className="flex items-start gap-3">
                 <span className="flex-shrink-0 w-8 h-8 rounded-full bg-brand-navy/10 flex items-center justify-center text-sm font-semibold text-brand-navy">3</span>
                 <div>
-                  <p className="text-sm font-semibold text-brand-navy">Fatigue Risk Analysis Report</p>
+                  <p className="text-sm font-semibold text-brand-navy">Fatigue Risk Analysis Report <span className="text-xs font-normal text-slate-400">(add-on)</span></p>
                   <p className="text-sm text-slate-600">Per-line fatigue scores (average, min, max), risk classifications, and rotation-wide trend visualisations showing the complete fatigue and recovery cycle.</p>
                 </div>
               </div>

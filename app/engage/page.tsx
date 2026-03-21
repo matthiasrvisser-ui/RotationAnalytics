@@ -117,7 +117,7 @@ export default function EngagePage() {
                 <p>This Agreement remains in effect for a twelve (12) month term and automatically renews unless terminated in accordance with its terms. <strong>Once executed, the Client may submit additional rotations for analysis under this Agreement without re-execution.</strong> A copy of the executed Agreement will be provided to both Parties upon acceptance.</p>
 
                 <p className="font-semibold">3. Deliverables</p>
-                <p>Deliverables include an Annotated Rotation Schedule and an Executive Findings Report. Deliverables rely solely on information supplied by the Client. Rotation Analytics does not verify the accuracy or completeness of Client-provided materials. Deliverables are for internal decision-making only unless written consent is provided. Deliverables shall be deemed accepted unless the Client provides written notice of a material deficiency within ten (10) business days of delivery.</p>
+                <p>Deliverables include an Annotated Rotation Schedule and an Executive Findings Report. <strong>Where Fatigue Risk Analysis is elected by the Client at the time of submission, Deliverables additionally include a Fatigue Risk Analysis Report</strong> documenting per-line fatigue scores, risk classifications, and trend visualisations across the full rotation cycle. Deliverables rely solely on information supplied by the Client. Rotation Analytics does not verify the accuracy or completeness of Client-provided materials. Deliverables are for internal decision-making only unless written consent is provided. Deliverables shall be deemed accepted unless the Client provides written notice of a material deficiency within ten (10) business days of delivery.</p>
 
                 <p className="font-semibold">4. Turnaround</p>
                 <p>Rotation Analytics targets delivery within <strong>48 hours</strong> of confirmed payment, with a maximum delivery window of <strong>72 hours (3 business days)</strong>. If Deliverables are not provided within 72 hours of confirmed payment, a <strong>10% fee reduction</strong> will be applied for each additional 24-hour period, up to a maximum reduction of <strong>30%</strong>, refunded to the Client. The turnaround period commences only upon confirmed payment and is subject to force majeure events beyond Rotation Analytics' reasonable control.</p>
@@ -350,6 +350,31 @@ export default function EngagePage() {
 
               <div className="border-t border-slate-200 pt-2" />
 
+              <div>
+                <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-4">Analysis Options</p>
+                <div className="border border-slate-200 rounded-lg p-5 bg-brand-cream">
+                  <label className="flex items-start gap-3 cursor-pointer">
+                    <input
+                      type="checkbox"
+                      name="fatigue_analysis"
+                      value="true"
+                      className="mt-0.5 w-4 h-4 rounded border-slate-400 accent-brand-navy cursor-pointer"
+                    />
+                    <div>
+                      <p className="text-sm font-semibold text-brand-navy mb-1">Add Fatigue Risk Analysis</p>
+                      <p className="text-xs text-slate-600 leading-relaxed">
+                        Elect biomathematical fatigue modelling as an add-on to your compliance analysis. Your deliverables will additionally include a Fatigue Risk Analysis Report with per-line fatigue scores, risk classifications, and trend visualisations across the full rotation cycle.
+                      </p>
+                      <a href="/fatigue-analysis" target="_blank" rel="noopener noreferrer" className="text-xs font-medium text-brand-navy hover:underline mt-1 inline-block">
+                        Learn more about Fatigue Risk Analysis &rarr;
+                      </a>
+                    </div>
+                  </label>
+                </div>
+              </div>
+
+              <div className="border-t border-slate-200 pt-2" />
+
               <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest">Supporting Details</p>
 
               <div>
@@ -430,6 +455,10 @@ export default function EngagePage() {
                 <div>
                   <p className="text-sm font-semibold text-slate-800 mb-1">Executive Findings Report</p>
                   <p className="text-xs text-slate-500 leading-relaxed">Risk-classified findings with citation of collective agreement provisions and supporting explanation.</p>
+                </div>
+                <div className="border-t border-slate-200 pt-3">
+                  <p className="text-sm font-semibold text-slate-800 mb-1">Fatigue Risk Analysis Report <span className="text-xs font-normal text-slate-400">(add-on)</span></p>
+                  <p className="text-xs text-slate-500 leading-relaxed">Per-line fatigue scores, risk classifications, and trend visualisations. Included when fatigue analysis is elected at submission.</p>
                 </div>
               </div>
             </div>

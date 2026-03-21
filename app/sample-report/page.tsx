@@ -82,8 +82,8 @@ export default function SampleReport() {
     <>
       <Hero
         headline="Sample Executive Report"
-        subheadline="A representative findings report demonstrating the structure, depth, and format of analysis delivered to the commissioning party."
-        cta={{ label: 'Discuss an Engagement', href: '/contact' }}
+        subheadline="A representative findings report demonstrating the structure, depth, and format of analysis delivered to the Client."
+        cta={{ label: 'Begin an Engagement', href: '/engage' }}
         secondaryCta={{ label: 'View Example Rotation', href: '/example-rotation' }}
       />
 
@@ -292,16 +292,16 @@ export default function SampleReport() {
           </p>
           <div className="flex flex-wrap justify-center gap-5 items-center">
             <Link
-              href="/contact"
+              href="/engage"
               className="bg-white text-brand-navy px-7 py-3 rounded font-medium text-sm hover:bg-brand-cream transition-colors"
             >
-              Get in Touch
+              Begin an Engagement
             </Link>
             <Link
-              href="/submit"
+              href="/contact"
               className="text-sm font-medium text-slate-200 hover:text-white hover:underline underline-offset-4 transition-colors"
             >
-              Already commissioned? Submit Work &rarr;
+              Get in Touch &rarr;
             </Link>
           </div>
         </div>

@@ -1,27 +1,20 @@
-import type { Metadata } from 'next'
+'use client'
+
 import Link from 'next/link'
+import { useState } from 'react'
 import { Hero } from '@/components/Hero'
 import { Section } from '@/components/Section'
 
-export const metadata: Metadata = {
-  title: 'Contact',
-  description:
-    'Contact Rotation Analytics Inc to discuss an engagement for independent rotation analysis.',
-}
-
 const timelineSteps = [
   {
-    number: '01',
     title: 'Enquiry & Scope Confirmation',
     description: 'We review your enquiry and confirm rotation period, worker count, and applicable collective agreement provisions.',
   },
   {
-    number: '02',
     title: 'Service Agreement',
     description: 'A brief service agreement confirming confidentiality, deliverables, and timeline is issued before work begins.',
   },
   {
-    number: '03',
     title: 'Analysis & Report Delivery',
     description: 'Rotation files are submitted, analysis is conducted, and the marked schedule and executive report are delivered confidentially.',
   },
@@ -34,15 +27,41 @@ const labelClass =
   'block text-xs font-semibold text-slate-500 uppercase tracking-wide mb-1.5'
 
 export default function Contact() {
+  const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle')
+  const [form, setForm] = useState({ org: '', contactName: '', email: '', phone: '', message: '' })
+
+  function set(field: string, value: string) {
+    setForm(f => ({ ...f, [field]: value }))
+  }
+
+  async function handleSubmit(e: React.FormEvent) {
+    e.preventDefault()
+    setStatus('submitting')
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      })
+      if (res.ok) {
+        setStatus('success')
+      } else {
+        setStatus('error')
+      }
+    } catch {
+      setStatus('error')
+    }
+  }
+
   return (
     <>
       <Hero
         headline="Get in Touch"
         subheadline="Discuss an engagement for independent rotation analysis — from a single rotation review to a full schedule evaluation."
-        secondaryCta={{ label: 'Already commissioned? Submit Work', href: '/submit' }}
+        secondaryCta={{ label: 'Already commissioned? Begin Engagement', href: '/engage' }}
       />
 
-      {/* How It Works — process first, then form */}
+      {/* How It Works */}
       <Section className="bg-brand-cream" divider>
         <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-8">
           How It Works
@@ -98,7 +117,7 @@ export default function Contact() {
                 <div>
                   <p className="text-sm font-semibold text-slate-900 mb-1">Documented Deliverables</p>
                   <p className="text-sm text-slate-500 leading-relaxed">
-                    A marked rotation schedule and risk-classified executive report, delivered confidentially to the commissioning party.
+                    A marked rotation schedule and risk-classified executive report, delivered confidentially to the Client.
                   </p>
                 </div>
               </div>
@@ -134,88 +153,112 @@ export default function Contact() {
               Enquiry
             </p>
 
-            <form className="space-y-5" aria-label="Engagement enquiry form">
-              <div>
-                <label htmlFor="org" className={labelClass}>
-                  Organization Name <span className="text-red-400">*</span>
-                </label>
-                <input
-                  id="org"
-                  type="text"
-                  autoComplete="organization"
-                  required
-                  aria-required="true"
-                  className={inputClass}
-                  placeholder="Organization name"
-                />
+            {status === 'success' ? (
+              <div className="bg-green-50 border border-green-200 rounded-lg p-8 text-center">
+                <div className="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-5 h-5 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <p className="text-sm font-semibold text-green-800 mb-2">Enquiry Received</p>
+                <p className="text-sm text-green-700 leading-relaxed">
+                  Thank you. We will respond within 2 business days at <strong>{form.email}</strong>.
+                </p>
               </div>
+            ) : (
+              <form className="space-y-5" onSubmit={handleSubmit} aria-label="Engagement enquiry form">
+                <div>
+                  <label htmlFor="org" className={labelClass}>
+                    Organization Name <span className="text-red-400">*</span>
+                  </label>
+                  <input
+                    id="org"
+                    type="text"
+                    autoComplete="organization"
+                    required
+                    value={form.org}
+                    onChange={e => set('org', e.target.value)}
+                    className={inputClass}
+                    placeholder="Organization name"
+                  />
+                </div>
 
-              <div>
-                <label htmlFor="contact-name" className={labelClass}>
-                  Contact Name <span className="text-red-400">*</span>
-                </label>
-                <input
-                  id="contact-name"
-                  type="text"
-                  autoComplete="name"
-                  required
-                  aria-required="true"
-                  className={inputClass}
-                  placeholder="Full name"
-                />
-              </div>
+                <div>
+                  <label htmlFor="contact-name" className={labelClass}>
+                    Contact Name <span className="text-red-400">*</span>
+                  </label>
+                  <input
+                    id="contact-name"
+                    type="text"
+                    autoComplete="name"
+                    required
+                    value={form.contactName}
+                    onChange={e => set('contactName', e.target.value)}
+                    className={inputClass}
+                    placeholder="Full name"
+                  />
+                </div>
 
-              <div>
-                <label htmlFor="email" className={labelClass}>
-                  Contact Email <span className="text-red-400">*</span>
-                </label>
-                <input
-                  id="email"
-                  type="email"
-                  autoComplete="email"
-                  required
-                  aria-required="true"
-                  className={inputClass}
-                  placeholder="your@email.com"
-                />
-              </div>
+                <div>
+                  <label htmlFor="email" className={labelClass}>
+                    Contact Email <span className="text-red-400">*</span>
+                  </label>
+                  <input
+                    id="email"
+                    type="email"
+                    autoComplete="email"
+                    required
+                    value={form.email}
+                    onChange={e => set('email', e.target.value)}
+                    className={inputClass}
+                    placeholder="your@email.com"
+                  />
+                </div>
 
-              <div>
-                <label htmlFor="phone" className={labelClass}>
-                  Contact Phone
-                </label>
-                <input
-                  id="phone"
-                  type="tel"
-                  autoComplete="tel"
-                  className={inputClass}
-                  placeholder="+1 (___) ___-____"
-                />
-              </div>
+                <div>
+                  <label htmlFor="phone" className={labelClass}>Contact Phone</label>
+                  <input
+                    id="phone"
+                    type="tel"
+                    autoComplete="tel"
+                    value={form.phone}
+                    onChange={e => set('phone', e.target.value)}
+                    className={inputClass}
+                    placeholder="+1 (___) ___-____"
+                  />
+                </div>
 
-              <div>
-                <label htmlFor="message" className={labelClass}>
-                  Message / Comments
-                </label>
-                <textarea
-                  id="message"
-                  rows={4}
-                  className={`${inputClass} resize-none`}
-                  placeholder="Brief description of your rotation environment, scheduling concerns, or any questions."
-                />
-              </div>
+                <div>
+                  <label htmlFor="message" className={labelClass}>Message / Comments</label>
+                  <textarea
+                    id="message"
+                    rows={4}
+                    value={form.message}
+                    onChange={e => set('message', e.target.value)}
+                    className={`${inputClass} resize-none`}
+                    placeholder="Brief description of your rotation environment, scheduling concerns, or any questions."
+                  />
+                </div>
 
-              <button
-                type="submit"
-                className="w-full bg-brand-navy text-white px-6 py-3 rounded font-medium text-sm hover:bg-brand-navy-dark transition-colors"
-              >
-                Submit Enquiry
-              </button>
+                {status === 'error' && (
+                  <p className="text-sm text-red-600 bg-red-50 border border-red-200 rounded px-4 py-3">
+                    Something went wrong. Please try again or email us directly at hello@rotationanalytics.ca.
+                  </p>
+                )}
 
-              <p className="text-xs text-slate-400 text-center">
-                We respond within 2 business days. No commitment until a service agreement is issued and accepted.
-              </p>
-            </form>
+                <button
+                  type="submit"
+                  disabled={status === 'submitting'}
+                  className="w-full bg-brand-navy text-white px-6 py-3 rounded font-medium text-sm hover:bg-brand-navy-dark transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  {status === 'submitting' ? 'Sending…' : 'Submit Enquiry'}
+                </button>
+
+                <p className="text-xs text-slate-400 text-center">
+                  We respond within 2 business days. No commitment until a service agreement is issued and accepted.
+                </p>
+              </form>
+            )}
           </div>
         </div>
       </Section>

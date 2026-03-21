@@ -2,7 +2,7 @@ const steps = [
   {
     step: 'Step 1',
     title: 'Rotation Received',
-    body: 'The rotation schedule is provided to Rotation Analytics Inc by the commissioning party. Confidential from point of receipt.',
+    body: 'The rotation schedule is provided to Rotation Analytics Inc by the Client. Confidential from point of receipt.',
   },
   {
     step: 'Step 2',
@@ -67,7 +67,7 @@ export function ProcessOverview({ showTitle = false }: ProcessOverviewProps) {
 
       <div className="mt-6 pt-6 border-t border-slate-100">
         <p className="text-xs text-slate-400 leading-relaxed">
-          All data and communication remains between Rotation Analytics Inc and the commissioning party.
+          All data and communication remains between Rotation Analytics Inc and the Client.
         </p>
       </div>
     </div>

@@ -23,14 +23,14 @@ export const metadata: Metadata = {
     siteName: 'Rotation Analytics',
     title: 'Rotation Analytics — Clarity from Complexity',
     description:
-      'Structured, independent analysis of rotation schedules — identifying collective agreement non-compliance, fatigue risk, and scheduling vulnerabilities. Findings delivered exclusively to the commissioning party.',
+      'Structured, independent analysis of rotation schedules — identifying collective agreement non-compliance, fatigue risk, and scheduling vulnerabilities. Findings delivered exclusively to the Client.',
     locale: 'en_CA',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Rotation Analytics — Clarity from Complexity',
     description:
-      'Structured, independent analysis of rotation schedules — identifying collective agreement non-compliance, fatigue risk, and scheduling vulnerabilities. Findings delivered exclusively to the commissioning party.',
+      'Structured, independent analysis of rotation schedules — identifying collective agreement non-compliance, fatigue risk, and scheduling vulnerabilities. Findings delivered exclusively to the Client.',
   },
   metadataBase: new URL('https://www.rotationanalytics.ca'),
 }

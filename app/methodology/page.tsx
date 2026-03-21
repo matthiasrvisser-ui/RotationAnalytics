@@ -112,7 +112,7 @@ export default function Methodology() {
         </p>
         <AnalysisFlow />
         <p className="text-xs text-slate-400 mt-5 leading-relaxed max-w-2xl">
-          Your rotation is confidential. All findings are delivered only to the commissioning party.
+          Your rotation is confidential. All findings are delivered only to the Client.
         </p>
       </Section>
 
@@ -197,16 +197,16 @@ export default function Methodology() {
           </p>
           <div className="flex flex-wrap justify-center gap-5 items-center">
             <Link
-              href="/contact"
+              href="/engage"
               className="bg-white text-brand-navy px-7 py-3 rounded font-medium text-sm hover:bg-brand-cream transition-colors"
             >
-              Get in Touch
+              Begin an Engagement
             </Link>
             <Link
-              href="/submit"
+              href="/contact"
               className="text-sm font-medium text-slate-200 hover:text-white hover:underline underline-offset-4 transition-colors"
             >
-              Already commissioned? Submit Work &rarr;
+              Get in Touch &rarr;
             </Link>
           </div>
         </div>

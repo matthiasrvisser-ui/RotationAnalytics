@@ -363,10 +363,10 @@ export default function ExampleRotation() {
               View the Sample Report
             </Link>
             <Link
-              href="/contact"
+              href="/engage"
               className="text-sm font-medium text-slate-200 hover:text-white hover:underline underline-offset-4 transition-colors"
             >
-              Discuss an Engagement &rarr;
+              Begin an Engagement &rarr;
             </Link>
           </div>
         </div>

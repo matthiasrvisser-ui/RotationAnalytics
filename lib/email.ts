@@ -24,7 +24,7 @@ export async function sendSubmissionConfirmation(opts: {
       <a href="${statusUrl}">${statusUrl}</a></p>
       <p>You will be notified by email when your invoice is issued and again when your deliverable is ready.</p>
       <hr>
-      <p style="font-size:12px;color:#888">Rotation Analytics — a division of Visser Ventures Corp. | Independent analytical services only. Not legal, safety, or labour relations advice.</p>
+      <p style="font-size:12px;color:#888">Rotation Analytics Inc | Clarity from Complexity — Exposing Hidden Risks in Complex Scheduling</p>
     `,
   })
 }
@@ -75,7 +75,48 @@ export async function sendInvoiceNotification(opts: {
       <p><a href="${opts.paymentLink}" style="background:#1B2D4F;color:#fff;padding:12px 24px;text-decoration:none;border-radius:4px;display:inline-block">Pay Invoice</a></p>
       <p>Track your engagement: <a href="${BASE_URL}/status/${opts.statusToken}">${BASE_URL}/status/${opts.statusToken}</a></p>
       <hr>
-      <p style="font-size:12px;color:#888">Rotation Analytics — a division of Visser Ventures Corp.</p>
+      <p style="font-size:12px;color:#888">Rotation Analytics Inc | Clarity from Complexity — Exposing Hidden Risks in Complex Scheduling</p>
+    `,
+  })
+}
+
+export async function sendEnquiry(opts: {
+  org: string
+  contactName: string
+  email: string
+  phone?: string
+  message?: string
+}) {
+  // Notify admin
+  await resend().emails.send({
+    from: FROM,
+    to: ADMIN_EMAIL,
+    subject: `New Enquiry — ${opts.org}`,
+    html: `
+      <p>New enquiry received via rotationanalytics.ca.</p>
+      <ul>
+        <li><strong>Organization:</strong> ${opts.org}</li>
+        <li><strong>Contact:</strong> ${opts.contactName}</li>
+        <li><strong>Email:</strong> ${opts.email}</li>
+        ${opts.phone ? `<li><strong>Phone:</strong> ${opts.phone}</li>` : ''}
+        ${opts.message ? `<li><strong>Message:</strong> ${opts.message}</li>` : ''}
+      </ul>
+      <p>Reply directly to <a href="mailto:${opts.email}">${opts.email}</a>.</p>
+    `,
+    replyTo: opts.email,
+  })
+
+  // Confirm receipt to enquirer
+  await resend().emails.send({
+    from: FROM,
+    to: opts.email,
+    subject: 'Enquiry Received — Rotation Analytics',
+    html: `
+      <p>Dear ${opts.contactName},</p>
+      <p>Thank you for your enquiry. We have received your message regarding <strong>${opts.org}</strong> and will respond within 2 business days.</p>
+      <p>If you have urgent questions in the meantime, you can reach us at <a href="mailto:hello@rotationanalytics.ca">hello@rotationanalytics.ca</a>.</p>
+      <hr>
+      <p style="font-size:12px;color:#888">Rotation Analytics Inc | Clarity from Complexity — Exposing Hidden Risks in Complex Scheduling</p>
     `,
   })
 }
@@ -98,7 +139,7 @@ export async function sendDeliverableReady(opts: {
       <p style="font-size:13px;color:#666">This link expires in 7 days. Contact us if you need it reissued.</p>
       <p>Deliverables are for internal decision-making only. Independent professional advice should be obtained before acting on findings.</p>
       <hr>
-      <p style="font-size:12px;color:#888">Rotation Analytics — a division of Visser Ventures Corp.</p>
+      <p style="font-size:12px;color:#888">Rotation Analytics Inc | Clarity from Complexity — Exposing Hidden Risks in Complex Scheduling</p>
     `,
   })
 }

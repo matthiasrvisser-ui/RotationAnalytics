@@ -36,6 +36,15 @@ export default function Home() {
         secondaryCta={{ label: 'View Sample Report', href: '/sample-report' }}
       />
 
+      {/* Credential line */}
+      <div className="border-t border-slate-200">
+        <div className="max-w-6xl mx-auto px-6 py-10 text-center">
+          <p className="text-sm text-slate-500 leading-relaxed max-w-2xl mx-auto">
+            Built by former unionized healthcare workers with over a decade of frontline rotation experience. We have lived the schedules we now analyze &mdash; and we bring that firsthand understanding to every engagement.
+          </p>
+        </div>
+      </div>
+
       {/* Problem framing */}
       <Section divider>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
@@ -132,8 +141,46 @@ export default function Home() {
         <ProcessOverview />
       </Section>
 
+      {/* What You Receive */}
+      <Section className="bg-brand-cream" divider>
+        <div className="max-w-4xl">
+          <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-5">
+            What You Receive
+          </p>
+          <h2 className="text-2xl md:text-3xl font-bold text-slate-900 tracking-tight mb-3">
+            Documented findings, delivered confidentially.
+          </h2>
+          <p className="text-base text-slate-500 leading-relaxed mb-8 max-w-3xl">
+            Every engagement produces two core deliverables. A third is available when fatigue analysis is elected.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+            <div className="bg-white border border-slate-200 rounded-lg p-6">
+              <p className="text-2xl font-bold text-slate-200 mb-4">01</p>
+              <h3 className="text-sm font-semibold text-slate-900 mb-2">Annotated Rotation Schedule</h3>
+              <p className="text-sm text-slate-500 leading-relaxed">
+                Your rotation returned with all identified non-conformances flagged and annotated directly in the file.
+              </p>
+            </div>
+            <div className="bg-white border border-slate-200 rounded-lg p-6">
+              <p className="text-2xl font-bold text-slate-200 mb-4">02</p>
+              <h3 className="text-sm font-semibold text-slate-900 mb-2">Executive Findings Report</h3>
+              <p className="text-sm text-slate-500 leading-relaxed">
+                Risk-classified findings with collective agreement citations and supporting explanation for internal review.
+              </p>
+            </div>
+            <div className="bg-white border border-slate-200 rounded-lg p-6">
+              <p className="text-2xl font-bold text-slate-200 mb-4">03</p>
+              <h3 className="text-sm font-semibold text-slate-900 mb-2">Fatigue Risk Analysis Report <span className="text-xs font-normal text-slate-400">(add-on)</span></h3>
+              <p className="text-sm text-slate-500 leading-relaxed">
+                Per-line fatigue scores, risk classifications, and trend visualisations across the full rotation cycle. Elected at submission.
+              </p>
+            </div>
+          </div>
+        </div>
+      </Section>
+
       {/* Where Rotation Analysis Applies */}
-      <Section title="Where Rotation Analysis Applies" className="bg-brand-cream" divider>
+      <Section title="Where Rotation Analysis Applies" divider>
         <p className="text-base text-slate-600 leading-relaxed mb-8 max-w-3xl">
           A rotation, or master schedule, is a cyclical work plan where a pre-determined pattern of shifts — including on duty times, off duty days, and shift types — automatically repeats over a set period, usually spanning weeks or months.
         </p>
@@ -223,16 +270,16 @@ export default function Home() {
           </p>
           <div className="flex flex-wrap justify-center gap-5 items-center">
             <Link
-              href="/contact"
+              href="/engage"
               className="bg-white text-brand-navy px-7 py-3 rounded font-medium text-sm hover:bg-brand-cream transition-colors"
             >
-              Get in Touch
+              Begin an Engagement
             </Link>
             <Link
-              href="/about"
+              href="/contact"
               className="text-sm font-medium text-slate-200 hover:text-white hover:underline underline-offset-4 transition-colors"
             >
-              Learn more about us &rarr;
+              Get in Touch &rarr;
             </Link>
           </div>
         </div>

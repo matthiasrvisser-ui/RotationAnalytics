@@ -104,7 +104,7 @@ export default function OGImage() {
               letterSpacing: '0.04em',
             }}
           >
-            Structured independent analysis. Released to the commissioning party only.
+            Structured independent analysis. Released to the Client only.
           </div>
         </div>
       </div>
