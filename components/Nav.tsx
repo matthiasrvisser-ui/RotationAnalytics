@@ -42,6 +42,16 @@ export function Nav() {
               </Link>
             ))}
             <Link
+              href="/status"
+              className={`text-sm px-4 py-1.5 rounded border transition-colors ${
+                pathname.startsWith('/status')
+                  ? 'border-brand-navy text-brand-navy font-semibold'
+                  : 'border-slate-300 text-slate-600 hover:border-brand-navy hover:text-brand-navy'
+              }`}
+            >
+              Client Portal
+            </Link>
+            <Link
               href="/engage"
               className={`text-sm px-4 py-1.5 rounded transition-colors ${
                 pathname === '/engage'
@@ -90,8 +100,15 @@ export function Nav() {
               </Link>
             ))}
             <Link
+              href="/status"
+              className="text-sm py-2 px-4 mt-2 rounded border border-slate-300 text-slate-600 text-center"
+              onClick={() => setMobileOpen(false)}
+            >
+              Client Portal
+            </Link>
+            <Link
               href="/engage"
-              className="text-sm py-2 px-4 mt-2 rounded bg-brand-navy text-white text-center"
+              className="text-sm py-2 px-4 mt-1 rounded bg-brand-navy text-white text-center"
               onClick={() => setMobileOpen(false)}
             >
               Begin Engagement
