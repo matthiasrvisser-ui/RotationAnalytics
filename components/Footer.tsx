@@ -64,6 +64,11 @@ export function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/getting-started" className="text-sm text-slate-300 hover:text-white transition-colors">
+                  Getting Started
+                </Link>
+              </li>
+              <li>
                 <Link href="/engage" className="text-sm text-slate-300 hover:text-white transition-colors">
                   Begin Engagement
                 </Link>

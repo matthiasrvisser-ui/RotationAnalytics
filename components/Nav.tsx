@@ -6,6 +6,7 @@ import { useState } from 'react'
 import { LogoHorizontal } from './Logo'
 
 const navLinks = [
+  { href: '/getting-started', label: 'Getting Started' },
   { href: '/methodology', label: 'Methodology' },
   { href: '/example-rotation', label: 'Example Rotation' },
   { href: '/sample-report', label: 'Sample Report' },

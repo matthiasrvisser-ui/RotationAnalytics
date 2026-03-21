@@ -139,6 +139,14 @@ export default function Home() {
         divider
       >
         <ProcessOverview />
+        <div className="mt-8">
+          <Link
+            href="/getting-started"
+            className="text-sm font-medium text-brand-navy hover:text-brand-navy-dark transition-colors"
+          >
+            View the full engagement pathway &rarr;
+          </Link>
+        </div>
       </Section>
 
       {/* What You Receive */}
@@ -266,7 +274,7 @@ export default function Home() {
             Ready to discuss an engagement?
           </h2>
           <p className="text-slate-300 mb-8 max-w-xl mx-auto text-sm leading-relaxed">
-            Whether you have a specific rotation in mind or want to understand what structured analysis would reveal, we are available to discuss your requirements.
+            Whether you have a specific rotation in mind or want to understand what structured analysis would reveal, we are available to discuss your requirements. Start with a single rotation — no ongoing commitment required.
           </p>
           <div className="flex flex-wrap justify-center gap-5 items-center">
             <Link
@@ -276,10 +284,10 @@ export default function Home() {
               Begin an Engagement
             </Link>
             <Link
-              href="/contact"
+              href="/getting-started"
               className="text-sm font-medium text-slate-200 hover:text-white hover:underline underline-offset-4 transition-colors"
             >
-              Get in Touch &rarr;
+              See the Full Process &rarr;
             </Link>
           </div>
         </div>
