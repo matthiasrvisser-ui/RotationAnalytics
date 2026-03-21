@@ -114,6 +114,9 @@ export function Footer() {
             <Link href="/terms-of-service" className="text-xs text-slate-500 hover:text-slate-300 transition-colors">
               Terms of Service
             </Link>
+            <Link href="/security" className="text-xs text-slate-500 hover:text-slate-300 transition-colors">
+              Information Security
+            </Link>
           </div>
         </div>
       </div>
