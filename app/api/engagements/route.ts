@@ -141,6 +141,7 @@ export async function POST(req: NextRequest) {
         contactName,
         orgName,
         statusToken: engagement.status_token,
+        workOrderNumber,
       }),
       sendAdminSubmissionAlert({
         engagementId: engagement.id,
