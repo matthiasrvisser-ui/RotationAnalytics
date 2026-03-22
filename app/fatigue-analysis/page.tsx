@@ -178,55 +178,21 @@ export default function FatigueAnalysisPage() {
         </div>
       </Section>
 
-      {/* ── INTEGRATED VALUE ── */}
+      {/* ── INTEGRATED VALUE — brief transition ── */}
       <Section contained className="bg-brand-cream">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-2xl font-semibold text-brand-navy mb-6">
-            Integrated with Compliance Analysis
+          <h2 className="text-2xl font-semibold text-brand-navy mb-4">
+            Available as an Add-On
           </h2>
           <p className="text-slate-700 leading-relaxed mb-4">
-            Fatigue analysis is available as an add-on to any compliance engagement. A single
-            rotation submission flows through both the compliance engine and the fatigue model,
-            covering both dimensions of scheduling risk.
+            Fatigue risk analysis is available as an add-on to any compliance engagement. A single rotation submission flows through both the compliance engine and the fatigue model — providing the most complete rotation risk assessment available.
           </p>
-
-          <div className="bg-white border border-slate-200 rounded-lg overflow-hidden my-6">
-            <div className="bg-brand-navy px-5 py-3">
-              <p className="text-white text-sm font-semibold">What You Receive</p>
-            </div>
-            <div className="p-5 space-y-4">
-              <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest">Included in Every Engagement</p>
-              <div className="flex items-start gap-3">
-                <span className="flex-shrink-0 w-8 h-8 rounded-full bg-brand-navy/10 flex items-center justify-center text-sm font-semibold text-brand-navy">1</span>
-                <div>
-                  <p className="text-sm font-semibold text-brand-navy">Annotated Rotation Schedule</p>
-                  <p className="text-sm text-slate-600">Every shift flagged for compliance non-conformances — directly in your rotation file.</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <span className="flex-shrink-0 w-8 h-8 rounded-full bg-brand-navy/10 flex items-center justify-center text-sm font-semibold text-brand-navy">2</span>
-                <div>
-                  <p className="text-sm font-semibold text-brand-navy">Executive Findings Report</p>
-                  <p className="text-sm text-slate-600">Risk-classified compliance findings with collective agreement citations and supporting explanation.</p>
-                </div>
-              </div>
-              <div className="border-t border-slate-200 pt-4">
-                <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-4">When Fatigue Analysis Is Elected</p>
-              </div>
-              <div className="flex items-start gap-3">
-                <span className="flex-shrink-0 w-8 h-8 rounded-full bg-brand-navy/10 flex items-center justify-center text-sm font-semibold text-brand-navy">3</span>
-                <div>
-                  <p className="text-sm font-semibold text-brand-navy">Fatigue Risk Analysis Report <span className="text-xs font-normal text-slate-400">(add-on)</span></p>
-                  <p className="text-sm text-slate-600">Per-line fatigue scores (average, min, max), risk classifications, and rotation-wide trend visualisations showing the complete fatigue and recovery cycle.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <p className="text-slate-700 leading-relaxed mb-4">
-            Compliance analysis identifies what the schedule violates. Fatigue analysis identifies
-            what the schedule does to the worker. Together, they form the complete rotation risk profile.
-          </p>
+          <Link
+            href="/getting-started"
+            className="text-sm font-medium text-brand-navy hover:text-brand-navy-dark transition-colors"
+          >
+            See the full engagement pathway &rarr;
+          </Link>
         </div>
       </Section>
 

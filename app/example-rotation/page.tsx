@@ -44,12 +44,6 @@ const issuesIdentified = [
   },
 ]
 
-const manualReviewFocus = [
-  { label: 'Shift coverage', detail: 'Are all shifts covered by an assigned worker?' },
-  { label: 'Staffing levels', detail: 'Are the right number of workers scheduled each day?' },
-  { label: 'Basic rest windows', detail: 'Do workers appear to have days off between blocks of shifts?' },
-]
-
 const missedIssues = [
   'Insufficient hours between shifts that fall just below the collective agreement threshold',
   'Weekend off requirements across multi-week periods that are not immediately visible',
@@ -71,25 +65,7 @@ export default function ExampleRotation() {
         secondaryCta={{ label: 'Our Methodology', href: '/methodology' }}
       />
 
-      {/* 1. Introduction / Context */}
-      <Section divider>
-        <div className="max-w-3xl">
-          <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-5">
-            Context
-          </p>
-          <h2 className="text-2xl md:text-3xl font-bold text-slate-900 tracking-tight mb-6">
-            Rotations are routinely reviewed and accepted without independent analysis.
-          </h2>
-          <p className="text-base text-slate-600 leading-relaxed mb-5">
-            Unionized rotation schedules are typically reviewed manually by schedulers and labour relations staff. At first glance, most rotations appear to meet staffing requirements and basic rest provisions. Subtle issues, however, can persist across rotation cycles without detection.
-          </p>
-          <p className="text-base text-slate-600 leading-relaxed">
-            These hidden problems include insufficient rest periods between shifts, weekends off that do not meet collective agreement thresholds, non-compliant consecutive shift sequences, on-call violations, and days off configurations that fail minimum requirements. High-impact violations carry real fatigue risk and create grounds for grievance proceedings.
-          </p>
-        </div>
-      </Section>
-
-      {/* 2. Rotation That Looks Acceptable */}
+      {/* 1. Before — Rotation That Looks Acceptable */}
       <Section className="bg-brand-cream" divider>
         <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-5">
           Before Analysis
@@ -138,55 +114,26 @@ export default function ExampleRotation() {
         </p>
       </Section>
 
-      {/* 3. Why Manual Review Misses Problems */}
+      {/* 2. The Gap — brief bridge */}
       <Section divider>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
-          <div>
-            <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-5">
-              The Gap
-            </p>
-            <h2 className="text-2xl md:text-3xl font-bold text-slate-900 tracking-tight mb-6">
-              Why Manual Review Misses Problems
-            </h2>
-            <p className="text-base text-slate-500 leading-relaxed mb-6">
-              Manual reviews typically confirm the fundamentals — are shifts covered, are staffing levels adequate, do workers appear to have rest days. These checks are necessary but insufficient.
-            </p>
-            <div className="space-y-3 mb-8">
-              {manualReviewFocus.map((item) => (
-                <div key={item.label} className="flex items-start gap-3 bg-slate-50 border border-slate-200 rounded-lg p-4">
-                  <div className="w-5 h-5 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <svg className="w-3 h-3 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                    </svg>
-                  </div>
-                  <div>
-                    <p className="text-sm font-semibold text-slate-800">{item.label}</p>
-                    <p className="text-xs text-slate-500">{item.detail}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-            <p className="text-xs text-slate-400 leading-relaxed">
-              These checks pass. The rotation looks acceptable. But deeper issues remain.
-            </p>
-          </div>
-
-          <div>
-            <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-5">
-              What Gets Missed
-            </p>
-            <div className="space-y-3">
-              {missedIssues.map((issue, i) => (
-                <div key={i} className="flex items-start gap-3 border-l-2 border-red-300 pl-4">
-                  <p className="text-sm text-slate-600 leading-relaxed">{issue}</p>
-                </div>
-              ))}
-            </div>
+        <div className="max-w-3xl">
+          <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-5">
+            What Manual Review Misses
+          </p>
+          <p className="text-base text-slate-600 leading-relaxed mb-6">
+            Manual reviews confirm the fundamentals — shift coverage, staffing levels, visible rest days. These checks pass. But deeper issues persist across multi-week periods where the intersecting rules of collective agreements, employment standards, and scheduling provisions cannot be held in view simultaneously.
+          </p>
+          <div className="space-y-3">
+            {missedIssues.map((issue, i) => (
+              <div key={i} className="flex items-start gap-3 border-l-2 border-red-300 pl-4">
+                <p className="text-sm text-slate-600 leading-relaxed">{issue}</p>
+              </div>
+            ))}
           </div>
         </div>
       </Section>
 
-      {/* 4. Rotation With Issues Highlighted */}
+      {/* 3. After — Rotation With Issues Highlighted */}
       <Section className="bg-brand-cream" divider>
         <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-5">
           After Analysis
@@ -236,7 +183,7 @@ export default function ExampleRotation() {
         </p>
       </Section>
 
-      {/* 5. Key Issues Identified */}
+      {/* 4. Key Issues Identified */}
       <Section
         title="Key Issues Identified"
         subtitle="The analysis engine applied 15 parameters and revealed 5 areas that did not meet requirements."
@@ -284,69 +231,7 @@ export default function ExampleRotation() {
         </p>
       </Section>
 
-      {/* 6. Why This Happens in Real Organizations */}
-      <Section className="bg-brand-cream" divider>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
-          <div>
-            <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-5">
-              Operational Reality
-            </p>
-            <h2 className="text-2xl md:text-3xl font-bold text-slate-900 tracking-tight mb-6">
-              Why This Happens in Real Organizations
-            </h2>
-            <p className="text-base text-slate-500 leading-relaxed mb-5">
-              Rotation planning is a complex exercise. A 10-week rotation with 11 lines contains over 420 individual shift assignments — 490 when including on-call — each governed by intersecting rules from collective agreements, employment standards, and operational requirements.
-            </p>
-            <p className="text-base text-slate-500 leading-relaxed">
-              Collective agreements contain nuanced provisions — weekend off requirements averaged across multi-week periods, consecutive shift limits counted across week boundaries, minimum rest hours measured to the half-hour. No manual reviewer can hold all intersecting parameters in view while tracing them across a full rotation cycle.
-            </p>
-          </div>
-
-          <div className="space-y-4">
-            {[
-              { label: 'Volume', body: 'A single 10-week rotation contains over 420 shift assignments — 490 including on-call — across multiple line types and classifications.' },
-              { label: 'Intersecting Rules', body: 'Parameters from collective agreements, employment standards, and operational policies apply simultaneously to each assignment.' },
-              { label: 'Hidden Patterns', body: 'Violations often span multiple weeks or appear only when measuring exact hours across shift transitions.' },
-              { label: 'Limited Time', body: 'Schedulers and labour relations staff rarely have capacity for cell-by-cell parameter verification across full rotation cycles.' },
-            ].map((item) => (
-              <div key={item.label} className="border-l-2 border-slate-200 pl-5">
-                <p className="text-sm font-semibold text-slate-800 mb-1">{item.label}</p>
-                <p className="text-sm text-slate-500 leading-relaxed">{item.body}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </Section>
-
-      {/* 7. How Rotation Analytics Inc Solves This */}
-      <Section divider>
-        <div className="max-w-3xl">
-          <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-5">
-            The Solution
-          </p>
-          <h2 className="text-2xl md:text-3xl font-bold text-slate-900 tracking-tight mb-6">
-            Independent Rotation Analysis
-          </h2>
-          <p className="text-base text-slate-600 leading-relaxed mb-8">
-            Rotation Analytics Inc applies documented parameters against the full rotation cycle to identify issues that manual review cannot reliably detect.
-          </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {[
-              { label: 'Compliance Evaluation', detail: 'Every shift assessed against collective agreement provisions and applicable employment standards.' },
-              { label: 'Rest Interval Analysis', detail: 'Exact hours between shifts calculated across the full cycle, measured against documented thresholds.' },
-              { label: 'Pattern Detection', detail: 'Consecutive shift sequences, weekend distribution, and on-call placement evaluated across multi-week periods.' },
-              { label: 'Documented Findings', detail: 'Executive report with risk-classified findings, specific line references, and applicable agreement citations.' },
-            ].map((item) => (
-              <div key={item.label} className="bg-brand-cream border border-slate-200 rounded-lg p-5">
-                <p className="text-sm font-semibold text-slate-900 mb-2">{item.label}</p>
-                <p className="text-sm text-slate-500 leading-relaxed">{item.detail}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </Section>
-
-      {/* 8. CTA — Continue through the site */}
+      {/* 5. CTA */}
       <Section className="bg-brand-navy">
         <div className="text-center py-4">
           <h2 className="text-2xl font-bold text-white mb-4 tracking-tight">

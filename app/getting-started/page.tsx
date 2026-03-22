@@ -35,7 +35,7 @@ const timelineSteps = [
     description:
       'A straightforward service agreement governs all engagements. It covers scope, confidentiality, independence, deliverables, and fees. You review and accept it electronically — no procurement cycles or lengthy negotiations.',
     details: [
-      'Per-rotation pricing — no subscriptions or platform fees',
+      'Per-rotation pricing with a $225 CAD minimum — no subscriptions or platform fees',
       'Confidentiality obligations documented in writing',
       'Independence commitments explicitly stated',
       'Agreement covers all submissions for 12 months',
@@ -86,9 +86,9 @@ const pilotBenefits = [
       'Review the deliverables against your own internal analysis or known issues. The findings speak for themselves — and they provide the basis for deciding whether ongoing engagement adds value.',
   },
   {
-    title: 'No Pressure to Continue',
+    title: 'No Ongoing Commitment',
     description:
-      'A pilot engagement is a single analysis starting at $225 CAD. You receive the same deliverables as every other engagement — nothing is simplified. If the pilot demonstrates value, your service agreement remains active for 12 months and you can continue submitting rotations on an ad hoc basis at any time. Organizations that require ongoing analytical support can contact us to discuss an integrated service agreement tailored to their volume and scheduling environment.',
+      'A single analysis starting at $225 CAD. If the pilot demonstrates value, your service agreement remains active for 12 months — submit additional rotations at any time.',
   },
 ]
 
@@ -117,11 +117,6 @@ const faqs = [
     question: 'Is there a minimum engagement size?',
     answer:
       'The minimum engagement fee is $225 CAD, which covers rotations up to approximately 640 shifts at the base compliance rate. Most single-rotation analyses fall within this range.',
-  },
-  {
-    question: 'How is the fatigue analysis different from the compliance analysis?',
-    answer:
-      'Compliance analysis evaluates the schedule against collective agreement provisions — it identifies what the schedule violates. Fatigue analysis applies a biomathematical model to identify where the schedule creates physiological fatigue risk — even when fully compliant. Together they provide the complete risk profile.',
   },
 ]
 
@@ -230,68 +225,8 @@ export default function GettingStartedPage() {
         </div>
       </Section>
 
-      {/* ── ONGOING ENGAGEMENTS ── */}
-      <Section contained>
-        <div className="max-w-4xl mx-auto">
-          <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-5">
-            Beyond the Pilot
-          </p>
-          <h2 className="text-2xl md:text-3xl font-bold text-slate-900 tracking-tight mb-3">
-            Ongoing analysis as your rotations evolve.
-          </h2>
-          <p className="text-base text-slate-500 leading-relaxed mb-8 max-w-3xl">
-            Rotation schedules change. New rotations are proposed. Amendments are
-            negotiated. Each change is an opportunity for new compliance risk to enter
-            the schedule undetected. Ongoing engagement ensures every iteration is
-            independently evaluated.
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-            <div className="border border-slate-200 rounded-lg p-6">
-              <div className="w-10 h-10 rounded-lg bg-brand-navy/10 flex items-center justify-center mb-4">
-                <svg className="w-5 h-5 text-brand-navy" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 12c0-1.232-.046-2.453-.138-3.662a4.006 4.006 0 00-3.7-3.7 48.678 48.678 0 00-7.324 0 4.006 4.006 0 00-3.7 3.7c-.017.22-.032.441-.046.662M19.5 12l3-3m-3 3l-3-3m-12 3c0 1.232.046 2.453.138 3.662a4.006 4.006 0 003.7 3.7 48.656 48.656 0 007.324 0 4.006 4.006 0 003.7-3.7c.017-.22.032-.441.046-.662M4.5 12l3 3m-3-3l-3 3" />
-                </svg>
-              </div>
-              <h3 className="text-sm font-semibold text-slate-900 mb-2">Recurring Submissions</h3>
-              <p className="text-sm text-slate-500 leading-relaxed">
-                Submit new or amended rotations at any time under your existing
-                agreement. Each submission is analysed independently with the same
-                rigour as the first.
-              </p>
-            </div>
-            <div className="border border-slate-200 rounded-lg p-6">
-              <div className="w-10 h-10 rounded-lg bg-brand-navy/10 flex items-center justify-center mb-4">
-                <svg className="w-5 h-5 text-brand-navy" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" />
-                </svg>
-              </div>
-              <h3 className="text-sm font-semibold text-slate-900 mb-2">Rotation-Over-Rotation Comparison</h3>
-              <p className="text-sm text-slate-500 leading-relaxed">
-                When the same rotation is analysed across successive cycles, changes in
-                compliance posture and fatigue risk become visible over time —
-                providing evidence of whether amendments improved or degraded the schedule.
-              </p>
-            </div>
-            <div className="border border-slate-200 rounded-lg p-6">
-              <div className="w-10 h-10 rounded-lg bg-brand-navy/10 flex items-center justify-center mb-4">
-                <svg className="w-5 h-5 text-brand-navy" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" />
-                </svg>
-              </div>
-              <h3 className="text-sm font-semibold text-slate-900 mb-2">Pre-Implementation Review</h3>
-              <p className="text-sm text-slate-500 leading-relaxed">
-                Proposed rotations can be analysed before they take effect — identifying
-                compliance and fatigue risk before workers are assigned, not after a
-                grievance is filed.
-              </p>
-            </div>
-          </div>
-        </div>
-      </Section>
-
       {/* ── FAQ ── */}
-      <Section contained className="bg-brand-cream">
+      <Section contained>
         <div className="max-w-3xl mx-auto">
           <h2 className="text-2xl font-semibold text-brand-navy mb-8">
             Common Questions
@@ -320,16 +255,16 @@ export default function GettingStartedPage() {
           </p>
           <div className="flex flex-wrap justify-center gap-5 items-center">
             <Link
-              href="/contact"
+              href="/engage"
               className="bg-white text-brand-navy px-7 py-3 rounded font-medium text-sm hover:bg-brand-cream transition-colors"
             >
-              Schedule a Conversation
+              Begin an Engagement
             </Link>
             <Link
-              href="/engage"
+              href="/contact"
               className="text-sm font-medium text-slate-200 hover:text-white hover:underline underline-offset-4 transition-colors"
             >
-              Go Directly to Engagement &rarr;
+              Get in Touch &rarr;
             </Link>
           </div>
         </div>

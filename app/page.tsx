@@ -40,7 +40,8 @@ export default function Home() {
       <div className="border-t border-slate-200">
         <div className="max-w-6xl mx-auto px-6 py-10 text-center">
           <p className="text-sm text-slate-500 leading-relaxed max-w-2xl mx-auto">
-            Led by a former frontline nurse with nearly a decade of rotation consulting experience. We have lived the schedules we now analyze &mdash; and we bring that firsthand understanding to every engagement.
+            Led by a rotation specialist who has spent over a decade building, auditing, and validating rotation schedules across healthcare — from the front line to enterprise workforce platforms.{' '}
+            <Link href="/about" className="text-brand-navy font-medium hover:underline">Meet the team &rarr;</Link>
           </p>
         </div>
       </div>
@@ -114,7 +115,7 @@ export default function Home() {
               </div>
               <h3 className="text-sm font-semibold text-slate-900 mb-2">Domain Expertise</h3>
               <p className="text-sm text-slate-500 leading-relaxed">
-                The engine finds what it's built to find because the people behind it have lived these schedules. Nearly a decade of real-world experience in unionized shift environments informs every parameter we evaluate.
+                The engine finds what it&rsquo;s built to find because the people behind it have lived these schedules — building rotations, auditing them, and advising enterprise platforms on compliance logic.
               </p>
             </div>
             <div className="bg-white border border-slate-200 rounded-lg p-6">
@@ -127,6 +128,19 @@ export default function Home() {
               <p className="text-sm text-slate-500 leading-relaxed">
                 Issues identified before implementation cost a fraction of what they cost after a grievance is filed. Independent analysis turns potential disputes into documented, addressable findings.
               </p>
+            </div>
+          </div>
+
+          <div className="mt-8 bg-white border border-brand-navy/10 rounded-lg p-6">
+            <div className="flex flex-col md:flex-row md:items-start gap-6">
+              <div className="flex-1">
+                <p className="text-xs font-semibold text-brand-navy uppercase tracking-widest mb-2">
+                  Only Available Here
+                </p>
+                <p className="text-sm text-slate-600 leading-relaxed">
+                  <strong className="text-slate-800">On-call shift validation</strong> — our engine validates on-call scheduling against collective agreement provisions, including placement relative to off-duty days, frequency, and rest period interactions. No other rotation analysis service provides this. Combined with our <strong className="text-slate-800">biomathematical fatigue modelling</strong>, this is the most complete rotation risk assessment available in Canada.
+                </p>
+              </div>
             </div>
           </div>
         </div>

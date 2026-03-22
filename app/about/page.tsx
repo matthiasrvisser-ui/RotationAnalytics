@@ -28,15 +28,6 @@ const commitments = [
   },
 ]
 
-const clientTypes = [
-  'Unions and worker representatives',
-  'Employers and management',
-  'Labour relations professionals',
-  'Health & Safety committees',
-  'Scheduling and workforce deployment platforms',
-  'Any organization requiring independent rotation evaluation',
-]
-
 export default function About() {
   return (
     <>
@@ -45,43 +36,25 @@ export default function About() {
         subheadline="An independent analytical firm providing third-party review of rotation schedules. Analysis conducted without alignment to any party to the scheduling arrangement."
       />
 
+      {/* Why We Exist */}
       <Section divider>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl">
-          <div>
-            <h2 className="text-xl font-bold text-slate-900 mb-4 tracking-tight">What We Do</h2>
-            <div className="space-y-4 text-sm text-slate-600 leading-relaxed">
-              <p>
-                Rotation Analytics Inc is an independent analytical firm specializing in the review of rotational staffing schedules. Our expertise is built on nearly a decade of real-world experience in healthcare union shift environments, combined with a proprietary analysis engine that evaluates rotation schedules at a level not achievable through routine review.
-              </p>
-              <p>
-                We identify collective agreement non-compliance, fatigue risk exposure, and scheduling issues across full rotation cycles. The result is a documented findings report delivered to the commissioning organization for its own review and decision-making.
-              </p>
-              <p>
-                We do not negotiate, represent parties, or advise on labour strategy. Our role is analytical, neutral, and evidence-focused.
-              </p>
-            </div>
-          </div>
-
-          <div>
-            <h2 className="text-xl font-bold text-slate-900 mb-4 tracking-tight">Who We Work With</h2>
-            <ul className="space-y-3 mb-6">
-              {clientTypes.map((item, i) => (
-                <li key={i} className="flex items-start gap-3 text-sm text-slate-600">
-                  <div className="w-1.5 h-1.5 rounded-full bg-brand-navy mt-1.5 flex-shrink-0" />
-                  {item}
-                </li>
-              ))}
-            </ul>
-            <div className="bg-slate-50 border border-slate-200 rounded-lg p-4">
-              <p className="text-sm text-slate-700">
-                Our expertise originates in healthcare, but the methodology applies to any fatigue-sensitive, shift-based operation.
-              </p>
-            </div>
-          </div>
+        <div className="max-w-3xl">
+          <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-5">
+            Why We Exist
+          </p>
+          <h2 className="text-2xl md:text-3xl font-bold text-slate-900 tracking-tight mb-6">
+            Rotation schedules are too complex and too consequential for manual review alone.
+          </h2>
+          <p className="text-base text-slate-600 leading-relaxed mb-5">
+            Rotation Analytics Inc was founded on a simple observation: the people reviewing rotation schedules — schedulers, labour relations professionals, union representatives — are doing critical work with inadequate tools. A single rotation can contain hundreds of shift assignments governed by intersecting rules from collective agreements, employment standards, and occupational health guidelines. Manual review cannot reliably hold all of those parameters in view.
+          </p>
+          <p className="text-base text-slate-600 leading-relaxed">
+            We built a firm and a methodology to close that gap — independent, evidence-based analysis that documents what the schedule actually contains, so every party to the arrangement can make informed decisions.
+          </p>
         </div>
       </Section>
 
-      {/* Leadership */}
+      {/* Leadership — the trust anchor */}
       <Section className="bg-brand-cream" divider>
         <div className="max-w-4xl">
           <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-5">
@@ -101,8 +74,11 @@ export default function About() {
                   <p className="text-xs text-slate-500">Principal Analyst</p>
                 </div>
               </div>
+              <p className="text-sm text-slate-600 leading-relaxed mb-3">
+                Kristy started on the front line — a unionized healthcare worker who lived the rotations herself. Over the past decade she moved to the other side of the table: building rotation schedules, auditing them for compliance, training consultants on how to do it correctly, and advising enterprise-level workforce technology platforms on rotation compliance logic.
+              </p>
               <p className="text-sm text-slate-600 leading-relaxed">
-                Former frontline nurse who transitioned into rotation consulting nearly a decade ago. Kristy designed and built the proprietary analysis engine that powers every engagement — turning firsthand scheduling expertise into a tool that finds what manual review cannot. Her experience as both a shift worker and a rotation specialist is the foundation of every parameter Rotation Analytics Inc evaluates.
+                That complete operational picture — from working the shifts, to constructing the schedules, to validating them at scale — is what she built the proprietary analysis engine from. Kristy doesn&rsquo;t study rotations from the outside. She has done every part of the work.
               </p>
             </div>
             <div className="bg-white border border-slate-200 rounded-lg p-6">
