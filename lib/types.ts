@@ -86,4 +86,4 @@ export const STATUS_ORDER: EngagementStatus[] = [
   'closed',
 ]
 
-export const AGREEMENT_VERSION = '2025-v1'
+export const AGREEMENT_VERSION = '2025-v2'
