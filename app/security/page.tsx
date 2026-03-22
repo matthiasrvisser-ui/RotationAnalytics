@@ -221,8 +221,8 @@ export default function SecurityPage() {
                 detail: 'Alberta\'s Electronic Transactions Act — governing the validity of electronic agreements, signatures, and records.',
               },
               {
-                label: 'OSHA / OHS Act',
-                detail: 'Analytical methodology references applicable occupational health and safety standards and peer-reviewed fatigue science.',
+                label: 'Employment Standards',
+                detail: 'Analytical methodology references applicable provincial employment standards and peer-reviewed fatigue science.',
               },
             ].map((item) => (
               <div key={item.label} className="bg-white border border-slate-200 rounded-lg p-4">

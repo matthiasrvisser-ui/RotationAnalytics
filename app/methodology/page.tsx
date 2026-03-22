@@ -46,7 +46,7 @@ const examineItems = [
 const referencePoints = [
   'Provincial Labour Standards legislation',
   'Applicable collective agreement scheduling provisions',
-  'Occupational Health & Safety Act requirements',
+  'Applicable provincial employment standards',
   'Peer-reviewed fatigue science (cited on applicable findings)',
 ]
 

@@ -81,6 +81,41 @@ export async function POST(req: NextRequest) {
       if (attempt === 18) digits = 5 // expand to 5 digits after exhausting 4-digit space
     }
 
+    // Handle supporting documents
+    const supportingFiles = formData.getAll('supporting_documents') as File[]
+    const uploadedDocs: { file_path: string; file_name: string; file_size: number }[] = []
+
+    for (const supportFile of supportingFiles) {
+      if (!supportFile || supportFile.size === 0) continue
+      const safeName = supportFile.name.replace(/[^a-zA-Z0-9._-]/g, '_')
+      const docPath = `${engagement.id}/${Date.now()}-${safeName}`
+      const docBuffer = Buffer.from(await supportFile.arrayBuffer())
+
+      const { error: docUploadError } = await supabaseAdmin.storage
+        .from('supporting-documents')
+        .upload(docPath, docBuffer, { contentType: supportFile.type, upsert: false })
+
+      if (!docUploadError) {
+        uploadedDocs.push({
+          file_path: docPath,
+          file_name: supportFile.name,
+          file_size: supportFile.size,
+        })
+      } else {
+        console.error('Supporting doc upload error:', docUploadError)
+      }
+    }
+
+    // Insert supporting document records
+    if (uploadedDocs.length > 0) {
+      await supabaseAdmin.from('supporting_documents').insert(
+        uploadedDocs.map(doc => ({
+          engagement_id: engagement.id,
+          ...doc,
+        }))
+      )
+    }
+
     // Update with file path, work order, and advance status
     await supabaseAdmin
       .from('engagements')
@@ -96,7 +131,7 @@ export async function POST(req: NextRequest) {
       engagement_id: engagement.id,
       action: 'submission_received',
       actor: 'client',
-      metadata: { org_name: orgName, has_file: !!filePath },
+      metadata: { org_name: orgName, has_file: !!filePath, supporting_documents: uploadedDocs.length },
     })
 
     // Emails — fire and forget (don't block response)

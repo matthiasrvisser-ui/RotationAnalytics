@@ -5,6 +5,13 @@ import { useRouter, useParams } from 'next/navigation'
 import Link from 'next/link'
 import { STATUS_LABELS, STATUS_ORDER, type EngagementStatus, type Engagement, type AuditEntry, type Message } from '@/lib/types'
 
+interface SupportingDoc {
+  id: string
+  file_name: string
+  file_size: number | null
+  created_at: string
+}
+
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL ?? 'https://rotationanalytics.ca'
 
 let _adminToken = ''
@@ -44,6 +51,9 @@ export default function EngagementDetail() {
   const [deliverableFile, setDeliverableFile] = useState<File | null>(null)
   const [uploading, setUploading] = useState(false)
 
+  // Supporting documents
+  const [supportingDocs, setSupportingDocs] = useState<SupportingDoc[]>([])
+
   const [actionLoading, setActionLoading] = useState(false)
   const [message, setMessage] = useState<{ type: 'success' | 'error'; text: string } | null>(null)
 
@@ -59,6 +69,10 @@ export default function EngagementDetail() {
     // Load messages
     const msgRes = await fetch(`/api/admin/engagements/${id}/messages`, { headers })
     if (msgRes.ok) setMessages(await msgRes.json())
+
+    // Load supporting documents
+    const docsRes = await fetch(`/api/admin/engagements/${id}/supporting-documents`, { headers })
+    if (docsRes.ok) setSupportingDocs(await docsRes.json())
 
     setLoading(false)
   }, [id, router])
@@ -121,6 +135,32 @@ export default function EngagementDetail() {
       setMsgBody('')
     }
     setSendingMsg(false)
+  }
+
+  async function downloadRotation() {
+    const headers = await authHeaders()
+    const res = await fetch(`/api/admin/engagements/${id}/rotation`, { headers })
+    if (res.ok) {
+      const { url } = await res.json()
+      window.open(url, '_blank')
+    } else {
+      setMessage({ type: 'error', text: 'Failed to generate download link.' })
+    }
+  }
+
+  async function downloadSupportingDoc(docId: string) {
+    const headers = await authHeaders()
+    const res = await fetch(`/api/admin/engagements/${id}/supporting-documents`, {
+      method: 'POST',
+      headers: { ...headers, 'Content-Type': 'application/json' },
+      body: JSON.stringify({ doc_id: docId }),
+    })
+    if (res.ok) {
+      const { url } = await res.json()
+      window.open(url, '_blank')
+    } else {
+      setMessage({ type: 'error', text: 'Failed to generate download link.' })
+    }
   }
 
   async function uploadDeliverable() {
@@ -386,9 +426,47 @@ export default function EngagementDetail() {
                 <div><dt className="text-xs text-slate-400">Collective Agreement</dt><dd>{engagement.collective_agreement}</dd></div>
                 {engagement.local_conditions && <div><dt className="text-xs text-slate-400">Local Conditions</dt><dd>{engagement.local_conditions}</dd></div>}
                 {engagement.notes && <div><dt className="text-xs text-slate-400">Notes</dt><dd className="text-xs text-slate-500">{engagement.notes}</dd></div>}
-                {engagement.rotation_file_path && <div><dt className="text-xs text-slate-400">File</dt><dd className="text-xs text-slate-500 break-all">{engagement.rotation_file_path}</dd></div>}
+                {engagement.rotation_file_path && (
+                  <div>
+                    <dt className="text-xs text-slate-400">Rotation File</dt>
+                    <dd>
+                      <button
+                        onClick={downloadRotation}
+                        className="inline-flex items-center gap-1.5 text-xs font-medium text-brand-navy hover:underline mt-1"
+                      >
+                        <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                        </svg>
+                        Download Rotation
+                      </button>
+                    </dd>
+                  </div>
+                )}
               </dl>
             </div>
+
+            {/* Supporting Documents */}
+            {supportingDocs.length > 0 && (
+              <div className="bg-white border border-slate-200 rounded-lg p-5">
+                <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-3">Supporting Documents</p>
+                <div className="space-y-2">
+                  {supportingDocs.map(doc => (
+                    <div key={doc.id} className="flex items-center justify-between gap-2">
+                      <div className="min-w-0">
+                        <p className="text-xs text-slate-700 truncate">{doc.file_name}</p>
+                        {doc.file_size && <p className="text-xs text-slate-400">{(doc.file_size / 1024).toFixed(0)} KB</p>}
+                      </div>
+                      <button
+                        onClick={() => downloadSupportingDoc(doc.id)}
+                        className="flex-shrink-0 text-xs font-medium text-brand-navy hover:underline"
+                      >
+                        Download
+                      </button>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
 
             {/* Audit log */}
             <div className="bg-white border border-slate-200 rounded-lg p-5">

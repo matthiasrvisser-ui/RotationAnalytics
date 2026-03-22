@@ -36,11 +36,34 @@ create table if not exists engagements (
   invoice_amount        numeric(10,2),
   invoice_issued_at     timestamptz,
   payment_confirmed_at  timestamptz,
+  -- Work order
+  work_order_number     text,
   -- Admin
   admin_notes           text
 );
 
 create unique index on engagements (status_token);
+
+create table if not exists messages (
+  id              uuid primary key default uuid_generate_v4(),
+  engagement_id   uuid not null references engagements(id) on delete cascade,
+  sender          text not null check (sender in ('admin','client')),
+  body            text not null,
+  created_at      timestamptz not null default now()
+);
+
+alter table messages enable row level security;
+
+create table if not exists supporting_documents (
+  id              uuid primary key default uuid_generate_v4(),
+  engagement_id   uuid not null references engagements(id) on delete cascade,
+  file_path       text not null,
+  file_name       text not null,
+  file_size       bigint,
+  created_at      timestamptz not null default now()
+);
+
+alter table supporting_documents enable row level security;
 
 create table if not exists audit_log (
   id              uuid primary key default uuid_generate_v4(),

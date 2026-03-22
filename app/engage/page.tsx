@@ -348,6 +348,25 @@ export default function EngagePage() {
                 </div>
               </div>
 
+              <div>
+                <label htmlFor="supporting_documents" className={labelClass}>
+                  Supporting Documents <span className="text-slate-400 normal-case font-normal">(optional)</span>
+                </label>
+                <div className="w-full border border-slate-300 rounded px-4 py-3 bg-white focus-within:ring-2 focus-within:ring-brand-navy/20 focus-within:border-brand-navy transition-colors">
+                  <input
+                    id="supporting_documents"
+                    name="supporting_documents"
+                    type="file"
+                    accept=".xlsx,.xls,.csv,.pdf,.doc,.docx,.png,.jpg,.jpeg"
+                    multiple
+                    className="w-full text-sm text-slate-600 file:mr-4 file:py-1.5 file:px-4 file:rounded file:border-0 file:text-xs file:font-semibold file:bg-slate-100 file:text-slate-700 hover:file:bg-slate-200 file:cursor-pointer cursor-pointer"
+                  />
+                  <p className="text-xs text-slate-400 mt-1.5">
+                    Collective agreement documents, shift legends, letters of understanding, or any other relevant files. Multiple files accepted.
+                  </p>
+                </div>
+              </div>
+
               <div className="border-t border-slate-200 pt-2" />
 
               <div>

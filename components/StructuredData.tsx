@@ -8,7 +8,7 @@ export function OrganizationSchema() {
     logo: 'https://www.rotationanalytics.ca/logo/rotation-analytics-logo.svg',
     image: 'https://www.rotationanalytics.ca/logo/rotation-analytics-logo.svg',
     description:
-      'Independent rotational risk analysis firm providing structured third-party review of rotation schedules — identifying collective agreement non-compliance, fatigue risk exposure, and scheduling vulnerabilities through biomathematical modelling and OHS standards.',
+      'Independent rotational risk analysis firm providing structured third-party review of rotation schedules — identifying collective agreement non-compliance, fatigue risk exposure, and scheduling vulnerabilities through biomathematical modelling and applicable provincial employment standards.',
     email: 'hello@rotationanalytics.ca',
     foundingDate: '2024',
     areaServed: {
