@@ -6,7 +6,7 @@ import { Section } from '@/components/Section'
 export const metadata: Metadata = {
   title: 'Getting Started',
   description:
-    'How to engage Rotation Analytics Inc for independent rotation compliance and fatigue risk analysis. From initial conversation through delivery — a clear process.',
+    'How to engage Rotation Analytics Inc for independent rotation compliance and fatigue risk analysis. Sign the agreement, submit your rotation, receive findings.',
   openGraph: {
     title: 'Getting Started | Rotation Analytics Inc',
     description:
@@ -14,26 +14,13 @@ export const metadata: Metadata = {
   },
 }
 
-const timelineSteps = [
+const standardSteps = [
   {
     number: '01',
-    title: 'Initial Conversation',
-    duration: '15–30 minutes',
-    description:
-      'We discuss your scheduling environment, the collective agreement(s) in scope, and what you are looking to achieve. This conversation is confidential and carries no obligation.',
-    details: [
-      'Identify the rotation(s) and agreement(s) in scope',
-      'Determine whether fatigue analysis is relevant',
-      'Answer any questions about methodology or deliverables',
-      'Confirm the engagement structure and expected timeline',
-    ],
-  },
-  {
-    number: '02',
     title: 'Service Agreement',
-    duration: 'Electronic acceptance',
+    duration: '2 minutes — electronic acceptance',
     description:
-      'A straightforward service agreement governs all engagements. It covers scope, confidentiality, independence, deliverables, and fees. You review and accept it electronically — no procurement cycles or lengthy negotiations.',
+      'Accept the service agreement electronically. It covers scope, confidentiality, independence, deliverables, and fees. No procurement cycles, no lengthy negotiations — read it and accept when you are ready.',
     details: [
       'Per-rotation pricing with a $225 CAD minimum — no subscriptions or platform fees',
       'Confidentiality obligations documented in writing',
@@ -42,7 +29,7 @@ const timelineSteps = [
     ],
   },
   {
-    number: '03',
+    number: '02',
     title: 'Rotation Submission',
     duration: '5 minutes',
     description:
@@ -55,7 +42,7 @@ const timelineSteps = [
     ],
   },
   {
-    number: '04',
+    number: '03',
     title: 'Analysis and Delivery',
     duration: '48–72 hours from confirmed payment',
     description:
@@ -125,36 +112,31 @@ export default function GettingStartedPage() {
     <>
       <Hero
         headline="Getting Started"
-        subheadline="A clear process from initial conversation to delivered findings. No platform onboarding, no procurement hurdles — just the analysis your rotation requires."
+        subheadline="Sign the agreement, submit your rotation, receive findings. Most clients are up and running in under ten minutes."
       />
 
-      {/* ── ENGAGEMENT PATHWAY ── */}
+      {/* ── STANDARD PATHWAY ── */}
       <Section contained>
         <div className="max-w-4xl mx-auto">
           <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-5">
-            The Engagement Pathway
+            Standard Engagement
           </p>
           <h2 className="text-2xl md:text-3xl font-bold text-slate-900 tracking-tight mb-3">
-            Four steps from conversation to findings.
+            Three steps. No gatekeeping.
           </h2>
           <p className="text-base text-slate-500 leading-relaxed mb-12 max-w-3xl">
-            Every engagement follows the same process. Whether this is
-            your first analysis or your twentieth, the pathway is consistent,
-            predictable, and designed to be fast.
+            When you are ready, you can begin immediately — accept the service agreement, submit your rotation, and receive documented findings. No discovery call required.
           </p>
 
           <div className="space-y-0">
-            {timelineSteps.map((step, i) => (
+            {standardSteps.map((step, i) => (
               <div key={step.number} className="relative flex gap-6 pb-12 last:pb-0">
-                {/* Timeline line */}
-                {i < timelineSteps.length - 1 && (
+                {i < standardSteps.length - 1 && (
                   <div className="absolute left-[23px] top-12 bottom-0 w-px bg-slate-200" />
                 )}
-                {/* Step number */}
                 <div className="flex-shrink-0 w-12 h-12 rounded-full bg-brand-navy flex items-center justify-center">
                   <span className="text-sm font-bold text-white">{step.number}</span>
                 </div>
-                {/* Content */}
                 <div className="flex-1 pt-1">
                   <div className="flex flex-wrap items-baseline gap-3 mb-2">
                     <h3 className="text-lg font-semibold text-brand-navy">{step.title}</h3>
@@ -177,50 +159,80 @@ export default function GettingStartedPage() {
               </div>
             ))}
           </div>
+
+          <div className="mt-10 flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6">
+            <Link
+              href="/engage"
+              className="inline-flex items-center justify-center bg-brand-navy text-white text-sm font-medium px-6 py-2.5 rounded hover:bg-brand-navy-dark transition-colors"
+            >
+              Begin an Engagement
+            </Link>
+            <p className="text-xs text-slate-400">
+              No conversation required. Sign the agreement and submit when you are ready.
+            </p>
+          </div>
         </div>
       </Section>
 
-      {/* ── PILOT ENGAGEMENT ── */}
+      {/* ── ENTERPRISE ── */}
       <Section contained className="bg-brand-cream">
         <div className="max-w-4xl mx-auto">
-          <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-5">
-            Start with a Pilot
-          </p>
-          <h2 className="text-2xl md:text-3xl font-bold text-slate-900 tracking-tight mb-3">
-            One rotation. Full analysis. No ongoing commitment.
-          </h2>
-          <p className="text-base text-slate-500 leading-relaxed mb-10 max-w-3xl">
-            The most effective way to evaluate the service is to submit a rotation
-            you already know well. Compare the findings against your own understanding
-            of the schedule. If the analysis identifies issues you were already
-            aware of — and reveals issues you were not — you have your answer.
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-            {pilotBenefits.map((benefit) => (
-              <div key={benefit.title} className="bg-white border border-slate-200 rounded-lg p-6">
-                <h3 className="text-sm font-semibold text-brand-navy mb-2">{benefit.title}</h3>
-                <p className="text-sm text-slate-500 leading-relaxed">{benefit.description}</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
+            {/* Pilot */}
+            <div>
+              <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-5">
+                Start with a Pilot
+              </p>
+              <h2 className="text-xl font-bold text-slate-900 tracking-tight mb-3">
+                One rotation. Full analysis. No ongoing commitment.
+              </h2>
+              <p className="text-sm text-slate-500 leading-relaxed mb-6">
+                Submit a rotation you already know well. Compare the findings against your own understanding of the schedule. If the analysis identifies issues you were already aware of — and reveals issues you were not — you have your answer.
+              </p>
+              <div className="space-y-3">
+                {pilotBenefits.map((benefit) => (
+                  <div key={benefit.title} className="bg-white border border-slate-200 rounded-lg p-4">
+                    <h3 className="text-sm font-semibold text-brand-navy mb-1">{benefit.title}</h3>
+                    <p className="text-xs text-slate-500 leading-relaxed">{benefit.description}</p>
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
-
-          <div className="mt-10 bg-white border border-brand-navy/10 rounded-lg p-6 flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6">
-            <div className="flex-1">
-              <p className="text-sm font-semibold text-brand-navy mb-1">
-                Ready to evaluate with a pilot?
-              </p>
-              <p className="text-sm text-slate-500 leading-relaxed">
-                Reach out to discuss your rotation and collective agreement. We will
-                confirm scope and timeline before any commitment.
-              </p>
             </div>
-            <Link
-              href="/contact"
-              className="flex-shrink-0 inline-flex items-center justify-center bg-brand-navy text-white text-sm font-medium px-6 py-2.5 rounded hover:bg-brand-navy-dark transition-colors"
-            >
-              Discuss a Pilot
-            </Link>
+
+            {/* Enterprise */}
+            <div>
+              <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-5">
+                Enterprise &amp; Integrated Engagements
+              </p>
+              <h2 className="text-xl font-bold text-slate-900 tracking-tight mb-3">
+                Recurring analysis across your organization.
+              </h2>
+              <p className="text-sm text-slate-500 leading-relaxed mb-6">
+                For organizations with multiple rotations, recurring analysis needs, or complex scheduling environments, we offer integrated engagement structures tailored to volume and scope.
+              </p>
+              <div className="space-y-3">
+                <div className="bg-white border border-slate-200 rounded-lg p-4">
+                  <h3 className="text-sm font-semibold text-brand-navy mb-1">Scoping Conversation</h3>
+                  <p className="text-xs text-slate-500 leading-relaxed">We discuss your scheduling environment, the collective agreements in scope, volume, and what you are looking to achieve.</p>
+                </div>
+                <div className="bg-white border border-slate-200 rounded-lg p-4">
+                  <h3 className="text-sm font-semibold text-brand-navy mb-1">Custom Agreement</h3>
+                  <p className="text-xs text-slate-500 leading-relaxed">Enterprise engagements are governed by a master service agreement structured around your organization&rsquo;s volume and requirements.</p>
+                </div>
+                <div className="bg-white border border-slate-200 rounded-lg p-4">
+                  <h3 className="text-sm font-semibold text-brand-navy mb-1">Ongoing Support</h3>
+                  <p className="text-xs text-slate-500 leading-relaxed">Rotation-over-rotation comparison, pre-implementation review of proposed schedules, and sustained rotational risk monitoring across cycles.</p>
+                </div>
+              </div>
+              <div className="mt-6">
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center justify-center bg-brand-navy text-white text-sm font-medium px-6 py-2.5 rounded hover:bg-brand-navy-dark transition-colors"
+                >
+                  Discuss an Enterprise Engagement
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </Section>
@@ -246,12 +258,10 @@ export default function GettingStartedPage() {
       <Section contained className="bg-brand-navy">
         <div className="max-w-3xl mx-auto text-center py-4">
           <h2 className="text-2xl font-bold text-white mb-4 tracking-tight">
-            Start with a conversation.
+            Ready when you are.
           </h2>
           <p className="text-slate-300 mb-8 max-w-xl mx-auto text-sm leading-relaxed">
-            Whether you have a specific rotation ready to submit or want to understand
-            how independent analysis applies to your scheduling environment, the first
-            step is the same.
+            Begin an engagement directly — or reach out if you have questions about your scheduling environment before committing.
           </p>
           <div className="flex flex-wrap justify-center gap-5 items-center">
             <Link

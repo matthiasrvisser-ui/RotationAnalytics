@@ -285,10 +285,10 @@ export default function Home() {
       <Section className="bg-brand-navy">
         <div className="text-center py-4">
           <h2 className="text-2xl font-bold text-white mb-4 tracking-tight">
-            Ready to discuss an engagement?
+            Ready when you are.
           </h2>
           <p className="text-slate-300 mb-8 max-w-xl mx-auto text-sm leading-relaxed">
-            Whether you have a specific rotation in mind or want to understand what independent analysis would reveal, we are available to discuss your requirements. Start with a single rotation — no ongoing commitment required.
+            Begin an engagement directly — sign the agreement, submit your rotation, and receive findings. No discovery call required. Start with a single rotation, no ongoing commitment.
           </p>
           <div className="flex flex-wrap justify-center gap-5 items-center">
             <Link
