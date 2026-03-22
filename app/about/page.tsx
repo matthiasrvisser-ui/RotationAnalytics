@@ -6,7 +6,7 @@ import { Section } from '@/components/Section'
 export const metadata: Metadata = {
   title: 'About',
   description:
-    'About Rotation Analytics Inc — an independent analytical firm providing third-party review of rotation schedules for any organization requiring expert, non-affiliated rotation analysis.',
+    'About Rotation Analytics Inc, an independent analytical firm providing third-party review of rotation schedules for any organization requiring expert, non-affiliated rotation analysis.',
 }
 
 const commitments = [
@@ -46,10 +46,10 @@ export default function About() {
             Rotation schedules are too complex and too consequential for manual review alone.
           </h2>
           <p className="text-base text-slate-600 leading-relaxed mb-5">
-            Rotation Analytics Inc was founded on a simple observation: the people reviewing rotation schedules — schedulers, labour relations professionals, union representatives — are doing critical work with inadequate tools. A single rotation can contain hundreds of shift assignments governed by intersecting rules from collective agreements, employment standards, and occupational health guidelines. Manual review cannot reliably hold all of those parameters in view.
+            Rotation Analytics Inc was founded on a simple observation: the people reviewing rotation schedules (schedulers, labour relations professionals, union representatives) are doing critical work with inadequate tools. A single rotation can contain hundreds of shift assignments governed by intersecting rules from collective agreements, employment standards, and occupational health guidelines. Manual review cannot reliably hold all of those parameters in view.
           </p>
           <p className="text-base text-slate-600 leading-relaxed">
-            We built a firm and a methodology to close that gap — independent, evidence-based analysis that documents what the schedule actually contains, so every party to the arrangement can make informed decisions.
+            We built a firm and a methodology to close that gap. Independent, evidence-based analysis that documents what the schedule actually contains, so every party to the arrangement can make informed decisions.
           </p>
         </div>
       </Section>
@@ -75,10 +75,10 @@ export default function About() {
                 </div>
               </div>
               <p className="text-sm text-slate-600 leading-relaxed mb-3">
-                Kristy started on the front line — a unionized healthcare worker who lived the rotations herself. Over the past decade she moved to the other side of the table: building rotation schedules, auditing them for compliance, training consultants on how to do it correctly, and advising enterprise-level workforce technology platforms on rotation compliance logic.
+                Kristy started on the front line as a unionized healthcare worker who lived the rotations herself. Over the past decade she moved to the other side of the table: building rotation schedules, auditing them for compliance, training consultants on how to do it correctly, and advising enterprise-level workforce technology platforms on rotation compliance logic.
               </p>
               <p className="text-sm text-slate-600 leading-relaxed">
-                That complete operational picture — from working the shifts, to constructing the schedules, to validating them at scale — is what she built the proprietary analysis engine from. Kristy doesn&rsquo;t study rotations from the outside. She has done every part of the work.
+                That complete operational picture, from working the shifts to constructing the schedules to validating them at scale, is what she built the proprietary analysis engine from. Kristy doesn&rsquo;t study rotations from the outside. She has done every part of the work.
               </p>
             </div>
             <div className="bg-white border border-slate-200 rounded-lg p-6">

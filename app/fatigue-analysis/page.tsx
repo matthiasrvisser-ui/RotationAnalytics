@@ -9,7 +9,7 @@ const SITE = 'https://www.rotationanalytics.ca'
 export const metadata: Metadata = {
   title: 'Fatigue Risk Analysis',
   description:
-    'Science-based fatigue risk assessment for every rotation line. Rotation Analytics Inc applies a biomathematical fatigue model to identify where schedules create physiological fatigue — even when they are fully compliant.',
+    'Science-based fatigue risk assessment for every rotation line. Rotation Analytics Inc applies a biomathematical fatigue model to identify where schedules create physiological fatigue, even when they are fully compliant.',
   openGraph: {
     title: 'Fatigue Risk Analysis | Rotation Analytics Inc',
     description:
@@ -37,7 +37,7 @@ export default function FatigueAnalysisPage() {
           </p>
           <p className="text-slate-700 leading-relaxed mb-6">
             This is a science-based fatigue risk assessment for every rotation line in the schedule.
-            The model runs continuously across the entire rotation — including days off — to track each
+            The model runs continuously across the entire rotation, including days off, to track each
             worker&rsquo;s physiological state without interruption. The result is a fatigue score
             for every day of the rotation, risk classification for every line, and a clear picture
             of where the schedule creates risk that manual review cannot detect.
@@ -72,14 +72,14 @@ export default function FatigueAnalysisPage() {
           <p className="text-slate-700 leading-relaxed mb-4">
             The model does not assume workers sleep a fixed number of hours between shifts.
             Instead, it predicts when sleep actually occurs based on the worker&rsquo;s physiological
-            state — sleep pressure, circadian phase, and shift timing determine when and how long
+            state. Sleep pressure, circadian phase, and shift timing determine when and how long
             the worker sleeps.
           </p>
           <p className="text-slate-700 leading-relaxed mb-4">
             Night shift workers are predicted to sleep during the day because their sleep pressure
             is high after the night shift. During multi-day breaks, the model recognises the
-            worker&rsquo;s natural sleep-wake cycle. No fixed sleep window is assumed —
-            sleep timing adapts to the schedule.
+            worker&rsquo;s natural sleep-wake cycle. No fixed sleep window is assumed.
+            Sleep timing adapts to the schedule.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
@@ -102,7 +102,7 @@ export default function FatigueAnalysisPage() {
               </p>
               <p className="text-sm text-slate-600 leading-relaxed">
                 Unlike analyses that only score worked shifts, this model simulates physiology
-                through every day of the rotation — including days off. Recovery is visible in the
+                through every day of the rotation, including days off. Recovery is visible in the
                 data, and the worker&rsquo;s state entering their next shift block is accurately
                 carried forward rather than artificially reset.
               </p>
@@ -135,7 +135,7 @@ export default function FatigueAnalysisPage() {
           <p className="text-slate-700 leading-relaxed mb-6">
             The report below is representative of an actual Fatigue Risk Analysis deliverable.
             Each row represents a rotation line. The trend column traces the fatigue score across
-            every day of the rotation — both worked days and days off — showing the full recovery
+            every day of the rotation, both worked days and days off, showing the full recovery
             and fatigue cycle.
           </p>
 
@@ -149,7 +149,7 @@ export default function FatigueAnalysisPage() {
                 </div>
                 <div>
                   <p className="text-sm font-semibold text-slate-800">Sample Fatigue Risk Analysis Report</p>
-                  <p className="text-xs text-slate-400">Excel Spreadsheet — Biomathematical Analysis</p>
+                  <p className="text-xs text-slate-400">Excel Spreadsheet, Biomathematical Analysis</p>
                 </div>
               </div>
               <a
@@ -173,7 +173,7 @@ export default function FatigueAnalysisPage() {
           </div>
 
           <p className="text-sm text-slate-500 mt-4 leading-relaxed">
-            All sparklines use a 25–100 vertical scale to show meaningful detail — 25 represents baseline, with the worker well rested on days off. Lines with visibly higher peaks carry more fatigue risk, even if both are classified at the same average risk level. The deliverable includes the full per-line breakdown, trend visualisations, and the methodology explanation.
+            All sparklines use a 25–100 vertical scale to show meaningful detail. 25 represents baseline, with the worker well rested on days off. Lines with visibly higher peaks carry more fatigue risk, even if both are classified at the same average risk level. The deliverable includes the full per-line breakdown, trend visualisations, and the methodology explanation.
           </p>
         </div>
       </Section>
@@ -185,7 +185,7 @@ export default function FatigueAnalysisPage() {
             Available as an Add-On
           </h2>
           <p className="text-slate-700 leading-relaxed mb-4">
-            Fatigue risk analysis is available as an add-on to any compliance engagement. A single rotation submission flows through both the compliance engine and the fatigue model — providing the most complete rotation risk assessment available.
+            Fatigue risk analysis is available as an add-on to any compliance engagement. A single rotation submission flows through both the compliance engine and the fatigue model, providing the most complete rotation risk assessment available.
           </p>
           <Link
             href="/getting-started"
@@ -246,7 +246,7 @@ export default function FatigueAnalysisPage() {
             Add Fatigue Analysis to Your Engagement
           </h2>
           <p className="text-slate-700 leading-relaxed mb-8">
-            Fatigue risk analysis is available as an add-on to any compliance engagement —
+            Fatigue risk analysis is available as an add-on to any compliance engagement,
             providing the most complete rotation risk assessment available.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

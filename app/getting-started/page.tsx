@@ -18,11 +18,11 @@ const standardSteps = [
   {
     number: '01',
     title: 'Service Agreement',
-    duration: '2 minutes — electronic acceptance',
+    duration: '2 minutes, electronic acceptance',
     description:
-      'Accept the service agreement electronically. It covers scope, confidentiality, independence, deliverables, and fees. No procurement cycles, no lengthy negotiations — read it and accept when you are ready.',
+      'Accept the service agreement electronically. It covers scope, confidentiality, independence, deliverables, and fees. No procurement cycles, no lengthy negotiations. Read it and accept when you are ready.',
     details: [
-      'Per-rotation pricing with a $225 CAD minimum — no subscriptions or platform fees',
+      'Per-rotation pricing with a $225 CAD minimum. No subscriptions or platform fees',
       'Confidentiality obligations documented in writing',
       'Independence commitments explicitly stated',
       'Agreement covers all submissions for 12 months',
@@ -70,12 +70,12 @@ const pilotBenefits = [
   {
     title: 'Evaluate the Output',
     description:
-      'Review the deliverables against your own internal analysis or known issues. The findings speak for themselves — and they provide the basis for deciding whether ongoing engagement adds value.',
+      'Review the deliverables against your own internal analysis or known issues. The findings speak for themselves, and they provide the basis for deciding whether ongoing engagement adds value.',
   },
   {
     title: 'No Ongoing Commitment',
     description:
-      'A single analysis starting at $225 CAD. If the pilot demonstrates value, your service agreement remains active for 12 months — submit additional rotations at any time.',
+      'A single analysis starting at $225 CAD. If the pilot demonstrates value, your service agreement remains active for 12 months. Submit additional rotations at any time.',
   },
 ]
 
@@ -125,7 +125,7 @@ export default function GettingStartedPage() {
             Three steps. No gatekeeping.
           </h2>
           <p className="text-base text-slate-500 leading-relaxed mb-12 max-w-3xl">
-            When you are ready, you can begin immediately — accept the service agreement, submit your rotation, and receive documented findings. No discovery call required.
+            When you are ready, you can begin immediately. Accept the service agreement, submit your rotation, and receive documented findings. No discovery call required.
           </p>
 
           <div className="space-y-0">
@@ -187,7 +187,7 @@ export default function GettingStartedPage() {
                 One rotation. Full analysis. No ongoing commitment.
               </h2>
               <p className="text-sm text-slate-500 leading-relaxed mb-6">
-                Submit a rotation you already know well. Compare the findings against your own understanding of the schedule. If the analysis identifies issues you were already aware of — and reveals issues you were not — you have your answer.
+                Submit a rotation you already know well. Compare the findings against your own understanding of the schedule. If the analysis identifies issues you were already aware of, and reveals issues you were not, you have your answer.
               </p>
               <div className="space-y-3">
                 {pilotBenefits.map((benefit) => (
@@ -261,7 +261,7 @@ export default function GettingStartedPage() {
             Ready when you are.
           </h2>
           <p className="text-slate-300 mb-8 max-w-xl mx-auto text-sm leading-relaxed">
-            Begin an engagement directly — or reach out if you have questions about your scheduling environment before committing.
+            Begin an engagement directly, or reach out if you have questions about your scheduling environment before committing.
           </p>
           <div className="flex flex-wrap justify-center gap-5 items-center">
             <Link

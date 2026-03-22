@@ -38,7 +38,7 @@ export default function SampleReport() {
       <Section divider>
         <div className="max-w-3xl mb-8">
           <p className="text-base text-slate-600 leading-relaxed">
-            This report was generated from the sample rotation on the <Link href="/example-rotation" className="text-brand-navy font-medium hover:underline">Example Rotation</Link> page — a schedule that appeared compliant during manual review. The analysis engine identified five areas that did not meet documented requirements.
+            This report was generated from the sample rotation on the <Link href="/example-rotation" className="text-brand-navy font-medium hover:underline">Example Rotation</Link> page, a schedule that appeared compliant during manual review. The analysis engine identified five areas that did not meet documented requirements.
           </p>
         </div>
 
@@ -106,7 +106,7 @@ export default function SampleReport() {
             Parameters Met
           </p>
           <p className="text-sm text-slate-500 leading-relaxed mb-6 max-w-3xl">
-            Every parameter is documented — including those that were met — providing the complete picture of compliance posture across the rotation.
+            Every parameter is documented, including those that were met, providing the complete picture of compliance posture across the rotation.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {metParameters.map((p) => (

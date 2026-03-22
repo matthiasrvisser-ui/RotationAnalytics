@@ -10,7 +10,7 @@ export function WhyItMatters() {
     },
     {
       label: 'Fatigue Is Measurable',
-      text: 'Fatigue is not a feeling — it is a physiological state driven by sleep pressure and circadian rhythm. These are predictable, quantifiable, and specific to the schedule.',
+      text: 'Fatigue is not a feeling. It is a physiological state driven by sleep pressure and circadian rhythm. These are predictable, quantifiable, and specific to the schedule.',
     },
     {
       label: 'Full Rotation Visibility',

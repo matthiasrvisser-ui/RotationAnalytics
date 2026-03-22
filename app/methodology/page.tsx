@@ -28,17 +28,17 @@ const examineItems = [
   {
     label: 'Fatigue risk patterns',
     detail:
-      'Shift sequences and rest intervals assessed against established occupational health guidelines. Quantified fatigue scoring is available separately through the Fatigue Risk Analysis add-on.',
+      'Shift sequences and rest intervals assessed using a biomathematical fatigue model that quantifies sleep pressure, circadian rhythm disruption, and accumulated sleep debt across the full rotation. Quantified fatigue scoring is available separately through the Fatigue Risk Analysis add-on.',
   },
   {
     label: 'Weekend distribution',
     detail:
-      'Weekends off patterns across the full rotation, compared to the rotation group where data is available.',
+      'Weekends are analyzed using two primary parameters: the minimum hours off required to classify a period as a weekend, and the total number of weekends off within a defined timeframe. Some agreements also require weekends off to be distributed equally.',
   },
   {
     label: 'On-call shift validation',
     detail:
-      'On-call scheduling assessed against collective agreement provisions — including placement relative to off-duty days, frequency, and rest period interactions. This validation is unique to Rotation Analytics Inc.',
+      'On-call scheduling assessed against collective agreement provisions, including placement relative to off-duty days, frequency, and rest period interactions. This validation is unique to Rotation Analytics Inc.',
   },
   {
     label: 'Collective agreement provisions',
@@ -48,10 +48,9 @@ const examineItems = [
 ]
 
 const referencePoints = [
-  'Provincial Labour Standards legislation',
+  'Provincial employment standards legislation',
   'Applicable collective agreement scheduling provisions',
-  'Applicable provincial employment standards',
-  'Peer-reviewed fatigue science (cited on applicable findings)',
+  'Peer-reviewed fatigue science (cited in applicable findings)',
 ]
 
 export default function Methodology() {
@@ -115,21 +114,50 @@ export default function Methodology() {
                 Compliance Risk
               </p>
               <p className="text-sm text-slate-600 leading-relaxed mb-5">
-                Evaluates the schedule against collective agreement provisions, employment standards, and regulatory requirements. Included in every engagement.
+                Each scheduling parameter is evaluated against collective agreement provisions, employment standards, and regulatory requirements. Every parameter is first classified as <strong className="text-slate-800">Met</strong> or <strong className="text-slate-800">Not Met</strong>. Each parameter also carries an impact classification that reflects its significance to the worker on that schedule.
               </p>
-              <div className="space-y-2">
-                {[
-                  { level: 'High', color: 'bg-red-100 text-red-700', desc: 'Immediate grievance basis or regulatory non-compliance.' },
-                  { level: 'Moderate', color: 'bg-amber-100 text-amber-700', desc: 'Elevated exposure warranting attention and monitoring.' },
-                  { level: 'Low', color: 'bg-green-100 text-green-700', desc: 'Parameters met. Documented for completeness.' },
-                ].map((r) => (
-                  <div key={r.level} className="flex items-start gap-3">
-                    <span className={`inline-block text-xs font-semibold px-2 py-0.5 rounded flex-shrink-0 ${r.color}`}>
-                      {r.level}
+
+              <div className="mb-5">
+                <p className="text-xs font-semibold text-slate-500 uppercase tracking-widest mb-3">
+                  Parameter Status
+                </p>
+                <div className="space-y-2">
+                  <div className="flex items-start gap-3">
+                    <span className="inline-block text-xs font-semibold px-2 py-0.5 rounded flex-shrink-0 bg-green-100 text-green-700">
+                      Met
                     </span>
-                    <p className="text-xs text-slate-500 leading-relaxed">{r.desc}</p>
+                    <p className="text-xs text-slate-500 leading-relaxed">Parameter meets the required provisions.</p>
                   </div>
-                ))}
+                  <div className="flex items-start gap-3">
+                    <span className="inline-block text-xs font-semibold px-2 py-0.5 rounded flex-shrink-0 bg-red-100 text-red-700">
+                      Not Met
+                    </span>
+                    <p className="text-xs text-slate-500 leading-relaxed">Parameter does not meet the required provisions.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <p className="text-xs font-semibold text-slate-500 uppercase tracking-widest mb-3">
+                  Impact Classification
+                </p>
+                <p className="text-xs text-slate-500 leading-relaxed mb-3">
+                  Every parameter carries an impact classification. When a parameter is met, the impact level confirms the significance of that compliance. When a parameter is not met, the impact level indicates how urgently it needs to be addressed.
+                </p>
+                <div className="space-y-2">
+                  {[
+                    { level: 'High', color: 'bg-red-100 text-red-700', desc: 'Critical parameter. Requires immediate attention when not met.' },
+                    { level: 'Moderate', color: 'bg-amber-100 text-amber-700', desc: 'Notable parameter. Warrants review and monitoring when not met.' },
+                    { level: 'Low', color: 'bg-green-100 text-green-700', desc: 'Supporting parameter. Documented for completeness.' },
+                  ].map((r) => (
+                    <div key={r.level} className="flex items-start gap-3">
+                      <span className={`inline-block text-xs font-semibold px-2 py-0.5 rounded flex-shrink-0 ${r.color}`}>
+                        {r.level}
+                      </span>
+                      <p className="text-xs text-slate-500 leading-relaxed">{r.desc}</p>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
 
@@ -165,7 +193,7 @@ export default function Methodology() {
             From rotation to documented findings.
           </h2>
           <p className="text-base text-slate-500 leading-relaxed mb-6">
-            Walk through a real analysis — from a rotation that passed manual review to the findings report that revealed what was missed.
+            Walk through a real analysis, from a rotation that passed manual review to the findings report that revealed what was missed.
           </p>
           <div className="flex flex-wrap gap-4">
             <Link

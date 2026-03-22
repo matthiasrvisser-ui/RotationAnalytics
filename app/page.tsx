@@ -31,7 +31,7 @@ export default function Home() {
     <>
       <Hero
         headline="Hidden Risks Live Inside Complex Rotation Schedules"
-        subheadline="We reveal them before they become costly problems. Independent, expert-led analysis of unionized shift rotations — powered by purpose-built compliance tools."
+        subheadline="We reveal them before they become costly problems. Independent, expert-led analysis of unionized shift rotations, powered by purpose-built compliance tools."
         cta={{ label: 'View Example Rotation', href: '/example-rotation' }}
         secondaryCta={{ label: 'View Sample Report', href: '/sample-report' }}
       />
@@ -40,7 +40,7 @@ export default function Home() {
       <div className="border-t border-slate-200">
         <div className="max-w-6xl mx-auto px-6 py-10 text-center">
           <p className="text-sm text-slate-500 leading-relaxed max-w-2xl mx-auto">
-            Led by a rotation specialist who has spent over a decade building, auditing, and validating rotation schedules across healthcare — from the front line to enterprise workforce platforms.{' '}
+            Led by a rotation specialist who has spent over a decade building, auditing, and validating rotation schedules across healthcare, from the front line to enterprise workforce platforms.{' '}
             <Link href="/about" className="text-brand-navy font-medium hover:underline">Meet the team &rarr;</Link>
           </p>
         </div>
@@ -90,7 +90,7 @@ export default function Home() {
             Manual review doesn&rsquo;t scale. Purpose-built analysis does.
           </h2>
           <p className="text-base text-slate-600 leading-relaxed mb-4">
-            You know the reality: collective agreement scheduling provisions are extremely complex and difficult to decipher. Rotations span weeks. Manual review — no matter how experienced the reviewer — misses more as complexity increases.
+            You know the reality: collective agreement scheduling provisions are extremely complex and difficult to decipher. Rotations span weeks. Manual review, no matter how experienced the reviewer, misses more as complexity increases.
           </p>
           <p className="text-base text-slate-600 leading-relaxed mb-10">
             Rotation Analytics Inc was built for exactly this problem.
@@ -104,7 +104,7 @@ export default function Home() {
               </div>
               <h3 className="text-sm font-semibold text-slate-900 mb-2">Purpose-Built Compliance Tools</h3>
               <p className="text-sm text-slate-500 leading-relaxed">
-                Our proprietary analysis engine was engineered specifically for rotation compliance — evaluating every shift against every applicable provision across the full rotation cycle.
+                Our proprietary analysis engine was engineered specifically for rotation compliance. It evaluates every shift against every applicable provision across the full rotation cycle.
               </p>
             </div>
             <div className="bg-white border border-slate-200 rounded-lg p-6">
@@ -115,7 +115,7 @@ export default function Home() {
               </div>
               <h3 className="text-sm font-semibold text-slate-900 mb-2">Domain Expertise</h3>
               <p className="text-sm text-slate-500 leading-relaxed">
-                The engine finds what it&rsquo;s built to find because the people behind it have lived these schedules — building rotations, auditing them, and advising enterprise platforms on compliance logic.
+                The engine finds what it&rsquo;s built to find because the people behind it have lived these schedules. They have built rotations, audited them, and advised enterprise platforms on compliance logic.
               </p>
             </div>
             <div className="bg-white border border-slate-200 rounded-lg p-6">
@@ -138,7 +138,7 @@ export default function Home() {
                   Only Available Here
                 </p>
                 <p className="text-sm text-slate-600 leading-relaxed">
-                  <strong className="text-slate-800">On-call shift validation</strong> — our engine validates on-call scheduling against collective agreement provisions, including placement relative to off-duty days, frequency, and rest period interactions. No other rotation analysis service provides this. Combined with our <strong className="text-slate-800">biomathematical fatigue modelling</strong>, this is the most complete rotation risk assessment available in Canada.
+                  <strong className="text-slate-800">On-call shift validation</strong>: our engine validates on-call scheduling against collective agreement provisions, including placement relative to off-duty days, frequency, and rest period interactions. No other rotation analysis service provides this. Combined with our <strong className="text-slate-800">biomathematical fatigue modelling</strong>, this is the most complete rotation risk assessment available in Canada.
                 </p>
               </div>
             </div>
@@ -204,7 +204,7 @@ export default function Home() {
       {/* Where Rotation Analysis Applies */}
       <Section title="Where Rotation Analysis Applies" divider>
         <p className="text-base text-slate-600 leading-relaxed mb-8 max-w-3xl">
-          A rotation is a cyclical work plan where a pattern of shifts — on duty times, off duty days, and shift types — repeats over a set period, usually spanning weeks or months.
+          A rotation is a cyclical work plan where a pattern of shifts (on-duty times, off-duty days, and shift types) repeats over a set period, usually spanning weeks or months.
         </p>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-px bg-slate-200 border border-slate-200 rounded-lg overflow-hidden">
           {[
@@ -254,7 +254,7 @@ export default function Home() {
             From rotation to documented findings.
           </h2>
           <p className="text-base text-slate-500 leading-relaxed max-w-2xl">
-            Walk through a real analysis — from a rotation that passed manual review to the report that revealed what was missed.
+            Walk through a real analysis, from a rotation that passed manual review to the report that revealed what was missed.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl">
@@ -272,7 +272,7 @@ export default function Home() {
             <p className="text-2xl font-bold text-slate-200 mb-4">02</p>
             <h3 className="text-base font-bold text-slate-900 mb-3 group-hover:text-brand-navy transition-colors">Sample Report</h3>
             <p className="text-sm text-slate-500 leading-relaxed mb-4">
-              Review the executive report that analysis produced — 15 parameters evaluated, 5 findings documented with risk classifications and agreement references.
+              Review the executive report that analysis produced. 15 parameters evaluated, 5 findings documented with risk classifications and agreement references.
             </p>
             <span className="text-sm font-medium text-brand-navy">
               View the report &rarr;
@@ -288,7 +288,7 @@ export default function Home() {
             Ready when you are.
           </h2>
           <p className="text-slate-300 mb-8 max-w-xl mx-auto text-sm leading-relaxed">
-            Begin an engagement directly — sign the agreement, submit your rotation, and receive findings. No discovery call required. Start with a single rotation, no ongoing commitment.
+            Begin an engagement directly. Sign the agreement, submit your rotation, and receive findings. No discovery call required. Start with a single rotation, no ongoing commitment.
           </p>
           <div className="flex flex-wrap justify-center gap-5 items-center">
             <Link

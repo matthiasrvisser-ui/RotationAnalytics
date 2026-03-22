@@ -42,7 +42,7 @@ export default function Contact() {
     <>
       <Hero
         headline="Get in Touch"
-        subheadline="Reach out to discuss independent rotation analysis — whether it's a single rotation or a full schedule evaluation."
+        subheadline="Reach out to discuss independent rotation analysis, whether it's a single rotation or a full schedule evaluation."
         secondaryCta={{ label: 'Already commissioned? Begin Engagement', href: '/engage' }}
       />
 
@@ -88,7 +88,7 @@ export default function Contact() {
                 What Happens Next
               </p>
               <p className="text-sm text-slate-600 leading-relaxed mb-2">
-                We respond within 2 business days. We&rsquo;ll discuss your rotation environment, the collective agreement(s) in scope, and confirm engagement structure and timeline — before any commitment.
+                We respond within 2 business days. We&rsquo;ll discuss your rotation environment, the collective agreement(s) in scope, and confirm engagement structure and timeline before any commitment.
               </p>
               <p className="text-sm text-slate-600 leading-relaxed">
                 All communications are confidential from first contact.

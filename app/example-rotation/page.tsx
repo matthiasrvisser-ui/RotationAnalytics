@@ -60,7 +60,7 @@ export default function ExampleRotation() {
     <>
       <Hero
         headline="Example Rotation Analysis"
-        subheadline="A sample rotation schedule that passed manual review — and the hidden issues that independent analysis revealed."
+        subheadline="A sample rotation schedule that passed manual review, and the hidden issues that independent analysis revealed."
         cta={{ label: 'View Sample Report', href: '/sample-report' }}
         secondaryCta={{ label: 'Our Methodology', href: '/methodology' }}
       />
@@ -121,7 +121,7 @@ export default function ExampleRotation() {
             What Manual Review Misses
           </p>
           <p className="text-base text-slate-600 leading-relaxed mb-6">
-            Manual reviews confirm the fundamentals — shift coverage, staffing levels, visible rest days. These checks pass. But deeper issues persist across multi-week periods where the intersecting rules of collective agreements, employment standards, and scheduling provisions cannot be held in view simultaneously.
+            Manual reviews confirm the fundamentals: shift coverage, staffing levels, visible rest days. These checks pass. But deeper issues persist across multi-week periods where the intersecting rules of collective agreements, employment standards, and scheduling provisions cannot be held in view simultaneously.
           </p>
           <div className="space-y-3">
             {missedIssues.map((issue, i) => (
@@ -139,7 +139,7 @@ export default function ExampleRotation() {
           After Analysis
         </p>
         <h2 className="text-2xl md:text-3xl font-bold text-slate-900 tracking-tight mb-3">
-          The Same Rotation — With Issues Highlighted
+          The Same Rotation, With Issues Highlighted
         </h2>
         <p className="text-base text-slate-500 leading-relaxed mb-8 max-w-3xl">
           The analysis engine applied 15 parameters drawn from the applicable collective agreement and employment standards. Cells highlighted in orange indicate insufficient hours between shifts. Cells in pink or purple indicate on-call scheduling violations.
@@ -155,7 +155,7 @@ export default function ExampleRotation() {
               </div>
               <div>
                 <p className="text-sm font-semibold text-slate-800">Checked Sample Rotation</p>
-                <p className="text-xs text-slate-400">Excel Spreadsheet — violations highlighted</p>
+                <p className="text-xs text-slate-400">Excel Spreadsheet, violations highlighted</p>
               </div>
             </div>
             <a
@@ -179,7 +179,7 @@ export default function ExampleRotation() {
         </div>
 
         <p className="text-xs text-slate-400 leading-relaxed mt-4 max-w-3xl">
-          Analysis revealed a number of non-conformances across this rotation — highlighted directly within the schedule for review. The full findings are documented in the executive report.
+          Analysis revealed a number of non-conformances across this rotation, highlighted directly within the schedule for review. The full findings are documented in the executive report.
         </p>
       </Section>
 
