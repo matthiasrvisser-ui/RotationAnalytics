@@ -33,6 +33,7 @@ export async function sendSubmissionConfirmation(opts: {
         </div>
         <p style="font-size: 15px; line-height: 1.6;">You can track progress at any time using your private status link below. Please save this link for your records — it is unique to your engagement.</p>
         <p style="margin: 24px 0;"><a href="${statusUrl}" style="background: #1B2D4F; color: #ffffff; padding: 12px 24px; text-decoration: none; border-radius: 4px; display: inline-block; font-size: 14px; font-weight: 600;">View Engagement Status</a></p>
+        <p style="font-size: 15px; line-height: 1.6;">A copy of your executed service agreement is available for download from your status page, or directly here: <a href="${BASE_URL}/api/agreement/${opts.statusToken}" style="color: #1B2D4F;">Download Service Agreement (PDF)</a></p>
         <p style="font-size: 15px; line-height: 1.6;">You'll receive email updates as your engagement progresses — including when your invoice is issued and when your deliverable is ready for download.</p>
         <p style="font-size: 15px; line-height: 1.6;">If you have any questions in the meantime, reply to this email or contact us at <a href="mailto:hello@rotationanalytics.ca" style="color: #1B2D4F;">hello@rotationanalytics.ca</a>.</p>
         <p style="font-size: 15px; line-height: 1.6; margin-top: 28px;">Regards,<br><strong>Rotation Analytics Inc</strong></p>
@@ -92,12 +93,12 @@ export async function sendInvoiceNotification(opts: {
         <div style="background: #f8f8f6; border: 1px solid #e5e5e5; border-radius: 6px; padding: 16px 20px; margin: 20px 0; font-size: 13px; line-height: 1.8;">
           <table style="border-collapse: collapse; width: 100%;">
             <tr><td style="padding: 3px 16px 3px 0; color: #888; white-space: nowrap;">Invoice Number</td><td style="padding: 3px 0; font-weight: 600; font-family: monospace; color: #1B2D4F;">${opts.invoiceNumber}</td></tr>
-            <tr><td style="padding: 3px 16px 3px 0; color: #888; white-space: nowrap;">Amount Due</td><td style="padding: 3px 0; font-weight: 600; color: #1B2D4F;">$${opts.invoiceAmount.toFixed(2)} CAD + applicable taxes</td></tr>
+            <tr><td style="padding: 3px 16px 3px 0; color: #888; white-space: nowrap;">Amount Due</td><td style="padding: 3px 0; font-weight: 600; color: #1B2D4F;">$${opts.invoiceAmount.toFixed(2)} CAD</td></tr>
             <tr><td style="padding: 3px 16px 3px 0; color: #888; white-space: nowrap;">Organization</td><td style="padding: 3px 0; font-weight: 600; color: #1B2D4F;">${opts.orgName}</td></tr>
             <tr><td style="padding: 3px 16px 3px 0; color: #888; white-space: nowrap;">Status</td><td style="padding: 3px 0; font-weight: 600; color: #1B2D4F;">Invoice Issued — Awaiting Payment</td></tr>
           </table>
         </div>
-        <p style="font-size: 15px; line-height: 1.6;">Your deliverable will be released upon payment confirmation. No usage rights are granted prior to payment.</p>
+        <p style="font-size: 15px; line-height: 1.6;">Your deliverable will be released upon payment confirmation.</p>
         <p style="margin: 24px 0;"><a href="${opts.paymentLink}" style="background: #1B2D4F; color: #ffffff; padding: 12px 24px; text-decoration: none; border-radius: 4px; display: inline-block; font-size: 14px; font-weight: 600;">Pay Invoice</a></p>
         <p style="font-size: 15px; line-height: 1.6;">Track your engagement at any time: <a href="${statusUrl}" style="color: #1B2D4F;">${statusUrl}</a></p>
         <p style="font-size: 15px; line-height: 1.6; margin-top: 28px;">Regards,<br><strong>Rotation Analytics Inc</strong></p>
