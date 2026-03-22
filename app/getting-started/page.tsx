@@ -177,40 +177,62 @@ export default function GettingStartedPage() {
       {/* ── ENTERPRISE ── */}
       <Section contained className="bg-brand-cream">
         <div className="max-w-4xl mx-auto">
+          {/* Shared header row — eyebrows */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 mb-5">
+            <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest">
+              Start with a Pilot
+            </p>
+            <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest hidden md:block">
+              Enterprise &amp; Integrated Engagements
+            </p>
+          </div>
+
+          {/* Shared header row — headings */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 mb-3">
+            <h2 className="text-xl font-bold text-slate-900 tracking-tight">
+              One rotation. Full analysis. No ongoing commitment.
+            </h2>
+            <h2 className="text-xl font-bold text-slate-900 tracking-tight hidden md:block">
+              Recurring analysis across your organization.
+            </h2>
+          </div>
+
+          {/* Shared header row — descriptions */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 mb-6">
+            <p className="text-sm text-slate-500 leading-relaxed">
+              Submit a rotation you already know well. Compare the findings against your own understanding of the schedule. If the analysis identifies issues you were already aware of, and reveals issues you were not, you have your answer.
+            </p>
+            <p className="text-sm text-slate-500 leading-relaxed hidden md:block">
+              For organizations with multiple rotations, recurring analysis needs, or complex scheduling environments, we offer integrated engagement structures tailored to volume and scope.
+            </p>
+          </div>
+
+          {/* Cards row — aligned */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-            {/* Pilot */}
-            <div className="flex flex-col">
-              <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-5">
-                Start with a Pilot
-              </p>
-              <h2 className="text-xl font-bold text-slate-900 tracking-tight mb-3">
-                One rotation. Full analysis. No ongoing commitment.
-              </h2>
-              <p className="text-sm text-slate-500 leading-relaxed mb-6">
-                Submit a rotation you already know well. Compare the findings against your own understanding of the schedule. If the analysis identifies issues you were already aware of, and reveals issues you were not, you have your answer.
-              </p>
-              <div className="space-y-3 flex-1">
-                {pilotBenefits.map((benefit) => (
-                  <div key={benefit.title} className="bg-white border border-slate-200 rounded-lg p-4">
-                    <h3 className="text-sm font-semibold text-brand-navy mb-1">{benefit.title}</h3>
-                    <p className="text-xs text-slate-500 leading-relaxed">{benefit.description}</p>
-                  </div>
-                ))}
-              </div>
+            {/* Pilot cards */}
+            <div className="space-y-3">
+              {pilotBenefits.map((benefit) => (
+                <div key={benefit.title} className="bg-white border border-slate-200 rounded-lg p-4">
+                  <h3 className="text-sm font-semibold text-brand-navy mb-1">{benefit.title}</h3>
+                  <p className="text-xs text-slate-500 leading-relaxed">{benefit.description}</p>
+                </div>
+              ))}
             </div>
 
-            {/* Enterprise */}
-            <div className="flex flex-col">
-              <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-5">
-                Enterprise &amp; Integrated Engagements
-              </p>
-              <h2 className="text-xl font-bold text-slate-900 tracking-tight mb-3">
-                Recurring analysis across your organization.
-              </h2>
-              <p className="text-sm text-slate-500 leading-relaxed mb-6">
-                For organizations with multiple rotations, recurring analysis needs, or complex scheduling environments, we offer integrated engagement structures tailored to volume and scope.
-              </p>
-              <div className="space-y-3 flex-1">
+            {/* Enterprise cards — mobile needs its own headers */}
+            <div>
+              <div className="md:hidden mb-6">
+                <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-5">
+                  Enterprise &amp; Integrated Engagements
+                </p>
+                <h2 className="text-xl font-bold text-slate-900 tracking-tight mb-3">
+                  Recurring analysis across your organization.
+                </h2>
+                <p className="text-sm text-slate-500 leading-relaxed">
+                  For organizations with multiple rotations, recurring analysis needs, or complex scheduling environments, we offer integrated engagement structures tailored to volume and scope.
+                </p>
+              </div>
+              <div className="space-y-3">
                 <div className="bg-white border border-slate-200 rounded-lg p-4">
                   <h3 className="text-sm font-semibold text-brand-navy mb-1">Scoping Conversation</h3>
                   <p className="text-xs text-slate-500 leading-relaxed">We discuss your scheduling environment, the collective agreements in scope, volume, and what you are looking to achieve.</p>
