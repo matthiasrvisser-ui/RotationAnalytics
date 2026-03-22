@@ -173,10 +173,7 @@ export default function FatigueAnalysisPage() {
           </div>
 
           <p className="text-sm text-slate-500 mt-4 leading-relaxed">
-            All sparklines use the same 0–100 vertical scale and are directly comparable across
-            rows. Lines with visibly higher peaks carry more fatigue risk, even if both are
-            classified at the same average risk level. The deliverable includes the full
-            per-line breakdown, trend visualisations, and the methodology explanation.
+            All sparklines use a 25–100 vertical scale to show meaningful detail — 25 represents baseline, with the worker well rested on days off. Lines with visibly higher peaks carry more fatigue risk, even if both are classified at the same average risk level. The deliverable includes the full per-line breakdown, trend visualisations, and the methodology explanation.
           </p>
         </div>
       </Section>

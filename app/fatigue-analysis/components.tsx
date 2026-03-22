@@ -109,7 +109,7 @@ export function RiskClassification() {
       color: 'bg-green-50 border-green-400 text-green-800',
       dot: 'bg-green-400',
       description:
-        'Worker is operating within normal physiological parameters for a standard shift. No intervention indicated.',
+        'Worker is operating within optimal physiological parameters for a standard shift.',
     },
     {
       range: '45 – 59',
@@ -117,7 +117,7 @@ export function RiskClassification() {
       color: 'bg-amber-50 border-amber-400 text-amber-800',
       dot: 'bg-amber-400',
       description:
-        'Elevated fatigue. Typical of evening shifts and consecutive day shifts with mildly shortened sleep. Performance may be subtly degraded.',
+        'Slightly elevated fatigue. Typical of evening shifts and consecutive day shifts with mildly shortened sleep. Performance may be subtly degraded. This is the expected baseline result for shift workers.',
     },
     {
       range: '60 – 74',
@@ -133,7 +133,7 @@ export function RiskClassification() {
       color: 'bg-red-100 border-red-600 text-red-900',
       dot: 'bg-red-600',
       description:
-        'Severe fatigue. Occurs with extended wakefulness, deep circadian trough, and compounding sleep debt. Performance impairment comparable to levels documented in occupational health fatigue literature. Immediate schedule review required.',
+        'Severe fatigue. Occurs with extended wakefulness, deep circadian trough, and compounding sleep debt. Performance impairment is comparable to levels documented in occupational health fatigue literature. Immediate schedule review required.',
     },
   ]
 

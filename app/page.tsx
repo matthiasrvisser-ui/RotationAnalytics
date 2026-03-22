@@ -40,7 +40,7 @@ export default function Home() {
       <div className="border-t border-slate-200">
         <div className="max-w-6xl mx-auto px-6 py-10 text-center">
           <p className="text-sm text-slate-500 leading-relaxed max-w-2xl mx-auto">
-            Led by a former frontline registered nurse with over a decade of rotation consulting experience. We have lived the schedules we now analyze &mdash; and we bring that firsthand understanding to every engagement.
+            Led by a former frontline nurse with nearly a decade of rotation consulting experience. We have lived the schedules we now analyze &mdash; and we bring that firsthand understanding to every engagement.
           </p>
         </div>
       </div>
@@ -89,7 +89,7 @@ export default function Home() {
             Manual review doesn&rsquo;t scale. Purpose-built analysis does.
           </h2>
           <p className="text-base text-slate-600 leading-relaxed mb-4">
-            You know the reality: collective agreements contain hundreds of scheduling provisions. Rotations span weeks. Manual review — no matter how experienced the reviewer — misses more as complexity increases.
+            You know the reality: collective agreement scheduling provisions are extremely complex and difficult to decipher. Rotations span weeks. Manual review — no matter how experienced the reviewer — misses more as complexity increases.
           </p>
           <p className="text-base text-slate-600 leading-relaxed mb-10">
             Rotation Analytics was built for exactly this problem.
@@ -114,7 +114,7 @@ export default function Home() {
               </div>
               <h3 className="text-sm font-semibold text-slate-900 mb-2">Domain Expertise</h3>
               <p className="text-sm text-slate-500 leading-relaxed">
-                The engine finds what it's built to find because the people behind it have lived these schedules. Decades of real-world experience in unionized shift environments inform every parameter we evaluate.
+                The engine finds what it's built to find because the people behind it have lived these schedules. Nearly a decade of real-world experience in unionized shift environments informs every parameter we evaluate.
               </p>
             </div>
             <div className="bg-white border border-slate-200 rounded-lg p-6">

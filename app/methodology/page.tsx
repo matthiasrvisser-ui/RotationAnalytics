@@ -32,9 +32,9 @@ const examineItems = [
       'Shift sequences and rest intervals assessed against established occupational health guidelines. Quantified fatigue scoring is available separately through the Fatigue Risk Analysis add-on.',
   },
   {
-    label: 'Weekend and statutory holiday distribution',
+    label: 'Weekend distribution',
     detail:
-      'Weekends off patterns and statutory holiday assignments across the full rotation, compared to the rotation group where data is available.',
+      'Weekends off patterns across the full rotation, compared to the rotation group where data is available.',
   },
   {
     label: 'Collective agreement provisions',
@@ -137,9 +137,9 @@ export default function Methodology() {
               </p>
               <div className="space-y-2">
                 {[
-                  { level: 'Low', range: '0–44', color: 'bg-green-100 text-green-700', desc: 'Normal physiological parameters.' },
-                  { level: 'Moderate', range: '45–59', color: 'bg-amber-100 text-amber-700', desc: 'Elevated fatigue. Performance may be subtly degraded.' },
-                  { level: 'High', range: '60–74', color: 'bg-red-100 text-red-700', desc: 'Significant fatigue. Meaningful performance impairment.' },
+                  { level: 'Low', range: '0–44', color: 'bg-green-100 text-green-700', desc: 'Optimal physiological parameters for a standard shift.' },
+                  { level: 'Moderate', range: '45–59', color: 'bg-amber-100 text-amber-700', desc: 'Slightly elevated fatigue. Expected baseline for shift workers.' },
+                  { level: 'High', range: '60–74', color: 'bg-red-100 text-red-700', desc: 'Significant fatigue. Meaningful degradation in reaction time and decision-making.' },
                   { level: 'Critical', range: '75–100', color: 'bg-red-200 text-red-800', desc: 'Severe fatigue. Immediate schedule review required.' },
                 ].map((r) => (
                   <div key={r.level} className="flex items-start gap-3">

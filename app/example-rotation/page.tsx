@@ -295,16 +295,16 @@ export default function ExampleRotation() {
               Why This Happens in Real Organizations
             </h2>
             <p className="text-base text-slate-500 leading-relaxed mb-5">
-              Rotation planning is a complex exercise. A 10-week rotation with 11 lines contains over 700 individual shift assignments, each governed by intersecting rules from collective agreements, employment standards, and operational requirements.
+              Rotation planning is a complex exercise. A 10-week rotation with 11 lines contains over 420 individual shift assignments — 490 when including on-call — each governed by intersecting rules from collective agreements, employment standards, and operational requirements.
             </p>
             <p className="text-base text-slate-500 leading-relaxed">
-              Collective agreements contain nuanced provisions — weekend off requirements averaged across multi-week periods, consecutive shift limits counted across week boundaries, minimum rest hours measured to the half-hour. A manual reviewer cannot trace all intersecting parameters simultaneously across a full rotation cycle.
+              Collective agreements contain nuanced provisions — weekend off requirements averaged across multi-week periods, consecutive shift limits counted across week boundaries, minimum rest hours measured to the half-hour. No manual reviewer can hold all intersecting parameters in view while tracing them across a full rotation cycle.
             </p>
           </div>
 
           <div className="space-y-4">
             {[
-              { label: 'Volume', body: 'A single 10-week rotation contains 700+ shift assignments across multiple line types and classifications.' },
+              { label: 'Volume', body: 'A single 10-week rotation contains over 420 shift assignments — 490 including on-call — across multiple line types and classifications.' },
               { label: 'Intersecting Rules', body: 'Parameters from collective agreements, employment standards, and operational policies apply simultaneously to each assignment.' },
               { label: 'Hidden Patterns', body: 'Violations often span multiple weeks or appear only when measuring exact hours across shift transitions.' },
               { label: 'Limited Time', body: 'Schedulers and labour relations staff rarely have capacity for cell-by-cell parameter verification across full rotation cycles.' },
