@@ -176,16 +176,23 @@ def build_document():
     story.append(Paragraph("1. Executive Summary", style_h1))
     story.append(Paragraph(
         "Rotation Analytics applies a biomathematical fatigue model to rotation schedules to identify "
-        "where schedules create physiological fatigue risk \u2014 even when fully compliant with collective "
+        "where schedules create physiological fatigue risk, even when fully compliant with collective "
         "agreements. The model is based on the Three-Process Model of alertness regulation, originally "
         "published by Torbjörn Åkerstedt and Simon Folkard in 1987 and refined through 2008.",
         style_body
     ))
     story.append(Paragraph(
         "The model produces a Fatigue Score on a 0\u2013100 scale for every day of the rotation for "
-        "every rotation line. Scores are classified into four risk levels \u2014 Low, Moderate, High, "
-        "and Critical \u2014 enabling stakeholders to identify schedule segments that create meaningful "
+        "every rotation line. Scores are classified into four risk levels (Low, Moderate, High, "
+        "and Critical), enabling stakeholders to identify schedule segments associated with elevated "
         "fatigue exposure and make informed decisions about rotation design.",
+        style_body
+    ))
+    story.append(Paragraph(
+        "The Fatigue Score is a <b>relative physiological risk estimate</b> produced by deterministic "
+        "simulation. It is intended as a decision-support tool for scheduling review, not as a "
+        "diagnostic instrument, compliance determination, or safety guarantee. The model produces "
+        "identical outputs for identical inputs.",
         style_body
     ))
     story.append(Paragraph(
@@ -208,7 +215,7 @@ def build_document():
     ))
     story.append(Paragraph("The model was selected for this implementation because:", style_body))
     story.append(bullet(
-        "It is published openly in peer-reviewed scientific literature \u2014 its equations and "
+        "It is published openly in peer-reviewed scientific literature; its equations and "
         "parameters are transparent and auditable"
     ))
     story.append(bullet(
@@ -219,10 +226,18 @@ def build_document():
         "healthcare and industrial settings"
     ))
     story.append(bullet(
-        "It can be implemented deterministically without proprietary software"
+        "It supports deterministic implementation without proprietary software"
     ))
     story.append(bullet(
-        "It produces outputs that are explainable to clients, regulators, and arbitrators"
+        "It produces outputs that are interpretable by clients, regulators, and arbitrators"
+    ))
+    story.append(Paragraph(
+        "The Rotation Analytics implementation uses published equations and parameter values from "
+        "the Three-Process Model literature. No novel physiological claims are introduced. The "
+        "implementation's validity rests on faithful reproduction of the published model's behaviour: "
+        "outputs exhibit the expected relationships between sleep pressure, circadian phase, and "
+        "fatigue as documented in the source literature.",
+        style_body
     ))
     story.append(Paragraph(
         "The published model describes three independent physiological processes: homeostatic sleep "
@@ -263,11 +278,11 @@ def build_document():
     story.append(param("\u03c4_s = 4 hours    (sleep time constant \u2014 rate of pressure dissipation)"))
     story.append(Spacer(1, 6))
     story.append(Paragraph(
-        "The asymmetry between these time constants is critical: pressure accumulates slowly across "
-        "a shift (18-hour time constant) and clears relatively quickly during sleep (4-hour time "
-        "constant). After 8 hours of sleep, pressure is near zero. After 16 hours awake (a normal "
-        "waking day), pressure has risen to a moderate level. After 24 hours of continuous "
-        "wakefulness, pressure is severe.",
+        "The asymmetry between these time constants is physiologically significant: pressure "
+        "accumulates slowly across a shift (18-hour time constant) and clears relatively quickly "
+        "during sleep (4-hour time constant). After 8 hours of sleep, pressure approaches zero. "
+        "After 16 hours awake (a normal waking day), pressure has risen to a moderate level. After "
+        "24 hours of continuous wakefulness, pressure approaches the upper asymptote.",
         style_body
     ))
     story.append(Paragraph(
@@ -301,10 +316,10 @@ def build_document():
         "Day and evening shifts receive a circadian benefit of up to <b>\u22129 points</b>."
     ))
     story.append(Paragraph(
-        "Even a fully rested worker experiences a significant dip in alertness during the circadian "
-        "trough. Circadian rhythms do not adapt quickly to schedule changes \u2014 shifting from days "
-        "to nights takes multiple days of consistent exposure, and many rotating schedules never "
-        "hold a worker on one pattern long enough for adaptation to occur.",
+        "Even a fully rested worker experiences a measurable reduction in alertness during the "
+        "circadian trough. Circadian rhythms do not adapt rapidly to schedule changes; shifting "
+        "from days to nights requires multiple days of consistent exposure, and many rotating "
+        "schedules do not hold a worker on one pattern long enough for adaptation to occur.",
         style_body
     ))
 
@@ -356,9 +371,12 @@ def build_document():
         "<b>D \u00d7 2</b> adds 2 points per hour of accumulated sleep debt"
     ))
     story.append(Paragraph(
-        "The composite score is clamped to the 0\u2013100 range. A score of 0 represents a fully alert "
-        "worker. A score of 100 represents extreme fatigue. The score represents the estimated "
-        "fatigue state of a representative worker at any given point in the rotation.",
+        "The composite score is clamped to the 0\u2013100 range. A score of 0 represents minimal "
+        "physiological fatigue. A score of 100 represents the upper bound of the model's fatigue "
+        "range. All scores represent a <b>representative worker</b>: a healthy working-age adult "
+        "with no pre-existing sleep disorders, following the scheduled shift pattern without "
+        "overtime or shift swaps. Scores are comparative risk indicators between schedule segments "
+        "and rotation lines, not absolute predictions of individual worker performance.",
         style_body
     ))
 
@@ -367,30 +385,34 @@ def build_document():
     # ═══════════════════════════════════════
     story.append(Paragraph("5. Sleep Prediction Model", style_h1))
     story.append(Paragraph(
-        "The model does not assume workers sleep a fixed number of hours between shifts. Instead, it "
-        "predicts when sleep occurs based on the worker's physiological state and schedule constraints.",
+        "The model does not assume workers sleep a fixed number of hours between shifts. Instead, "
+        "sleep timing and duration are determined by <b>rule-based deterministic logic</b> operating "
+        "within physiological constraints derived from the Three-Process Model. Given identical "
+        "schedule inputs, the sleep prediction produces identical outputs.",
         style_body
     ))
     story.append(Paragraph("5.1  Sleep Onset", style_h2))
     story.append(Paragraph(
-        "The worker falls asleep when sleep pressure is high enough and the body's circadian clock "
-        "is in a sleep-favourable phase. During multi-day breaks, the worker sleeps each night "
-        "naturally \u2014 the model recognises that once sleep pressure rebuilds to a moderate level "
-        "during nighttime hours (22:00\u201306:00), the worker will fall asleep again, producing a "
+        "Sleep onset is triggered when two conditions are satisfied: sleep pressure exceeds a "
+        "threshold value and the circadian phase is in a sleep-favourable window. During multi-day "
+        "breaks, the model recognises that once sleep pressure rebuilds to a moderate level during "
+        "nighttime hours (22:00\u201306:00), the worker will initiate sleep again, producing a "
         "normal daily sleep-wake cycle across rest periods.",
         style_body
     ))
     story.append(Paragraph("5.2  Sleep Termination", style_h2))
     story.append(Paragraph(
-        "The worker wakes when sleep pressure has cleared sufficiently, or when the circadian clock "
-        "enters a strong alerting phase (natural morning waking), or when the next shift is approaching. "
-        "No fixed sleep window is assumed \u2014 sleep timing adapts naturally to the schedule.",
+        "Sleep terminates when any of the following conditions is met: sleep pressure has cleared "
+        "below a threshold value, the circadian clock enters a strong alerting phase (natural "
+        "morning waking), or the next shift is approaching. No fixed sleep window is assumed; "
+        "sleep timing adapts to the schedule.",
         style_body
     ))
     story.append(Paragraph(
         "Night shift workers are predicted to sleep during the day because their sleep pressure is "
         "high after the night shift. Predicted sleep duration under normal conditions falls in the "
-        "6\u20138 hour range. When off-time is shortened, predicted sleep is truncated accordingly.",
+        "6\u20138 hour range, consistent with published polysomnographic data for shift workers. When "
+        "off-time is shortened, predicted sleep is truncated accordingly.",
         style_body
     ))
 
@@ -399,22 +421,30 @@ def build_document():
     # ═══════════════════════════════════════
     story.append(Paragraph("6. Sleep Debt", style_h1))
     story.append(Paragraph(
-        "When predicted sleep falls below 6 hours and the gap between shifts is short (under 16 "
-        "hours), the shortfall accumulates as sleep debt. Each hour of debt adds <b>2 points</b> "
-        "to the Fatigue Score.",
+        "Process S captures within-shift fatigue accumulation. Sleep debt captures the "
+        "<b>between-shift</b> effect: when consecutive rest periods are too short to fully restore "
+        "the worker, each shortfall compounds into the next shift.",
+        style_body
+    ))
+    story.append(Paragraph(
+        "When predicted sleep falls below 6 hours and the gap between shifts is under 16 hours, "
+        "the shortfall accumulates as sleep debt. Each hour of debt adds <b>2 points</b> "
+        "to the Fatigue Score (the <b>k = 2</b> multiplier in Section 4).",
         style_body
     ))
     story.append(Paragraph(
         "Sleep debt resets to zero when the worker achieves a full sleep period of <b>7 hours or "
-        "more</b>.",
+        "more</b>. This binary reset is a deliberate simplification: the model treats a single "
+        "full sleep as sufficient recovery from accumulated short-rest debt, consistent with the "
+        "model's role as a scheduling-level risk indicator rather than a clinical sleep tracker.",
         style_body
     ))
     story.append(Paragraph(
-        "This design is deliberate. Sleep debt is intended to capture the compounding effect of "
-        "consecutive short-rest shifts \u2014 not to penalise workers who are well-rested during long "
-        "recovery periods. A worker with several days off who sleeps less simply because they are "
-        "not tired does not accumulate debt. The 16-hour gap threshold ensures that only genuinely "
-        "compressed rest periods contribute to debt accumulation.",
+        "<b>Two-gate accumulation rule.</b> Both conditions (predicted sleep &lt; 6 hours <i>and</i> "
+        "shift gap &lt; 16 hours) must be satisfied for debt to accumulate. A worker with several "
+        "days off who sleeps less simply because they are not fatigued does not accumulate debt. "
+        "The 16-hour gap threshold ensures that only genuinely compressed rest periods contribute "
+        "to debt accumulation.",
         style_body
     ))
 
@@ -424,7 +454,20 @@ def build_document():
     story.append(Paragraph("7. Simulation Methodology", style_h1))
     story.append(Paragraph(
         "The model runs a continuous simulation at 15-minute resolution across every day in the "
-        "rotation \u2014 both worked days and days off.",
+        "rotation, including both worked days and days off.",
+        style_body
+    ))
+    story.append(Paragraph("<b>Initialization.</b> The simulation assumes the worker begins the rotation "
+        "in a fully rested state: sleep pressure is set to its post-sleep baseline (S = 0.1), sleep "
+        "debt is zero, and the circadian phase corresponds to 06:00 on the first day. This assumption "
+        "means the first shift block in the rotation is evaluated under favourable conditions; fatigue "
+        "effects attributable to the rotation itself emerge from the second shift onward.",
+        style_body
+    ))
+    story.append(Paragraph("<b>Boundary conditions.</b> All state variables (sleep pressure, circadian "
+        "phase, sleep debt) are carried forward continuously from one time step to the next. There "
+        "are no resets at shift boundaries, day boundaries, or between worked and off-duty periods. "
+        "The simulation terminates at the end of the last scheduled day in the rotation.",
         style_body
     ))
     story.append(Paragraph("<b>Time Grid Specification:</b>", style_body))
@@ -510,9 +553,19 @@ def build_document():
     # ═══════════════════════════════════════
     story.append(Paragraph("9. Risk Classification Framework", style_h1))
     story.append(Paragraph(
-        "Fatigue Scores are mapped to four operational risk categories. These thresholds have been "
-        "calibrated against real-world shift schedules to produce meaningful, actionable classifications "
+        "Fatigue Scores are mapped to four risk categories. These thresholds have been "
+        "calibrated against real-world shift schedules to produce actionable classifications "
         "(see Section 10 for calibration rationale).",
+        style_body
+    ))
+    story.append(Paragraph(
+        "<b>Interpretation guidance.</b> Risk classifications describe the modelled physiological "
+        "state of a representative worker at a given point in the rotation. They are not compliance "
+        "determinations, safety guarantees, or predictions of individual worker performance. A "
+        "\"Low\" classification does not certify a schedule as safe; a \"Critical\" classification "
+        "does not constitute a finding of regulatory non-compliance. Classifications are intended "
+        "to support scheduling review by identifying where the schedule creates conditions "
+        "associated with elevated fatigue exposure.",
         style_body
     ))
     story.append(Spacer(1, 6))
@@ -520,18 +573,19 @@ def build_document():
     table_data = [
         ["Score Range", "Classification", "Description"],
         ["0 \u2013 44", "Low",
-         "Worker is operating within normal physiological parameters for a standard shift. "
-         "No intervention indicated."],
+         "Fatigue score is within the range expected for a standard day shift with adequate "
+         "prior rest. No schedule-level concern indicated."],
         ["45 \u2013 59", "Moderate",
-         "Elevated fatigue. Typical of evening shifts and consecutive day shifts with mildly "
-         "shortened sleep. Performance may be subtly degraded."],
+         "Fatigue score is elevated above baseline. Commonly observed during evening shifts "
+         "and consecutive day shifts where rest periods are mildly shortened."],
         ["60 \u2013 74", "High",
-         "Significant fatigue. Typical of night shifts, where the circadian trough compounds "
-         "sleep pressure. Meaningful degradation in reaction time and decision-making expected."],
+         "Fatigue score reflects compounding sleep pressure and circadian effects. Commonly "
+         "observed during night shift blocks where the circadian trough overlaps with accumulated "
+         "wakefulness."],
         ["75 \u2013 100", "Critical",
-         "Severe fatigue. Occurs with extended wakefulness, deep circadian trough, and compounding "
-         "sleep debt. Performance impairment comparable to levels documented in occupational health "
-         "fatigue literature. Immediate schedule review required."],
+         "Fatigue score is in the upper range of the model. Produced by extended wakefulness "
+         "combined with deep circadian trough and compounding sleep debt. Schedule review "
+         "is indicated."],
     ]
     col_widths = [1.0 * inch, 1.1 * inch, 4.3 * inch]
     t = Table(table_data, colWidths=col_widths, repeatRows=1)
@@ -576,65 +630,79 @@ def build_document():
     story.append(Paragraph("10. Calibration Notes", style_h1))
     story.append(Paragraph(
         "The Three-Process Model as published provides theoretical parameter values derived from "
-        "laboratory studies. Applying these parameters directly to real-world rotation schedules "
-        "produced classifications that did not align with observed operational reality. Rotation "
-        "Analytics calibrated two aspects of the model to produce meaningful, actionable results.",
+        "laboratory studies. These parameters govern the physiological processes (Sections 3\u20135) and "
+        "remain unchanged in the Rotation Analytics implementation. The calibration documented below "
+        "addresses two separate concerns: (1) the applicability of one model component to scheduled "
+        "rotations, and (2) the alignment of risk classification thresholds with the score "
+        "distributions produced by real-world schedules.",
         style_body
     ))
 
-    story.append(Paragraph("10.1  Sleep Inertia (Process W) \u2014 Zeroed", style_h2))
+    story.append(Paragraph("10.1  Sleep Inertia (Process W): Excluded", style_h2))
     story.append(Paragraph(
-        "The published model includes a sleep inertia component (Process W) that penalises the "
-        "worker for 20\u201360 minutes after waking. This process is relevant in on-call and emergency "
+        "The published model includes a sleep inertia component (Process W) that reduces modelled "
+        "alertness for 20\u201360 minutes after waking. This process is relevant in on-call and emergency "
         "response environments where personnel are woken mid-sleep and must perform immediately.",
         style_body
     ))
     story.append(Paragraph(
-        "Rotation Analytics analyses scheduled rotations \u2014 not on-call or interrupt-driven "
+        "Rotation Analytics analyses scheduled rotations, not on-call or interrupt-driven "
         "schedules. In a scheduled rotation, workers wake before their shift and have time to "
-        "clear sleep inertia before reporting. Including Process W would penalise the start of "
-        "every shift for a physiological state that has resolved by the time the worker is on duty.",
+        "clear sleep inertia before reporting. Including Process W would reduce modelled alertness "
+        "at the start of every shift for a transient physiological state that has resolved by the "
+        "time the worker is on duty. This does not reflect the scheduling context the model is "
+        "applied to.",
         style_body
     ))
     story.append(Paragraph(
-        "Accordingly, W\u2080 is set to 0 in the current implementation. If on-call or emergency "
-        "response schedules are analysed in the future, Process W can be activated with published "
-        "parameters.",
+        "Accordingly, W\u2080 is set to 0 in the current implementation. The published equations and "
+        "parameters are preserved in Section 3.3 and the Mathematical Appendix. If on-call or "
+        "emergency response schedules are analysed in the future, Process W can be activated with "
+        "published parameters without modifying the underlying model.",
         style_body
     ))
 
-    story.append(Paragraph("10.2  Risk Classification Thresholds \u2014 Calibrated", style_h2))
+    story.append(Paragraph("10.2  Risk Classification Thresholds: Adjusted", style_h2))
     story.append(Paragraph(
-        "The published model suggests risk thresholds at lower Fatigue Score values (approximately "
-        "0\u201329 Low, 30\u201349 Moderate, 50\u201369 High, 70\u2013100 Critical). When applied to real-world "
-        "healthcare rotation schedules, these thresholds classified the majority of standard shifts "
-        "as Moderate or High, including schedules that are well-established and operationally sound.",
+        "The published literature does not prescribe specific risk classification thresholds for "
+        "the Three-Process Model's composite output. The thresholds commonly cited in earlier "
+        "implementations (approximately 0\u201329 / 30\u201349 / 50\u201369 / 70\u2013100) were derived from "
+        "laboratory alertness data and do not account for the score distributions that the model "
+        "produces when applied to real-world multi-day rotation schedules.",
         style_body
     ))
     story.append(Paragraph(
-        "This overshoot occurs because laboratory-derived parameters do not fully account for the "
-        "adaptation that real workers achieve through consistent scheduling patterns. To produce "
-        "classifications that distinguish genuinely concerning schedules from standard shift work, "
-        "the thresholds were recalibrated against actual rotation data:",
+        "When these lower thresholds were applied to actual healthcare rotation schedules, the "
+        "majority of standard shifts classified as Moderate or High. This included schedule patterns "
+        "that are well-established across multiple healthcare employers. The thresholds were not "
+        "discriminating between schedule segments that differ meaningfully in fatigue exposure.",
+        style_body
+    ))
+    story.append(Paragraph(
+        "The classification thresholds were adjusted to align with the score distributions "
+        "observed across a reference set of real rotation schedules:",
         style_body
     ))
     story.append(bullet(
-        "Schedules known to be operationally acceptable were verified to classify as Low"
+        "<b>Low (0\u201344):</b> Encompasses the score range produced by standard day shifts with "
+        "adequate prior rest"
     ))
     story.append(bullet(
-        "Evening shifts and mildly compressed schedules were verified to classify as Moderate"
+        "<b>Moderate (45\u201359):</b> Captures the elevation observed during evening shifts and "
+        "consecutive day shifts with mildly shortened rest"
     ))
     story.append(bullet(
-        "Night shift blocks with circadian trough exposure were verified to classify as High"
+        "<b>High (60\u201374):</b> Corresponds to the compounding effects observed during night "
+        "shift blocks with circadian trough exposure"
     ))
     story.append(bullet(
-        "Only genuinely extreme schedules \u2014 extended wakefulness with compounding debt \u2014 "
-        "reach Critical"
+        "<b>Critical (75\u2013100):</b> Reserved for the upper score range, produced only by "
+        "extended wakefulness combined with deep circadian trough and compounding sleep debt"
     ))
     story.append(Paragraph(
-        "The recalibrated thresholds (0\u201344 / 45\u201359 / 60\u201374 / 75\u2013100) produce risk "
-        "classifications that align with operational experience and clinical expectation. This "
-        "calibration is what makes the analysis actionable rather than merely theoretical.",
+        "These adjusted thresholds produce classifications where each risk level corresponds to a "
+        "distinct scheduling pattern. The model equations and physiological parameters are unchanged; "
+        "only the interpretive boundaries applied to the composite score were adjusted.",
         style_body
     ))
 
@@ -642,33 +710,47 @@ def build_document():
     # 11. MODEL ASSUMPTIONS AND LIMITATIONS
     # ═══════════════════════════════════════
     story.append(Paragraph("11. Model Assumptions and Limitations", style_h1))
-    story.append(Paragraph("11.1  What the Engine Can Do", style_h2))
-    story.append(bullet("Predict fatigue levels for a representative worker based on a given schedule"))
-    story.append(bullet("Identify shifts and time windows that carry elevated physiological risk"))
-    story.append(bullet("Compare the fatigue profiles of different scheduling options objectively"))
-    story.append(bullet("Detect cumulative fatigue accumulation across a rotation that point-in-time rules miss"))
 
-    story.append(Paragraph("11.2  What the Engine Cannot Do", style_h2))
+    story.append(Paragraph("11.1  Intended Use", style_h2))
+    story.append(Paragraph(
+        "The fatigue analysis is a <b>schedule-level decision-support tool</b>. It is intended to "
+        "identify where a rotation creates conditions associated with elevated fatigue exposure, "
+        "enabling informed discussion about schedule design. It is not a diagnostic instrument, a "
+        "compliance determination, a safety certification, or a substitute for clinical assessment "
+        "of individual workers.",
+        style_body
+    ))
+
+    story.append(Paragraph("11.2  What the Model Can Do", style_h2))
+    story.append(bullet("Estimate fatigue levels for a representative worker based on a given schedule"))
+    story.append(bullet("Identify shifts and time windows associated with elevated physiological fatigue exposure"))
+    story.append(bullet("Compare the fatigue profiles of different scheduling options on a consistent basis"))
+    story.append(bullet("Detect cumulative fatigue accumulation across a rotation that point-in-time rules cannot identify"))
+
+    story.append(Paragraph("11.3  What the Model Cannot Do", style_h2))
     story.append(bullet("Account for individual differences in sleep need, chronotype, or health conditions"))
-    story.append(bullet("Measure actual fatigue \u2014 only predict it based on schedule inputs"))
+    story.append(bullet("Measure actual fatigue in a specific worker; it estimates fatigue from schedule inputs only"))
     story.append(bullet("Replace clinical or occupational health assessment for a specific individual"))
     story.append(bullet("Guarantee that a low-risk schedule will produce no fatigue-related incidents"))
 
-    story.append(Paragraph("11.3  Assumptions", style_h2))
+    story.append(Paragraph("11.4  Key Assumptions", style_h2))
     story.append(bullet(
-        "The model represents a <b>typical working-age adult</b>. Individual variation requires "
-        "individual data (actigraphy, sleep diaries) that is not available in a scheduling context."
+        "<b>Representative worker.</b> The model represents a healthy working-age adult with no "
+        "pre-existing sleep disorders. Individual variation requires individual data (actigraphy, "
+        "sleep diaries) that is not available in a scheduling context."
     ))
     story.append(bullet(
-        "The model assumes the worker follows the <b>scheduled shift pattern as provided</b>. It "
-        "does not account for overtime, shift swaps, or absences."
+        "<b>Schedule as provided.</b> The model assumes the worker follows the scheduled shift "
+        "pattern as submitted. It does not account for overtime, shift swaps, or absences."
     ))
     story.append(bullet(
-        "Results should be interpreted as <b>relative risk indicators</b>, not absolute performance "
-        "predictions."
+        "<b>Relative risk indicators.</b> Fatigue Scores are comparative indicators between "
+        "schedule segments and rotation lines. They are not absolute predictions of individual "
+        "worker performance or impairment."
     ))
     story.append(bullet(
-        "The analysis is informational and <b>does not constitute medical, safety, or legal advice</b>."
+        "<b>Informational only.</b> The analysis does not constitute medical, safety, or legal "
+        "advice. It is provided as decision-support information for scheduling review."
     ))
 
     # ═══════════════════════════════════════
