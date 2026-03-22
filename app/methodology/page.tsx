@@ -7,7 +7,7 @@ import { AnalysisFlow } from '@/components/AnalysisFlow'
 export const metadata: Metadata = {
   title: 'Methodology',
   description:
-    'How Rotation Analytics Inc applies structured analytical methodology to identify fatigue risk, agreement compliance exposure, and rotation design vulnerabilities across shift-based scheduling environments.',
+    'How Rotation Analytics examines rotation schedules, classifies compliance and fatigue risk, and delivers independent findings for client review.',
 }
 
 const examineItems = [
@@ -43,33 +43,6 @@ const examineItems = [
   },
 ]
 
-const riskLevels = [
-  {
-    level: 'High',
-    leftBorder: 'border-l-4 border-l-red-400',
-    bg: 'bg-red-50',
-    badge: 'bg-red-100 text-red-700',
-    description:
-      'Immediate basis for grievance proceedings, regulatory non-compliance, or documented occupational health risk. Prompt review warranted.',
-  },
-  {
-    level: 'Moderate',
-    leftBorder: 'border-l-4 border-l-amber-400',
-    bg: 'bg-amber-50',
-    badge: 'bg-amber-100 text-amber-700',
-    description:
-      'Elevated exposure warranting attention and monitoring. May not yet constitute a grievable violation, but formal documentation is appropriate.',
-  },
-  {
-    level: 'Low',
-    leftBorder: 'border-l-4 border-l-green-400',
-    bg: 'bg-green-50',
-    badge: 'bg-green-100 text-green-700',
-    description:
-      'Parameters met. Documented for completeness and ongoing record.',
-  },
-]
-
 const referencePoints = [
   'Provincial Labour Standards legislation',
   'Applicable collective agreement scheduling provisions',
@@ -87,7 +60,7 @@ export default function Methodology() {
 
       <Section
         title="What We Examine"
-        subtitle="Each rotation analysis reviews the following dimensions of the schedule."
+        subtitle="Each compliance analysis reviews the following dimensions of the schedule."
         divider
       >
         <div className="divide-y divide-slate-100">
@@ -116,30 +89,115 @@ export default function Methodology() {
         </p>
       </Section>
 
-      <Section
-        title="Risk Classification"
-        subtitle="Compliance findings are classified into three levels to guide client prioritisation."
-        className="bg-brand-cream"
-        divider
-      >
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {riskLevels.map((r) => (
-            <div key={r.level} className={`rounded-lg ${r.leftBorder} ${r.bg} p-5`}>
-              <span className={`inline-block text-xs font-semibold px-2.5 py-1 rounded mb-4 ${r.badge}`}>
-                {r.level} Risk
-              </span>
-              <p className="text-sm text-slate-700 leading-relaxed">{r.description}</p>
+      {/* Two Dimensions of Risk */}
+      <Section className="bg-brand-cream" divider>
+        <div className="max-w-4xl">
+          <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-5">
+            Risk Classification
+          </p>
+          <h2 className="text-2xl md:text-3xl font-bold text-slate-900 tracking-tight mb-3">
+            Two dimensions of scheduling risk. Each with its own classification system.
+          </h2>
+          <p className="text-base text-slate-500 leading-relaxed mb-10 max-w-3xl">
+            Compliance analysis and fatigue analysis evaluate different aspects of the schedule and use different risk scales. When both are elected, findings from each appear in their respective reports and combine to form the complete rotation risk profile.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* Compliance */}
+            <div className="bg-white border border-slate-200 rounded-lg p-6">
+              <p className="text-xs font-semibold text-brand-navy uppercase tracking-widest mb-4">
+                Compliance Risk
+              </p>
+              <p className="text-sm text-slate-600 leading-relaxed mb-5">
+                Evaluates the schedule against collective agreement provisions, employment standards, and regulatory requirements. Included in every engagement.
+              </p>
+              <div className="space-y-2">
+                {[
+                  { level: 'High', color: 'bg-red-100 text-red-700', desc: 'Immediate grievance basis or regulatory non-compliance.' },
+                  { level: 'Moderate', color: 'bg-amber-100 text-amber-700', desc: 'Elevated exposure warranting attention and monitoring.' },
+                  { level: 'Low', color: 'bg-green-100 text-green-700', desc: 'Parameters met. Documented for completeness.' },
+                ].map((r) => (
+                  <div key={r.level} className="flex items-start gap-3">
+                    <span className={`inline-block text-xs font-semibold px-2 py-0.5 rounded flex-shrink-0 ${r.color}`}>
+                      {r.level}
+                    </span>
+                    <p className="text-xs text-slate-500 leading-relaxed">{r.desc}</p>
+                  </div>
+                ))}
+              </div>
             </div>
-          ))}
+
+            {/* Fatigue */}
+            <div className="bg-white border border-slate-200 rounded-lg p-6">
+              <p className="text-xs font-semibold text-brand-navy uppercase tracking-widest mb-4">
+                Fatigue Risk
+              </p>
+              <p className="text-sm text-slate-600 leading-relaxed mb-5">
+                Models physiological fatigue across the full rotation using a biomathematical model. Available as an add-on when elected at submission.
+              </p>
+              <div className="space-y-2">
+                {[
+                  { level: 'Low', range: '0–44', color: 'bg-green-100 text-green-700', desc: 'Normal physiological parameters.' },
+                  { level: 'Moderate', range: '45–59', color: 'bg-amber-100 text-amber-700', desc: 'Elevated fatigue. Performance may be subtly degraded.' },
+                  { level: 'High', range: '60–74', color: 'bg-red-100 text-red-700', desc: 'Significant fatigue. Meaningful performance impairment.' },
+                  { level: 'Critical', range: '75–100', color: 'bg-red-200 text-red-800', desc: 'Severe fatigue. Immediate schedule review required.' },
+                ].map((r) => (
+                  <div key={r.level} className="flex items-start gap-3">
+                    <span className={`inline-block text-xs font-semibold px-2 py-0.5 rounded flex-shrink-0 ${r.color}`}>
+                      {r.level}
+                    </span>
+                    <p className="text-xs text-slate-500 leading-relaxed">{r.desc}</p>
+                  </div>
+                ))}
+              </div>
+              <Link
+                href="/fatigue-analysis"
+                className="text-xs font-medium text-brand-navy hover:underline mt-4 inline-block"
+              >
+                Full fatigue methodology &rarr;
+              </Link>
+            </div>
+          </div>
         </div>
-        <p className="text-xs text-slate-500 leading-relaxed mt-6 max-w-3xl">
-          Compliance risk uses three classification levels (High, Moderate, Low) based on collective agreement obligations and regulatory requirements. Fatigue risk uses four levels (Low, Moderate, High, Critical) based on biomathematical fatigue modelling. When both analyses are elected, findings from each appear in their respective reports and combine to form the complete rotation risk profile.
-        </p>
+      </Section>
+
+      {/* Fatigue Risk Analysis Add-on */}
+      <Section divider>
+        <div className="max-w-4xl">
+          <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-5">
+            Fatigue Risk Analysis
+          </p>
+          <h2 className="text-2xl md:text-3xl font-bold text-slate-900 tracking-tight mb-3">
+            A schedule can be fully compliant and still produce a fatigued worker.
+          </h2>
+          <p className="text-base text-slate-500 leading-relaxed mb-8 max-w-3xl">
+            Compliance analysis identifies what the schedule violates. Fatigue analysis identifies what the schedule does to the worker. The fatigue engine runs a biomathematical model continuously across every day of the rotation — including days off — to produce a fatigue score for every line.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
+            {[
+              { label: 'Science-Based', detail: 'Built on the Three-Process Model (Åkerstedt & Folkard), the most widely validated fatigue model in occupational health literature.' },
+              { label: 'Full Rotation Coverage', detail: 'Simulates physiology through every day — worked and off — so recovery and compounding effects are accurately captured.' },
+              { label: 'Per-Line Scoring', detail: 'Every rotation line receives a fatigue score, risk classification, and trend visualisation across the full cycle.' },
+            ].map((item) => (
+              <div key={item.label} className="bg-brand-cream border border-slate-200 rounded-lg p-5">
+                <p className="text-sm font-semibold text-slate-900 mb-2">{item.label}</p>
+                <p className="text-xs text-slate-500 leading-relaxed">{item.detail}</p>
+              </div>
+            ))}
+          </div>
+          <Link
+            href="/fatigue-analysis"
+            className="text-sm font-medium text-brand-navy hover:text-brand-navy-dark transition-colors"
+          >
+            Read the full Fatigue Risk Analysis methodology &rarr;
+          </Link>
+        </div>
       </Section>
 
       <Section
         title="Regulatory Reference Points"
         subtitle="Each analysis references the applicable frameworks for its jurisdiction and collective agreement."
+        className="bg-brand-cream"
         divider
       >
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-3xl">
@@ -153,7 +211,7 @@ export default function Methodology() {
       </Section>
 
       {/* See the Methodology Applied */}
-      <Section className="bg-brand-cream" divider>
+      <Section divider>
         <div className="mb-8">
           <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-5">
             See the Methodology Applied
@@ -166,7 +224,7 @@ export default function Methodology() {
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl">
-          <Link href="/example-rotation" className="group border border-slate-200 bg-white rounded-lg p-8 hover:border-brand-navy/30 transition-colors">
+          <Link href="/example-rotation" className="group border border-slate-200 rounded-lg p-8 hover:border-brand-navy/30 transition-colors">
             <p className="text-2xl font-bold text-slate-200 mb-4">01</p>
             <h3 className="text-base font-bold text-slate-900 mb-3 group-hover:text-brand-navy transition-colors">
               Example Rotation
@@ -176,7 +234,7 @@ export default function Methodology() {
             </p>
             <span className="text-sm font-medium text-brand-navy">View the rotation &rarr;</span>
           </Link>
-          <Link href="/sample-report" className="group border border-slate-200 bg-white rounded-lg p-8 hover:border-brand-navy/30 transition-colors">
+          <Link href="/sample-report" className="group border border-slate-200 rounded-lg p-8 hover:border-brand-navy/30 transition-colors">
             <p className="text-2xl font-bold text-slate-200 mb-4">02</p>
             <h3 className="text-base font-bold text-slate-900 mb-3 group-hover:text-brand-navy transition-colors">
               Sample Report
