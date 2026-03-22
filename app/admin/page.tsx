@@ -16,6 +16,8 @@ interface EngagementRow {
   invoice_amount: number | null
   payment_confirmed_at: string | null
   status_token: string
+  fatigue_analysis: boolean
+  work_order_number: string | null
 }
 
 const STATUS_COLORS: Partial<Record<EngagementStatus, string>> = {
@@ -144,7 +146,10 @@ export default function AdminDashboard() {
                     <td className="px-4 py-3 text-xs text-slate-500 whitespace-nowrap">
                       {new Date(e.created_at).toLocaleDateString('en-CA')}
                     </td>
-                    <td className="px-4 py-3 font-medium text-slate-800">{e.org_name}</td>
+                    <td className="px-4 py-3">
+                      <div className="font-medium text-slate-800">{e.org_name}</div>
+                      {e.work_order_number && <div className="text-xs text-slate-400 font-mono">{e.work_order_number}</div>}
+                    </td>
                     <td className="px-4 py-3 text-slate-600">
                       <div>{e.contact_name}</div>
                       <div className="text-xs text-slate-400">{e.email}</div>
@@ -153,6 +158,11 @@ export default function AdminDashboard() {
                       <span className={`inline-flex px-2 py-0.5 rounded-full text-xs font-semibold ${STATUS_COLORS[e.status] ?? 'bg-slate-100 text-slate-600'}`}>
                         {STATUS_LABELS[e.status]}
                       </span>
+                      {e.fatigue_analysis && (
+                        <span className="ml-1.5 inline-flex px-1.5 py-0.5 rounded text-xs font-medium bg-blue-50 text-blue-600" title="Fatigue Analysis Elected">
+                          FA
+                        </span>
+                      )}
                     </td>
                     <td className="px-4 py-3 text-xs text-slate-500">
                       {e.invoice_number ? `${e.invoice_number} — $${Number(e.invoice_amount).toFixed(2)}` : '—'}

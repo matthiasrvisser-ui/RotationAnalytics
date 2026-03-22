@@ -421,6 +421,19 @@ export default function EngagementDetail() {
             <div className="bg-white border border-slate-200 rounded-lg p-5">
               <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-3">Submission</p>
               <dl className="space-y-2 text-sm">
+                {engagement.work_order_number && (
+                  <div><dt className="text-xs text-slate-400">Work Order</dt><dd className="font-mono font-semibold text-slate-800">{engagement.work_order_number}</dd></div>
+                )}
+                <div>
+                  <dt className="text-xs text-slate-400">Analysis Type</dt>
+                  <dd>
+                    {engagement.fatigue_analysis ? (
+                      <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-semibold bg-green-100 text-green-700">Fatigue Analysis Elected</span>
+                    ) : (
+                      <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-semibold bg-slate-100 text-slate-600">Compliance Only</span>
+                    )}
+                  </dd>
+                </div>
                 <div><dt className="text-xs text-slate-400">Agreement Signed</dt><dd>{new Date(engagement.agreement_signed_at).toLocaleDateString('en-CA')}</dd></div>
                 <div><dt className="text-xs text-slate-400">Agreement Version</dt><dd>{engagement.agreement_version}</dd></div>
                 <div><dt className="text-xs text-slate-400">Collective Agreement</dt><dd>{engagement.collective_agreement}</dd></div>

@@ -570,24 +570,28 @@ def build_document():
     ))
     story.append(Spacer(1, 6))
 
+    style_table_cell = ParagraphStyle(
+        'TableCell', parent=style_body,
+        fontSize=9, leading=13, spaceAfter=0, spaceBefore=0, alignment=TA_LEFT
+    )
     table_data = [
         ["Score Range", "Classification", "Description"],
         ["0 \u2013 44", "Low",
-         "Fatigue score is within the range expected for a standard day shift with adequate "
-         "prior rest. No schedule-level concern indicated."],
+         Paragraph("Fatigue score is within the range expected for a standard day shift with adequate "
+         "prior rest. No schedule-level concern indicated.", style_table_cell)],
         ["45 \u2013 59", "Moderate",
-         "Fatigue score is elevated above baseline. Commonly observed during evening shifts "
-         "and consecutive day shifts where rest periods are mildly shortened."],
+         Paragraph("Fatigue score is elevated above baseline. Commonly observed during evening shifts "
+         "and consecutive day shifts where rest periods are mildly shortened.", style_table_cell)],
         ["60 \u2013 74", "High",
-         "Fatigue score reflects compounding sleep pressure and circadian effects. Commonly "
+         Paragraph("Fatigue score reflects compounding sleep pressure and circadian effects. Commonly "
          "observed during night shift blocks where the circadian trough overlaps with accumulated "
-         "wakefulness."],
+         "wakefulness.", style_table_cell)],
         ["75 \u2013 100", "Critical",
-         "Fatigue score is in the upper range of the model. Produced by extended wakefulness "
+         Paragraph("Fatigue score is in the upper range of the model. Produced by extended wakefulness "
          "combined with deep circadian trough and compounding sleep debt. Schedule review "
-         "is indicated."],
+         "is indicated.", style_table_cell)],
     ]
-    col_widths = [1.0 * inch, 1.1 * inch, 4.3 * inch]
+    col_widths = [0.9 * inch, 1.1 * inch, 4.4 * inch]
     t = Table(table_data, colWidths=col_widths, repeatRows=1)
     t.setStyle(TableStyle([
         ('FONTNAME', (0, 0), (-1, 0), 'Helvetica-Bold'),

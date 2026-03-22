@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation'
 import { supabaseAdmin } from '@/lib/supabase'
 import { Section } from '@/components/Section'
 import { MessageThread } from '@/components/MessageThread'
+import { DocumentUpload } from '@/components/DocumentUpload'
 import { STATUS_LABELS, STATUS_ORDER, type EngagementStatus, type Message } from '@/lib/types'
 
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL ?? 'https://rotationanalytics.ca'
@@ -171,6 +172,10 @@ export default async function StatusPage({ params }: { params: { token: string }
                 </div>
               </dl>
             </div>
+
+            {['submission_complete', 'in_analysis', 'invoice_issued', 'awaiting_payment'].includes(engagement.status) && (
+              <DocumentUpload token={params.token} />
+            )}
 
             <div className="bg-white border border-slate-200 rounded-lg p-5">
               <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-2">Enquiries</p>

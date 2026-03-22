@@ -91,8 +91,13 @@ export default function About() {
                   <p className="text-xs text-slate-500">Founder &amp; CEO</p>
                 </div>
               </div>
+              <p className="text-sm text-slate-600 leading-relaxed mb-3">
+                Matthias is an operational leader and business owner who founded{' '}
+                <a href="https://www.frontierhsa.ca" target="_blank" rel="noopener noreferrer" className="text-brand-navy font-medium hover:underline">Frontier HSA</a>,
+                a Health Spending Account provider serving Canadian small businesses. That experience building compliant, regulated financial products from the ground up shaped how he approaches new ventures: get the infrastructure right, document everything, and let the work speak for itself.
+              </p>
               <p className="text-sm text-slate-600 leading-relaxed">
-                Business owner and entrepreneur responsible for the commercial operations, strategic direction, and client engagement behind Rotation Analytics Inc. Matthias brings the operational and business infrastructure that enables the firm to deliver independent analysis at scale.
+                He married Kristy in 2025, and together they built Rotation Analytics Inc. Matthias is responsible for the commercial operations, strategic direction, and client engagement that enable the firm to deliver independent analysis at scale.
               </p>
             </div>
           </div>

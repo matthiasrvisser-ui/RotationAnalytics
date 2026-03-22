@@ -177,9 +177,9 @@ export default function GettingStartedPage() {
       {/* ── ENTERPRISE ── */}
       <Section contained className="bg-brand-cream">
         <div className="max-w-4xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             {/* Pilot */}
-            <div>
+            <div className="flex flex-col">
               <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-5">
                 Start with a Pilot
               </p>
@@ -189,7 +189,7 @@ export default function GettingStartedPage() {
               <p className="text-sm text-slate-500 leading-relaxed mb-6">
                 Submit a rotation you already know well. Compare the findings against your own understanding of the schedule. If the analysis identifies issues you were already aware of, and reveals issues you were not, you have your answer.
               </p>
-              <div className="space-y-3">
+              <div className="space-y-3 flex-1">
                 {pilotBenefits.map((benefit) => (
                   <div key={benefit.title} className="bg-white border border-slate-200 rounded-lg p-4">
                     <h3 className="text-sm font-semibold text-brand-navy mb-1">{benefit.title}</h3>
@@ -200,7 +200,7 @@ export default function GettingStartedPage() {
             </div>
 
             {/* Enterprise */}
-            <div>
+            <div className="flex flex-col">
               <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-5">
                 Enterprise &amp; Integrated Engagements
               </p>
@@ -210,7 +210,7 @@ export default function GettingStartedPage() {
               <p className="text-sm text-slate-500 leading-relaxed mb-6">
                 For organizations with multiple rotations, recurring analysis needs, or complex scheduling environments, we offer integrated engagement structures tailored to volume and scope.
               </p>
-              <div className="space-y-3">
+              <div className="space-y-3 flex-1">
                 <div className="bg-white border border-slate-200 rounded-lg p-4">
                   <h3 className="text-sm font-semibold text-brand-navy mb-1">Scoping Conversation</h3>
                   <p className="text-xs text-slate-500 leading-relaxed">We discuss your scheduling environment, the collective agreements in scope, volume, and what you are looking to achieve.</p>

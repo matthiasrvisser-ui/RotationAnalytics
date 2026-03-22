@@ -27,6 +27,7 @@ export interface Engagement {
   local_conditions: string | null
   notes: string | null
   rotation_file_path: string | null
+  fatigue_analysis: boolean
   // Deliverable
   deliverable_path: string | null
   deliverable_token: string | null

@@ -17,6 +17,7 @@ export async function POST(req: NextRequest) {
     const localConditions = (formData.get('local_conditions') as string) || null
     const notes = (formData.get('notes') as string) || null
     const agreementAccepted = formData.get('agreement_accepted') === 'true'
+    const fatigueAnalysis = formData.get('fatigue_analysis') === 'true'
 
     if (!orgName || !contactName || !email || !collectiveAgreement || !agreementAccepted) {
       return NextResponse.json({ error: 'Missing required fields' }, { status: 400 })
@@ -33,6 +34,7 @@ export async function POST(req: NextRequest) {
         collective_agreement: collectiveAgreement,
         local_conditions: localConditions,
         notes,
+        fatigue_analysis: fatigueAnalysis,
         agreement_version: AGREEMENT_VERSION,
         agreement_signed_at: new Date().toISOString(),
         agreement_ip: req.headers.get('x-forwarded-for') ?? req.headers.get('x-real-ip'),

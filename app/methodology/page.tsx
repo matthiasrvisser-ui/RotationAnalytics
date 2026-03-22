@@ -84,7 +84,7 @@ export default function Methodology() {
         <p className="text-sm text-slate-500 leading-relaxed mb-4 max-w-3xl">
           Each analysis references the applicable frameworks for its jurisdiction and collective agreement.
         </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-3xl">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 max-w-4xl">
           {referencePoints.map((item, i) => (
             <div key={i} className="flex items-start gap-3 bg-slate-50 border border-slate-200 rounded-lg p-3">
               <div className="w-1.5 h-1.5 rounded-full bg-brand-navy mt-1.5 flex-shrink-0" />
