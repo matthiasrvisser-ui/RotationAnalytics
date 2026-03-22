@@ -95,7 +95,10 @@ export async function PATCH(
     .update(updates)
     .eq('id', params.id)
 
-  if (updateError) return NextResponse.json({ error: updateError.message }, { status: 500 })
+  if (updateError) {
+    console.error('Engagement update error:', updateError)
+    return NextResponse.json({ error: updateError.message }, { status: 500 })
+  }
 
   // Audit log
   await supabaseAdmin.from('audit_log').insert({
@@ -104,6 +107,52 @@ export async function PATCH(
     actor: 'admin',
     metadata: { previous_status: engagement.status, ...updates },
   })
+
+  return NextResponse.json({ success: true })
+}
+
+export async function DELETE(
+  req: NextRequest,
+  { params }: { params: { id: string } }
+) {
+  if (!isAuthorized(req)) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+
+  const { data: engagement } = await supabaseAdmin
+    .from('engagements')
+    .select('id, rotation_file_path, deliverable_path')
+    .eq('id', params.id)
+    .single()
+
+  if (!engagement) return NextResponse.json({ error: 'Not found' }, { status: 404 })
+
+  // Clean up storage files
+  if (engagement.rotation_file_path) {
+    await supabaseAdmin.storage.from('rotations').remove([engagement.rotation_file_path])
+  }
+  if (engagement.deliverable_path) {
+    await supabaseAdmin.storage.from('deliverables').remove([engagement.deliverable_path])
+  }
+
+  // Clean up supporting documents storage
+  const { data: docs } = await supabaseAdmin
+    .from('supporting_documents')
+    .select('file_path')
+    .eq('engagement_id', params.id)
+
+  if (docs?.length) {
+    await supabaseAdmin.storage.from('supporting-documents').remove(docs.map(d => d.file_path))
+  }
+
+  // Delete engagement (cascades to messages, supporting_documents, audit_log)
+  const { error } = await supabaseAdmin
+    .from('engagements')
+    .delete()
+    .eq('id', params.id)
+
+  if (error) {
+    console.error('Delete engagement error:', error)
+    return NextResponse.json({ error: error.message }, { status: 500 })
+  }
 
   return NextResponse.json({ success: true })
 }

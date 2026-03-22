@@ -18,7 +18,14 @@ export function getSupabaseAdmin() {
     _supabaseAdmin = createClient(
       process.env.NEXT_PUBLIC_SUPABASE_URL!,
       process.env.SUPABASE_SERVICE_ROLE_KEY!,
-      { auth: { autoRefreshToken: false, persistSession: false } }
+      {
+        auth: { autoRefreshToken: false, persistSession: false },
+        global: {
+          // Bypass Next.js fetch cache so server-component queries always hit the DB
+          fetch: (url: RequestInfo | URL, options?: RequestInit) =>
+            fetch(url, { ...options, cache: 'no-store' }),
+        },
+      }
     )
   }
   return _supabaseAdmin
