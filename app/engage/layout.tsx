@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description:
     'Start your rotation analysis engagement with Rotation Analytics Inc. Review and accept the service agreement, then submit your rotation files for independent analysis.',
   openGraph: {
-    title: 'Begin Engagement | Rotation Analytics',
+    title: 'Begin Engagement | Rotation Analytics Inc',
     description:
       'Start your independent rotation schedule analysis engagement with Rotation Analytics Inc.',
   },

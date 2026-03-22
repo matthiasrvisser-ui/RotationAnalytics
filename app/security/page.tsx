@@ -6,7 +6,7 @@ import { Section } from '@/components/Section'
 export const metadata: Metadata = {
   title: 'Information Security',
   description:
-    'How Rotation Analytics protects client data — infrastructure security, encryption, access controls, data residency, retention, and breach notification procedures.',
+    'How Rotation Analytics Inc protects client data — infrastructure security, encryption, access controls, data residency, retention, and breach notification procedures.',
 }
 
 const infrastructure = [
@@ -48,11 +48,11 @@ const policies = [
   },
   {
     title: 'Data Minimisation',
-    body: 'Rotation Analytics collects only the information necessary to perform the commissioned analysis. We do not collect employee names, personal identifiers, or health information. Rotation data is processed in aggregate by line number. We do not use client data for any purpose beyond the scope defined in the service agreement.',
+    body: 'Rotation Analytics Inc collects only the information necessary to perform the commissioned analysis. We do not collect employee names, personal identifiers, or health information. Rotation data is processed in aggregate by line number. We do not use client data for any purpose beyond the scope defined in the service agreement.',
   },
   {
     title: 'Third-Party Processors',
-    body: 'Rotation Analytics uses a limited number of third-party service providers to deliver its services. Each processor has been evaluated for security practices and data handling standards. A list of current sub-processors is available upon request.',
+    body: 'Rotation Analytics Inc uses a limited number of third-party service providers to deliver its services. Each processor has been evaluated for security practices and data handling standards. A list of current sub-processors is available upon request.',
   },
 ]
 
@@ -61,14 +61,14 @@ export default function SecurityPage() {
     <>
       <Hero
         headline="Information Security"
-        subheadline="How Rotation Analytics protects the confidentiality, integrity, and availability of client data throughout every engagement."
+        subheadline="How Rotation Analytics Inc protects the confidentiality, integrity, and availability of client data throughout every engagement."
       />
 
       {/* Overview */}
       <Section contained divider>
         <div className="max-w-3xl mx-auto">
           <p className="text-base text-slate-700 leading-relaxed mb-4">
-            Rotation Analytics handles sensitive operational scheduling data on behalf of our clients.
+            Rotation Analytics Inc handles sensitive operational scheduling data on behalf of our clients.
             We take this responsibility seriously. This page describes the technical and organisational
             measures we maintain to protect client data.
           </p>
@@ -136,7 +136,7 @@ export default function SecurityPage() {
             Breach Notification
           </h2>
           <p className="text-slate-700 leading-relaxed mb-4">
-            In the event of a data breach that poses a real risk of significant harm, Rotation Analytics will:
+            In the event of a data breach that poses a real risk of significant harm, Rotation Analytics Inc will:
           </p>
           <div className="space-y-3 mb-6">
             {[
@@ -204,7 +204,7 @@ export default function SecurityPage() {
             Regulatory Alignment
           </h2>
           <p className="text-slate-700 leading-relaxed mb-6">
-            Rotation Analytics operates in accordance with the following privacy and data protection frameworks:
+            Rotation Analytics Inc operates in accordance with the following privacy and data protection frameworks:
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {[
@@ -262,7 +262,7 @@ export default function SecurityPage() {
             </div>
           </div>
           <p className="text-xs text-slate-400 mt-6 leading-relaxed">
-            This page describes Rotation Analytics&rsquo; current security practices as of March 2026.
+            This page describes Rotation Analytics Inc&rsquo; current security practices as of March 2026.
             Security measures are reviewed and updated regularly. For the most current information,{' '}
             <Link href="/contact" className="text-brand-navy hover:underline">contact us</Link>.
             See also:{' '}

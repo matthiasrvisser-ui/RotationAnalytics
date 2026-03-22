@@ -79,11 +79,11 @@ export default function Home() {
         </div>
       </Section>
 
-      {/* Why Rotation Analytics */}
+      {/* Why Rotation Analytics Inc */}
       <Section className="bg-brand-cream" divider>
         <div className="max-w-4xl">
           <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-5">
-            Why Rotation Analytics
+            Why Rotation Analytics Inc
           </p>
           <h2 className="text-2xl md:text-3xl font-bold text-slate-900 tracking-tight mb-6">
             Manual review doesn&rsquo;t scale. Purpose-built analysis does.
@@ -92,7 +92,7 @@ export default function Home() {
             You know the reality: collective agreement scheduling provisions are extremely complex and difficult to decipher. Rotations span weeks. Manual review — no matter how experienced the reviewer — misses more as complexity increases.
           </p>
           <p className="text-base text-slate-600 leading-relaxed mb-10">
-            Rotation Analytics was built for exactly this problem.
+            Rotation Analytics Inc was built for exactly this problem.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-white border border-slate-200 rounded-lg p-6">

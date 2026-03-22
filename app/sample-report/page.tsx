@@ -6,7 +6,7 @@ import { Section } from '@/components/Section'
 export const metadata: Metadata = {
   title: 'Sample Report',
   description:
-    'A sample executive report demonstrating how Rotation Analytics documents rotation findings with risk classifications, agreement references, and independent analysis.',
+    'A sample executive report demonstrating how Rotation Analytics Inc documents rotation findings with risk classifications, agreement references, and independent analysis.',
 }
 
 const SITE = 'https://www.rotationanalytics.ca'
@@ -100,7 +100,7 @@ export default function SampleReport() {
             The report below was generated from the sample rotation available on the <Link href="/example-rotation" className="text-brand-navy font-medium hover:underline">Example Rotation</Link> page. That rotation appeared compliant during manual review. The analysis engine identified five areas where the schedule did not meet documented requirements — including insufficient rest periods, weekend off violations, and on-call scheduling concerns.
           </p>
           <p className="text-base text-slate-600 leading-relaxed">
-            This sample demonstrates the format, depth, and classification structure that every Rotation Analytics executive report follows.
+            This sample demonstrates the format, depth, and classification structure that every Rotation Analytics Inc executive report follows.
           </p>
         </div>
       </Section>

@@ -76,7 +76,7 @@ export default function EngagePage() {
       <>
         <Hero
           headline="Begin Your Engagement"
-          subheadline="Review and accept the service agreement to begin. Once accepted, submit your rotation data — Rotation Analytics will verify completeness, issue an invoice, and deliver your analysis upon confirmed payment."
+          subheadline="Review and accept the service agreement to begin. Once accepted, submit your rotation data — Rotation Analytics Inc will verify completeness, issue an invoice, and deliver your analysis upon confirmed payment."
         />
 
         <Section divider>
@@ -104,38 +104,38 @@ export default function EngagePage() {
             <div className="border border-slate-200 rounded-lg bg-white overflow-hidden mb-6">
               <div className="h-96 overflow-y-auto p-6 text-sm text-slate-700 leading-relaxed space-y-4">
 
-                <p className="text-xs text-slate-500 font-semibold uppercase tracking-wide">Service Agreement — Rotation Analytics, a division of Visser Ventures Corp.</p>
+                <p className="text-xs text-slate-500 font-semibold uppercase tracking-wide">Service Agreement — Rotation Analytics Inc, a division of Visser Ventures Corp.</p>
 
-                <p><strong>This Service Agreement</strong> is entered into as of the date of electronic acceptance between <strong>Visser Ventures Corp.</strong>, a corporation incorporated under the laws of the Province of Alberta, operating under the trade name <strong>Rotation Analytics</strong> ("Rotation Analytics" or the "Provider"), and the Client identified below.</p>
+                <p><strong>This Service Agreement</strong> is entered into as of the date of electronic acceptance between <strong>Visser Ventures Corp.</strong>, a corporation incorporated under the laws of the Province of Alberta, operating under the trade name <strong>Rotation Analytics Inc</strong> ("Rotation Analytics Inc" or the "Provider"), and the Client identified below.</p>
 
                 <p className="font-semibold">1. Services</p>
-                <p>Rotation Analytics performs independent rotational risk analysis of workforce rotation schedules provided by the Client. Analytical Services include risk analysis against collective agreement provisions, extended work agreements, employment standards legislation, occupational health and safety standards, and fatigue science principles including biomathematical modelling. Findings constitute independent risk analysis and identify and classify rotational risk. Findings are not determinations of compliance, safety, legality, or obligation. Rotation Analytics does not provide legal, engineering, safety certification, regulatory, medical, or professional advisory services.</p>
+                <p>Rotation Analytics Inc performs independent rotational risk analysis of workforce rotation schedules provided by the Client. Analytical Services include risk analysis against collective agreement provisions, extended work agreements, employment standards legislation, occupational health and safety standards, and fatigue science principles including biomathematical modelling. Findings constitute independent risk analysis and identify and classify rotational risk. Findings are not determinations of compliance, safety, legality, or obligation. Rotation Analytics Inc does not provide legal, engineering, safety certification, regulatory, medical, or professional advisory services.</p>
 
                 <p className="font-semibold">2. Engagement Commencement &amp; Models</p>
-                <p>An Engagement begins only upon: (a) execution of this Agreement by electronic acceptance; (b) receipt of complete submission materials; and (c) receipt of payment. Rotation Analytics will review submitted materials for completeness and may request clarification or additional information before proceeding. An invoice will not be issued until Rotation Analytics has confirmed that all applicable data has been received. Completeness of submission is determined solely by Rotation Analytics. Fees are calculated automatically based on the published rate schedule and the submitted rotation data.</p>
-                <p>Rotation Analytics offers both <strong>ad hoc</strong> and <strong>integrated</strong> engagement models. Ad hoc engagements provide single-rotation analysis on an as-needed basis. Integrated engagements provide recurring analytical support across rotation cycles, enabling trend identification, comparative risk assessment, and ongoing rotational risk monitoring. Rotation Analytics recommends integrated engagement for organizations seeking sustained oversight of rotational risk.</p>
+                <p>An Engagement begins only upon: (a) execution of this Agreement by electronic acceptance; (b) receipt of complete submission materials; and (c) receipt of payment. Rotation Analytics Inc will review submitted materials for completeness and may request clarification or additional information before proceeding. An invoice will not be issued until Rotation Analytics Inc has confirmed that all applicable data has been received. Completeness of submission is determined solely by Rotation Analytics Inc. Fees are calculated automatically based on the published rate schedule and the submitted rotation data.</p>
+                <p>Rotation Analytics Inc offers both <strong>ad hoc</strong> and <strong>integrated</strong> engagement models. Ad hoc engagements provide single-rotation analysis on an as-needed basis. Integrated engagements provide recurring analytical support across rotation cycles, enabling trend identification, comparative risk assessment, and ongoing rotational risk monitoring. Rotation Analytics Inc recommends integrated engagement for organizations seeking sustained oversight of rotational risk.</p>
                 <p>This Agreement remains in effect for a twelve (12) month term and automatically renews unless terminated in accordance with its terms. <strong>Once executed, the Client may submit additional rotations for analysis under this Agreement without re-execution.</strong> A copy of the executed Agreement will be provided to both Parties upon acceptance.</p>
 
                 <p className="font-semibold">3. Deliverables</p>
-                <p>Deliverables include an Annotated Rotation Schedule and an Executive Findings Report. <strong>Where Fatigue Risk Analysis is elected by the Client at the time of submission, Deliverables additionally include a Fatigue Risk Analysis Report</strong> documenting per-line fatigue scores, risk classifications, and trend visualisations across the full rotation cycle. Deliverables rely solely on information supplied by the Client. Rotation Analytics does not verify the accuracy or completeness of Client-provided materials. Deliverables are for internal decision-making only unless written consent is provided. Deliverables shall be deemed accepted unless the Client provides written notice of a material deficiency within ten (10) business days of delivery.</p>
+                <p>Deliverables include an Annotated Rotation Schedule and an Executive Findings Report. <strong>Where Fatigue Risk Analysis is elected by the Client at the time of submission, Deliverables additionally include a Fatigue Risk Analysis Report</strong> documenting per-line fatigue scores, risk classifications, and trend visualisations across the full rotation cycle. Deliverables rely solely on information supplied by the Client. Rotation Analytics Inc does not verify the accuracy or completeness of Client-provided materials. Deliverables are for internal decision-making only unless written consent is provided. Deliverables shall be deemed accepted unless the Client provides written notice of a material deficiency within ten (10) business days of delivery.</p>
 
                 <p className="font-semibold">4. Turnaround</p>
-                <p>Rotation Analytics targets delivery within <strong>48 hours</strong> of confirmed payment, with a maximum delivery window of <strong>72 hours (3 business days)</strong>. If Deliverables are not provided within 72 hours of confirmed payment, a <strong>10% fee reduction</strong> will be applied for each additional 24-hour period, up to a maximum reduction of <strong>30%</strong>, refunded to the Client. The turnaround period commences only upon confirmed payment and is subject to force majeure events beyond Rotation Analytics' reasonable control.</p>
+                <p>Rotation Analytics Inc targets delivery within <strong>48 hours</strong> of confirmed payment, with a maximum delivery window of <strong>72 hours (3 business days)</strong>. If Deliverables are not provided within 72 hours of confirmed payment, a <strong>10% fee reduction</strong> will be applied for each additional 24-hour period, up to a maximum reduction of <strong>30%</strong>, refunded to the Client. The turnaround period commences only upon confirmed payment and is subject to force majeure events beyond Rotation Analytics Inc' reasonable control.</p>
 
                 <p className="font-semibold">5. Fees and Payment</p>
-                <p>Analytical Services are billed on a <strong>per-shift basis</strong> at the published rates in effect at the time of submission. Compliance Analysis is billed at <strong>$0.35 CAD per shift analyzed</strong>, including regular and on-call shifts. Fatigue Risk Analysis, when elected, is billed at an additional <strong>$0.15 CAD per shift analyzed</strong> ($0.50 CAD per shift combined). A <strong>Designated Day Off (DDO) surcharge of $0.15 CAD per DDO shift</strong> applies where rotation schedules include designated days off requiring additional analytical review. A <strong>minimum engagement fee of $225.00 CAD</strong> applies to all engagements. By accepting this Agreement and submitting rotation data, the Client authorizes Rotation Analytics to calculate fees based on the confirmed submission data and issue an invoice upon verification of completeness. Fees are quoted in Canadian dollars and exclude applicable taxes. Invoices are payable within thirty (30) days. Analysis commences upon confirmed payment. <strong>Deliverables will not be released until payment is confirmed.</strong> Overdue amounts bear interest at 1.5% per month. Rotation Analytics may suspend services upon written notice if payment is overdue.</p>
+                <p>Analytical Services are billed on a <strong>per-shift basis</strong> at the published rates in effect at the time of submission. Compliance Analysis is billed at <strong>$0.35 CAD per shift analyzed</strong>, including regular and on-call shifts. Fatigue Risk Analysis, when elected, is billed at an additional <strong>$0.15 CAD per shift analyzed</strong> ($0.50 CAD per shift combined). A <strong>Designated Day Off (DDO) surcharge of $0.15 CAD per DDO shift</strong> applies where rotation schedules include designated days off requiring additional analytical review. A <strong>minimum engagement fee of $225.00 CAD</strong> applies to all engagements. By accepting this Agreement and submitting rotation data, the Client authorizes Rotation Analytics Inc to calculate fees based on the confirmed submission data and issue an invoice upon verification of completeness. Fees are quoted in Canadian dollars and exclude applicable taxes. Invoices are payable within thirty (30) days. Analysis commences upon confirmed payment. <strong>Deliverables will not be released until payment is confirmed.</strong></p>
 
                 <p className="font-semibold">6. Intellectual Property</p>
                 <p>All methodologies, tools, templates, and analytical frameworks remain the exclusive property of Visser Ventures Corp. Prior to payment, the Client holds no licence or usage rights in the Deliverables. Upon payment in full, the Client receives a non-exclusive, non-transferable licence for internal use only. The Client shall not attempt to derive, replicate, reverse engineer, or recreate the Methodology from Deliverables.</p>
 
                 <p className="font-semibold">7. Confidentiality</p>
-                <p>Each Party shall protect Confidential Information and not disclose it except as required by law or performance of obligations. Rotation Analytics will treat all submitted workforce data as Confidential Information. Confidentiality obligations survive termination for three (3) years. Each Party shall comply with applicable privacy legislation, including the <em>Personal Information Protection Act</em> (Alberta).</p>
+                <p>Each Party shall protect Confidential Information and not disclose it except as required by law or performance of obligations. Rotation Analytics Inc will treat all submitted workforce data as Confidential Information. Confidentiality obligations survive termination for three (3) years. Each Party shall comply with applicable privacy legislation, including the <em>Personal Information Protection Act</em> (Alberta).</p>
 
                 <p className="font-semibold">8. Independence</p>
-                <p>Rotation Analytics acts as an independent contractor. No employment, partnership, joint venture, agency, or fiduciary relationship is created. Rotation Analytics does not represent any party in disputes or negotiations. The Client shall not characterize Rotation Analytics as an advocate or representative.</p>
+                <p>Rotation Analytics Inc acts as an independent contractor. No employment, partnership, joint venture, agency, or fiduciary relationship is created. Rotation Analytics Inc does not represent any party in disputes or negotiations. The Client shall not characterize Rotation Analytics Inc as an advocate or representative.</p>
 
                 <p className="font-semibold">9. Limitation of Liability</p>
-                <p>Deliverables are informational only. Rotation Analytics is not liable for decisions or actions taken based on Deliverables. Aggregate liability shall not exceed fees paid in the twelve (12) months preceding the claim. No liability for indirect, incidental, consequential, special, or punitive damages. The Client shall indemnify and hold harmless Rotation Analytics, Visser Ventures Corp., and their directors, officers, employees, and contractors from claims arising from Client reliance on Deliverables, inaccurate Client-provided information, operational decisions by the Client, or third-party claims relating to the Client's rotation schedules or employment practices.</p>
+                <p>Deliverables are informational only. Rotation Analytics Inc is not liable for decisions or actions taken based on Deliverables. Aggregate liability shall not exceed fees paid in the twelve (12) months preceding the claim. No liability for indirect, incidental, consequential, special, or punitive damages. The Client shall indemnify and hold harmless Rotation Analytics Inc, Visser Ventures Corp., and their directors, officers, employees, and contractors from claims arising from Client reliance on Deliverables, inaccurate Client-provided information, operational decisions by the Client, or third-party claims relating to the Client's rotation schedules or employment practices.</p>
 
                 <p className="font-semibold">10. Governing Law</p>
                 <p>This Agreement is governed by the laws of the Province of Alberta and applicable Canadian federal law. Exclusive jurisdiction of Alberta courts applies. Parties shall attempt good-faith negotiation prior to litigation.</p>
@@ -143,7 +143,7 @@ export default function EngagePage() {
                 <p className="font-semibold">11. Electronic Acceptance</p>
                 <p>Electronic acceptance is valid under the <em>Electronic Transactions Act</em> (Alberta). Electronic acceptance has the same legal effect as a handwritten signature. The timestamp and version of this Agreement are recorded upon acceptance.</p>
 
-                <p className="text-xs text-slate-400 pt-4 border-t border-slate-100">Agreement version: 2025-v2 | Rotation Analytics — a division of Visser Ventures Corp., Alberta, Canada | Independent analytical services only.</p>
+                <p className="text-xs text-slate-400 pt-4 border-t border-slate-100">Agreement version: 2025-v2 | Rotation Analytics Inc — a division of Visser Ventures Corp., Alberta, Canada | Independent analytical services only.</p>
               </div>
             </div>
 
@@ -216,7 +216,7 @@ export default function EngagePage() {
               </h3>
               <p className="text-sm text-slate-600 leading-relaxed mb-5">
                 If your organization has a signed Service Agreement (Version 2025-v2) currently
-                in effect with Rotation Analytics, you may submit additional rotations for analysis
+                in effect with Rotation Analytics Inc, you may submit additional rotations for analysis
                 without re-executing the agreement.
               </p>
 
@@ -233,7 +233,7 @@ export default function EngagePage() {
                   />
                   <span className="text-sm text-slate-700 leading-relaxed">
                     I confirm that my organization has a signed Service Agreement currently in effect
-                    with Rotation Analytics, and I acknowledge that this submission is governed by
+                    with Rotation Analytics Inc, and I acknowledge that this submission is governed by
                     the terms, conditions, and pricing of that agreement.
                   </span>
                 </label>
@@ -271,7 +271,7 @@ export default function EngagePage() {
     <>
       <Hero
         headline="Submit Your Rotation"
-        subheadline="Agreement accepted — a copy has been provided to both parties. Submit your rotation data below. Rotation Analytics will verify completeness and issue an invoice."
+        subheadline="Agreement accepted — a copy has been provided to both parties. Submit your rotation data below. Rotation Analytics Inc will verify completeness and issue an invoice."
       />
 
       <Section divider>
@@ -449,7 +449,7 @@ export default function EngagePage() {
               </button>
 
               <p className="text-xs text-slate-400 text-center">
-                Rotation Analytics will verify data completeness and issue an invoice upon confirmation. Analysis commences upon confirmed payment.
+                Rotation Analytics Inc will verify data completeness and issue an invoice upon confirmation. Analysis commences upon confirmed payment.
                 Target turnaround: 48 hours. Maximum: 72 hours.
               </p>
             </form>
@@ -490,7 +490,7 @@ export default function EngagePage() {
             <div className="bg-brand-navy/5 border border-brand-navy/15 rounded-lg p-5">
               <p className="text-xs font-semibold text-brand-navy uppercase tracking-widest mb-2">Integrated Support</p>
               <p className="text-sm text-slate-600 leading-relaxed">
-                While ad hoc analysis is available, Rotation Analytics recommends integrated engagement for ongoing rotational risk monitoring across rotation cycles. Contact us to discuss recurring analytical support.
+                While ad hoc analysis is available, Rotation Analytics Inc recommends integrated engagement for ongoing rotational risk monitoring across rotation cycles. Contact us to discuss recurring analytical support.
               </p>
             </div>
           </div>

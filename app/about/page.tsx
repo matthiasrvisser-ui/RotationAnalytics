@@ -51,7 +51,7 @@ export default function About() {
             <h2 className="text-xl font-bold text-slate-900 mb-4 tracking-tight">What We Do</h2>
             <div className="space-y-4 text-sm text-slate-600 leading-relaxed">
               <p>
-                Rotation Analytics is an independent analytical firm specializing in the review of rotational staffing schedules. Our expertise is built on nearly a decade of real-world experience in healthcare union shift environments, combined with a proprietary analysis engine that evaluates rotation schedules at a level not achievable through routine review.
+                Rotation Analytics Inc is an independent analytical firm specializing in the review of rotational staffing schedules. Our expertise is built on nearly a decade of real-world experience in healthcare union shift environments, combined with a proprietary analysis engine that evaluates rotation schedules at a level not achievable through routine review.
               </p>
               <p>
                 We identify collective agreement non-compliance, fatigue risk exposure, and scheduling issues across full rotation cycles. The result is a documented findings report delivered to the commissioning organization for its own review and decision-making.
@@ -102,7 +102,7 @@ export default function About() {
                 </div>
               </div>
               <p className="text-sm text-slate-600 leading-relaxed">
-                Former frontline nurse who transitioned into rotation consulting nearly a decade ago. Kristy designed and built the proprietary analysis engine that powers every engagement — turning firsthand scheduling expertise into a tool that finds what manual review cannot. Her experience as both a shift worker and a rotation specialist is the foundation of every parameter Rotation Analytics evaluates.
+                Former frontline nurse who transitioned into rotation consulting nearly a decade ago. Kristy designed and built the proprietary analysis engine that powers every engagement — turning firsthand scheduling expertise into a tool that finds what manual review cannot. Her experience as both a shift worker and a rotation specialist is the foundation of every parameter Rotation Analytics Inc evaluates.
               </p>
             </div>
             <div className="bg-white border border-slate-200 rounded-lg p-6">
@@ -116,12 +116,12 @@ export default function About() {
                 </div>
               </div>
               <p className="text-sm text-slate-600 leading-relaxed">
-                Business owner and entrepreneur responsible for the commercial operations, strategic direction, and client engagement behind Rotation Analytics. Matthias brings the operational and business infrastructure that enables the firm to deliver independent analysis at scale.
+                Business owner and entrepreneur responsible for the commercial operations, strategic direction, and client engagement behind Rotation Analytics Inc. Matthias brings the operational and business infrastructure that enables the firm to deliver independent analysis at scale.
               </p>
             </div>
           </div>
           <p className="text-xs text-slate-400 mt-6 leading-relaxed">
-            Rotation Analytics is a division of Visser Ventures Corp., incorporated under the laws of the Province of Alberta, Canada.
+            Rotation Analytics Inc is a division of Visser Ventures Corp., incorporated under the laws of the Province of Alberta, Canada.
           </p>
         </div>
       </Section>

@@ -55,7 +55,7 @@ export default function Contact() {
               What to Expect
             </p>
             <p className="text-base text-slate-600 leading-relaxed mb-8">
-              A Rotation Analytics engagement is straightforward: you submit a rotation, we analyze it, you receive documented findings. No platform subscriptions. No long-term contracts.
+              A Rotation Analytics Inc engagement is straightforward: you submit a rotation, we analyze it, you receive documented findings. No platform subscriptions. No long-term contracts.
             </p>
 
             <div className="space-y-5 mb-8">

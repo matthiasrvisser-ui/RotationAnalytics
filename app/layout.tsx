@@ -13,22 +13,22 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: 'Rotation Analytics',
-    template: '%s | Rotation Analytics',
+    default: 'Rotation Analytics Inc',
+    template: '%s | Rotation Analytics Inc',
   },
   description:
     'Rotation Analytics Inc provides structured, independent analysis of rotation schedules — identifying collective agreement non-compliance, fatigue risk exposure, and scheduling vulnerabilities for client review.',
   openGraph: {
     type: 'website',
-    siteName: 'Rotation Analytics',
-    title: 'Rotation Analytics — Clarity from Complexity',
+    siteName: 'Rotation Analytics Inc',
+    title: 'Rotation Analytics Inc — Clarity from Complexity',
     description:
       'Structured, independent analysis of rotation schedules — identifying collective agreement non-compliance, fatigue risk, and scheduling vulnerabilities. Findings delivered exclusively to the Client.',
     locale: 'en_CA',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Rotation Analytics — Clarity from Complexity',
+    title: 'Rotation Analytics Inc — Clarity from Complexity',
     description:
       'Structured, independent analysis of rotation schedules — identifying collective agreement non-compliance, fatigue risk, and scheduling vulnerabilities. Findings delivered exclusively to the Client.',
   },

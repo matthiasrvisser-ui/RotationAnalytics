@@ -14,7 +14,7 @@ export default function TermsOfServicePage() {
     <>
       <Hero
         headline="Terms of Service"
-        subheadline="Conditions governing use of the Rotation Analytics website and services."
+        subheadline="Conditions governing use of the Rotation Analytics Inc website and services."
       />
 
       <Section contained>

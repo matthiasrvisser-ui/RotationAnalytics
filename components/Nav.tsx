@@ -20,23 +20,23 @@ export function Nav() {
   const [mobileOpen, setMobileOpen] = useState(false)
 
   return (
-    <header className="sticky top-0 z-50 bg-white border-b border-slate-200">
+    <header className="sticky top-0 z-50 bg-white shadow-sm">
       <div className="max-w-6xl mx-auto px-6">
-        <div className="flex items-center justify-between h-16">
-          <Link href="/" aria-label="Rotation Analytics home">
+        <div className="flex items-center justify-between h-[72px]">
+          <Link href="/" aria-label="Rotation Analytics Inc home">
             <LogoHorizontal />
           </Link>
 
           {/* Desktop nav */}
-          <nav aria-label="Primary navigation" className="hidden md:flex items-center gap-7">
+          <nav aria-label="Primary navigation" className="hidden lg:flex items-center gap-6">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className={`text-sm transition-colors ${
+                className={`text-[13px] tracking-wide uppercase transition-colors duration-200 border-b-2 pb-0.5 ${
                   pathname === link.href
-                    ? 'text-brand-navy font-semibold'
-                    : 'text-slate-500 hover:text-brand-navy'
+                    ? 'text-brand-navy font-semibold border-brand-navy'
+                    : 'text-slate-500 border-transparent hover:text-brand-navy hover:border-slate-300'
                 }`}
               >
                 {link.label}
@@ -44,9 +44,9 @@ export function Nav() {
             ))}
             <Link
               href="/status"
-              className={`text-sm px-4 py-1.5 rounded border transition-colors ${
+              className={`text-[13px] tracking-wide uppercase font-medium px-4 py-2 rounded-md border transition-colors duration-200 ${
                 pathname.startsWith('/status')
-                  ? 'border-brand-navy text-brand-navy font-semibold'
+                  ? 'border-brand-navy text-brand-navy'
                   : 'border-slate-300 text-slate-600 hover:border-brand-navy hover:text-brand-navy'
               }`}
             >
@@ -54,7 +54,7 @@ export function Nav() {
             </Link>
             <Link
               href="/engage"
-              className={`text-sm px-4 py-1.5 rounded transition-colors ${
+              className={`text-[13px] tracking-wide uppercase font-medium px-5 py-2 rounded-md transition-colors duration-200 ${
                 pathname === '/engage'
                   ? 'bg-brand-navy text-white'
                   : 'bg-brand-navy text-white hover:bg-brand-navy-dark'
@@ -66,7 +66,7 @@ export function Nav() {
 
           {/* Mobile menu button */}
           <button
-            className="md:hidden text-slate-500 hover:text-brand-navy transition-colors p-1"
+            className="lg:hidden text-slate-500 hover:text-brand-navy transition-colors duration-200 p-1"
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Toggle navigation menu"
             aria-expanded={mobileOpen}
@@ -85,7 +85,7 @@ export function Nav() {
 
         {/* Mobile nav */}
         {mobileOpen && (
-          <nav aria-label="Mobile navigation" className="md:hidden border-t border-slate-100 py-4 flex flex-col gap-1">
+          <nav aria-label="Mobile navigation" className="lg:hidden border-t border-slate-100 py-4 flex flex-col gap-1">
             {navLinks.map((link) => (
               <Link
                 key={link.href}

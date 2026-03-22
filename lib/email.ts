@@ -1,7 +1,7 @@
 import { Resend } from 'resend'
 
 function resend() { return new Resend(process.env.RESEND_API_KEY!) }
-const FROM = 'Rotation Analytics <no-reply@rotationanalytics.ca>'
+const FROM = 'Rotation Analytics Inc <no-reply@rotationanalytics.ca>'
 const ADMIN_EMAIL = process.env.ADMIN_EMAIL ?? 'admin@rotationanalytics.ca'
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL ?? 'https://rotationanalytics.ca'
 
@@ -15,7 +15,7 @@ export async function sendSubmissionConfirmation(opts: {
   await resend().emails.send({
     from: FROM,
     to: opts.to,
-    subject: 'Submission Received — Rotation Analytics',
+    subject: 'Submission Received — Rotation Analytics Inc',
     html: `
       <p>Dear ${opts.contactName},</p>
       <p>Your submission for <strong>${opts.orgName}</strong> has been received. Engagement is now active.</p>
@@ -63,7 +63,7 @@ export async function sendInvoiceNotification(opts: {
   await resend().emails.send({
     from: FROM,
     to: opts.to,
-    subject: `Invoice ${opts.invoiceNumber} — Rotation Analytics`,
+    subject: `Invoice ${opts.invoiceNumber} — Rotation Analytics Inc`,
     html: `
       <p>Dear ${opts.contactName},</p>
       <p>Analysis of your rotation for <strong>${opts.orgName}</strong> is complete. Your invoice has been issued.</p>
@@ -110,7 +110,7 @@ export async function sendEnquiry(opts: {
   await resend().emails.send({
     from: FROM,
     to: opts.email,
-    subject: 'Enquiry Received — Rotation Analytics',
+    subject: 'Enquiry Received — Rotation Analytics Inc',
     html: `
       <p>Dear ${opts.contactName},</p>
       <p>Thank you for your enquiry. We have received your message regarding <strong>${opts.org}</strong> and will respond within 2 business days.</p>
@@ -130,7 +130,7 @@ export async function sendDeliverableReady(opts: {
   await resend().emails.send({
     from: FROM,
     to: opts.to,
-    subject: 'Your Deliverable Is Ready — Rotation Analytics',
+    subject: 'Your Deliverable Is Ready — Rotation Analytics Inc',
     html: `
       <p>Dear ${opts.contactName},</p>
       <p>Payment has been confirmed. Your analytical deliverable for <strong>${opts.orgName}</strong> is now available for download.</p>

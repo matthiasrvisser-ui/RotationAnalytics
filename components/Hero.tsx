@@ -43,7 +43,7 @@ export function Hero({ headline, subheadline, cta, secondaryCta, backgroundImage
               hasImage ? 'text-slate-300' : 'text-slate-400'
             }`}
           >
-            Rotation Analytics
+            Rotation Analytics Inc
           </p>
           <p
             className={`text-sm font-light italic tracking-wide mb-7 ${

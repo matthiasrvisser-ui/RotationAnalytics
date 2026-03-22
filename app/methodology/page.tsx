@@ -7,7 +7,7 @@ import { AnalysisFlow } from '@/components/AnalysisFlow'
 export const metadata: Metadata = {
   title: 'Methodology',
   description:
-    'How Rotation Analytics examines rotation schedules, classifies compliance and fatigue risk, and delivers independent findings for client review.',
+    'How Rotation Analytics Inc examines rotation schedules, classifies compliance and fatigue risk, and delivers independent findings for client review.',
 }
 
 const examineItems = [
@@ -55,7 +55,7 @@ export default function Methodology() {
     <>
       <Hero
         headline="Our Methodology"
-        subheadline="How Rotation Analytics examines rotation schedules and classifies scheduling risk for client review."
+        subheadline="How Rotation Analytics Inc examines rotation schedules and classifies scheduling risk for client review."
       />
 
       <Section

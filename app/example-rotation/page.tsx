@@ -318,7 +318,7 @@ export default function ExampleRotation() {
         </div>
       </Section>
 
-      {/* 7. How Rotation Analytics Solves This */}
+      {/* 7. How Rotation Analytics Inc Solves This */}
       <Section divider>
         <div className="max-w-3xl">
           <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-5">
@@ -328,7 +328,7 @@ export default function ExampleRotation() {
             Independent Rotation Analysis
           </h2>
           <p className="text-base text-slate-600 leading-relaxed mb-8">
-            Rotation Analytics applies documented parameters against the full rotation cycle to identify issues that manual review cannot reliably detect.
+            Rotation Analytics Inc applies documented parameters against the full rotation cycle to identify issues that manual review cannot reliably detect.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {[
