@@ -245,13 +245,12 @@ export default function GettingStartedPage() {
                   <h3 className="text-sm font-semibold text-brand-navy mb-1">Ongoing Support</h3>
                   <p className="text-xs text-slate-500 leading-relaxed">Rotation-over-rotation comparison, pre-implementation review of proposed schedules, and sustained rotational risk monitoring across cycles.</p>
                 </div>
-              </div>
-              <div className="mt-6">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center justify-center bg-brand-navy text-white text-sm font-medium px-6 py-2.5 rounded hover:bg-brand-navy-dark transition-colors"
+                  className="block bg-brand-navy border border-brand-navy rounded-lg p-4 hover:bg-brand-navy-dark transition-colors"
                 >
-                  Discuss an Enterprise Engagement
+                  <h3 className="text-sm font-semibold text-white mb-1">Discuss an Enterprise Engagement</h3>
+                  <p className="text-xs text-slate-300 leading-relaxed">Reach out to discuss your scheduling environment, volume, and requirements.</p>
                 </Link>
               </div>
             </div>
