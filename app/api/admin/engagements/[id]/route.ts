@@ -61,35 +61,13 @@ export async function PATCH(
     updates.invoice_number = invoice_number
     updates.invoice_amount = invoice_amount
     updates.invoice_issued_at = new Date().toISOString()
-
-    // Send invoice email
-    if (payment_link) {
-      await sendInvoiceNotification({
-        to: engagement.email,
-        contactName: engagement.contact_name,
-        orgName: engagement.org_name,
-        invoiceNumber: invoice_number,
-        invoiceAmount: Number(invoice_amount),
-        paymentLink: payment_link,
-        statusToken: engagement.status_token,
-      })
-    }
   }
 
   if (status === 'paid') {
     updates.payment_confirmed_at = new Date().toISOString()
   }
 
-  if (status === 'delivered' && engagement.deliverable_token) {
-    const downloadUrl = `${BASE_URL}/api/deliverable/${engagement.deliverable_token}`
-    await sendDeliverableReady({
-      to: engagement.email,
-      contactName: engagement.contact_name,
-      orgName: engagement.org_name,
-      downloadUrl,
-    })
-  }
-
+  // Persist status update FIRST — emails should never block the DB write
   const { error: updateError } = await supabaseAdmin
     .from('engagements')
     .update(updates)
@@ -108,7 +86,37 @@ export async function PATCH(
     metadata: { previous_status: engagement.status, ...updates },
   })
 
-  return NextResponse.json({ success: true })
+  // Send notification emails AFTER successful DB update (failures logged, never block response)
+  let emailSent = false
+  try {
+    if (status === 'invoice_issued' && payment_link) {
+      await sendInvoiceNotification({
+        to: engagement.email,
+        contactName: engagement.contact_name,
+        orgName: engagement.org_name,
+        invoiceNumber: invoice_number,
+        invoiceAmount: Number(invoice_amount),
+        paymentLink: payment_link,
+        statusToken: engagement.status_token,
+      })
+      emailSent = true
+    }
+
+    if (status === 'delivered' && engagement.deliverable_token) {
+      const downloadUrl = `${BASE_URL}/api/deliverable/${engagement.deliverable_token}`
+      await sendDeliverableReady({
+        to: engagement.email,
+        contactName: engagement.contact_name,
+        orgName: engagement.org_name,
+        downloadUrl,
+      })
+      emailSent = true
+    }
+  } catch (emailErr) {
+    console.error('Email notification failed (status update succeeded):', emailErr)
+  }
+
+  return NextResponse.json({ success: true, emailSent })
 }
 
 export async function DELETE(
