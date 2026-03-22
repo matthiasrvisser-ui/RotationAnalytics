@@ -134,20 +134,21 @@ export async function POST(req: NextRequest) {
       metadata: { org_name: orgName, has_file: !!filePath, supporting_documents: uploadedDocs.length },
     })
 
-    // Emails — fire and forget (don't block response)
-    sendSubmissionConfirmation({
-      to: email,
-      contactName,
-      orgName,
-      statusToken: engagement.status_token,
-    }).catch(console.error)
-
-    sendAdminSubmissionAlert({
-      engagementId: engagement.id,
-      orgName,
-      contactName,
-      email,
-    }).catch(console.error)
+    // Send emails — must await on Vercel serverless (function terminates after response)
+    await Promise.allSettled([
+      sendSubmissionConfirmation({
+        to: email,
+        contactName,
+        orgName,
+        statusToken: engagement.status_token,
+      }),
+      sendAdminSubmissionAlert({
+        engagementId: engagement.id,
+        orgName,
+        contactName,
+        email,
+      }),
+    ])
 
     return NextResponse.json({
       success: true,

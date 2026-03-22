@@ -64,7 +64,7 @@ export async function PATCH(
 
     // Send invoice email
     if (payment_link) {
-      sendInvoiceNotification({
+      await sendInvoiceNotification({
         to: engagement.email,
         contactName: engagement.contact_name,
         orgName: engagement.org_name,
@@ -72,7 +72,7 @@ export async function PATCH(
         invoiceAmount: Number(invoice_amount),
         paymentLink: payment_link,
         statusToken: engagement.status_token,
-      }).catch(console.error)
+      })
     }
   }
 
@@ -82,12 +82,12 @@ export async function PATCH(
 
   if (status === 'delivered' && engagement.deliverable_token) {
     const downloadUrl = `${BASE_URL}/api/deliverable/${engagement.deliverable_token}`
-    sendDeliverableReady({
+    await sendDeliverableReady({
       to: engagement.email,
       contactName: engagement.contact_name,
       orgName: engagement.org_name,
       downloadUrl,
-    }).catch(console.error)
+    })
   }
 
   const { error: updateError } = await supabaseAdmin
