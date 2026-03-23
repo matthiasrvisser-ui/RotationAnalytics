@@ -1,6 +1,6 @@
 # SERVICE AGREEMENT
 
-## Rotation Analytics Inc - a division of Visser Ventures Corp.
+## Rotation Analytics - a division of Visser Ventures Corp.
 
 ### Analytical Services - Terms and Conditions
 
@@ -8,19 +8,19 @@
 
 **This Service Agreement** (the "Agreement") is entered into as of the date of execution indicated below (the "Effective Date") between:
 
-**Visser Ventures Corp.**, a corporation incorporated under the laws of the Province of Alberta, operating under the trade name **Rotation Analytics Inc** ("Rotation Analytics Inc" or the "Provider");
+**Visser Ventures Corp.**, a corporation incorporated under the laws of the Province of Alberta, operating under the trade name **Rotation Analytics** ("Rotation Analytics" or the "Provider");
 
 and
 
 The organization identified in the signature block below (the "Client").
 
-Rotation Analytics Inc and the Client are each referred to as a "Party" and collectively as the "Parties."
+Rotation Analytics and the Client are each referred to as a "Party" and collectively as the "Parties."
 
 ---
 
 ## 1. DEFINITIONS
 
-**1.1** "Analytical Services" means the independent rotational risk analysis of workforce rotation schedules performed by Rotation Analytics Inc, including review against applicable collective agreements, occupational health and safety standards, and fatigue science principles.
+**1.1** "Analytical Services" means the independent rotational risk analysis of workforce rotation schedules performed by Rotation Analytics, including review against applicable collective agreements, occupational health and safety standards, and fatigue science principles.
 
 **1.2** "Applicable Law" means the laws of the Province of Alberta and the federal laws of Canada applicable therein.
 
@@ -28,7 +28,7 @@ Rotation Analytics Inc and the Client are each referred to as a "Party" and coll
 
 **1.4** "Confidential Information" means all non-public information disclosed by one Party to the other, including rotation schedules, workforce data, analytical findings, methodology, pricing, and business information.
 
-**1.5** "Deliverables" means outputs produced by Rotation Analytics Inc during an Engagement.
+**1.5** "Deliverables" means outputs produced by Rotation Analytics during an Engagement.
 
 **1.6** "Engagement" means a discrete project commissioned under this Agreement.
 
@@ -42,7 +42,7 @@ Rotation Analytics Inc and the Client are each referred to as a "Party" and coll
 
 ## 2. SERVICES
 
-**2.1** Rotation Analytics Inc will perform independent rotational risk analysis of workforce rotation schedules provided by the Client. Scope is determined by the submitted rotation data and elected services.
+**2.1** Rotation Analytics will perform independent rotational risk analysis of workforce rotation schedules provided by the Client. Scope is determined by the submitted rotation data and elected services.
 
 **2.2** Analytical Services include risk analysis against:
 
@@ -58,21 +58,21 @@ Rotation Analytics Inc and the Client are each referred to as a "Party" and coll
 
 **2.3** Findings constitute independent risk analysis and identify and classify rotational risk. Findings are not determinations of compliance, safety, legality, or obligation.
 
-**2.4 Data Completeness.** Rotation Analytics Inc will review submitted materials for completeness and may request clarification or additional information before proceeding. An invoice will not be issued, and analysis will not commence, until Rotation Analytics Inc has confirmed that all applicable data has been received. Completeness of submission is determined solely by Rotation Analytics Inc.
+**2.4 Data Completeness.** Rotation Analytics will review submitted materials for completeness and may request clarification or additional information before proceeding. An invoice will not be issued, and analysis will not commence, until Rotation Analytics has confirmed that all applicable data has been received. Completeness of submission is determined solely by Rotation Analytics
 
-**2.5 Engagement Models.** Rotation Analytics Inc offers both ad hoc and integrated engagement models:
+**2.5 Engagement Models.** Rotation Analytics offers both ad hoc and integrated engagement models:
 
 (a) **Ad Hoc Engagement**: single-rotation analysis commissioned on an as-needed basis;
 
 (b) **Integrated Engagement**: recurring analytical support across rotation cycles, enabling trend identification, comparative risk assessment, and ongoing rotational risk monitoring.
 
-Rotation Analytics Inc recommends integrated engagement for organizations seeking sustained oversight of rotational risk. Ad hoc engagements may be converted to integrated engagements at any time upon written request.
+Rotation Analytics recommends integrated engagement for organizations seeking sustained oversight of rotational risk. Ad hoc engagements may be converted to integrated engagements at any time upon written request.
 
 **2.6 Returning Clients.** This Agreement remains in effect for the Term specified in Section 11 and governs all Engagements during that period. Once executed, the Client may submit additional rotations for analysis under this Agreement without re-execution. Each submission initiates a new Engagement subject to the data completeness verification and invoicing process described in Section 2.4 and Section 5.
 
 **2.7 Agreement Copies.** Upon execution, a copy of the executed Agreement shall be provided to both Parties. The executed copy shall include the version number, timestamp of acceptance, and identity of the accepting party.
 
-**2.8 Non-Reliance.** The Client acknowledges Rotation Analytics Inc does not provide legal, engineering, safety certification, regulatory, medical, or professional advisory services and agrees not to rely on Analytical Services as a substitute for independent professional advice.
+**2.8 Non-Reliance.** The Client acknowledges Rotation Analytics does not provide legal, engineering, safety certification, regulatory, medical, or professional advisory services and agrees not to rely on Analytical Services as a substitute for independent professional advice.
 
 ---
 
@@ -84,17 +84,17 @@ Rotation Analytics Inc recommends integrated engagement for organizations seekin
 
 (b) **Executive Findings Report**.
 
-**3.2** Deliverables rely solely on information supplied by the Client. Rotation Analytics Inc does not verify accuracy or completeness.
+**3.2** Deliverables rely solely on information supplied by the Client. Rotation Analytics does not verify accuracy or completeness.
 
 **3.3** Deliverables are for internal decision-making only unless written consent is provided.
 
 **3.4 Acceptance of Deliverables.** Deliverables shall be deemed accepted unless the Client provides written notice of a material deficiency within ten (10) business days of delivery.
 
-**3.5 Turnaround.** Rotation Analytics Inc targets delivery within forty-eight (48) hours of confirmed payment, with a maximum delivery window of seventy-two (72) hours (three business days).
+**3.5 Turnaround.** Rotation Analytics targets delivery within forty-eight (48) hours of confirmed payment, with a maximum delivery window of seventy-two (72) hours (three business days).
 
 **3.6 Late Delivery Adjustment.** If Deliverables are not provided within seventy-two (72) hours of confirmed payment, a fee reduction of ten percent (10%) shall be applied for each additional twenty-four (24) hour period of delay, up to a maximum reduction of thirty percent (30%). The applicable reduction shall be refunded to the Client. The turnaround period commences only upon confirmed payment of the issued invoice.
 
-**3.7 Turnaround Exclusions.** The turnaround period is tolled during: (a) any period in which Rotation Analytics Inc is awaiting additional information or clarification from the Client; and (b) force majeure events beyond the reasonable control of Rotation Analytics Inc, including but not limited to natural disasters, acts of government, internet or infrastructure failures, and pandemics.
+**3.7 Turnaround Exclusions.** The turnaround period is tolled during: (a) any period in which Rotation Analytics is awaiting additional information or clarification from the Client; and (b) force majeure events beyond the reasonable control of Rotation Analytics, including but not limited to natural disasters, acts of government, internet or infrastructure failures, and pandemics.
 
 ---
 
@@ -108,11 +108,11 @@ Rotation Analytics Inc recommends integrated engagement for organizations seekin
 
 (c) identify applicable standards;
 
-(d) notify Rotation Analytics Inc of errors or changes; and
+(d) notify Rotation Analytics of errors or changes; and
 
 (e) independently review Deliverables before reliance.
 
-**4.2** Rotation Analytics Inc may rely on Client-provided information.
+**4.2** Rotation Analytics may rely on Client-provided information.
 
 **4.3 Compliance Responsibility.** The Client remains solely responsible for compliance with all Applicable Laws, collective agreements, workplace safety obligations, and operational decisions.
 
@@ -130,13 +130,13 @@ Rotation Analytics Inc recommends integrated engagement for organizations seekin
 
 A minimum engagement fee of **$225.00 (CAD)** applies to all Engagements regardless of volume.
 
-**5.2** Fees are calculated automatically based on the published rate schedule at the time of submission and the confirmed rotation data. By accepting this Agreement and submitting rotation data, the Client authorizes Rotation Analytics Inc to verify completeness, calculate Fees accordingly, and issue an invoice upon confirmation of data completeness. Analysis commences upon confirmed payment.
+**5.2** Fees are calculated automatically based on the published rate schedule at the time of submission and the confirmed rotation data. By accepting this Agreement and submitting rotation data, the Client authorizes Rotation Analytics to verify completeness, calculate Fees accordingly, and issue an invoice upon confirmation of data completeness. Analysis commences upon confirmed payment.
 
 **5.3** Invoices are payable within thirty (30) days of the date of invoice.
 
 **5.4** Fees are quoted in Canadian dollars and exclude applicable taxes.
 
-**5.5 Suspension for Non-Payment.** Rotation Analytics Inc may suspend services upon written notice if payment is overdue.
+**5.5 Suspension for Non-Payment.** Rotation Analytics may suspend services upon written notice if payment is overdue.
 
 **5.6 Interest.** Overdue amounts bear interest at 1.5% per month (18% annually) or the maximum permitted by law.
 
@@ -150,7 +150,7 @@ A minimum engagement fee of **$225.00 (CAD)** applies to all Engagements regardl
 
 **6.2** Exceptions include publicly available or independently developed information.
 
-**6.3** Rotation Analytics Inc will treat workforce data as Confidential Information.
+**6.3** Rotation Analytics will treat workforce data as Confidential Information.
 
 **6.4** The Client consents to anonymised and aggregated data use for methodology improvement.
 
@@ -162,13 +162,13 @@ A minimum engagement fee of **$225.00 (CAD)** applies to all Engagements regardl
 
 ## 7. INDEPENDENCE AND RELATIONSHIP
 
-**7.1** Rotation Analytics Inc acts as an independent contractor.
+**7.1** Rotation Analytics acts as an independent contractor.
 
 **7.2** No employment, partnership, joint venture, agency, or fiduciary relationship is created.
 
-**7.3** Rotation Analytics Inc does not negotiate collective agreements or represent parties in disputes.
+**7.3** Rotation Analytics does not negotiate collective agreements or represent parties in disputes.
 
-**7.4** The Client shall not characterize Rotation Analytics Inc as an advocate or representative.
+**7.4** The Client shall not characterize Rotation Analytics as an advocate or representative.
 
 ---
 
@@ -188,7 +188,7 @@ A minimum engagement fee of **$225.00 (CAD)** applies to all Engagements regardl
 
 **9.1** Deliverables are informational only.
 
-**9.2** Rotation Analytics Inc is not liable for decisions or actions taken based on Deliverables.
+**9.2** Rotation Analytics is not liable for decisions or actions taken based on Deliverables.
 
 **9.3 Liability Cap.** Aggregate liability shall not exceed Fees paid in the twelve (12) months preceding the claim.
 
@@ -196,7 +196,7 @@ A minimum engagement fee of **$225.00 (CAD)** applies to all Engagements regardl
 
 **9.5** Limitations apply to all causes of action and survive termination.
 
-**9.6 Client Indemnity.** The Client shall indemnify and hold harmless Rotation Analytics Inc, Visser Ventures Corp., and their directors, officers, employees, and contractors from any claims, damages, losses, liabilities, or expenses arising from:
+**9.6 Client Indemnity.** The Client shall indemnify and hold harmless Rotation Analytics, Visser Ventures Corp., and their directors, officers, employees, and contractors from any claims, damages, losses, liabilities, or expenses arising from:
 
 (a) Client reliance on Deliverables;
 
@@ -228,7 +228,7 @@ A minimum engagement fee of **$225.00 (CAD)** applies to all Engagements regardl
 
 **11.3** Immediate termination permitted for material breach or insolvency.
 
-**11.4 Work-in-Progress Billing.** Upon termination, Rotation Analytics Inc may cease work immediately and invoice all work performed up to the termination date.
+**11.4 Work-in-Progress Billing.** Upon termination, Rotation Analytics may cease work immediately and invoice all work performed up to the termination date.
 
 **11.5** Sections relating to confidentiality, IP, liability, indemnity, and disclaimers survive termination.
 
@@ -283,7 +283,7 @@ A minimum engagement fee of **$225.00 (CAD)** applies to all Engagements regardl
 ---
 
 **VISSER VENTURES CORP.**
-*Operating as Rotation Analytics Inc*
+*Operating as Rotation Analytics*
 
 | | |
 |---|---|

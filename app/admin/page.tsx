@@ -101,7 +101,7 @@ export default function AdminDashboard() {
     <div className="min-h-screen bg-slate-50">
       <div className="bg-white border-b border-slate-200 px-6 py-4 flex items-center justify-between">
         <div>
-          <p className="text-xs text-slate-400 uppercase tracking-widest font-semibold">Rotation Analytics Inc</p>
+          <p className="text-xs text-slate-400 uppercase tracking-widest font-semibold">Rotation Analytics</p>
           <h1 className="text-lg font-bold text-slate-900">Admin Dashboard</h1>
         </div>
         <button onClick={logout} className="text-sm text-slate-500 hover:text-slate-800 transition-colors">Sign Out</button>

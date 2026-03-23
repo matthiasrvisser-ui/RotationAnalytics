@@ -6,7 +6,7 @@ import { Section } from '@/components/Section'
 export const metadata: Metadata = {
   title: 'About',
   description:
-    'About Rotation Analytics Inc, an independent analytical firm providing third-party review of rotation schedules for any organization requiring expert, non-affiliated rotation analysis.',
+    'About Rotation Analytics, an independent analytical firm providing third-party review of rotation schedules for any organization requiring expert, non-affiliated rotation analysis.',
 }
 
 const commitments = [
@@ -32,7 +32,7 @@ export default function About() {
   return (
     <>
       <Hero
-        headline="About Rotation Analytics Inc"
+        headline="About Rotation Analytics"
         subheadline="An independent analytical firm providing third-party review of rotation schedules. Analysis conducted without alignment to any party to the scheduling arrangement."
       />
 
@@ -46,7 +46,7 @@ export default function About() {
             Rotation schedules are too complex and too consequential for manual review alone.
           </h2>
           <p className="text-base text-slate-600 leading-relaxed mb-5">
-            Rotation Analytics Inc was founded on a simple observation: the people reviewing rotation schedules (schedulers, labour relations professionals, union representatives) are doing critical work with inadequate tools. A single rotation can contain hundreds of shift assignments governed by intersecting rules from collective agreements, employment standards, and occupational health guidelines. Manual review cannot reliably hold all of those parameters in view.
+            Rotation Analytics was founded on a simple observation: the people reviewing rotation schedules (schedulers, labour relations professionals, union representatives) are doing critical work with inadequate tools. A single rotation can contain hundreds of shift assignments governed by intersecting rules from collective agreements, employment standards, and occupational health guidelines. Manual review cannot reliably hold all of those parameters in view.
           </p>
           <p className="text-base text-slate-600 leading-relaxed">
             We built a firm and a methodology to close that gap. Independent, evidence-based analysis that documents what the schedule actually contains, so every party to the arrangement can make informed decisions.
@@ -97,12 +97,12 @@ export default function About() {
                 a Health Spending Account provider serving Canadian small businesses. That experience building compliant, regulated financial products from the ground up shaped how he approaches new ventures: get the infrastructure right, document everything, and let the work speak for itself.
               </p>
               <p className="text-sm text-slate-600 leading-relaxed">
-                He married Kristy in 2025, and together they built Rotation Analytics Inc. Matthias is responsible for the commercial operations, strategic direction, and client engagement that enable the firm to deliver independent analysis at scale.
+                He married Kristy in 2025, and together they built Rotation Analytics Matthias is responsible for the commercial operations, strategic direction, and client engagement that enable the firm to deliver independent analysis at scale.
               </p>
             </div>
           </div>
           <p className="text-xs text-slate-400 mt-6 leading-relaxed">
-            Rotation Analytics Inc is a division of Visser Ventures Corp., incorporated under the laws of the Province of Alberta, Canada.
+            Rotation Analytics is a division of Visser Ventures Corp., incorporated under the laws of the Province of Alberta, Canada.
           </p>
         </div>
       </Section>

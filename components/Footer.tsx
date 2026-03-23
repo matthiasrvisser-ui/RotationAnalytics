@@ -107,11 +107,11 @@ export function Footer() {
 
         <div className="border-t border-slate-700 pt-6 space-y-3">
           <p className="text-xs text-slate-400 leading-relaxed max-w-2xl">
-            Rotation Analytics Inc conducts its methodology without structural alignment to any party to the scheduling arrangement. Findings are a systematic evaluation of the rotation record and are released exclusively to the commissioning party as defined in the service agreement.
+            Rotation Analytics conducts its methodology without structural alignment to any party to the scheduling arrangement. Findings are a systematic evaluation of the rotation record and are released exclusively to the commissioning party as defined in the service agreement.
           </p>
           <div className="flex flex-wrap items-center gap-x-4 gap-y-1">
             <p className="text-xs text-slate-500">
-              &copy; {currentYear} Rotation Analytics Inc. All rights reserved.
+              &copy; {currentYear} Rotation Analytics All rights reserved.
             </p>
             <Link href="/privacy-policy" className="text-xs text-slate-500 hover:text-slate-300 transition-colors">
               Privacy Policy

@@ -6,7 +6,7 @@ import { Hero } from '@/components/Hero'
 export const metadata: Metadata = {
   title: 'Privacy Policy',
   description:
-    'Privacy policy for Rotation Analytics Inc — how we collect, use, disclose, and protect personal information in accordance with PIPEDA and applicable Alberta privacy legislation.',
+    'Privacy policy for Rotation Analytics — how we collect, use, disclose, and protect personal information in accordance with PIPEDA and applicable Alberta privacy legislation.',
 }
 
 export default function PrivacyPolicyPage() {
@@ -14,7 +14,7 @@ export default function PrivacyPolicyPage() {
     <>
       <Hero
         headline="Privacy Policy"
-        subheadline="How Rotation Analytics Inc collects, uses, discloses, and protects your information."
+        subheadline="How Rotation Analytics collects, uses, discloses, and protects your information."
       />
 
       <Section contained>
@@ -28,7 +28,7 @@ export default function PrivacyPolicyPage() {
             1. Introduction
           </h2>
           <p className="text-slate-700 leading-relaxed mb-4">
-            At Rotation Analytics Inc (&ldquo;we,&rdquo; &ldquo;our,&rdquo; or &ldquo;us&rdquo;),
+            At Rotation Analytics (&ldquo;we,&rdquo; &ldquo;our,&rdquo; or &ldquo;us&rdquo;),
             a division of Visser Ventures Corp., we are committed to protecting your privacy and
             safeguarding your personal information in accordance with Canada&rsquo;s{' '}
             <em>Personal Information Protection and Electronic Documents Act</em> (PIPEDA) and
@@ -50,12 +50,12 @@ export default function PrivacyPolicyPage() {
             information that allows an individual to be identified.
           </p>
           <p className="text-slate-700 leading-relaxed mb-4">
-            Rotation Analytics Inc only collects personal information with your express or
+            Rotation Analytics only collects personal information with your express or
             reasonably implied knowledge and consent. We will only use your personal information
             for the purposes identified in this Policy.
           </p>
           <p className="text-slate-700 leading-relaxed mb-3">
-            Personal information that may be collected by Rotation Analytics Inc includes:
+            Personal information that may be collected by Rotation Analytics includes:
           </p>
           <ul className="list-disc pl-6 text-slate-700 space-y-2 mb-4">
             <li>Organization name, contact name, email address, and phone number;</li>
@@ -73,7 +73,7 @@ export default function PrivacyPolicyPage() {
             </li>
           </ul>
           <p className="text-slate-700 leading-relaxed mb-3">
-            Rotation Analytics Inc may collect and use personal information for the purposes of:
+            Rotation Analytics may collect and use personal information for the purposes of:
           </p>
           <ul className="list-disc pl-6 text-slate-700 space-y-2 mb-4">
             <li>
@@ -93,7 +93,7 @@ export default function PrivacyPolicyPage() {
             </li>
           </ul>
           <p className="text-slate-700 leading-relaxed mb-4">
-            Rotation Analytics Inc will not (i) sell, rent, or trade personal information to
+            Rotation Analytics will not (i) sell, rent, or trade personal information to
             third parties; (ii) disclose personal information to third parties without consent,
             except where required by law; (iii) retain personal information longer than
             necessary for the fulfilment of stated purposes or legal requirements; (iv) store
@@ -122,7 +122,7 @@ export default function PrivacyPolicyPage() {
             4. Retention and Disposal of Personal Information
           </h2>
           <p className="text-slate-700 leading-relaxed mb-4">
-            Rotation Analytics Inc will retain personal information only as long as necessary
+            Rotation Analytics will retain personal information only as long as necessary
             to fulfil the purposes for which it was collected, or as required by law. When
             information is no longer needed, it will be securely destroyed.
           </p>
@@ -137,14 +137,14 @@ export default function PrivacyPolicyPage() {
             5. Consent
           </h2>
           <p className="text-slate-700 leading-relaxed mb-4">
-            By submitting your personal information to Rotation Analytics Inc, you are giving
+            By submitting your personal information to Rotation Analytics, you are giving
             your consent to the collection, use, and disclosure of your personal information in
             accordance with this Policy.
           </p>
           <p className="text-slate-700 leading-relaxed mb-4">
             If you do not consent to the collection, use, and disclosure of your personal
             information in accordance with this Policy, please do not provide any personal
-            information to Rotation Analytics Inc. Please be aware that if you choose not to
+            information to Rotation Analytics Please be aware that if you choose not to
             provide personal information, some services may be unavailable.
           </p>
           <p className="text-slate-700 leading-relaxed mb-4">
@@ -160,12 +160,12 @@ export default function PrivacyPolicyPage() {
             6. Access to Personal Information
           </h2>
           <p className="text-slate-700 leading-relaxed mb-4">
-            Rotation Analytics Inc will make all appropriate efforts to ensure the accuracy
+            Rotation Analytics will make all appropriate efforts to ensure the accuracy
             and completeness of your personal information when making a decision or when
             disclosing information to third parties.
           </p>
           <p className="text-slate-700 leading-relaxed mb-4">
-            Rotation Analytics Inc recognises that personal information belongs to the
+            Rotation Analytics recognises that personal information belongs to the
             individual and, subject to certain restrictions established by law and proof of
             identification, shall make every reasonable effort to provide you with the right
             to (i) access your personal information upon request; (ii) challenge the accuracy
@@ -179,7 +179,7 @@ export default function PrivacyPolicyPage() {
             7. Third-Party Applications
           </h2>
           <p className="text-slate-700 leading-relaxed mb-4">
-            While providing our services, Rotation Analytics Inc may use third-party
+            While providing our services, Rotation Analytics may use third-party
             applications, software, and services to enhance functionality, improve user
             experience, and support our operations. These third-party applications may collect,
             process, and store personal information for the purposes established within this
@@ -216,7 +216,7 @@ export default function PrivacyPolicyPage() {
             9. Safeguarding Information
           </h2>
           <p className="text-slate-700 leading-relaxed mb-4">
-            Rotation Analytics Inc maintains appropriate safeguards to protect the
+            Rotation Analytics maintains appropriate safeguards to protect the
             confidentiality of all personal information that it receives and discloses,
             including but not limited to (i) the encryption of sensitive data;
             (ii) the use of secure servers and encrypted communications; and (iii) access
@@ -237,7 +237,7 @@ export default function PrivacyPolicyPage() {
           </h2>
           <p className="text-slate-700 leading-relaxed mb-4">
             Your personal information is primarily stored within Canada. In the event that it
-            is necessary to transfer data outside of Canada, Rotation Analytics Inc will take
+            is necessary to transfer data outside of Canada, Rotation Analytics will take
             appropriate measures to ensure that the transfer is conducted in compliance with
             Canadian privacy laws, including ensuring that third-party service providers adhere
             to privacy and security standards that align with PIPEDA.
@@ -276,13 +276,13 @@ export default function PrivacyPolicyPage() {
             .
           </p>
           <p className="text-slate-700 leading-relaxed mb-1">
-            <strong>Rotation Analytics Inc</strong>
+            <strong>Rotation Analytics</strong>
           </p>
           <p className="text-slate-700 leading-relaxed mb-4">
             A division of Visser Ventures Corp.
           </p>
           <p className="text-slate-700 leading-relaxed mb-4">
-            Rotation Analytics Inc will make every reasonable effort to respond to a complaint
+            Rotation Analytics will make every reasonable effort to respond to a complaint
             within thirty (30) days of submission.
           </p>
 

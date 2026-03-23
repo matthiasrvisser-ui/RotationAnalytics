@@ -1,7 +1,7 @@
 import { ImageResponse } from 'next/og'
 
 export const runtime = 'edge'
-export const alt = 'Rotation Analytics Inc — Independent Rotation Analysis for Complex Shift Operations'
+export const alt = 'Rotation Analytics — Independent Rotation Analysis for Complex Shift Operations'
 export const size = { width: 1200, height: 630 }
 export const contentType = 'image/png'
 
@@ -52,7 +52,7 @@ export default function OGImage() {
               textTransform: 'uppercase',
             }}
           >
-            Rotation Analytics Inc
+            Rotation Analytics
           </span>
         </div>
 

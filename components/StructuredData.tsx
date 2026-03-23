@@ -2,8 +2,8 @@ export function OrganizationSchema() {
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'ProfessionalService',
-    name: 'Rotation Analytics Inc',
-    alternateName: 'Rotation Analytics Inc',
+    name: 'Rotation Analytics',
+    alternateName: 'Rotation Analytics',
     url: 'https://www.rotationanalytics.ca',
     logo: 'https://www.rotationanalytics.ca/logo/rotation-analytics-logo.svg',
     image: 'https://www.rotationanalytics.ca/logo/rotation-analytics-logo.svg',
@@ -50,13 +50,13 @@ export function WebSiteSchema() {
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    name: 'Rotation Analytics Inc',
+    name: 'Rotation Analytics',
     url: 'https://www.rotationanalytics.ca',
     description:
       'Structured, independent analysis of rotation schedules. Identifies collective agreement non-compliance, fatigue risk, and scheduling vulnerabilities.',
     publisher: {
       '@type': 'Organization',
-      name: 'Rotation Analytics Inc',
+      name: 'Rotation Analytics',
     },
   }
 
@@ -99,7 +99,7 @@ export function ServiceSchema() {
     serviceType: 'Rotation Schedule Analysis',
     provider: {
       '@type': 'ProfessionalService',
-      name: 'Rotation Analytics Inc',
+      name: 'Rotation Analytics',
       url: 'https://www.rotationanalytics.ca',
     },
     areaServed: {
@@ -112,7 +112,7 @@ export function ServiceSchema() {
       '@type': 'Offer',
       priceCurrency: 'CAD',
       description:
-        'Fees are outlined in the Service Agreement upon engagement. Contact Rotation Analytics Inc for details.',
+        'Fees are outlined in the Service Agreement upon engagement. Contact Rotation Analytics for details.',
     },
     hasOfferCatalog: {
       '@type': 'OfferCatalog',

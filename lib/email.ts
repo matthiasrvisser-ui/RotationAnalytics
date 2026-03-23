@@ -1,7 +1,7 @@
 import { Resend } from 'resend'
 
 function resend() { return new Resend(process.env.RESEND_API_KEY!) }
-const FROM = 'Rotation Analytics Inc <no-reply@rotationanalytics.ca>'
+const FROM = 'Rotation Analytics <no-reply@rotationanalytics.ca>'
 const ADMIN_EMAIL = process.env.ADMIN_EMAIL ?? 'admin@rotationanalytics.ca'
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL ?? 'https://rotationanalytics.ca'
 
@@ -17,11 +17,11 @@ export async function sendSubmissionConfirmation(opts: {
   await resend().emails.send({
     from: FROM,
     to: opts.to,
-    subject: 'Submission Received — Rotation Analytics Inc',
+    subject: 'Submission Received — Rotation Analytics',
     html: `
       <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #1B2D4F; max-width: 600px; margin: 0 auto;">
         <p style="font-size: 15px; line-height: 1.6;">Hello ${firstName},</p>
-        <p style="font-size: 15px; line-height: 1.6;">We've received your rotation submission for <strong>${opts.orgName}</strong> and your engagement with Rotation Analytics Inc is now active.</p>
+        <p style="font-size: 15px; line-height: 1.6;">We've received your rotation submission for <strong>${opts.orgName}</strong> and your engagement with Rotation Analytics is now active.</p>
         <p style="font-size: 15px; line-height: 1.6;">Your materials have been successfully submitted and queued for analysis.</p>
         <div style="background: #f8f8f6; border: 1px solid #e5e5e5; border-radius: 6px; padding: 16px 20px; margin: 20px 0; font-size: 13px; line-height: 1.8;">
           <table style="border-collapse: collapse; width: 100%;">
@@ -36,9 +36,9 @@ export async function sendSubmissionConfirmation(opts: {
         <p style="font-size: 15px; line-height: 1.6;">A copy of your executed service agreement is available for download from your status page, or directly here: <a href="${BASE_URL}/api/agreement/${opts.statusToken}" style="color: #1B2D4F;">Download Service Agreement (PDF)</a></p>
         <p style="font-size: 15px; line-height: 1.6;">You'll receive email updates as your engagement progresses — including when your invoice is issued and when your deliverable is ready for download.</p>
         <p style="font-size: 15px; line-height: 1.6;">If you have any questions in the meantime, reply to this email or contact us at <a href="mailto:hello@rotationanalytics.ca" style="color: #1B2D4F;">hello@rotationanalytics.ca</a>.</p>
-        <p style="font-size: 15px; line-height: 1.6; margin-top: 28px;">Regards,<br><strong>Rotation Analytics Inc</strong></p>
+        <p style="font-size: 15px; line-height: 1.6; margin-top: 28px;">Regards,<br><strong>Rotation Analytics</strong></p>
         <hr style="border: none; border-top: 1px solid #e5e5e5; margin: 28px 0 16px;">
-        <p style="font-size: 11px; color: #999; line-height: 1.5;">Rotation Analytics Inc — Independent Rotation Analysis<br>This is an automated confirmation. Please do not reply to this address directly.</p>
+        <p style="font-size: 11px; color: #999; line-height: 1.5;">Rotation Analytics — Independent Rotation Analysis<br>This is an automated confirmation. Please do not reply to this address directly.</p>
       </div>
     `,
     replyTo: 'hello@rotationanalytics.ca',
@@ -85,7 +85,7 @@ export async function sendInvoiceNotification(opts: {
   await resend().emails.send({
     from: FROM,
     to: opts.to,
-    subject: `Invoice ${opts.invoiceNumber} — Rotation Analytics Inc`,
+    subject: `Invoice ${opts.invoiceNumber} — Rotation Analytics`,
     html: `
       <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #1B2D4F; max-width: 600px; margin: 0 auto;">
         <p style="font-size: 15px; line-height: 1.6;">Hello ${firstName},</p>
@@ -101,9 +101,9 @@ export async function sendInvoiceNotification(opts: {
         <p style="font-size: 15px; line-height: 1.6;">Your deliverable will be released upon payment confirmation.</p>
         <p style="margin: 24px 0;"><a href="${opts.paymentLink}" style="background: #1B2D4F; color: #ffffff; padding: 12px 24px; text-decoration: none; border-radius: 4px; display: inline-block; font-size: 14px; font-weight: 600;">Pay Invoice</a></p>
         <p style="font-size: 15px; line-height: 1.6;">Track your engagement at any time: <a href="${statusUrl}" style="color: #1B2D4F;">${statusUrl}</a></p>
-        <p style="font-size: 15px; line-height: 1.6; margin-top: 28px;">Regards,<br><strong>Rotation Analytics Inc</strong></p>
+        <p style="font-size: 15px; line-height: 1.6; margin-top: 28px;">Regards,<br><strong>Rotation Analytics</strong></p>
         <hr style="border: none; border-top: 1px solid #e5e5e5; margin: 28px 0 16px;">
-        <p style="font-size: 11px; color: #999; line-height: 1.5;">Rotation Analytics Inc — Independent Rotation Analysis<br>This is an automated notification. Please do not reply to this address directly.</p>
+        <p style="font-size: 11px; color: #999; line-height: 1.5;">Rotation Analytics — Independent Rotation Analysis<br>This is an automated notification. Please do not reply to this address directly.</p>
       </div>
     `,
     replyTo: 'hello@rotationanalytics.ca',
@@ -145,15 +145,15 @@ export async function sendEnquiry(opts: {
   await resend().emails.send({
     from: FROM,
     to: opts.email,
-    subject: 'Enquiry Received — Rotation Analytics Inc',
+    subject: 'Enquiry Received — Rotation Analytics',
     html: `
       <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #1B2D4F; max-width: 600px; margin: 0 auto;">
         <p style="font-size: 15px; line-height: 1.6;">Hello ${firstName},</p>
         <p style="font-size: 15px; line-height: 1.6;">Thank you for your enquiry. We've received your message regarding <strong>${opts.org}</strong> and will respond within 2 business days.</p>
         <p style="font-size: 15px; line-height: 1.6;">If you have urgent questions in the meantime, you can reach us at <a href="mailto:hello@rotationanalytics.ca" style="color: #1B2D4F;">hello@rotationanalytics.ca</a>.</p>
-        <p style="font-size: 15px; line-height: 1.6; margin-top: 28px;">Regards,<br><strong>Rotation Analytics Inc</strong></p>
+        <p style="font-size: 15px; line-height: 1.6; margin-top: 28px;">Regards,<br><strong>Rotation Analytics</strong></p>
         <hr style="border: none; border-top: 1px solid #e5e5e5; margin: 28px 0 16px;">
-        <p style="font-size: 11px; color: #999; line-height: 1.5;">Rotation Analytics Inc — Independent Rotation Analysis<br>This is an automated confirmation. Please do not reply to this address directly.</p>
+        <p style="font-size: 11px; color: #999; line-height: 1.5;">Rotation Analytics — Independent Rotation Analysis<br>This is an automated confirmation. Please do not reply to this address directly.</p>
       </div>
     `,
     replyTo: 'hello@rotationanalytics.ca',
@@ -170,7 +170,7 @@ export async function sendDeliverableReady(opts: {
   await resend().emails.send({
     from: FROM,
     to: opts.to,
-    subject: 'Your Deliverable Is Ready — Rotation Analytics Inc',
+    subject: 'Your Deliverable Is Ready — Rotation Analytics',
     html: `
       <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #1B2D4F; max-width: 600px; margin: 0 auto;">
         <p style="font-size: 15px; line-height: 1.6;">Hello ${firstName},</p>
@@ -185,9 +185,9 @@ export async function sendDeliverableReady(opts: {
         <p style="margin: 24px 0;"><a href="${opts.downloadUrl}" style="background: #1B2D4F; color: #ffffff; padding: 12px 24px; text-decoration: none; border-radius: 4px; display: inline-block; font-size: 14px; font-weight: 600;">Download Your Deliverable</a></p>
         <p style="font-size: 13px; color: #666; line-height: 1.5;">This link expires in 7 days. Contact us at <a href="mailto:hello@rotationanalytics.ca" style="color: #1B2D4F;">hello@rotationanalytics.ca</a> if you need it reissued.</p>
         <p style="font-size: 15px; line-height: 1.6;">Deliverables are for internal decision-making only. Independent professional advice should be obtained before acting on findings.</p>
-        <p style="font-size: 15px; line-height: 1.6; margin-top: 28px;">Regards,<br><strong>Rotation Analytics Inc</strong></p>
+        <p style="font-size: 15px; line-height: 1.6; margin-top: 28px;">Regards,<br><strong>Rotation Analytics</strong></p>
         <hr style="border: none; border-top: 1px solid #e5e5e5; margin: 28px 0 16px;">
-        <p style="font-size: 11px; color: #999; line-height: 1.5;">Rotation Analytics Inc — Independent Rotation Analysis<br>This is an automated notification. Please do not reply to this address directly.</p>
+        <p style="font-size: 11px; color: #999; line-height: 1.5;">Rotation Analytics — Independent Rotation Analysis<br>This is an automated notification. Please do not reply to this address directly.</p>
       </div>
     `,
     replyTo: 'hello@rotationanalytics.ca',

@@ -65,7 +65,7 @@ export default function AdminLogin() {
     <div className="min-h-screen bg-slate-50 flex items-center justify-center px-4">
       <div className="w-full max-w-sm">
         <div className="bg-white border border-slate-200 rounded-lg shadow-sm p-8">
-          <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-1">Rotation Analytics Inc</p>
+          <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-1">Rotation Analytics</p>
           <h1 className="text-xl font-bold text-slate-900 mb-6">Admin Access</h1>
           <Suspense fallback={null}>
             <LoginForm />

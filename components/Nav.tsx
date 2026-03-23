@@ -23,7 +23,7 @@ export function Nav() {
     <header className="sticky top-0 z-50 bg-white shadow-sm">
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex items-center justify-between h-[72px]">
-          <Link href="/" aria-label="Rotation Analytics Inc home">
+          <Link href="/" aria-label="Rotation Analytics home">
             <LogoHorizontal />
           </Link>
 

@@ -45,7 +45,7 @@ export function MessageThread({ messages: initial, token }: Props) {
               <p className={`text-xs mt-1 ${m.sender === 'client' ? 'text-white/60' : 'text-slate-400'}`}>
                 {new Date(m.created_at).toLocaleDateString('en-CA', { month: 'short', day: 'numeric' })}
                 {' · '}
-                {m.sender === 'admin' ? 'Rotation Analytics Inc' : 'You'}
+                {m.sender === 'admin' ? 'Rotation Analytics' : 'You'}
               </p>
             </div>
           </div>

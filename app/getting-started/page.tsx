@@ -6,9 +6,9 @@ import { Section } from '@/components/Section'
 export const metadata: Metadata = {
   title: 'Getting Started',
   description:
-    'How to engage Rotation Analytics Inc for independent rotation compliance and fatigue risk analysis. Sign the agreement, submit your rotation, receive findings.',
+    'How to engage Rotation Analytics for independent rotation compliance and fatigue risk analysis. Sign the agreement, submit your rotation, receive findings.',
   openGraph: {
-    title: 'Getting Started | Rotation Analytics Inc',
+    title: 'Getting Started | Rotation Analytics',
     description:
       'An engagement pathway for unions, employers, and labour relations professionals seeking independent rotation analysis.',
   },
@@ -46,7 +46,7 @@ const standardSteps = [
     title: 'Analysis and Delivery',
     duration: '48–72 hours from confirmed payment',
     description:
-      'Rotation Analytics Inc evaluates the rotation against every applicable provision in the collective agreement. If fatigue analysis is elected, the biomathematical model runs concurrently. Deliverables are released confidentially to the submitting client.',
+      'Rotation Analytics evaluates the rotation against every applicable provision in the collective agreement. If fatigue analysis is elected, the biomathematical model runs concurrently. Deliverables are released confidentially to the submitting client.',
     details: [
       'Annotated rotation schedule with flagged non-conformances',
       'Executive findings report with risk classifications and citations',
@@ -93,7 +93,7 @@ const faqs = [
   {
     question: 'Can both the union and the employer engage separately?',
     answer:
-      'Yes. Rotation Analytics Inc operates independently and will accept engagements from any party. Each engagement is confidential to the submitting client. If both parties engage on the same rotation, each receives their own independent analysis.',
+      'Yes. Rotation Analytics operates independently and will accept engagements from any party. Each engagement is confidential to the submitting client. If both parties engage on the same rotation, each receives their own independent analysis.',
   },
   {
     question: 'What collective agreements do you support?',

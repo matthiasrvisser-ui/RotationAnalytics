@@ -6,7 +6,7 @@ import { Hero } from '@/components/Hero'
 export const metadata: Metadata = {
   title: 'Terms of Service',
   description:
-    'Terms of service for Rotation Analytics Inc — conditions governing use of our website and rotation schedule analysis services.',
+    'Terms of service for Rotation Analytics — conditions governing use of our website and rotation schedule analysis services.',
 }
 
 export default function TermsOfServicePage() {
@@ -14,7 +14,7 @@ export default function TermsOfServicePage() {
     <>
       <Hero
         headline="Terms of Service"
-        subheadline="Conditions governing use of the Rotation Analytics Inc website and services."
+        subheadline="Conditions governing use of the Rotation Analytics website and services."
       />
 
       <Section contained>
@@ -40,7 +40,7 @@ export default function TermsOfServicePage() {
             1. Introduction
           </h2>
           <p className="text-slate-700 leading-relaxed mb-4">
-            Welcome to Rotation Analytics Inc (&ldquo;we,&rdquo; &ldquo;our,&rdquo;
+            Welcome to Rotation Analytics (&ldquo;we,&rdquo; &ldquo;our,&rdquo;
             or &ldquo;us&rdquo;), a division of Visser Ventures Corp. By accessing or using our
             website (the &ldquo;Site&rdquo;) you agree to be bound by and comply with these terms
             and conditions of use (the &ldquo;Terms&rdquo;). If you do not agree to be bound by,
@@ -83,7 +83,7 @@ export default function TermsOfServicePage() {
             4. Notification of Changes
           </h2>
           <p className="text-slate-700 leading-relaxed mb-4">
-            Rotation Analytics Inc reserves the right to update, modify, or revise these Terms
+            Rotation Analytics reserves the right to update, modify, or revise these Terms
             at any time, at our sole discretion. Any changes will be posted on this page. The
             date of the most recent revision will be indicated at the top of this document.
             Major changes to the Terms will be clearly communicated by notification through the
@@ -103,7 +103,7 @@ export default function TermsOfServicePage() {
             5. Analytical Findings Disclaimer
           </h2>
           <p className="text-slate-700 leading-relaxed mb-4">
-            Reports, findings, and deliverables produced by Rotation Analytics Inc are provided
+            Reports, findings, and deliverables produced by Rotation Analytics are provided
             for informational and analytical purposes. Findings constitute analytical
             observations only and are not determinations of legal compliance. They do not
             constitute legal advice, labour relations advice, or formal compliance rulings.
@@ -112,7 +112,7 @@ export default function TermsOfServicePage() {
             The commissioning party is responsible for decisions made based on our findings.
             You should seek specific legal advice by consulting your own legal counsel regarding
             your individual concerns. No one should act, or refrain from acting, based solely
-            on the findings or Content provided by Rotation Analytics Inc.
+            on the findings or Content provided by Rotation Analytics
           </p>
 
           {/* 6. Service Description and Engagement Terms */}
@@ -120,7 +120,7 @@ export default function TermsOfServicePage() {
             6. Service Description and Engagement Terms
           </h2>
           <p className="text-slate-700 leading-relaxed mb-4">
-            Rotation Analytics Inc provides independent analytical review of rotation schedules.
+            Rotation Analytics provides independent analytical review of rotation schedules.
             Our services include evaluating shift schedules against collective agreement
             provisions, employment standards, and occupational health guidelines. Rotation
             Analytics Inc conducts analysis without structural alignment to any party to the
@@ -128,7 +128,7 @@ export default function TermsOfServicePage() {
           </p>
           <p className="text-slate-700 leading-relaxed mb-4">
             Individual engagements are governed by a separate service agreement executed between
-            Rotation Analytics Inc and the commissioning party. These Terms of Service apply to
+            Rotation Analytics and the commissioning party. These Terms of Service apply to
             general website use and supplement, but do not replace, the terms of any executed
             service agreement.
           </p>
@@ -233,7 +233,7 @@ export default function TermsOfServicePage() {
             upon you unless terminated or modified by us in accordance with these Terms.
           </p>
           <p className="text-slate-700 leading-relaxed mb-4">
-            You agree that Rotation Analytics Inc may, at our sole discretion, suspend or
+            You agree that Rotation Analytics may, at our sole discretion, suspend or
             terminate your access to all or part of the Site, with or without notice, and for
             any reason, including, without limitation, a breach of these Terms of Service. Any
             suspected fraudulent, abusive, or illegal activity may result in the termination of
@@ -277,7 +277,7 @@ export default function TermsOfServicePage() {
             15. Indemnity
           </h2>
           <p className="text-slate-700 leading-relaxed mb-4">
-            You agree to indemnify, defend, and hold harmless Rotation Analytics Inc, Visser
+            You agree to indemnify, defend, and hold harmless Rotation Analytics, Visser
             Ventures Corp., their affiliates, officers, directors, employees, and agents from
             and against any and all claims, damages, losses, liabilities, costs, and expenses,
             including but not limited to reasonable legal fees, arising from your use of the
@@ -290,7 +290,7 @@ export default function TermsOfServicePage() {
             16. Limitation of Liability
           </h2>
           <p className="text-slate-700 leading-relaxed mb-4">
-            To the maximum extent permitted by law, Rotation Analytics Inc and Visser Ventures
+            To the maximum extent permitted by law, Rotation Analytics and Visser Ventures
             Corp. shall not be liable for any indirect, incidental, consequential, or punitive
             damages arising from or related to the use of our website or services. Aggregate
             liability is limited to fees paid in the preceding twelve (12) months under the
@@ -335,7 +335,7 @@ export default function TermsOfServicePage() {
           </h2>
           <p className="text-slate-700 leading-relaxed mb-4">
             These Terms shall be governed by and defined following the laws of the Province of
-            Alberta and applicable federal laws of Canada. Rotation Analytics Inc and yourself
+            Alberta and applicable federal laws of Canada. Rotation Analytics and yourself
             irrevocably consent that the courts of the Province of Alberta shall have exclusive
             jurisdiction to resolve any dispute which may arise in connection with these Terms.
           </p>
@@ -367,7 +367,7 @@ export default function TermsOfServicePage() {
             .
           </p>
           <p className="text-slate-700 leading-relaxed mb-1">
-            <strong>Rotation Analytics Inc</strong>
+            <strong>Rotation Analytics</strong>
           </p>
           <p className="text-slate-700 leading-relaxed mb-4">
             A division of Visser Ventures Corp.

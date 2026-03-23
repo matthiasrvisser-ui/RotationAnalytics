@@ -11,7 +11,7 @@ const primaryProblems = [
   },
   {
     heading: 'Lack of Documented Analysis',
-    body: 'Grievance preparation is strengthened when supported by independently produced analysis. Informal review does not carry the same evidentiary weight. Rotation Analytics Inc provides a documented analysis package for client use.',
+    body: 'Grievance preparation is strengthened when supported by independently produced analysis. Informal review does not carry the same evidentiary weight. Rotation Analytics provides a documented analysis package for client use.',
   },
 ]
 
@@ -85,11 +85,11 @@ export default function Home() {
         </div>
       </Section>
 
-      {/* §5 — Why Rotation Analytics Inc */}
+      {/* §5 — Why Rotation Analytics */}
       <Section className="bg-brand-cream" divider>
         <div className="max-w-4xl">
           <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-5">
-            Why Rotation Analytics Inc
+            Why Rotation Analytics
           </p>
           <h2 className="text-2xl md:text-3xl font-bold text-slate-900 tracking-tight mb-6">
             Manual review doesn&rsquo;t scale. Purpose-built analysis does.
@@ -98,7 +98,7 @@ export default function Home() {
             You know the reality: collective agreement scheduling provisions are extremely complex and difficult to decipher. Rotations span weeks. Manual review, no matter how experienced the reviewer, misses more as complexity increases.
           </p>
           <p className="text-base text-slate-600 leading-relaxed mb-10">
-            Rotation Analytics Inc was built for exactly this problem.
+            Rotation Analytics was built for exactly this problem.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-white border border-slate-200 rounded-lg p-6">

@@ -92,7 +92,7 @@ def header_footer(canvas, doc):
     canvas.saveState()
     canvas.setFont('Helvetica', 7.5)
     canvas.setFillColor(SLATE_400)
-    canvas.drawString(72, letter[1] - 40, "Rotation Analytics Inc")
+    canvas.drawString(72, letter[1] - 40, "Rotation Analytics")
     canvas.drawRightString(letter[0] - 72, letter[1] - 40, "Confidential \u2014 Methodology White Paper")
     canvas.setStrokeColor(SLATE_200)
     canvas.setLineWidth(0.5)
@@ -844,7 +844,7 @@ def build_document():
         story.append(logo2)
         story.append(Spacer(1, 0.3 * inch))
     story.append(HRFlowable(width="30%", thickness=2, color=NAVY, spaceAfter=20))
-    story.append(Paragraph("Rotation Analytics Inc", ParagraphStyle(
+    story.append(Paragraph("Rotation Analytics", ParagraphStyle(
         'FinalName', fontName='Helvetica-Bold', fontSize=16, leading=22,
         textColor=NAVY, alignment=TA_CENTER, spaceAfter=4
     )))
@@ -868,7 +868,7 @@ def build_document():
         style_disclaimer
     ))
     story.append(Spacer(1, 6))
-    story.append(Paragraph("\u00a9 2026 Rotation Analytics Inc. All rights reserved.", style_disclaimer))
+    story.append(Paragraph("\u00a9 2026 Rotation Analytics All rights reserved.", style_disclaimer))
 
     # Build
     doc = SimpleDocTemplate(
@@ -876,7 +876,7 @@ def build_document():
         topMargin=0.9 * inch, bottomMargin=0.7 * inch,
         leftMargin=1.0 * inch, rightMargin=1.0 * inch,
         title="Fatigue Risk Analysis: Mathematical Methodology and Validation",
-        author="Rotation Analytics Inc",
+        author="Rotation Analytics",
         subject="Biomathematical Fatigue Model \u2014 Methodology White Paper",
     )
     doc.build(story, onFirstPage=lambda c, d: None, onLaterPages=header_footer)

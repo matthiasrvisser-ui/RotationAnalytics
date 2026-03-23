@@ -6,7 +6,7 @@ import { Section } from '@/components/Section'
 export const metadata: Metadata = {
   title: 'Methodology',
   description:
-    'How Rotation Analytics Inc examines rotation schedules, classifies compliance and fatigue risk, and delivers independent findings for client review.',
+    'How Rotation Analytics examines rotation schedules, classifies compliance and fatigue risk, and delivers independent findings for client review.',
 }
 
 const examineItems = [
@@ -38,7 +38,7 @@ const examineItems = [
   {
     label: 'On-call shift validation',
     detail:
-      'On-call scheduling assessed against collective agreement provisions, including placement relative to off-duty days, frequency, and rest period interactions. This validation is unique to Rotation Analytics Inc.',
+      'On-call scheduling assessed against collective agreement provisions, including placement relative to off-duty days, frequency, and rest period interactions. This validation is unique to Rotation Analytics',
   },
   {
     label: 'Collective agreement provisions',
@@ -58,7 +58,7 @@ export default function Methodology() {
     <>
       <Hero
         headline="Our Methodology"
-        subheadline="How Rotation Analytics Inc examines rotation schedules and classifies scheduling risk for client review."
+        subheadline="How Rotation Analytics examines rotation schedules and classifies scheduling risk for client review."
       />
 
       <Section

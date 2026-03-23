@@ -9,9 +9,9 @@ const SITE = 'https://www.rotationanalytics.ca'
 export const metadata: Metadata = {
   title: 'Fatigue Risk Analysis',
   description:
-    'Science-based fatigue risk assessment for every rotation line. Rotation Analytics Inc applies a biomathematical fatigue model to identify where schedules create physiological fatigue, even when they are fully compliant.',
+    'Science-based fatigue risk assessment for every rotation line. Rotation Analytics applies a biomathematical fatigue model to identify where schedules create physiological fatigue, even when they are fully compliant.',
   openGraph: {
-    title: 'Fatigue Risk Analysis | Rotation Analytics Inc',
+    title: 'Fatigue Risk Analysis | Rotation Analytics',
     description:
       'Biomathematical fatigue modeling integrated with collective agreement compliance analysis. Identify fatigue exposure that manual review cannot detect.',
   },

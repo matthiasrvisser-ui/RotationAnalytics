@@ -6,7 +6,7 @@ import { Section } from '@/components/Section'
 export const metadata: Metadata = {
   title: 'Sample Report',
   description:
-    'A sample executive report demonstrating how Rotation Analytics Inc documents rotation findings with risk classifications, agreement references, and independent analysis.',
+    'A sample executive report demonstrating how Rotation Analytics documents rotation findings with risk classifications, agreement references, and independent analysis.',
 }
 
 const SITE = 'https://www.rotationanalytics.ca'
@@ -56,7 +56,7 @@ export default function SampleReport() {
               </div>
               <div>
                 <p className="text-sm font-semibold text-white">Sample Executive Report</p>
-                <p className="text-xs text-slate-400">Rotation Analytics Inc — Confidential</p>
+                <p className="text-xs text-slate-400">Rotation Analytics — Confidential</p>
               </div>
             </div>
             <a
