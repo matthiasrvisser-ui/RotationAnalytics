@@ -258,41 +258,30 @@ export default function Home() {
 
       {/* §8 — Where Rotation Analysis Applies */}
       <Section title="Where Rotation Analysis Applies" divider>
-        <p className="text-base text-slate-600 leading-relaxed mb-8 max-w-3xl">
-          A rotation is a cyclical work plan where a pattern of shifts (on-duty times, off-duty days, and shift types) repeats over a set period, usually spanning weeks or months.
-        </p>
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-px bg-slate-200 border border-slate-200 rounded-lg overflow-hidden">
-          {[
-            {
-              label: 'Healthcare',
-              detail: 'Complex shift agreements and fatigue-sensitive operations.',
-            },
-            {
-              label: 'Energy & Industrial',
-              detail: 'Extended rotations with documented rest requirements.',
-            },
-            {
-              label: 'Emergency Services',
-              detail: 'Collective agreement provisions and fatigue protocols.',
-            },
-            {
-              label: 'Transportation',
-              detail: 'Regulated rest obligations across multi-week schedules.',
-            },
-            {
-              label: 'Manufacturing',
-              detail: 'Continuous production with multi-week rotation structures.',
-            },
-            {
-              label: '24/7 Operations',
-              detail: 'Consecutive sequence risk and agreement exposure.',
-            },
-          ].map((sector) => (
-            <div key={sector.label} className="bg-white p-6">
-              <p className="text-sm font-semibold text-slate-900 mb-2">{sector.label}</p>
-              <p className="text-xs text-slate-500 leading-relaxed">{sector.detail}</p>
+        <div className="max-w-3xl">
+          <p className="text-base text-slate-600 leading-relaxed mb-6">
+            A rotation is a cyclical work plan where a pattern of shifts (on-duty times, off-duty days, and shift types) repeats over a set period, usually spanning weeks or months. Any industry that operates on structured rotation schedules can benefit from independent analysis.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+              <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-3">Analyze</p>
+              <p className="text-sm text-slate-600 leading-relaxed">
+                Every shift in the rotation is evaluated against collective agreement provisions, employment standards, and scheduling best practices across the full cycle.
+              </p>
             </div>
-          ))}
+            <div>
+              <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-3">Identify</p>
+              <p className="text-sm text-slate-600 leading-relaxed">
+                Non-conformances, rest period violations, and fatigue risk exposures are documented with risk classifications and agreement references.
+              </p>
+            </div>
+            <div>
+              <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-3">Deliver</p>
+              <p className="text-sm text-slate-600 leading-relaxed">
+                Findings are packaged into a structured report delivered exclusively to the commissioning client for internal review, grievance preparation, or negotiation support.
+              </p>
+            </div>
+          </div>
         </div>
       </Section>
 
