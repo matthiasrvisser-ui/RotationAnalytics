@@ -69,8 +69,8 @@ export function Hero({ headline, subheadline, cta, secondaryCta, tertiaryCta, ba
           </p>
           {(cta || secondaryCta) && (
             <div className="space-y-4">
-              <div className="flex flex-wrap gap-5 items-center">
-                {cta && (
+              {cta && (
+                <div>
                   <Link
                     href={cta.href}
                     className={`inline-block px-7 py-3 rounded font-medium text-sm transition-colors ${
@@ -81,28 +81,30 @@ export function Hero({ headline, subheadline, cta, secondaryCta, tertiaryCta, ba
                   >
                     {cta.label}
                   </Link>
-                )}
-                {secondaryCta && (
-                  <Link
-                    href={secondaryCta.href}
-                    className={`inline-block text-sm font-medium hover:underline underline-offset-4 transition-colors ${
-                      hasImage ? 'text-slate-200 hover:text-white' : 'text-brand-navy'
-                    }`}
-                  >
-                    {secondaryCta.label} →
-                  </Link>
-                )}
-              </div>
-              {tertiaryCta && (
+                </div>
+              )}
+              {(secondaryCta || tertiaryCta) && (
                 <div className="flex flex-wrap gap-5 items-center">
-                  <Link
-                    href={tertiaryCta.href}
-                    className={`inline-block text-sm font-medium hover:underline underline-offset-4 transition-colors ${
-                      hasImage ? 'text-slate-200 hover:text-white' : 'text-brand-navy'
-                    }`}
-                  >
-                    {tertiaryCta.label} →
-                  </Link>
+                  {secondaryCta && (
+                    <Link
+                      href={secondaryCta.href}
+                      className={`inline-block text-sm font-medium hover:underline underline-offset-4 transition-colors ${
+                        hasImage ? 'text-slate-200 hover:text-white' : 'text-brand-navy'
+                      }`}
+                    >
+                      {secondaryCta.label} →
+                    </Link>
+                  )}
+                  {tertiaryCta && (
+                    <Link
+                      href={tertiaryCta.href}
+                      className={`inline-block text-sm font-medium hover:underline underline-offset-4 transition-colors ${
+                        hasImage ? 'text-slate-200 hover:text-white' : 'text-brand-navy'
+                      }`}
+                    >
+                      {tertiaryCta.label} →
+                    </Link>
+                  )}
                 </div>
               )}
             </div>
