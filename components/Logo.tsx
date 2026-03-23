@@ -27,7 +27,7 @@ export function LogoHorizontal({ color = '#1B2D4F', className = '' }: LogoProps)
         className="object-contain"
       />
       <span style={{ fontFamily: FONT, fontSize: '18px', fontWeight: '600', color: color, letterSpacing: '0.3px' }}>
-        Rotation Analytics<span style={{ fontWeight: '400', marginLeft: '4px' }}>Inc</span>
+        Rotation Analytics
       </span>
     </div>
   )

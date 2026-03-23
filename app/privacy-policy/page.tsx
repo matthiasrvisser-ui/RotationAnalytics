@@ -244,7 +244,7 @@ export default function PrivacyPolicyPage() {
           </p>
           <p className="text-slate-700 leading-relaxed mb-4">
             If a privacy breach occurs that poses a real risk of significant harm, Rotation
-            Analytics Inc will (i) notify affected individuals via their provided contact
+            Analytics will (i) notify affected individuals via their provided contact
             information as soon as reasonably possible; (ii) report the breach to the Office of
             the Privacy Commissioner of Canada (OPC); and (iii) take immediate corrective
             actions to mitigate risks and prevent future incidents.

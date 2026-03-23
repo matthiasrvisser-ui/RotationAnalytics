@@ -123,7 +123,7 @@ export default function TermsOfServicePage() {
             Rotation Analytics provides independent analytical review of rotation schedules.
             Our services include evaluating shift schedules against collective agreement
             provisions, employment standards, and occupational health guidelines. Rotation
-            Analytics Inc conducts analysis without structural alignment to any party to the
+            Analytics conducts analysis without structural alignment to any party to the
             scheduling arrangement.
           </p>
           <p className="text-slate-700 leading-relaxed mb-4">
