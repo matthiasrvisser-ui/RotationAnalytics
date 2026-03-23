@@ -97,56 +97,17 @@ export default function Home() {
           <p className="text-base text-slate-600 leading-relaxed mb-4">
             You know the reality: collective agreement scheduling provisions are extremely complex and difficult to decipher. Rotations span weeks. Manual review, no matter how experienced the reviewer, misses more as complexity increases.
           </p>
-          <p className="text-base text-slate-600 leading-relaxed mb-10">
-            Rotation Analytics was built for exactly this problem.
+          <p className="text-base text-slate-600 leading-relaxed mb-8">
+            Rotation Analytics was built for exactly this problem. Issues identified before implementation cost a fraction of what they cost after a grievance is filed. Independent analysis turns potential disputes into documented, addressable findings.
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-white border border-slate-200 rounded-lg p-6">
-              <div className="w-10 h-10 rounded-lg bg-brand-navy/10 flex items-center justify-center mb-4">
-                <svg className="w-5 h-5 text-brand-navy" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085" />
-                </svg>
-              </div>
-              <h3 className="text-sm font-semibold text-slate-900 mb-2">Purpose-Built Compliance Tools</h3>
-              <p className="text-sm text-slate-500 leading-relaxed">
-                Our proprietary analysis engine was engineered specifically for rotation compliance. It evaluates every shift against every applicable provision across the full rotation cycle.
-              </p>
-            </div>
-            <div className="bg-white border border-slate-200 rounded-lg p-6">
-              <div className="w-10 h-10 rounded-lg bg-brand-navy/10 flex items-center justify-center mb-4">
-                <svg className="w-5 h-5 text-brand-navy" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M4.26 10.147a60.438 60.438 0 00-.491 6.347A48.62 48.62 0 0112 20.904a48.62 48.62 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.636 50.636 0 00-2.658-.813A59.906 59.906 0 0112 3.493a59.903 59.903 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0112 13.489a50.702 50.702 0 017.74-3.342" />
-                </svg>
-              </div>
-              <h3 className="text-sm font-semibold text-slate-900 mb-2">Domain Expertise</h3>
-              <p className="text-sm text-slate-500 leading-relaxed">
-                The engine finds what it&rsquo;s built to find because the people behind it have lived these schedules. They have built rotations, audited them, and advised enterprise platforms on compliance logic.
-              </p>
-            </div>
-            <div className="bg-white border border-slate-200 rounded-lg p-6">
-              <div className="w-10 h-10 rounded-lg bg-brand-navy/10 flex items-center justify-center mb-4">
-                <svg className="w-5 h-5 text-brand-navy" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
-                </svg>
-              </div>
-              <h3 className="text-sm font-semibold text-slate-900 mb-2">Pre-Grievance Identification</h3>
-              <p className="text-sm text-slate-500 leading-relaxed">
-                Issues identified before implementation cost a fraction of what they cost after a grievance is filed. Independent analysis turns potential disputes into documented, addressable findings.
-              </p>
-            </div>
-          </div>
 
-          <div className="mt-8 bg-white border border-brand-navy/10 rounded-lg p-6">
-            <div className="flex flex-col md:flex-row md:items-start gap-6">
-              <div className="flex-1">
-                <p className="text-xs font-semibold text-brand-navy uppercase tracking-widest mb-2">
-                  Only Available Here
-                </p>
-                <p className="text-sm text-slate-600 leading-relaxed">
-                  <strong className="text-slate-800">On-call shift validation</strong>: our engine validates on-call scheduling against collective agreement provisions, including placement relative to off-duty days, frequency, and rest period interactions. No other rotation analysis service provides this. Combined with our <strong className="text-slate-800">biomathematical fatigue modelling</strong>, this is the most complete rotation risk assessment available in Canada.
-                </p>
-              </div>
-            </div>
+          <div className="bg-white border border-brand-navy/10 rounded-lg p-6">
+            <p className="text-xs font-semibold text-brand-navy uppercase tracking-widest mb-2">
+              Only Available Here
+            </p>
+            <p className="text-sm text-slate-600 leading-relaxed">
+              <strong className="text-slate-800">On-call shift validation</strong>: our engine validates on-call scheduling against collective agreement provisions, including placement relative to off-duty days, frequency, and rest period interactions. No other rotation analysis service provides this. Combined with our <strong className="text-slate-800">biomathematical fatigue modelling</strong>, this is the most complete rotation risk assessment available in Canada.
+            </p>
           </div>
         </div>
       </Section>
@@ -196,29 +157,13 @@ export default function Home() {
             </span>
           </Link>
         </div>
-
-        {/* What You Receive — compact summary */}
-        <div className="border-t border-slate-200 pt-10">
-          <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-4">
-            What You Receive
-          </p>
-          <p className="text-base text-slate-600 leading-relaxed max-w-3xl">
-            Every engagement produces an{' '}
-            <Link href="/example-rotation" className="text-brand-navy font-medium hover:underline">annotated rotation schedule</Link>
-            {' '}and an{' '}
-            <Link href="/sample-report" className="text-brand-navy font-medium hover:underline">executive findings report</Link>
-            {' '}with risk-classified findings and collective agreement citations. A{' '}
-            <Link href="/fatigue-analysis" className="text-brand-navy font-medium hover:underline">fatigue risk analysis report</Link>
-            {' '}is available as an add-on, elected at submission.
-          </p>
-        </div>
       </Section>
 
       {/* §7 — Process overview + mid-page CTA */}
       <Section
         className="bg-brand-cream"
         title="The Analysis Process"
-        subtitle="How a rotation analysis is conducted from receipt to delivery."
+        subtitle="A rotation is a cyclical work plan where a pattern of shifts repeats over a set period, usually spanning weeks or months. Here is how an analysis is conducted from receipt to delivery."
         divider
       >
         <ProcessOverview />
@@ -256,43 +201,14 @@ export default function Home() {
         </div>
       </Section>
 
-      {/* §8 — Where Rotation Analysis Applies */}
-      <Section title="Where Rotation Analysis Applies" divider>
-        <div className="max-w-3xl">
-          <p className="text-base text-slate-600 leading-relaxed mb-6">
-            A rotation is a cyclical work plan where a pattern of shifts (on-duty times, off-duty days, and shift types) repeats over a set period, usually spanning weeks or months. Any industry that operates on structured rotation schedules can benefit from independent analysis.
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div>
-              <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-3">Analyze</p>
-              <p className="text-sm text-slate-600 leading-relaxed">
-                Every shift in the rotation is evaluated against collective agreement provisions, employment standards, and scheduling best practices across the full cycle.
-              </p>
-            </div>
-            <div>
-              <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-3">Identify</p>
-              <p className="text-sm text-slate-600 leading-relaxed">
-                Non-conformances, rest period violations, and fatigue risk exposures are documented with risk classifications and agreement references.
-              </p>
-            </div>
-            <div>
-              <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-3">Deliver</p>
-              <p className="text-sm text-slate-600 leading-relaxed">
-                Findings are packaged into a structured report delivered exclusively to the commissioning client for internal review, grievance preparation, or negotiation support.
-              </p>
-            </div>
-          </div>
-        </div>
-      </Section>
-
-      {/* §9 — Final CTA */}
+      {/* §8 — Final CTA */}
       <Section className="bg-brand-navy">
         <div className="text-center py-4">
           <h2 className="text-2xl font-bold text-white mb-4 tracking-tight">
             Ready when you are.
           </h2>
           <p className="text-slate-300 mb-8 max-w-xl mx-auto text-sm leading-relaxed">
-            Begin an engagement directly. Sign the agreement, submit your rotation, and receive findings. No discovery call required. Start with a single rotation, no ongoing commitment.
+            Independent, expert-led analysis of your rotation schedule. Findings delivered exclusively to you.
           </p>
           <div className="flex flex-wrap justify-center gap-5 items-center">
             <Link
