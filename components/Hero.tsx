@@ -5,11 +5,12 @@ interface HeroProps {
   subheadline: string
   cta?: { label: string; href: string }
   secondaryCta?: { label: string; href: string }
+  tertiaryCta?: { label: string; href: string }
   /** Optional background image URL. When provided, a navy tint overlay is applied. */
   backgroundImage?: string
 }
 
-export function Hero({ headline, subheadline, cta, secondaryCta, backgroundImage }: HeroProps) {
+export function Hero({ headline, subheadline, cta, secondaryCta, tertiaryCta, backgroundImage }: HeroProps) {
   const hasImage = Boolean(backgroundImage)
 
   return (
@@ -67,28 +68,42 @@ export function Hero({ headline, subheadline, cta, secondaryCta, backgroundImage
             {subheadline}
           </p>
           {(cta || secondaryCta) && (
-            <div className="flex flex-wrap gap-5 items-center">
-              {cta && (
-                <Link
-                  href={cta.href}
-                  className={`inline-block px-7 py-3 rounded font-medium text-sm transition-colors ${
-                    hasImage
-                      ? 'bg-white text-brand-navy hover:bg-brand-cream'
-                      : 'bg-brand-navy text-white hover:bg-brand-navy-dark'
-                  }`}
-                >
-                  {cta.label}
-                </Link>
-              )}
-              {secondaryCta && (
-                <Link
-                  href={secondaryCta.href}
-                  className={`inline-block text-sm font-medium hover:underline underline-offset-4 transition-colors ${
-                    hasImage ? 'text-slate-200 hover:text-white' : 'text-brand-navy'
-                  }`}
-                >
-                  {secondaryCta.label} →
-                </Link>
+            <div className="space-y-4">
+              <div className="flex flex-wrap gap-5 items-center">
+                {cta && (
+                  <Link
+                    href={cta.href}
+                    className={`inline-block px-7 py-3 rounded font-medium text-sm transition-colors ${
+                      hasImage
+                        ? 'bg-white text-brand-navy hover:bg-brand-cream'
+                        : 'bg-brand-navy text-white hover:bg-brand-navy-dark'
+                    }`}
+                  >
+                    {cta.label}
+                  </Link>
+                )}
+                {secondaryCta && (
+                  <Link
+                    href={secondaryCta.href}
+                    className={`inline-block text-sm font-medium hover:underline underline-offset-4 transition-colors ${
+                      hasImage ? 'text-slate-200 hover:text-white' : 'text-brand-navy'
+                    }`}
+                  >
+                    {secondaryCta.label} →
+                  </Link>
+                )}
+              </div>
+              {tertiaryCta && (
+                <div className="flex flex-wrap gap-5 items-center">
+                  <Link
+                    href={tertiaryCta.href}
+                    className={`inline-block text-sm font-medium hover:underline underline-offset-4 transition-colors ${
+                      hasImage ? 'text-slate-200 hover:text-white' : 'text-brand-navy'
+                    }`}
+                  >
+                    {tertiaryCta.label} →
+                  </Link>
+                </div>
               )}
             </div>
           )}

@@ -35,6 +35,7 @@ export default function Home() {
         subheadline="We reveal them before they become costly problems. Independent, expert-led analysis of unionized shift rotations, powered by purpose-built compliance tools."
         cta={{ label: 'Begin an Engagement', href: '/engage' }}
         secondaryCta={{ label: 'View Sample Report', href: '/sample-report' }}
+        tertiaryCta={{ label: 'View Example Rotation', href: '/example-rotation' }}
       />
 
       {/* §2 — Credential line */}
@@ -163,7 +164,7 @@ export default function Home() {
             Walk through a real analysis, from a rotation that passed manual review to the report that revealed what was missed.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
           <Link href="/example-rotation" className="group border border-slate-200 rounded-lg p-8 hover:border-brand-navy/30 transition-colors">
             <p className="text-2xl font-bold text-slate-200 mb-4">01</p>
             <h3 className="text-base font-bold text-slate-900 mb-3 group-hover:text-brand-navy transition-colors">Example Rotation</h3>
@@ -184,44 +185,32 @@ export default function Home() {
               View the report &rarr;
             </span>
           </Link>
+          <Link href="/fatigue-analysis" className="group border border-slate-200 rounded-lg p-8 hover:border-brand-navy/30 transition-colors">
+            <p className="text-2xl font-bold text-slate-200 mb-4">03</p>
+            <h3 className="text-base font-bold text-slate-900 mb-3 group-hover:text-brand-navy transition-colors">Fatigue Analysis</h3>
+            <p className="text-sm text-slate-500 leading-relaxed mb-4">
+              A schedule can be fully compliant and still produce a fatigued worker. See how biomathematical fatigue modelling identifies where and when that happens.
+            </p>
+            <span className="text-sm font-medium text-brand-navy">
+              Learn more &rarr;
+            </span>
+          </Link>
         </div>
 
-        {/* What You Receive — flows naturally after "see it in action" */}
-        <div className="max-w-4xl">
-          <div className="border-t border-slate-200 pt-12">
-            <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-5">
-              What You Receive
-            </p>
-            <h2 className="text-2xl md:text-3xl font-bold text-slate-900 tracking-tight mb-3">
-              Documented findings, delivered confidentially.
-            </h2>
-            <p className="text-base text-slate-500 leading-relaxed mb-8 max-w-3xl">
-              Every engagement produces two core deliverables. A third is available when fatigue analysis is elected.
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-              <div className="bg-brand-cream border border-slate-200 rounded-lg p-6">
-                <p className="text-2xl font-bold text-slate-200 mb-4">01</p>
-                <h3 className="text-sm font-semibold text-slate-900 mb-2">Annotated Rotation Schedule</h3>
-                <p className="text-sm text-slate-500 leading-relaxed">
-                  Your rotation returned with all identified non-conformances flagged and annotated directly in the file.
-                </p>
-              </div>
-              <div className="bg-brand-cream border border-slate-200 rounded-lg p-6">
-                <p className="text-2xl font-bold text-slate-200 mb-4">02</p>
-                <h3 className="text-sm font-semibold text-slate-900 mb-2">Executive Findings Report</h3>
-                <p className="text-sm text-slate-500 leading-relaxed">
-                  Risk-classified findings with collective agreement citations and supporting explanation for internal review.
-                </p>
-              </div>
-              <div className="bg-brand-cream border border-slate-200 rounded-lg p-6">
-                <p className="text-2xl font-bold text-slate-200 mb-4">03</p>
-                <h3 className="text-sm font-semibold text-slate-900 mb-2">Fatigue Risk Analysis Report <span className="text-xs font-normal text-slate-400">(add-on)</span></h3>
-                <p className="text-sm text-slate-500 leading-relaxed">
-                  Per-line fatigue scores, risk classifications, and trend visualisations across the full rotation cycle. Elected at submission.
-                </p>
-              </div>
-            </div>
-          </div>
+        {/* What You Receive — compact summary */}
+        <div className="border-t border-slate-200 pt-10">
+          <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-4">
+            What You Receive
+          </p>
+          <p className="text-base text-slate-600 leading-relaxed max-w-3xl">
+            Every engagement produces an{' '}
+            <Link href="/example-rotation" className="text-brand-navy font-medium hover:underline">annotated rotation schedule</Link>
+            {' '}and an{' '}
+            <Link href="/sample-report" className="text-brand-navy font-medium hover:underline">executive findings report</Link>
+            {' '}with risk-classified findings and collective agreement citations. A{' '}
+            <Link href="/fatigue-analysis" className="text-brand-navy font-medium hover:underline">fatigue risk analysis report</Link>
+            {' '}is available as an add-on, elected at submission.
+          </p>
         </div>
       </Section>
 
