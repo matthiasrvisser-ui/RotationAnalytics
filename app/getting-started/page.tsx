@@ -56,7 +56,7 @@ const standardSteps = [
   },
 ]
 
-const pilotBenefits = [
+const submissionBenefits = [
   {
     title: 'One Rotation, One Fee',
     description:
@@ -65,7 +65,7 @@ const pilotBenefits = [
   {
     title: 'Full Methodology',
     description:
-      'The pilot engagement uses the same analysis engine, the same fatigue model, and the same deliverable format as every other engagement. Nothing is simplified or reduced.',
+      'Every submission uses the same analysis engine, the same fatigue model, and the same deliverable format. Nothing is simplified or reduced.',
   },
   {
     title: 'Evaluate the Output',
@@ -75,7 +75,7 @@ const pilotBenefits = [
   {
     title: 'No Ongoing Commitment',
     description:
-      'A single analysis starting at $225 CAD. If the pilot demonstrates value, your service agreement remains active for 12 months. Submit additional rotations at any time.',
+      'A single analysis starting at $225 CAD. Your service agreement remains active for 12 months. Submit additional rotations at any time without re-signing.',
   },
 ]
 
@@ -105,6 +105,11 @@ const faqs = [
     answer:
       'The minimum engagement fee is $225 CAD, which covers rotations up to approximately 640 shifts at the base compliance rate. Most single-rotation analyses fall within this range.',
   },
+  {
+    question: 'What is the difference between an immediate submission and an enterprise engagement?',
+    answer:
+      'An immediate submission is a single-rotation, pay-as-you-go analysis. Accept the service agreement, submit your rotation, and receive findings — no scoping call, no ongoing commitment. Your agreement remains active for 12 months, so you can submit additional rotations at any time without re-signing. An enterprise engagement is for organizations with multiple rotations, recurring analysis needs, or complex scheduling environments. Enterprise engagements begin with a scoping conversation and are governed by a custom master service agreement structured around volume and requirements.',
+  },
 ]
 
 export default function GettingStartedPage() {
@@ -119,7 +124,7 @@ export default function GettingStartedPage() {
       <Section contained>
         <div className="max-w-4xl mx-auto">
           <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-5">
-            Standard Engagement
+            Immediate Submission
           </p>
           <h2 className="text-2xl md:text-3xl font-bold text-slate-900 tracking-tight mb-3">
             Three steps. No gatekeeping.
@@ -180,10 +185,10 @@ export default function GettingStartedPage() {
           {/* Shared header row — eyebrows */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 mb-5">
             <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest">
-              Start with a Pilot
+              Immediate Submission
             </p>
             <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest hidden md:block">
-              Enterprise &amp; Integrated Engagements
+              Enterprise Engagement
             </p>
           </div>
 
@@ -209,9 +214,9 @@ export default function GettingStartedPage() {
 
           {/* Cards row — aligned */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-            {/* Pilot cards */}
+            {/* Immediate submission cards */}
             <div className="space-y-3">
-              {pilotBenefits.map((benefit) => (
+              {submissionBenefits.map((benefit) => (
                 <div key={benefit.title} className="bg-white border border-slate-200 rounded-lg p-4">
                   <h3 className="text-sm font-semibold text-brand-navy mb-1">{benefit.title}</h3>
                   <p className="text-xs text-slate-500 leading-relaxed">{benefit.description}</p>
@@ -223,7 +228,7 @@ export default function GettingStartedPage() {
             <div>
               <div className="md:hidden mb-6">
                 <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-5">
-                  Enterprise &amp; Integrated Engagements
+                  Enterprise Engagement
                 </p>
                 <h2 className="text-xl font-bold text-slate-900 tracking-tight mb-3">
                   Recurring analysis across your organization.
@@ -249,8 +254,8 @@ export default function GettingStartedPage() {
                   href="/contact"
                   className="block bg-brand-navy border border-brand-navy rounded-lg p-4 hover:bg-brand-navy-dark transition-colors"
                 >
-                  <h3 className="text-sm font-semibold text-white mb-1">Discuss an Enterprise Engagement</h3>
-                  <p className="text-xs text-slate-300 leading-relaxed">Reach out to discuss your scheduling environment, volume, and requirements.</p>
+                  <h3 className="text-sm font-semibold text-white mb-1">Discuss Enterprise Engagement</h3>
+                  <p className="text-xs text-slate-300 leading-relaxed">For multi-rotation or recurring analysis needs. Reach out to discuss your scheduling environment, volume, and requirements.</p>
                 </Link>
               </div>
             </div>
@@ -282,7 +287,7 @@ export default function GettingStartedPage() {
             Ready when you are.
           </h2>
           <p className="text-slate-300 mb-8 max-w-xl mx-auto text-sm leading-relaxed">
-            Begin an engagement directly, or reach out if you have questions about your scheduling environment before committing.
+            Begin an engagement directly, or reach out if you have questions about your scheduling environment before getting started.
           </p>
           <div className="flex flex-wrap justify-center gap-5 items-center">
             <Link

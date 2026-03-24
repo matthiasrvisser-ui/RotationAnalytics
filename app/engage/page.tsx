@@ -19,7 +19,7 @@ export default function EngagePage() {
   const [agreed, setAgreed] = useState(false)
   const [agreeError, setAgreeError] = useState(false)
   const [submitError, setSubmitError] = useState<string | null>(null)
-  const [showReturningModal, setShowReturningModal] = useState(false)
+  const [clientType, setClientType] = useState<'new' | 'returning'>('new')
   const [returningAgreed, setReturningAgreed] = useState(false)
   const [returningError, setReturningError] = useState(false)
   const formRef = useRef<HTMLFormElement>(null)
@@ -40,7 +40,6 @@ export default function EngagePage() {
       return
     }
     setReturningError(false)
-    setShowReturningModal(false)
     setStep('submission')
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
@@ -76,11 +75,74 @@ export default function EngagePage() {
       <>
         <Hero
           headline="Begin Your Engagement"
-          subheadline="Review and accept the service agreement to begin. Once accepted, submit your rotation data — Rotation Analytics will verify completeness, issue an invoice, and deliver your analysis upon confirmed payment."
+          subheadline="Single rotation. No ongoing commitment. Starting at $225 CAD with analysis delivered in 48–72 hours."
         />
 
         <Section divider>
           <div className="max-w-3xl">
+            {/* Client type fork */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
+              <button
+                type="button"
+                onClick={() => setClientType('new')}
+                className={`text-left border rounded-lg p-5 transition-colors ${clientType === 'new' ? 'border-brand-navy bg-brand-navy/5 ring-2 ring-brand-navy/20' : 'border-slate-200 bg-white hover:border-slate-300'}`}
+              >
+                <p className="text-sm font-semibold text-brand-navy mb-1">New Client</p>
+                <p className="text-xs text-slate-500 leading-relaxed">
+                  Accept the service agreement and submit your first rotation.
+                </p>
+              </button>
+              <button
+                type="button"
+                onClick={() => setClientType('returning')}
+                className={`text-left border rounded-lg p-5 transition-colors ${clientType === 'returning' ? 'border-brand-navy bg-brand-navy/5 ring-2 ring-brand-navy/20' : 'border-slate-200 bg-white hover:border-slate-300'}`}
+              >
+                <p className="text-sm font-semibold text-brand-navy mb-1">Returning Client</p>
+                <p className="text-xs text-slate-500 leading-relaxed">
+                  Already have a signed service agreement? Submit under your existing 12-month agreement.
+                </p>
+              </button>
+            </div>
+
+            {/* Returning client — confirm and proceed */}
+            {clientType === 'returning' && (
+              <div className="mb-10">
+                <div className={`rounded-lg border p-5 mb-5 ${returningError ? 'border-red-300 bg-red-50' : 'border-slate-200 bg-slate-50'}`}>
+                  <label className="flex items-start gap-3 cursor-pointer">
+                    <input
+                      type="checkbox"
+                      className="mt-0.5 w-4 h-4 rounded border-slate-400 accent-brand-navy cursor-pointer"
+                      checked={returningAgreed}
+                      onChange={e => {
+                        setReturningAgreed(e.target.checked)
+                        if (e.target.checked) setReturningError(false)
+                      }}
+                    />
+                    <span className="text-sm text-slate-700 leading-relaxed">
+                      I confirm that my organization has a signed Service Agreement (Version 2025-v2) currently in effect
+                      with Rotation Analytics, and I acknowledge that this submission is governed by
+                      the terms, conditions, and pricing of that agreement.
+                    </span>
+                  </label>
+                  {returningError && (
+                    <p className="mt-2 text-xs text-red-600 font-medium">
+                      You must confirm your existing agreement to continue.
+                    </p>
+                  )}
+                </div>
+                <button
+                  type="button"
+                  onClick={handleReturningContinue}
+                  className="bg-brand-navy text-white px-8 py-3 rounded font-medium text-sm hover:bg-brand-navy-dark transition-colors"
+                >
+                  Continue to Submission
+                </button>
+              </div>
+            )}
+
+            {/* New client — full agreement flow */}
+            {clientType === 'new' && (
+              <>
             {/* Process steps */}
             <div className="flex items-center gap-3 mb-10">
               {['Accept Agreement', 'Submit Rotation', 'Invoice & Payment', 'Deliverables'].map((label, i) => (
@@ -177,92 +239,10 @@ export default function EngagePage() {
             >
               Accept Agreement &amp; Continue to Submission
             </button>
-
-            <div className="mt-6 pt-6 border-t border-slate-200">
-              <button
-                type="button"
-                onClick={() => setShowReturningModal(true)}
-                className="text-sm font-medium text-brand-navy hover:text-brand-navy-dark transition-colors"
-              >
-                Returning client? Submit under your existing agreement &rarr;
-              </button>
-            </div>
+              </>
+            )}
           </div>
         </Section>
-
-        {/* Returning Client Modal */}
-        {showReturningModal && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
-            <div
-              className="absolute inset-0 bg-black/50"
-              onClick={() => { setShowReturningModal(false); setReturningError(false); setReturningAgreed(false) }}
-            />
-            <div className="relative bg-white rounded-lg shadow-xl max-w-lg w-full p-6">
-              <button
-                onClick={() => { setShowReturningModal(false); setReturningError(false); setReturningAgreed(false) }}
-                className="absolute top-4 right-4 text-slate-400 hover:text-slate-600 transition-colors"
-                aria-label="Close"
-              >
-                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              </button>
-
-              <p className="text-xs font-semibold text-brand-navy uppercase tracking-widest mb-3">
-                Returning Client
-              </p>
-              <h3 className="text-lg font-semibold text-brand-navy mb-3">
-                Submit Under Existing Agreement
-              </h3>
-              <p className="text-sm text-slate-600 leading-relaxed mb-5">
-                If your organization has a signed Service Agreement (Version 2025-v2) currently
-                in effect with Rotation Analytics, you may submit additional rotations for analysis
-                without re-executing the agreement.
-              </p>
-
-              <div className={`rounded-lg border p-4 mb-5 ${returningError ? 'border-red-300 bg-red-50' : 'border-slate-200 bg-slate-50'}`}>
-                <label className="flex items-start gap-3 cursor-pointer">
-                  <input
-                    type="checkbox"
-                    className="mt-0.5 w-4 h-4 rounded border-slate-400 accent-brand-navy cursor-pointer"
-                    checked={returningAgreed}
-                    onChange={e => {
-                      setReturningAgreed(e.target.checked)
-                      if (e.target.checked) setReturningError(false)
-                    }}
-                  />
-                  <span className="text-sm text-slate-700 leading-relaxed">
-                    I confirm that my organization has a signed Service Agreement currently in effect
-                    with Rotation Analytics, and I acknowledge that this submission is governed by
-                    the terms, conditions, and pricing of that agreement.
-                  </span>
-                </label>
-                {returningError && (
-                  <p className="mt-2 text-xs text-red-600 font-medium">
-                    You must confirm your existing agreement to continue.
-                  </p>
-                )}
-              </div>
-
-              <div className="flex items-center gap-3">
-                <button
-                  type="button"
-                  onClick={handleReturningContinue}
-                  className="bg-brand-navy text-white px-6 py-2.5 rounded font-medium text-sm hover:bg-brand-navy-dark transition-colors"
-                >
-                  Continue to Submission
-                </button>
-                <button
-                  type="button"
-                  onClick={() => { setShowReturningModal(false); setReturningError(false); setReturningAgreed(false) }}
-                  className="text-sm text-slate-500 hover:text-slate-700 transition-colors"
-                >
-                  Cancel
-                </button>
-              </div>
-            </div>
-          </div>
-        )}
       </>
     )
   }
@@ -271,7 +251,7 @@ export default function EngagePage() {
     <>
       <Hero
         headline="Submit Your Rotation"
-        subheadline="Agreement accepted — a copy has been provided to both parties. Submit your rotation data below. Rotation Analytics will verify completeness and issue an invoice."
+        subheadline="Agreement accepted. A copy has been provided to both parties. Submit your rotation data below. Rotation Analytics will verify completeness and issue an invoice."
       />
 
       <Section divider>
@@ -487,12 +467,6 @@ export default function EngagePage() {
               <p className="text-sm text-slate-600 leading-relaxed">Deliverables are held until payment is confirmed. No licence or usage rights are granted prior to payment.</p>
             </div>
 
-            <div className="bg-brand-navy/5 border border-brand-navy/15 rounded-lg p-5">
-              <p className="text-xs font-semibold text-brand-navy uppercase tracking-widest mb-2">Integrated Support</p>
-              <p className="text-sm text-slate-600 leading-relaxed">
-                While ad hoc analysis is available, Rotation Analytics recommends integrated engagement for ongoing rotational risk monitoring across rotation cycles. Contact us to discuss recurring analytical support.
-              </p>
-            </div>
           </div>
         </div>
       </Section>

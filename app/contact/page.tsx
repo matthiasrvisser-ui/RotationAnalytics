@@ -13,7 +13,7 @@ const labelClass =
 
 export default function Contact() {
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle')
-  const [form, setForm] = useState({ org: '', contactName: '', email: '', phone: '', message: '' })
+  const [form, setForm] = useState({ org: '', contactName: '', email: '', phone: '', enquiryType: '', message: '' })
 
   function set(field: string, value: string) {
     setForm(f => ({ ...f, [field]: value }))
@@ -41,12 +41,23 @@ export default function Contact() {
   return (
     <>
       <Hero
-        headline="Get in Touch"
-        subheadline="Reach out to discuss independent rotation analysis, whether it's a single rotation or a full schedule evaluation."
-        secondaryCta={{ label: 'Already commissioned? Begin Engagement', href: '/engage' }}
+        headline="Enterprise Engagement"
+        subheadline="For multi-rotation, recurring analysis, or master service agreement discussions. Reach out to discuss your scheduling environment, volume, and requirements."
       />
 
       <Section>
+        <div className="bg-brand-cream border border-slate-200 rounded-lg p-5 mb-10 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+          <p className="text-sm text-slate-600 leading-relaxed">
+            Ready to submit a single rotation? No scoping call needed. Begin immediately.
+          </p>
+          <Link
+            href="/engage"
+            className="inline-flex items-center justify-center bg-brand-navy text-white text-sm font-medium px-5 py-2.5 rounded hover:bg-brand-navy-dark transition-colors whitespace-nowrap"
+          >
+            Begin an Engagement
+          </Link>
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-14">
           {/* Left — Direct contact + what happens next */}
           <div>
@@ -88,7 +99,7 @@ export default function Contact() {
                 What Happens Next
               </p>
               <p className="text-sm text-slate-600 leading-relaxed mb-2">
-                We respond within 2 business days. We&rsquo;ll discuss your rotation environment, the collective agreement(s) in scope, and confirm engagement structure and timeline before any commitment.
+                We respond within 2 business days. We&rsquo;ll discuss your scheduling environment, the collective agreement(s) in scope, rotation volume, and confirm an enterprise engagement structure and timeline before any commitment.
               </p>
               <p className="text-sm text-slate-600 leading-relaxed">
                 All communications are confidential from first contact.
@@ -109,7 +120,7 @@ export default function Contact() {
           {/* Right — Contact Form */}
           <div>
             <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-5">
-              Enquiry
+              Enterprise Enquiry
             </p>
 
             {status === 'success' ? (
@@ -185,6 +196,21 @@ export default function Contact() {
                     className={inputClass}
                     placeholder="+1 (___) ___-____"
                   />
+                </div>
+
+                <div>
+                  <label htmlFor="enquiryType" className={labelClass}>Nature of Enquiry</label>
+                  <select
+                    id="enquiryType"
+                    value={form.enquiryType}
+                    onChange={e => set('enquiryType', e.target.value)}
+                    className={inputClass}
+                  >
+                    <option value="">Select...</option>
+                    <option value="enterprise">Enterprise / Multi-Rotation Engagement</option>
+                    <option value="msa">Master Service Agreement</option>
+                    <option value="general">General Question</option>
+                  </select>
                 </div>
 
                 <div>
