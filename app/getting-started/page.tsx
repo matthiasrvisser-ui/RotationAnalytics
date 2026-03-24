@@ -83,7 +83,7 @@ const faqs = [
   {
     question: 'What format does the rotation need to be in?',
     answer:
-      'Excel (.xlsx, .xls) or CSV. The rotation should include shift start times, end times, and shift type identifiers. A shift legend or key should be included or provided separately.',
+      'Excel (.xlsx, .xls) or CSV. The rotation should include shift start times, end times, and shift type identifiers. A shift legend or key should be included or provided separately. Do not include employee names or any personally identifiable information. Role identifiers and rotation structure are all that is required.',
   },
   {
     question: 'How are findings delivered?',
@@ -98,7 +98,7 @@ const faqs = [
   {
     question: 'What collective agreements do you support?',
     answer:
-      'The analysis engine is configured for the specific collective agreement identified at submission. We have deep experience with healthcare collective agreements in Alberta and can support agreements from any Canadian jurisdiction and sector.',
+      'All collective agreements are supported. The analysis engine is configured for the specific collective agreement identified at submission. If the agreement is not publicly available, a copy should be submitted alongside the rotation.',
   },
   {
     question: 'Is there a minimum engagement size?',
