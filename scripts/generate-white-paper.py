@@ -367,7 +367,7 @@ def build_document():
         ["S_lower", "0.17", "Asymptotic lower bound of S (fully rested state)"],
         ["S_brake", "0.35", "Threshold at which sleep recovery transitions from rapid (\u03c4_S) to slow (\u03c4_S2)"],
     ]
-    story.append(make_table(homeo_data, [1.2 * inch, 1.0 * inch, 4.2 * inch]))
+    story.append(make_table(homeo_data, [1.5 * inch, 1.0 * inch, 3.9 * inch]))
     story.append(Paragraph("<i>Table 1: Homeostatic process parameters.</i>", style_caption))
     story.append(Spacer(1, 8))
 
@@ -438,7 +438,7 @@ def build_document():
         ["Sleep debt rate (k_debt)", "0.5", "Fatigue points added per hour of accumulated sleep debt"],
         ["Debt recovery rate", "0.5", "Rate at which excess sleep reduces accumulated debt (50% efficiency)"],
     ]
-    story.append(make_table(score_data, [1.8 * inch, 0.8 * inch, 3.8 * inch]))
+    story.append(make_table(score_data, [1.8 * inch, 1.0 * inch, 3.6 * inch]))
     story.append(Paragraph("<i>Table 4: Scoring parameters.</i>", style_caption))
     story.append(Spacer(1, 8))
 
@@ -472,7 +472,7 @@ def build_document():
         "The average circadian value across all 15-minute steps of the shift is computed:",
         style_body
     ))
-    story.append(formula("CircadianMod = \u2212C\u0304_shift \u00d7 CircadianWeight"))
+    story.append(formula("CircadianMod = -C_avg_shift \u00d7 CircadianWeight"))
     story.append(Paragraph(
         "When the circadian function is negative (nighttime trough), CircadianMod becomes "
         "positive, adding to fatigue. When the circadian function is positive (daytime peak), "
@@ -519,7 +519,7 @@ def build_document():
         "0\u2013100 base score"
     ))
     story.append(bullet(
-        "<b>CircadianMod</b> = \u2212C\u0304_shift \u00d7 25, ranging from approximately \u22127 "
+        "<b>CircadianMod</b> = -C_avg_shift \u00d7 25, ranging from approximately \u22127 "
         "(afternoon, favourable) to +7 (early morning, unfavourable)"
     ))
     story.append(bullet(
