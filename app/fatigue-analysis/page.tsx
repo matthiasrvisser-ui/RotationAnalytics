@@ -195,10 +195,10 @@ export default function FatigueAnalysisPage() {
       <Section contained className="bg-brand-cream">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-2xl font-semibold text-brand-navy mb-4">
-            Available as an Add-On
+            Included With Any Compliance Engagement
           </h2>
           <p className="text-slate-700 leading-relaxed mb-4">
-            Fatigue risk analysis is available as an add-on to any compliance engagement. A single rotation submission flows through both the compliance engine and the fatigue model, providing the most complete rotation risk assessment available.
+            Fatigue risk analysis can be elected alongside any compliance engagement. A single rotation submission flows through both the compliance engine and the fatigue model, delivering the most complete rotation risk assessment available.
           </p>
           <Link
             href="/getting-started"

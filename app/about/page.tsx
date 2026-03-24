@@ -97,7 +97,7 @@ export default function About() {
                 a Health Spending Account provider serving Canadian small businesses. That experience building compliant, regulated financial products from the ground up shaped how he approaches new ventures: get the infrastructure right, document everything, and let the work speak for itself.
               </p>
               <p className="text-sm text-slate-600 leading-relaxed">
-                He married Kristy in 2025, and together they built Rotation Analytics Matthias is responsible for the commercial operations, strategic direction, and client engagement that enable the firm to deliver independent analysis at scale.
+                Matthias is responsible for the commercial operations, strategic direction, and client engagement that enable Rotation Analytics to deliver independent analysis at scale.
               </p>
             </div>
           </div>
