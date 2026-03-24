@@ -323,7 +323,10 @@ export default function EngagePage() {
                     className="w-full text-sm text-slate-600 file:mr-4 file:py-1.5 file:px-4 file:rounded file:border-0 file:text-xs file:font-semibold file:bg-brand-navy file:text-white hover:file:bg-brand-navy-dark file:cursor-pointer cursor-pointer"
                   />
                   <p className="text-xs text-slate-400 mt-1.5">
-                    Excel format (.xlsx, .xls) or .csv — include the shift legend (shift codes, start/end times, paid hours).
+                    Excel format (.xlsx, .xls) or .csv. Include the shift legend (shift codes, start/end times, paid hours).
+                  </p>
+                  <p className="text-xs text-slate-400 mt-1">
+                    No personally identifiable information is required. Rotations should contain shift times, role identifiers, and rotation structure only. Do not include employee names or personal details.
                   </p>
                 </div>
               </div>

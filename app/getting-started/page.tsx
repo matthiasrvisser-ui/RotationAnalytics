@@ -38,7 +38,7 @@ const standardSteps = [
       'Upload the rotation file directly through the secure portal',
       'Reference the collective agreement and any local conditions',
       'Elect the optional Fatigue Risk Analysis add-on',
-      'Provide any additional context that may assist the analysis',
+      'No personally identifiable information is required. Rotations should contain shift times, role identifiers, and rotation structure only',
     ],
   },
   {
