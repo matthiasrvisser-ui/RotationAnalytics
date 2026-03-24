@@ -235,23 +235,23 @@ export default function ExampleRotation() {
       <Section className="bg-brand-navy">
         <div className="text-center py-4">
           <h2 className="text-2xl font-bold text-white mb-4 tracking-tight">
-            See the Full Executive Report
+            Ready when you are.
           </h2>
           <p className="text-slate-300 mb-8 max-w-xl mx-auto text-sm leading-relaxed">
-            This rotation generated an executive report documenting all 15 parameters evaluated, with risk classifications and applicable agreement references.
+            Independent rotation analysis. No discovery call. Findings delivered in 48&ndash;72 hours.
           </p>
           <div className="flex flex-wrap justify-center gap-5 items-center">
             <Link
-              href="/sample-report"
+              href="/engage"
               className="bg-white text-brand-navy px-7 py-3 rounded font-medium text-sm hover:bg-brand-cream transition-colors"
             >
-              View the Sample Report
+              Begin an Engagement
             </Link>
             <Link
-              href="/engage"
+              href="/sample-report"
               className="text-sm font-medium text-slate-200 hover:text-white hover:underline underline-offset-4 transition-colors"
             >
-              Begin an Engagement &rarr;
+              View the Sample Report &rarr;
             </Link>
           </div>
         </div>

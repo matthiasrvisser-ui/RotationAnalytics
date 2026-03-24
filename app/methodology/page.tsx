@@ -170,7 +170,7 @@ export default function Methodology() {
                 Models physiological fatigue across the full rotation using a biomathematical model validated in occupational health literature. Available as an add-on when elected at submission.
               </p>
               <p className="text-sm text-slate-600 leading-relaxed mb-4">
-                Fatigue scores are classified into four risk levels (Low, Moderate, High, Critical) based on the combined effect of sleep pressure, circadian rhythm, and accumulated sleep debt.
+                Fatigue scores are classified into five risk levels (Low, Moderate, High, Very High, and Critical) based on the combined effect of sleep pressure, circadian rhythm, and accumulated sleep debt.
               </p>
               <Link
                 href="/fatigue-analysis"
@@ -216,10 +216,10 @@ export default function Methodology() {
       <Section className="bg-brand-navy">
         <div className="text-center py-4">
           <h2 className="text-2xl font-bold text-white mb-4 tracking-tight">
-            Ready to discuss an engagement?
+            Ready when you are.
           </h2>
           <p className="text-slate-300 mb-8 max-w-xl mx-auto text-sm leading-relaxed">
-            Whether you have a specific rotation in mind or want to understand what independent analysis would reveal, we are available to discuss your requirements.
+            Independent rotation analysis. No discovery call. Findings delivered in 48&ndash;72 hours.
           </p>
           <div className="flex flex-wrap justify-center gap-5 items-center">
             <Link
@@ -229,10 +229,10 @@ export default function Methodology() {
               Begin an Engagement
             </Link>
             <Link
-              href="/contact"
+              href="/example-rotation"
               className="text-sm font-medium text-slate-200 hover:text-white hover:underline underline-offset-4 transition-colors"
             >
-              Get in Touch &rarr;
+              View an Example Rotation &rarr;
             </Link>
           </div>
         </div>

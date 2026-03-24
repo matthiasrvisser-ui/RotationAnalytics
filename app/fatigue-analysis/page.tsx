@@ -76,24 +76,23 @@ export default function FatigueAnalysisPage() {
             the worker sleeps.
           </p>
           <p className="text-slate-700 leading-relaxed mb-4">
-            Night shift workers are predicted to sleep during the day because their sleep pressure
-            is high after the night shift. During multi-day breaks, the model recognises the
-            worker&rsquo;s natural sleep-wake cycle. No fixed sleep window is assumed.
-            Sleep timing adapts to the schedule.
+            Sleep onset occurs when predicted alertness falls below a threshold, and waking occurs
+            when alertness recovers above a higher threshold. A circadian sleep gate between 22:00
+            and 06:00 facilitates nighttime sleep. Daytime sleep is capped at 5.5 hours per calendar
+            day, consistent with published research showing that night-shift workers obtain
+            significantly less restorative sleep when sleeping during biological daytime.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 my-6">
             <div className="bg-white border border-slate-200 rounded-lg p-5">
               <p className="text-xs font-semibold text-brand-navy uppercase tracking-widest mb-2">
                 Sleep Debt
               </p>
               <p className="text-sm text-slate-600 leading-relaxed">
-                When predicted sleep falls below 6 hours and the gap between shifts is short
-                (under 16 hours), the shortfall accumulates. Each hour adds 2 points to the
-                fatigue score. The debt resets when the worker achieves a full sleep period
-                of 7 hours or more &mdash; capturing the compounding effect of consecutive
-                short-rest shifts without penalising well-rested workers during long recovery
-                periods.
+                When actual sleep falls short of the 8-hour daily requirement, the deficit
+                accumulates. When sleep exceeds the requirement, debt recovers at 50% efficiency,
+                reflecting that recovery sleep is less efficient than preventive sleep.
+                This captures the compounding effect of consecutive short-rest shifts.
               </p>
             </div>
             <div className="bg-white border border-slate-200 rounded-lg p-5">
@@ -107,6 +106,18 @@ export default function FatigueAnalysisPage() {
                 carried forward rather than artificially reset.
               </p>
             </div>
+            <div className="bg-white border border-slate-200 rounded-lg p-5">
+              <p className="text-xs font-semibold text-brand-navy uppercase tracking-widest mb-2">
+                First Night in Run
+              </p>
+              <p className="text-sm text-slate-600 leading-relaxed">
+                The first night shift after day shifts or days off carries the highest fatigue risk.
+                Workers have typically been awake since their normal morning wake time and have not
+                adapted their sleep schedule to night work. The model suppresses pre-shift sleep
+                to reflect this, producing appropriately elevated fatigue scores for transitional
+                night shifts.
+              </p>
+            </div>
           </div>
         </div>
       </Section>
@@ -118,7 +129,7 @@ export default function FatigueAnalysisPage() {
             Risk Classification
           </h2>
           <p className="text-slate-700 leading-relaxed mb-6">
-            Fatigue scores are classified into four risk levels. These classifications appear in
+            Fatigue scores are classified into five risk levels. These classifications appear in
             the deliverable alongside compliance findings, giving the Client a
             complete picture of scheduling risk.
           </p>
@@ -136,7 +147,9 @@ export default function FatigueAnalysisPage() {
             The report below is representative of an actual Fatigue Risk Analysis deliverable.
             Each row represents a rotation line. The trend column traces the fatigue score across
             every day of the rotation, both worked days and days off, showing the full recovery
-            and fatigue cycle.
+            and fatigue cycle. The days-in-risk-band columns show how many days each worker
+            spends at each risk level across the full rotation, capturing the cumulative
+            exposure profile.
           </p>
 
           <div className="border border-slate-200 rounded-lg overflow-hidden bg-white mb-4">
@@ -204,15 +217,17 @@ export default function FatigueAnalysisPage() {
           </h2>
           <p className="text-slate-700 leading-relaxed mb-4">
             The fatigue model is built on the Three-Process Model published by Åkerstedt and
-            Folkard (1987, revised through 2008) &mdash; the most widely validated biomathematical model
+            Folkard (1987, revised through 2008), the most widely validated biomathematical model
             for shift work fatigue in the occupational health literature. Its parameters have been
-            validated against real worker performance data including healthcare and industrial settings.
+            calibrated against expected fatigue outcomes for common shift patterns, including
+            healthcare and industrial settings.
           </p>
           <p className="text-slate-700 leading-relaxed mb-6">
             This analysis models a representative worker based on established physiological
             parameters. It does not account for individual variation in sleep patterns, age,
             chronotype, or health status. The fatigue scores represent what a typical working-age
-            adult would experience on this schedule.
+            adult would experience on this schedule. The model evaluates the planned rotation
+            design, not day-to-day variations such as overtime, shift swaps, or unplanned absences.
           </p>
 
           <div className="bg-brand-navy/5 border border-brand-navy/10 rounded-lg p-6">
@@ -240,27 +255,26 @@ export default function FatigueAnalysisPage() {
       </Section>
 
       {/* ── CTA ── */}
-      <Section contained className="bg-brand-cream">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-2xl font-semibold text-brand-navy mb-4">
-            Add Fatigue Analysis to Your Engagement
+      <Section className="bg-brand-navy">
+        <div className="text-center py-4">
+          <h2 className="text-2xl font-bold text-white mb-4 tracking-tight">
+            Ready when you are.
           </h2>
-          <p className="text-slate-700 leading-relaxed mb-8">
-            Fatigue risk analysis is available as an add-on to any compliance engagement,
-            providing the most complete rotation risk assessment available.
+          <p className="text-slate-300 mb-8 max-w-xl mx-auto text-sm leading-relaxed">
+            Independent rotation analysis. No discovery call. Findings delivered in 48&ndash;72 hours.
           </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="flex flex-wrap justify-center gap-5 items-center">
             <Link
               href="/engage"
-              className="inline-flex items-center justify-center bg-brand-navy text-white text-sm font-medium px-6 py-3 rounded hover:bg-brand-navy-dark transition-colors"
+              className="bg-white text-brand-navy px-7 py-3 rounded font-medium text-sm hover:bg-brand-cream transition-colors"
             >
               Begin an Engagement
             </Link>
             <Link
               href="/example-rotation"
-              className="text-sm font-medium text-brand-navy hover:text-brand-navy-dark transition-colors"
+              className="text-sm font-medium text-slate-200 hover:text-white hover:underline underline-offset-4 transition-colors"
             >
-              View Example Rotation &rarr;
+              View an Example Rotation &rarr;
             </Link>
           </div>
         </div>

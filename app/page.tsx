@@ -176,29 +176,6 @@ export default function Home() {
           </Link>
         </div>
 
-        {/* Mid-page CTA */}
-        <div className="mt-12 bg-white border border-slate-200 rounded-lg p-8 md:p-10 text-center">
-          <h3 className="text-xl font-bold text-slate-900 mb-3 tracking-tight">
-            No discovery call required.
-          </h3>
-          <p className="text-sm text-slate-500 leading-relaxed mb-6 max-w-lg mx-auto">
-            Start with a single rotation, no ongoing commitment. Sign the agreement, submit your rotation, and receive findings.
-          </p>
-          <div className="flex flex-wrap justify-center gap-5 items-center">
-            <Link
-              href="/engage"
-              className="bg-brand-navy text-white px-7 py-3 rounded font-medium text-sm hover:bg-brand-navy-dark transition-colors"
-            >
-              Begin an Engagement
-            </Link>
-            <Link
-              href="/getting-started"
-              className="text-sm font-medium text-brand-navy hover:underline underline-offset-4 transition-colors"
-            >
-              See the Full Process &rarr;
-            </Link>
-          </div>
-        </div>
       </Section>
 
       {/* §8 — Final CTA */}
@@ -208,7 +185,7 @@ export default function Home() {
             Ready when you are.
           </h2>
           <p className="text-slate-300 mb-8 max-w-xl mx-auto text-sm leading-relaxed">
-            Independent, expert-led analysis of your rotation schedule. Findings delivered exclusively to you.
+            Independent rotation analysis. No discovery call. Findings delivered in 48&ndash;72 hours.
           </p>
           <div className="flex flex-wrap justify-center gap-5 items-center">
             <Link
@@ -221,7 +198,7 @@ export default function Home() {
               href="/getting-started"
               className="text-sm font-medium text-slate-200 hover:text-white hover:underline underline-offset-4 transition-colors"
             >
-              See the Full Process &rarr;
+              See How It Works &rarr;
             </Link>
           </div>
         </div>

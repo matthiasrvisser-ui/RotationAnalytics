@@ -133,10 +133,10 @@ export default function SampleReport() {
       <Section className="bg-brand-navy">
         <div className="text-center py-4">
           <h2 className="text-2xl font-bold text-white mb-4 tracking-tight">
-            Ready to discuss an engagement?
+            Ready when you are.
           </h2>
           <p className="text-slate-300 mb-8 max-w-xl mx-auto text-sm leading-relaxed">
-            Whether you have a specific rotation in mind or want to understand what this analysis would reveal for your schedule, we are available to discuss your requirements.
+            Independent rotation analysis. No discovery call. Findings delivered in 48&ndash;72 hours.
           </p>
           <div className="flex flex-wrap justify-center gap-5 items-center">
             <Link
@@ -144,12 +144,6 @@ export default function SampleReport() {
               className="bg-white text-brand-navy px-7 py-3 rounded font-medium text-sm hover:bg-brand-cream transition-colors"
             >
               Begin an Engagement
-            </Link>
-            <Link
-              href="/contact"
-              className="text-sm font-medium text-slate-200 hover:text-white hover:underline underline-offset-4 transition-colors"
-            >
-              Get in Touch &rarr;
             </Link>
           </div>
         </div>

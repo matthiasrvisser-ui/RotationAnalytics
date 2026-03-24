@@ -287,7 +287,7 @@ export default function GettingStartedPage() {
             Ready when you are.
           </h2>
           <p className="text-slate-300 mb-8 max-w-xl mx-auto text-sm leading-relaxed">
-            Begin an engagement directly, or reach out if you have questions about your scheduling environment before getting started.
+            Independent rotation analysis. No discovery call. Findings delivered in 48&ndash;72 hours.
           </p>
           <div className="flex flex-wrap justify-center gap-5 items-center">
             <Link
@@ -295,12 +295,6 @@ export default function GettingStartedPage() {
               className="bg-white text-brand-navy px-7 py-3 rounded font-medium text-sm hover:bg-brand-cream transition-colors"
             >
               Begin an Engagement
-            </Link>
-            <Link
-              href="/contact"
-              className="text-sm font-medium text-slate-200 hover:text-white hover:underline underline-offset-4 transition-colors"
-            >
-              Get in Touch &rarr;
             </Link>
           </div>
         </div>
