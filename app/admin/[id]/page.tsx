@@ -148,6 +148,17 @@ export default function EngagementDetail() {
     }
   }
 
+  async function downloadDeliverable() {
+    const headers = await authHeaders()
+    const res = await fetch(`/api/admin/engagements/${id}/deliverable`, { headers })
+    if (res.ok) {
+      const { url } = await res.json()
+      window.open(url, '_blank')
+    } else {
+      setMessage({ type: 'error', text: 'Failed to generate download link.' })
+    }
+  }
+
   async function downloadSupportingDoc(docId: string) {
     const headers = await authHeaders()
     const res = await fetch(`/api/admin/engagements/${id}/supporting-documents`, {
@@ -330,8 +341,17 @@ export default function EngagementDetail() {
             <div className="bg-white border border-slate-200 rounded-lg p-6">
               <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-4">Upload Deliverable</p>
               {engagement.deliverable_path ? (
-                <div className="text-sm text-green-700 bg-green-50 border border-green-200 rounded p-3 mb-4">
-                  Deliverable uploaded. After payment is confirmed, mark status as Delivered to notify client.
+                <div className="flex items-center justify-between bg-green-50 border border-green-200 rounded p-3 mb-4">
+                  <p className="text-sm text-green-700">Deliverable uploaded. After payment is confirmed, mark status as Delivered to notify client.</p>
+                  <button
+                    onClick={downloadDeliverable}
+                    className="flex-shrink-0 ml-4 inline-flex items-center gap-1.5 text-xs font-semibold text-green-700 hover:text-green-900 hover:underline"
+                  >
+                    <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                    </svg>
+                    Download
+                  </button>
                 </div>
               ) : null}
               <div className="space-y-3">

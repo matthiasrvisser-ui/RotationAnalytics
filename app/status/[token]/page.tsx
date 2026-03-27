@@ -41,8 +41,8 @@ export default async function StatusPage({ params }: { params: { token: string }
     .order('created_at', { ascending: true })
 
   const currentIndex = STATUS_ORDER.indexOf(engagement.status as EngagementStatus)
-  const hasDeliverable = engagement.status === 'delivered' && engagement.deliverable_token
-  const downloadUrl = hasDeliverable ? `${BASE_URL}/api/deliverable/${engagement.deliverable_token}` : null
+  const hasDeliverable = ['delivered', 'closed'].includes(engagement.status as string) && !!engagement.deliverable_token
+  const downloadUrl = hasDeliverable ? `/api/status/${params.token}/deliverable` : null
 
   return (
     <>
@@ -116,12 +116,9 @@ export default async function StatusPage({ params }: { params: { token: string }
                           >
                             Download Deliverable
                           </a>
-                          {engagement.deliverable_expires_at && (
-                            <p className="text-xs text-slate-400 mt-1">
-                              Link expires {new Date(engagement.deliverable_expires_at).toLocaleDateString('en-CA')}.
-                              Contact us to reissue.
-                            </p>
-                          )}
+                          <p className="text-xs text-slate-400 mt-1">
+                            Available here anytime. Contact us if you have any issues.
+                          </p>
                         </div>
                       )}
                     </div>

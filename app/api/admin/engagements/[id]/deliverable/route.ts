@@ -8,6 +8,33 @@ function isAuthorized(req: NextRequest) {
   return token === process.env.ADMIN_PASSWORD
 }
 
+export async function GET(
+  req: NextRequest,
+  { params }: { params: { id: string } }
+) {
+  if (!isAuthorized(req)) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+
+  const { data: engagement } = await supabaseAdmin
+    .from('engagements')
+    .select('deliverable_path')
+    .eq('id', params.id)
+    .single()
+
+  if (!engagement?.deliverable_path) {
+    return NextResponse.json({ error: 'No deliverable on file.' }, { status: 404 })
+  }
+
+  const { data } = await supabaseAdmin.storage
+    .from('deliverables')
+    .createSignedUrl(engagement.deliverable_path, 3600)
+
+  if (!data?.signedUrl) {
+    return NextResponse.json({ error: 'Failed to generate download link.' }, { status: 500 })
+  }
+
+  return NextResponse.json({ url: data.signedUrl })
+}
+
 export async function POST(
   req: NextRequest,
   { params }: { params: { id: string } }
