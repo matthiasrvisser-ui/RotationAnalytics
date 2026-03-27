@@ -40,7 +40,7 @@ export async function GET(req: NextRequest) {
   }
 
   const autocloseCutoff = daysAgo(AUTOCLOSE_AFTER_DAYS)
-  const candidateIds = [...firstDownloads.entries()]
+  const candidateIds = Array.from(firstDownloads.entries())
     .filter(([, date]) => date < autocloseCutoff)
     .map(([id]) => id)
 
@@ -81,7 +81,7 @@ export async function GET(req: NextRequest) {
     .eq('action', 'deliverable_uploaded')
     .lt('created_at', daysAgo(FILE_RETENTION_DAYS).toISOString())
 
-  const oldIds = [...new Set((oldUploads ?? []).map(l => l.engagement_id))]
+  const oldIds = Array.from(new Set((oldUploads ?? []).map(l => l.engagement_id)))
 
   if (oldIds.length > 0) {
     const { data: engagements } = await supabaseAdmin
