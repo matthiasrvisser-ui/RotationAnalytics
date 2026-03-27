@@ -30,7 +30,7 @@ const infrastructure = [
   {
     title: 'Authentication & Access Control',
     items: [
-      'Administrative access is protected by authenticated credentials and restricted to authorised personnel only.',
+      'Administrative access is protected by authenticated credentials and restricted to authorized personnel only.',
       'Client engagement data is accessed exclusively through unique, cryptographically generated status tokens — not through user accounts or passwords.',
       'API keys and service credentials are stored as encrypted environment variables, never committed to source code.',
     ],
@@ -44,10 +44,10 @@ const policies = [
   },
   {
     title: 'Data Retention',
-    body: 'Engagement data — including submitted rotation files, analytical deliverables, and communication records — is retained for seven (7) years from engagement completion in compliance with applicable Canadian tax and business record regulations. Upon request or at the end of the retention period, data is securely deleted.',
+    body: 'Engagement records — including submitted rotation files, analytical deliverables, and communication records — are retained for one (1) year from engagement completion. Engagements are automatically closed 30 days after the client\'s first deliverable download. All submitted files and deliverables are permanently deleted at the one-year mark. Records may be deleted earlier upon written request.',
   },
   {
-    title: 'Data Minimisation',
+    title: 'Data Minimization',
     body: 'Rotation Analytics collects only the information necessary to perform the commissioned analysis. We do not collect employee names, personal identifiers, or health information. Rotation data is processed in aggregate by line number. We do not use client data for any purpose beyond the scope defined in the service agreement.',
   },
   {
@@ -69,12 +69,12 @@ export default function SecurityPage() {
         <div className="max-w-3xl mx-auto">
           <p className="text-base text-slate-700 leading-relaxed mb-4">
             Rotation Analytics handles sensitive operational scheduling data on behalf of our clients.
-            We take this responsibility seriously. This page describes the technical and organisational
+            We take this responsibility seriously. This page describes the technical and organizational
             measures we maintain to protect client data.
           </p>
           <p className="text-base text-slate-700 leading-relaxed">
             Our security practices are designed to meet the expectations of enterprise clients operating
-            in regulated, unionised environments where data confidentiality is not optional.
+            in regulated, unionized environments where data confidentiality is not optional.
           </p>
         </div>
       </Section>
@@ -174,7 +174,7 @@ export default function SecurityPage() {
               },
               {
                 title: 'Personnel Controls',
-                body: 'Only authorised personnel with a direct operational need access client data. All personnel with data access are bound by confidentiality obligations.',
+                body: 'Only authorized personnel with a direct operational need access client data. All personnel with data access are bound by confidentiality obligations.',
               },
               {
                 title: 'No Secondary Use',
@@ -182,7 +182,7 @@ export default function SecurityPage() {
               },
               {
                 title: 'Deliverable Security',
-                body: 'Completed deliverables are made available exclusively through authenticated, time-limited download links. Deliverable access tokens expire automatically. Deliverables are not transmitted via unencrypted email.',
+                body: 'Completed deliverables are accessible through the client\'s secure status page and remain available for download until the engagement is automatically closed. Engagements close 30 days after the first download. All files are permanently deleted one year from engagement completion. Deliverables are not transmitted via unencrypted email.',
               },
             ].map((item) => (
               <div key={item.title} className="border-l-2 border-brand-navy/20 pl-5">
@@ -242,7 +242,7 @@ export default function SecurityPage() {
               Enterprise Security Enquiries
             </p>
             <p className="text-sm text-slate-600 leading-relaxed mb-4">
-              For organisations with specific security requirements — including requests for our
+              For organizations with specific security requirements — including requests for our
               sub-processor list, data processing agreements, or security questionnaire completion —
               please contact us directly.
             </p>

@@ -9,7 +9,7 @@ export async function GET(
 ) {
   const { data: engagement } = await supabaseAdmin
     .from('engagements')
-    .select('status, deliverable_path')
+    .select('id, status, deliverable_path')
     .eq('status_token', params.token)
     .single()
 
@@ -28,6 +28,14 @@ export async function GET(
   if (!data?.signedUrl) {
     return NextResponse.json({ error: 'Failed to generate download link.' }, { status: 500 })
   }
+
+  // Log download for auto-close tracking
+  await supabaseAdmin.from('audit_log').insert({
+    engagement_id: engagement.id,
+    action: 'deliverable_downloaded',
+    actor: 'client',
+    metadata: { source: 'status_page' },
+  })
 
   return NextResponse.redirect(data.signedUrl)
 }
